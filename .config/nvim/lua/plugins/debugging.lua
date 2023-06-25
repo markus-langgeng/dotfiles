@@ -1,0 +1,20 @@
+-- return {
+--     {
+--         "mfussenegger/nvim-dap",
+--         keys = {
+--             { "<C-b>", function() require("dap").toggle_breakpoint() end, "" },
+--             { "<F9>",  function() require("dap").continue() end,          "" },
+--             { "<F1>",  function() require("dap").step_over() end,         "" },
+--             { "<F2>",  function() require("dap").step_into() end,         "" },
+--             { "<F3>",  function() require("dap").step_out() end,          "" },
+--         },
+--         dependencies = {
+--             { "rcarriga/nvim-dap-ui" },
+--             { "rcarriga/nvim-dap-ui" },
+--             { "theHamsta/nvim-dap-virtual-text" },
+--
+--             -- languages specific
+--         },
+--     },
+-- }
+return {}
