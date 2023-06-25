@@ -1,0 +1,4 @@
+
+#!/bin/sh
+
+export vim='vim -u ${XDG_CONFIG_HOME:-$HOME/.config}/vim/vimrc'

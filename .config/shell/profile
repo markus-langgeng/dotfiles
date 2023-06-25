@@ -1,0 +1,23 @@
+# #!/bin/zsh
+
+# After modifying this file, apply change with 'exec zsh --login'
+
+# Add ~/.local/bin to $PATH
+export PATH="$PATH:${$(find ~/.local/bin -type d -printf %p:)%%:}"
+
+# Default programs
+export EDITOR="nvim"
+export VISUAL="nvim"
+export TERMINAL="st"
+export BROWSER="firefox"
+
+# xdg base dirs
+export XDG_CONFIG_HOME=$HOME/.config
+export XDG_CACHE_HOME=$HOME/.cache
+export XDG_DATA_HOME=$HOME/.local/share
+export XDG_STATE_HOME=$HOME/.local/state
+
+# Clean up
+export ZDOTDIR="$HOME/.config/zsh"
+export XINITRC="$XDG_CONFIG_HOME"/X11/xinitrc
+export LESSHISTFILE="$XDG_STATE_HOME/less/history"

@@ -1,0 +1,18 @@
+# Set CAPS key=ESC|CTRL and CTRL key=SUPER
+setxkbmap -layout us -variant dvp -option "ctrl:swapcaps"
+xmodmap -e "keycode 37 = Super_L"	# My super key is physically broken
+xmodmap -e "clear lock"			    # Remove capslock
+xcape -e "Control_L=Escape"		    # Turn capslock to ESC when pressed alone
+
+# Always use nvidia to render bc 490 driver cannot do hybrid *sadge*
+xrandr --setprovideroutputsource modesetting NVIDIA-0
+xrandr --auto
+xrandr --dpi 96
+
+# Hot keys
+sxhkd &
+
+xwallpaper --zoom ~/Pictures/wallpapers/wallhaven-gundam.png &
+picom -b &
+
+exec dwm
