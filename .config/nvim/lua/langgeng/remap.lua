@@ -9,7 +9,6 @@ map("n", "<C-d>", "<C-d>zz")
 map("n", "<C-u>", "<C-u>zz")
 map("n", "n", "nzzzv")
 map("n", "N", "Nzzzv")
-map("n", "<CR>", "ciw")
 
 map("x", "<leader>p", [["_dP]])
 

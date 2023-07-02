@@ -5,7 +5,7 @@ return {
         opts = {
             options = {
                 -- theme = 'catppuccin',
-                icons_enabled = false,
+                icons_enabled = true,
                 -- theme = 'palenight',
                 component_separators = '|',
                 section_separators = '',
@@ -14,5 +14,5 @@ return {
         },
     },
     -- icons
-    -- { "nvim-tree/nvim-web-devicons", lazy = true },
+    { "nvim-tree/nvim-web-devicons", lazy = true },
 }

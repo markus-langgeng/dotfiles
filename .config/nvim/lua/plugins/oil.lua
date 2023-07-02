@@ -2,11 +2,10 @@ return {
     "stevearc/oil.nvim",
     lazy = false,
     keys = {
-        { "<leader>pv", function() require("oil").open() end, desc = "Explore directory with coconut oil 📂" },
+        { "<leader>pv", function() require("oil").open() end, desc = "Explore directory 📂 with coconut oil" },
     },
     opts = {
         columns = {
-            "permissions",
             "size",
             "mtime"
         },

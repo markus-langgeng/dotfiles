@@ -33,9 +33,6 @@ local options = {
             },
         },
     },
-    ui = {
-        icons = {},
-    },
 }
 
 require("lazy").setup("plugins", options)

@@ -10,7 +10,7 @@ return {
                 "nvim-lua/plenary.nvim",
                 -- "nvim-telescope/telescope-fzf-native.nvim",
                 -- "nvim-telescope/telescope-file-browser.nvim",
-                -- "xiyaowong/telescope-emoji.nvim",
+                "xiyaowong/telescope-emoji.nvim",
             },
         },
         keys = {
