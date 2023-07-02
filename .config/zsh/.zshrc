@@ -1,6 +1,8 @@
 # Enable colors and change prompt:
 autoload -U colors && colors
-PS1="%B%{$fg[red]%}[%{$fg[yellow]%}%n%{$fg[green]%}@%{$fg[blue]%}%M %{$fg[magenta]%}%~%{$fg[red]%}]%{$reset_color%}$%b "
+# PS1 Prompt
+source "${XDG_CONFIG_HOME:-$HOME/.config}/zsh/custom-prompt"
+
 setopt autocd
 stty stop undef	# Disable ctrl-s to freeze terminal.
 setopt interactive_comments
@@ -9,6 +11,8 @@ setopt interactive_comments
 HISTFILE="${XDG_STATE_HOME:-$HOME/.cache}"/zsh/hsitory
 histsize=1000
 SAVEHIST=1000
+
+[ -f "${XDG_CONFIG_HOME:-$HOME/.config}/shell/aliasrc" ] && source "${XDG_CONFIG_HOME:-$HOME/.config}/shell/aliasrc"
 
 # Basic autocomplete
 autoload -Uz compinit
@@ -23,9 +27,7 @@ bindkey -v
 export KEYTIMEOUT=1
 # Use vim keys in tab complete menu:
 bindkey -M menuselect 'h' vi-backward-char
-bindkey -M menuselect 'k' vi-up-line-or-history
 bindkey -M menuselect 'l' vi-forward-char
-bindkey -M menuselect 'j' vi-down-line-or-history
 bindkey -M menuselect 'left' vi-backward-char
 bindkey -M menuselect 'down' vi-down-line-or-history
 bindkey -M menuselect 'up' vi-up-line-or-history
@@ -35,6 +37,12 @@ bindkey -v '^W' backward-delete-word
 
 
 # alias vimm='vim -u ${XDG_CONFIG_HOME:-$HOME/.config}/vim/vimrc'
-alias config='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
-alias vim=nvim v=nvim
-alias wget=wget --hist-file="$XDG_DATA_HOME/wget-hsts"
+alias dotf='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
+
+# plugins
+source /usr/share/zsh/plugins/zsh-history-substring-search/zsh-history-substring-search.zsh
+bindkey '^[[A' history-substring-search-up
+bindkey '^[[B' history-substring-search-down
+bindkey -M vicmd 'k' history-substring-search-up
+bindkey -M vicmd 'j' history-substring-search-down
+source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh  # should be last
