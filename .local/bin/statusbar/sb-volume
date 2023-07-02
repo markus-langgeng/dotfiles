@@ -1,0 +1,26 @@
+#!/bin/sh
+
+kill -40 $(pidof dwmblocks)
+
+vol="$(wpctl get-volume @DEFAULT_AUDIO_SINK@)"
+vol="${vol#Volume: }" # remove the word Volume:
+
+# vol        != vol
+# vol[MUTED] != vol
+[ "$vol" != "${vol%\[MUTED\]}" ] || [ "$vol" == 0.00 ] && echo "󰖁" && exit
+
+split() {
+	# For ommiting the . without calling and external program.
+	IFS=$2
+	set -- $1
+	printf '%s' "$@"
+}
+vol="$(printf "%.0f" "$(split "$vol" ".")")"
+
+case 1 in
+	$((vol >= 60)) ) icon="󰕾" ;;
+	$((vol >= 20)) ) icon="󰖀" ;;
+	$((vol >= 1)) ) icon="󰕿" ;;
+esac
+
+printf "$vol%% $icon"

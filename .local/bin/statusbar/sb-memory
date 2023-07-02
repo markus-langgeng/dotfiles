@@ -1,0 +1,3 @@
+#!/bin/sh
+
+free --mebi | awk '(NR==2){printf("%sMiB/%sMiB(%.1f%%) 󰧑 ",$3,$2,($3/$2*100))}'
