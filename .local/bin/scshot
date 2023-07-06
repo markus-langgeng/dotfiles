@@ -1,0 +1,17 @@
+#!/bin/sh
+
+sc1="gui (select region by yourself)"
+sc2="full (all monitors at the same time)"
+sc3="screen (specified monitor)"
+sc4="gui+upload"
+sc="$sc1\n$sc2\n$sc3\n$sc4"
+
+outpath="$HOME/Pictures/screenshots/"
+
+case "$(printf "$sc" | dmenu -l 4 -p 'Screenshot mode')" in
+    $sc1) flameshot gui -c -p $outpath ;;
+    $sc2) flameshot full -c -p $outpath ;;
+    $sc3) flameshot screen -c -p $outpath ;;
+    $sc4) flameshot gui -u -c -p $outpath ;;
+esac
+
