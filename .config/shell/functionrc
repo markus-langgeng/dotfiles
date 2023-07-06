@@ -1,0 +1,8 @@
+#!/bin/sh
+
+mkcd() { mkdir -pv "$1" && cd "$1" }
+mvcd() { mv -vi "$1" "$2" && cd "$2" }
+
+cdz() { cd "$HOME/.config/zsh" && nvim . }
+cds() { cd "$HOME/.config/shell" && nvim . }
+cdv() { cd "$HOME/.config/nvim" && nvim . }
