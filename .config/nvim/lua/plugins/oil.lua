@@ -5,10 +5,6 @@ return {
         { "<leader>pv", function() require("oil").open() end, desc = "Explore directory 📂 with coconut oil" },
     },
     opts = {
-        columns = {
-            "size",
-            "mtime"
-        },
         win_options = {
             signcolumn = "yes",
         },

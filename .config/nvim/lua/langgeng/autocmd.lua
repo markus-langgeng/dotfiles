@@ -57,3 +57,9 @@ autocmd({ "BufWritePost" }, {
     pattern = { "sxhkdrc" },
     command = [[!kill -10 $(pidof sxhkd)]]
 })
+
+autocmd({ "BufWritePost" }, {
+    group = reload_config_group,
+    pattern = { "xresources" },
+    command = [[!xrdb $HOME/.config/X11/xresources]]
+})

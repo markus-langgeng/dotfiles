@@ -9,17 +9,18 @@ xrandr --setprovideroutputsource modesetting NVIDIA-0
 xrandr --auto
 xrandr --dpi 96
 
-# xrdb ${XDG_CONFIG_HOME:-$HOME/.config}/X11/xresources & xrdbpid=$!	# Uncomment to use Xresources colors/settings on startup
 # Hot keys
 sxhkd &
 
 xwallpaper --zoom ~/Pictures/wallpapers/wallhaven-gundam.png &
 picom -b &
 
-# Ensure that xrdb has finished running before moving on to start the WM/DE.
-# [ -n "$xrdbpid" ] && wait "$xrdbpid"
 
 dwmblocks &
+# xrdb ${XDG_CONFIG_HOME:-$HOME/.config}/X11/xresources
+xrdb ${XDG_CONFIG_HOME:-$HOME/.config}/X11/xresources & xrdbpid=$!	# Uncomment to use Xresources colors/settings on startup
+# Ensure that xrdb has finished running before moving on to start the WM/DE.
+[ -n "$xrdbpid" ] && wait "$xrdbpid"
 while :; do
 	ssh-agent dwm
 done

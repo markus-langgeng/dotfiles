@@ -15,11 +15,11 @@
 # directories
 # R_BRACKET
 # dollar sign w/ color based on exit status
-PS1="%F{blue}[%f\
+PS1="%B%F{blue}[%f%b\
 %F{yellow}%#%n%f\
 %F{magenta}@%m%f \
 %10<..<%~%<<\
-%F{blue}]%f\
+%B%F{blue}]%f%b\
 %F{%(?.green.red)}$%f "
 
 if [ -f ${XDG_CONFIG_HOME:-$HOME/.config}/zsh/git-prompt.sh ]; then
