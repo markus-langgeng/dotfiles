@@ -13,11 +13,16 @@ alias \
 	rm="rm -vI" \
 	bc="bc -ql" \
 	rsync="rsync -vrPlu" \
-	mkd="mkdir -pv" \
+	mkdir="mkdir -pv" \
+    iv="sxiv" \
 	yt="yt-dlp --embed-metadata -i" \
 	yta="yt -x -f bestaudio/best" \
 	ytt="yt --skip-download --write-thumbnail" \
-	ffmpeg="ffmpeg -hide_banner"
+	ffmpeg="ffmpeg -hide_banner" \
+    weather="curl wttr.in" \
+    sysres="systemctl restart" \
+    sysren="systemctl enable --now" \
+    sysdis="systemctl disable --now"
 
 # Colorize commands when possible.
 alias \
@@ -25,7 +30,7 @@ alias \
 	grep="grep --color=auto" \
 	diff="diff --color=auto" \
 	ip="ip -color=auto"
-    # ccat="highlight --out-format=ansi" \
+    # ccat="highlight --out-format=ansi"
 
 # These common commands are just too long! Abbreviate them.
 alias \
@@ -36,10 +41,5 @@ alias \
 	v="$EDITOR" \
 	p="pacman" \
 	z="zathura" \
-    wget="wget --hist-file=\"$XDG_DATA_HOME/wget-hsts\""
-
-# git aliases
-alias g="git" \
-    glg="git log --decorate --oneline --graph" \
-    gch="git checkout" \
-    gcm="git commit"
+    wget="wget --hist-file=\"$XDG_DATA_HOME/wget-hsts\"" \
+    g="git" \

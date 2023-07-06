@@ -1,11 +1,12 @@
 local o = vim.opt
 local g = vim.g
+local expand = vim.fn.expand
 
 -- [[ autocmd & autogroup ]]
 local augroup = vim.api.nvim_create_augroup
 local on_save_group = augroup("langgeng", { clear = true })
 local yank_group = augroup("HighlightYank", {})
-local dart_format_group = augroup("DartFormat", { clear = true })
+local format_group = augroup("DartFormat", { clear = true })
 local reload_config_group = augroup("ReloadConfig", { clear = true })
 
 local autocmd = vim.api.nvim_create_autocmd
@@ -43,7 +44,7 @@ autocmd({ "FileType" }, {
 })
 
 autocmd({ "FileType" }, {
-    group = dart_format_group,
+    group = format_group,
     pattern = { "dart", "cpp" },
     callback = function()
         o.tabstop = 2
@@ -62,4 +63,13 @@ autocmd({ "BufWritePost" }, {
     group = reload_config_group,
     pattern = { "xresources" },
     command = [[!xrdb $HOME/.config/X11/xresources]]
+})
+
+autocmd({ "BufWritePost" }, {
+    group = reload_config_group,
+    pattern = {
+        expand("$HOME") .. "/.config/zsh/*",
+        expand("$HOME") .. "/.config/shell/*rc",
+    },
+    command = [[!source $HOME/.config/zsh/.zshrc]]
 })
