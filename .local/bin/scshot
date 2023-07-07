@@ -6,7 +6,8 @@ sc3="screen (specified monitor)"
 sc4="gui+upload"
 sc="$sc1\n$sc2\n$sc3\n$sc4"
 
-outpath="$HOME/Pictures/screenshots/"
+name="screenshot_$(date '+%Y-%m-%d_%H-%M')"
+outpath="$HOME/Pictures/screenshots/$name"
 
 case "$(printf "$sc" | dmenu -l 4 -p 'Screenshot mode')" in
     $sc1) flameshot gui -c -p $outpath ;;
