@@ -12,7 +12,7 @@ xrandr --dpi 96
 # Hot keys
 sxhkd &
 
-xwallpaper --zoom ~/Pictures/wallpapers/wallhaven-gundam.png &
+xwallpaper --zoom $HOME/.local/share/default-wallpapers/wallpaper-bike.jpg &
 picom -b &
 
 
