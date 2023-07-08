@@ -36,7 +36,7 @@ o.timeoutlen = 400
 o.swapfile = false
 o.backup = false
 o.undofile = true
--- o.undodir = vim.fn.expand("~/.cache/nvim/undodir")
+o.undodir = vim.fn.expand("~/.cache/nvim/undodir")
 
 -- interval for writing swap file to disk, also used by gitsigns
 o.updatetime = 250
