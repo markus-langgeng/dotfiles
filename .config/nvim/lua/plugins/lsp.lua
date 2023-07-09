@@ -134,6 +134,13 @@ return { -- LSP Configuration & Plugins
                             end,
                             settings     = servers[server_name],
                         }
+                    elseif server_name == "clangd" then
+                        require("lspconfig")[server_name].setup {
+                            capabilities = capabilities,
+                            on_attach    = on_attach,
+                            settings     = servers[server_name],
+                            autostart    = false
+                        }
                     else
                         require("lspconfig")[server_name].setup {
                             capabilities = capabilities,

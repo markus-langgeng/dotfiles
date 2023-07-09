@@ -4,7 +4,7 @@ mkcd() { mkdir -pv "$1" && cd "$1" }
 mvcd() { mv -vi "$1" "$2" && cd "$2" }
 
 fcd() {
-    case ${1:-"$HOME"} in
+    case $1 in
         "c"  ) cd $(find "$HOME/.config/" -type d | fzf) ;;
         "s"  ) cd "$HOME/.config/shell" ;;
         "v"  ) cd "$HOME/.config/nvim/" ;;
@@ -18,22 +18,21 @@ fcd() {
         "p"  ) cd $(find "$HOME/Pictures/"  -type d | fzf) ;;
         "m"  ) cd $(find "$HOME/Music/"     -type d | fzf) ;;
         "doc") cd $(find "$HOME/Documents/" -type d | fzf) ;;
-        *    ) cd $(find "$1" -type d >/dev/null 2>&1 | fzf) ;;
+        *    ) cd $(find ${1:-"$HOME"}  -type d >/dev/null 2>&1 | fzf) ;;
     esac
-    case ${2:-""} in
+    case $2 in
         "v") nvim . ;;
         "l") ls -lAh ;;
     esac
 }
 
 open() {
-    local p=${1:-"$HOME"}
-    case $p in
+    case $1 in
         "doc") xdg-open $(find "$HOME/Documents/"   -type f | fzf) ;;
         "dl" ) xdg-open $(find "$HOME/Downloads/"   -type f | fzf) ;;
         "m"  ) xdg-open $(find "$HOME/Music/"       -type f | fzf) ;;
         "p"  ) xdg-open $(find "$HOME/Pictures/"    -type f | fzf) ;;
-        *    ) xdg-open $(find $1   -type f >/dev/null 2>&1 | fzf) ;;
+        *    ) xdg-open $(find ${1:-"$HOME"}   -type f >/dev/null 2>&1 | fzf) ;;
     esac
 }
 
