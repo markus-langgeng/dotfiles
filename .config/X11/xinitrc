@@ -1,5 +1,5 @@
 # Set CAPS key=ESC|CTRL and CTRL key=SUPER
-setxkbmap -layout us -variant dvp -option "ctrl:swapcaps"
+setxkbmap -layout "us,us" -variant "dvp," -option "ctrl:swapcaps,grp:win_space_toggle"
 xmodmap -e "keycode 37 = Super_L"	# My super key is physically broken
 xmodmap -e "clear lock"			    # Remove capslock
 xcape -e "Control_L=Escape"		    # Turn capslock to ESC when pressed alone

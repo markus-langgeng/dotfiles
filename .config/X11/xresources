@@ -70,7 +70,7 @@
 *.color8:       #5a647e
 ! red
 *.color1:       #da4939
-*.color9:       #da4939
+*.color9:       #df7653
 ! green
 *.color2:       #789339
 *.color10:      #a5c261
@@ -92,5 +92,5 @@
 
 
 !! dwm
-dwm.selbordercolor: #a5c261
-dwm.selbgcolor:     #789339
+dwm.selbordercolor: #df9953
+dwm.selbgcolor:     #da4939

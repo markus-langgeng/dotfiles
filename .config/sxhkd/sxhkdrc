@@ -6,5 +6,8 @@ XF86AudioLowerVolume
 XF86AudioMute
     wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle ; sb-volume 2>/dev/null
 XF86AudioMicMute
-    wpctl set-mute @DEFAULT_AUDIO_SOURCE@ toggle ; sb-volume 2>/dev/null
+    wpctl set-mute @DEFAULT_AUDIO_SOURCE@ toggle ; sb-volume 2/dev/null
 
+# Change kb layout
+super + space
+    sb-kb
