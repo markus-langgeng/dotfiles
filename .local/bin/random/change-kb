@@ -1,0 +1,22 @@
+#!/bin/sh
+
+layout="us"
+variant="dvp"
+
+layout2=$(localectl list-x11-keymap-layouts | dmenu -p "Pick layouts (default:$layout):")
+variant2=$(localectl list-x11-keymap-variants | grep -E "dvorak|dvp|qwerty" | \
+    dmenu -p "Pick variants (default:$variant):")
+
+m="Changing"
+[ -z $layout2 ] && m="${m} layout:$layout(default)"\
+    || { m="${m} layout:$layout->$layout2"; layout=$layout2; }
+
+[ -z $variant2 ] && m="${m}, variant:$variant(default)"\
+    || { m="${m}, variant:$variant->$variant2" ; variant=$variant2; }
+
+confirm=$(printf "yes\nno" | dmenu -p "$m")
+[ "$confirm" != "yes" ] && { echo "No changes were made"; exit; }
+
+# echo "$m"
+setxkbmap -layout "$layout" -variant "$variant"
+kill -45 $(pidof dwmblocks)

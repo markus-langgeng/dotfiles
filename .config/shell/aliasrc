@@ -14,6 +14,7 @@ alias \
 	bc="bc -ql" \
 	rsync="rsync -vrPlu" \
 	mkdir="mkdir -pv" \
+    src="source $HOME/.config/zsh/.zshrc" \
     iv="sxiv" \
 	yt="yt-dlp --embed-metadata -i" \
 	yta="yt -x -f bestaudio/best" \
@@ -43,3 +44,4 @@ alias \
 	z="zathura" \
     wget="wget --hist-file=\"$XDG_DATA_HOME/wget-hsts\"" \
     g="git" \
+    ff="firefox"

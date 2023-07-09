@@ -64,12 +64,3 @@ autocmd({ "BufWritePost" }, {
     pattern = { "xresources" },
     command = [[!xrdb $HOME/.config/X11/xresources]]
 })
-
-autocmd({ "BufWritePost" }, {
-    group = reload_config_group,
-    pattern = {
-        expand("$HOME") .. "/.config/zsh/*",
-        expand("$HOME") .. "/.config/shell/*rc",
-    },
-    command = [[!source $HOME/.config/zsh/.zshrc]]
-})
