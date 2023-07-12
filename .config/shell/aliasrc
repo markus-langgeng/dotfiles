@@ -21,9 +21,7 @@ alias \
 	ytt="yt --skip-download --write-thumbnail" \
 	ffmpeg="ffmpeg -hide_banner" \
     weather="curl wttr.in" \
-    sysres="systemctl restart" \
-    sysren="systemctl enable --now" \
-    sysdis="systemctl disable --now"
+    convert="magick convert -verbose"
 
 # Colorize commands when possible.
 alias \
@@ -42,6 +40,6 @@ alias \
 	v="$EDITOR" \
 	p="pacman" \
 	z="zathura" \
-    wget="wget --hist-file=\"$XDG_DATA_HOME/wget-hsts\"" \
+    wget="wget --hsts-file=\"$XDG_DATA_HOME/wget-hsts\"" \
     g="git" \
     ff="firefox"

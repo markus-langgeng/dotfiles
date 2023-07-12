@@ -11,3 +11,7 @@ XF86AudioMicMute
 # Change kb layout
 super + space
     sb-kb
+
+# Need the toggle-touchpad and sb-tap scrpt
+XF86TouchpadToggle
+    toggle-touchpad ; sb-tap

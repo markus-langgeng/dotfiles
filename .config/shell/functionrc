@@ -5,24 +5,15 @@ mvcd() { mv -vi "$1" "$2" && cd "$2" }
 
 fcd() {
     case $1 in
-        "c"  ) cd $(find "$HOME/.config/" -type d | fzf) ;;
-        "s"  ) cd "$HOME/.config/shell" ;;
-        "v"  ) cd "$HOME/.config/nvim/" ;;
-        "x"  ) cd "$HOME/.config/X11/"  ;;
-        "z"  ) cd "$HOME/.config/zsh/"  ;;
-        "scr") cd $(find "$HOME/.local/bin/" -type d | fzf) ;;
+        "c" ) cd $(find "$HOME/.config/" -type d | fzf) ;;
+        "sc") cd $(find "$HOME/.local/bin/" -type d | fzf) ;;
 
-        "dl" ) cd "$HOME/Downloads/" ;;
-        "ss" ) cd "$HOME/Pictures/screenshots/" ;;
-        "wl" ) cd "$HOME/Pictures/wallpapers/"  ;;
-        "p"  ) cd $(find "$HOME/Pictures/"  -type d | fzf) ;;
-        "m"  ) cd $(find "$HOME/Music/"     -type d | fzf) ;;
-        "doc") cd $(find "$HOME/Documents/" -type d | fzf) ;;
-        *    ) cd $(find ${1:-"$HOME"}  -type d >/dev/null 2>&1 | fzf) ;;
-    esac
-    case $2 in
-        "v") nvim . ;;
-        "l") ls -lAh ;;
+        "dl") cd "$HOME/Downloads/" ;;
+        "ss") cd "$HOME/Pictures/screenshots/" ;;
+        "w" ) cd $(find "$HOME/Pictures/wallpapers/" -type d | fzf) ;;
+        "m" ) cd $(find "$HOME/Music/" -type d | fzf) ;;
+        "d" ) cd $(find "$HOME/Documents/" -type d | fzf) ;;
+        *   ) cd $(find ${1:-"$HOME"} -type d >/dev/null 2>&1 | fzf) ;;
     esac
 }
 
@@ -36,5 +27,5 @@ open() {
     esac
 }
 
-getpath() { local p=${1:-"$HOME"} ; find $p -type f | fzf | tr -d '\n' | xclip -selection c }
+getpath() { find ${1:-"$HOME"} -type f | fzf | tr -d '\n' | xclip -selection c }
 

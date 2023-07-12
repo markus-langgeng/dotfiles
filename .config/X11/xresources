@@ -70,7 +70,7 @@
 *.color8:       #5a647e
 ! red
 *.color1:       #da4939
-*.color9:       #df7653
+*.color9:       #ff4500
 ! green
 *.color2:       #789339
 *.color10:      #a5c261
@@ -92,5 +92,6 @@
 
 
 !! dwm
-dwm.selbordercolor: #df9953
+dwm.selbordercolor: #FF4500
 dwm.selbgcolor:     #da4939
+! #ff0800 candy apple
