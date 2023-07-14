@@ -1,0 +1,36 @@
+#!/bin/sh
+# bookmark current selection
+# Copy/select (copy is more reliable) a URL and then click super + F9
+
+pattern="https?|files://\w+\.\w+"
+bmpath="$HOME/.local/share/bookmarks"
+
+if [ ! -f $bmpath ]; then
+    touch bookmarks;
+    echo "# categories used to prompt the user when adding a bookmark\n# " >> $bpmpath
+fi
+
+if ! echo $(xclip -o) | grep -iE "https?|files://\w+\.\w+"; then
+    echo "OK" | dmenu -p "Bookmark is for urls only (for now) :v"; exit
+fi
+
+categories=$(sed '2!d;s/^# //;s/ /\n/g' $bmpath )
+selection=$(xclip -o)
+grep -iwF "$selection" $bmpath && echo "OK" | dmenu -p "Url already exists" && exit
+
+selection_prompt=$(echo "$selection" | sed 's/\(.\{50\}\).*/\1.../' )
+new_categories=()
+
+while
+    prompt_cat_again="yes"
+    chosen_category=$(echo "$categories" \
+        | dmenu -p "Pick/create category for $selection_prompt" | sed 's/\s/_/g' )
+    [ -z "$chosen_category" ] && exit
+
+    echo $categories | grep -qiwF "$chosen_category" || sed -i "2s/\(.*\)/\1 $chosen_category/" $bmpath
+    new_categories+=("$chosen_category")
+    prompt_cat_again=$(echo -e "yes\nno" | dmenu -p "Add category again?")
+    [ "$prompt_cat_again" = "yes" ] || break
+do :; done
+
+echo "$selection  [$new_categories]" >> $bmpath

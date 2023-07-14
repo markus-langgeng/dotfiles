@@ -8,6 +8,7 @@ fcd() {
     case $1 in
         "c" ) cd $(find "$HOME/.config/"    "${opts[@]}" | fzf) ;;
         "sc") cd $(find "$HOME/.local/bin/" "${opts[@]}" | fzf) ;;
+        "sh") cd $(find "$HOME/.local/share/" "${opts[@]}" | fzf) ;;
 
         "dl") cd "$HOME/Downloads/" ;;
         "p" ) cd $(find "$HOME/Pictures/"   "${opts[@]}" | fzf) ;;

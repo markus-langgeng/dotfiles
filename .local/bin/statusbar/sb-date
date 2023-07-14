@@ -1,4 +1,4 @@
 #!/bin/sh
 
-date '+ %A %Y-%m-%d  %R 󱑎'
+date "+ (%R) %a %d/%m/%Y"
 

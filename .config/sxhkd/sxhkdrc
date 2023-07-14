@@ -15,3 +15,8 @@ super + space
 # Need the toggle-touchpad and sb-tap scrpt
 XF86TouchpadToggle
     toggle-touchpad ; sb-tap
+
+super + F9
+    bm-this
+super + shift + F9
+    open-bm
