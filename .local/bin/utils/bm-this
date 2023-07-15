@@ -16,7 +16,7 @@ fi
 
 categories=$(sed '2!d;s/^# //;s/ /\n/g' $bmpath )
 selection=$(xclip -o)
-grep -iwF "$selection" $bmpath && echo "OK" | dmenu -p "Url already exists" && exit
+if grep -iwF "$selection" $bmpath; then echo "OK" | dmenu -p "Url already exists"; exit; fi
 
 selection_prompt=$(echo "$selection" | sed 's/\(.\{50\}\).*/\1.../' )
 new_categories=()
@@ -33,4 +33,4 @@ while
     [ "$prompt_cat_again" = "yes" ] || break
 do :; done
 
-echo "$selection  [$new_categories]" >> $bmpath
+echo "[$(tr -s ' ' ',' <<< ${new_categories[*]})]     $selection" >> $bmpath

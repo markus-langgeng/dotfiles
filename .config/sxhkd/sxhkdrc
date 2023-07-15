@@ -20,3 +20,5 @@ super + F9
     bm-this
 super + shift + F9
     open-bm
+Print
+    scshot
