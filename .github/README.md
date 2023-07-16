@@ -1,4 +1,4 @@
-# Markus' dotfiles
+# Markus's dotfiles
 
 Welcome to my dotfiles. Here, I'm going to try to explain as best as I can the
 softwares that I use and also the keybindings. I also have other repo for other
