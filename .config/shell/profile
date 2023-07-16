@@ -24,3 +24,9 @@ export LESSHISTFILE="$XDG_STATE_HOME/less/history"
 
 # fzf config
 export FZF_DEFAULT_OPTS="--cycle"
+export NODE_REPL_HISTORY="$XDG_DATA_HOME"/node_repl_history
+
+# IME
+export GTK_IM_MODULE=fcitx
+export QT_IM_MODULE=fcitx
+export XMODIFIERS=@im=fcitx

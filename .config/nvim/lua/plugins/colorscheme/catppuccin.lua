@@ -41,7 +41,7 @@ return {
     priority = 1000,
     build = ":CatppuccinCompile",
 
-    config = function()
-        require("catppuccin").setup(options)
-    end,
+    -- config = function()
+    --     require("catppuccin").setup(options)
+    -- end,
 }

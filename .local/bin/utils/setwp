@@ -3,9 +3,9 @@
 s="$HOME/Pictures/wallpapers/"
 p="$HOME/.config/wall.png"
 
-[ "$1" = "." ] && xwallpaper ${2:-"--maximize"} "$p" && exit
+[ "$1" = "." ] && xwallpaper ${2:-"--zoom"} "$p" && exit
 [ -f "$1" ] && cp "$1" "$p"
 [ -d "$1" ] && cp $(find "$1" -name "*.jpg" -o -name "*.jpeg" -o -name "*.png" -type f | shuf -n 1) "$p"
 [ -z "$1" ] && cp $(find "$s" -name "*.jpg" -o -name "*.jpeg" -o -name "*.png" -type f | shuf -n 1) "$p"
 
-xwallpaper ${2:-"--maximize"} "$p"
+xwallpaper ${2:-"--zoom"} "$p"

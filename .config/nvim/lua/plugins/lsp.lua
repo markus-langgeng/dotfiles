@@ -85,7 +85,7 @@ return { -- LSP Configuration & Plugins
 
             -- Automatically install servers on the list
             local servers = {
-                -- clangd = {},
+                clangd = {},
                 -- pyright = {},
                 -- tsserver = {},
                 lua_ls = {
@@ -95,7 +95,6 @@ return { -- LSP Configuration & Plugins
                     },
                 },
                 texlab = {},
-                -- emmet_ls = {},
                 -- jsonls = {
                 --     single_file_support = true
                 -- },

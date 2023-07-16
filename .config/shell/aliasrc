@@ -20,8 +20,9 @@ alias \
 	yta="yt -x -f bestaudio/best" \
 	ytt="yt --skip-download --write-thumbnail" \
 	ffmpeg="ffmpeg -hide_banner" \
+    convert="magick convert -verbose" \
     weather="curl wttr.in" \
-    convert="magick convert -verbose"
+    df="df -h"
 
 # Colorize commands when possible.
 alias \
@@ -42,4 +43,5 @@ alias \
 	z="zathura" \
     wget="wget --hsts-file=\"$XDG_DATA_HOME/wget-hsts\"" \
     g="git" \
-    ff="firefox"
+    ff="firefox" \
+    pn="pnpm"

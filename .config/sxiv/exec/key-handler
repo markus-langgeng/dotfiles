@@ -15,9 +15,9 @@
 case "$1" in
 "c")    xclip -in -filter | tr '\n' ' ' | xclip -in -selection clipboard ;;
 "w")    while read file; do setwp "$file"; done ;;
+"x")    while read file; do rm "$file"; done ;;
 "C-d")    while read file; do xclip -selection clipboard -target image/png "$file"; done ;;
 "S-d")    while read file; do xclip -selection clipboard -target image/png "$file"; done ;;
-"x")    while read file; do rm "$file"; done ;;
 "C-a")  while read file; do mv "$file" "$HOME/Pictures/wallpapers/animals/"; done ;;
 "C-i")  while read file; do mv "$file" "$HOME/Pictures/wallpapers/illustrations/"; done ;;
 "C-s")  while read file; do mv "$file" "$HOME/Pictures/wallpapers/scenery/"; done ;;

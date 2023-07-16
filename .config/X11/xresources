@@ -1,3 +1,7 @@
+! dwm.font: monospace:pixelsize=13:antialias=true:autohint=true
+! dmenu.font: monospace:pixelsize=13:antialias=true:autohint=true
+! st.font: monospace:pixelsize=13:antialias=true:autohint=true
+
 !! tomorrow dark
 ! special
 ! *.foreground:   #c5c8c6

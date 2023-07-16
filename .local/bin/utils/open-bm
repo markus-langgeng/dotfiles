@@ -4,4 +4,8 @@
 bmlist=$(sed -E '/(^\s*$|^#)/ d' $HOME/.local/share/bookmarks)
 choice=$(echo "$bmlist" | dmenu -l 10 -p "Open bookmark:")
 
-[ ! -z "$choice" ] && ${1:-$BROWSER} $(echo $choice | awk '{print $2}')
+[ -z "$choice" ] && exit
+case $1 in
+    "-c") echo $choice | awk '{print $2}' | xclip -selection c ;;
+    *   )  $BROWSER $(echo $choice | awk '{print $2}') ;;
+esac
