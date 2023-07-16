@@ -7,7 +7,7 @@ link to it whenever it is mentioned here.
 
 ## Brief overview of the softwares that I use
 
-1. OS: [Arch Linux](https://wiki.archlinux.org/)
+1. OS: [Arch Linux](https://wiki.archlinux.org/title/Installation_guide)
 2. Shell: zsh
 3. WM(Window Manager)/~~DE(Desktop Environment)~~: [dwm](https://dwm.suckless.org/)
 4. Terminal Emulator: [st](https://st.suckless.org/)
@@ -32,7 +32,8 @@ TBD
 
 ## Software setups
 TBD but I want to fill this section with applications that are kind of hard to
-setup (e.g. Hardening Firefox, IME, why I chose a certain kb layout and the kb remap)
+setup (e.g. Hardening Firefox, IME and the packages I installed, why I chose a
+certain kb layout and the kb remap)
 
 ## Wishlist
 1. Learn to use R instead of gui spreadsheet program
