@@ -86,6 +86,7 @@ return { -- LSP Configuration & Plugins
             -- Automatically install servers on the list
             local servers = {
                 clangd = {},
+                gopls = {},
                 -- pyright = {},
                 -- tsserver = {},
                 lua_ls = {

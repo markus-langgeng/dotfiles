@@ -32,6 +32,7 @@ return { -- Highlight, edit, and navigate code
         },
         opts = {
             ensure_installed = {
+                "go",
                 "cpp",
                 "lua",
                 "python",

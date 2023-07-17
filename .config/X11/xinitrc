@@ -12,7 +12,7 @@ xrandr --dpi 96
 fcitx5 &
 sxhkd &
 picom -b &
-dwmblocks &
+slstatus &
 
 xrdb ${XDG_CONFIG_HOME:-$HOME/.config}/X11/xresources & xrdbpid=$!	# Uncomment to use Xresources colors/settings on startup
 setwp .

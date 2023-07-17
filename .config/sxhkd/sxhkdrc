@@ -1,16 +1,12 @@
 # Control volume
 XF86AudioRaiseVolume
-    wpctl set-volume -l 1.0 @DEFAULT_AUDIO_SINK@ 2%+ ; sb-volume 2>/dev/null
+    wpctl set-volume -l 1.0 @DEFAULT_AUDIO_SINK@ 2%+
 XF86AudioLowerVolume
-    wpctl set-volume @DEFAULT_AUDIO_SINK@ 2%- ; sb-volume 2>/dev/null
+    wpctl set-volume @DEFAULT_AUDIO_SINK@ 2%-
 XF86AudioMute
-    wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle ; sb-volume 2>/dev/null
+    wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle
 XF86AudioMicMute
-    wpctl set-mute @DEFAULT_AUDIO_SOURCE@ toggle ; sb-volume 2/dev/null
-
-# Change kb layout
-super + space
-    sb-kb
+    wpctl set-mute @DEFAULT_AUDIO_SOURCE@ toggle
 
 # Need the toggle-touchpad and sb-tap scrpt
 XF86TouchpadToggle

@@ -3,5 +3,4 @@
 vol=$(wpctl get-volume @DEFAULT_AUDIO_SINK@ | awk '{print $2, $3}')
 mute=$(echo $vol | awk '{print $2}')
 vol=$( echo "${vol% \[MUTED\]}" | awk '{print $1 * 100}' )
-[ ! -z $mute ] && echo "V $vol%(X)" || echo "V $vol%"
-kill -40 $(pidof dwmblocks)
+[ -z $mute ] && echo "$vol%" || echo "[x]$vol%"

@@ -9,10 +9,10 @@ link to it whenever it is mentioned here.
 
 1. OS: [Arch Linux](https://wiki.archlinux.org/title/Installation_guide)
 2. Shell: zsh
-3. WM(Window Manager)/~~DE(Desktop Environment)~~: [dwm](https://dwm.suckless.org/)
+3. WM (Window Manager)/~~DE (Desktop Environment)~~: [dwm](https://dwm.suckless.org/)
 4. Terminal Emulator: [st](https://st.suckless.org/)
 5. App Launcher: [dmenu](https://tools.suckless.org/dmenu)
-6. Status Bar: dwmblocks-async
+6. Status Bar: slstatus
 7. Text Editor: [neovim](https://github.com/neovim/neovim/) + vim
 8. Browser: firefox
 9. PDF Viewer: zathura

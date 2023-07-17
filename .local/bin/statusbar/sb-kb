@@ -1,6 +1,0 @@
-#!/bin/sh
-
-# need xkb-switch-git from the AUR
-# 42 sigrtmin+8
-echo "$(xkb-switch)"
-kill -42 $(pidof dwmblocks)

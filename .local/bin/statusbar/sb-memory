@@ -1,4 +1,0 @@
-#!/bin/sh
-
-# free --mebi | awk '(NR==2){printf("M:%sMiB/%sMiB[%.1f%%]",$3,$2,($3/$2*100))}'
-free --mebi | awk '(NR==2){printf("M %.1f%%",($3/$2*100))}'
