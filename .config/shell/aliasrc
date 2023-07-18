@@ -44,4 +44,7 @@ alias \
     wget="wget --hsts-file=\"$XDG_DATA_HOME/wget-hsts\"" \
     g="git" \
     ff="firefox" \
-    pn="pnpm"
+    pn="pnpm" \
+    xdg-qf="xdg-mime query filetype" \
+    xdg-qd="xdg-mime query default" \
+    xdg-def="xdg-mime default"

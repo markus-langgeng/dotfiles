@@ -2,7 +2,7 @@
 # bookmark current selection
 # Copy/select (copy is more reliable) a URL and then click super + F9
 
-pattern="https?|files://\w+\.\w+"
+pattern="^https?:|^files://\w+\.\w+|^about:\w+"
 bmpath="$HOME/.local/share/bookmarks"
 
 if [ ! -f $bmpath ]; then
@@ -10,7 +10,7 @@ if [ ! -f $bmpath ]; then
     echo "# categories used to prompt the user when adding a bookmark\n# " >> $bpmpath
 fi
 
-if ! echo $(xclip -o) | grep -iE "https?|files://\w+\.\w+"; then
+if ! echo $(xclip -o) | grep -iE $pattern; then
     echo "OK" | dmenu -p "Bookmark is for urls only (for now) :v"; exit
 fi
 
@@ -25,7 +25,12 @@ while
     prompt_cat_again="yes"
     chosen_category=$(echo "$categories" \
         | dmenu -p "Pick/create category for $selection_prompt" | sed 's/\s/_/g' )
-    [ -z "$chosen_category" ] && exit
+
+    if [ -z "$chosen_category" ] && [ ! -z $new_categories ]; then
+        echo "[$(tr -s ' ' ',' <<< ${new_categories[*]})]     $selection" >> $bmpath
+        exit
+    fi
+    [ -z "$chosen_category"  ] && exit
 
     echo $categories | grep -qiwF "$chosen_category" || sed -i "2s/\(.*\)/\1 $chosen_category/" $bmpath
     new_categories+=("$chosen_category")
