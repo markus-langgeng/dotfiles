@@ -65,4 +65,4 @@ o.foldenable = false -- Disable folding at startup.
 o.mouse = ""
 o.winbar = "%= %f %m %="
 -- o.laststatus = 3
-o.clipboard:append "unnamedplus"
+-- o.clipboard:append "unnamedplus"

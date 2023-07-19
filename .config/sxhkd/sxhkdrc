@@ -15,6 +15,6 @@ XF86TouchpadToggle
 super + F9
     bm-this
 super + shift + F9
-    open-bm
+    bm-open
 Print
     scshot

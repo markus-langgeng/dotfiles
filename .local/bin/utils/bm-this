@@ -1,41 +1,52 @@
 #!/bin/sh
-# bookmark current selection
-# Copy/select (copy is more reliable) a URL and then click super + F9
 
-pattern="^https?:|^files://\w+\.\w+|^about:\w+"
-bmpath="$HOME/.local/share/bookmarks"
+pattern="^https?://\w+\.\w+|^file:///|^about:\w+"
+bmurl="$HOME/.local/share/bookmarks/urls"
+bmdir="$HOME/.local/share/bookmarks/directories"
+bmfile="$HOME/.local/share/bookmarks/files"
 
-if [ ! -f $bmpath ]; then
-    touch bookmarks;
-    echo "# categories used to prompt the user when adding a bookmark\n# " >> $bpmpath
+[ ! -d "$HOME/.local/share/bookmarks" ] && mkdir $bmurl
+[ ! -f "$bmurl" ] && touch $bmurl && echo -e "# keywords/categories\n#\n" >> $bmurl
+[ ! -f "$bmdir" ] && touch $bmdir && echo -e "# keywords/categories\n#\n" >> $bmdir
+[ ! -f "$bmfile" ] && touch $bmfile && echo -e "# keywords/categories\n#\n" >> $bmfile
+
+kwurl=$(sed -E '2!d;s/^#|^# //;s/ /\n/g' $bmurl)
+kwdir=$(sed -E '2!d;s/^#|^# //;s/ /\n/g' $bmdir)
+kwfile=$(sed -E '2!d;s/^#|^# //;s/ /\n/g' $bmfile)
+chosenkw=""; all_chosenkw=(); selection=$(xclip -o -selection c)
+
+function choose_kw() {
+    local sel=$(echo "$selection" | sed 's/\(.\{50\}\).*/\1.../' )
+    local msg="Choose/create keyword for $sel"
+    chosenkw=$(echo -e "$1" | dmenu -p "$msg" | sed 's/ /_/g')
+    [ -z "$chosenkw" ] && exit || all_chosenkw+=("$chosenkw")
+}
+
+function add_new_kw() {
+    echo "$1" | grep -qiwF "$2" || sed -i "2s/\(.*\)/\1 $2/" $3
+}
+
+function prompt_kw() {
+    while
+        choose_kw "$1"
+        [ ! -z "$chosenkw" ] && add_new_kw "$1" "$chosenkw" "$2"
+        local promptkw=$(echo -e "yes\nno" | dmenu -i -p "Add keyword again?")
+        [ "$promptkw" = "yes" ] || break
+    do :; done
+}
+
+if echo "$selection" | grep -E "$pattern"; then
+    grep -iwF "$selection" $bmurl && echo "ok" | dmenu -p "Url's already bookmarked" && exit;
+    prompt_kw "$kwurl" "$bmurl";
+    echo "[$(tr -s ' ' ',' <<< ${all_chosenkw[*]})]    $selection" >> $bmurl;
+elif [ -d "$selection" ]; then
+    grep -iwF "$selection" $bmdir && echo "ok" | dmenu -p "Dir's already bookmarked" && exit
+    prompt_kw "$kwdir" "$bmdir"
+    echo "[$(tr -s ' ' ',' <<< ${all_chosenkw[*]})]    $selection" >> $bmdir
+elif [ -e "$selection" ]; then
+    grep -iwF "$selection" $bmfile && echo "ok" | dmenu -p "File's already bookmarked" && exit
+    prompt_kw "$kwfile" "$bmfile"
+    echo "[$(tr -s ' ' ',' <<< ${all_chosenkw[*]})]    $selection" >> $bmfile
+else
+    echo "ok" | dmenu -p "$selection is not a url, dir, nor file."
 fi
-
-if ! echo $(xclip -o) | grep -iE $pattern; then
-    echo "OK" | dmenu -p "Bookmark is for urls only (for now) :v"; exit
-fi
-
-categories=$(sed '2!d;s/^# //;s/ /\n/g' $bmpath )
-selection=$(xclip -o)
-if grep -iwF "$selection" $bmpath; then echo "OK" | dmenu -p "Url already exists"; exit; fi
-
-selection_prompt=$(echo "$selection" | sed 's/\(.\{50\}\).*/\1.../' )
-new_categories=()
-
-while
-    prompt_cat_again="yes"
-    chosen_category=$(echo "$categories" \
-        | dmenu -p "Pick/create category for $selection_prompt" | sed 's/\s/_/g' )
-
-    if [ -z "$chosen_category" ] && [ ! -z $new_categories ]; then
-        echo "[$(tr -s ' ' ',' <<< ${new_categories[*]})]     $selection" >> $bmpath
-        exit
-    fi
-    [ -z "$chosen_category"  ] && exit
-
-    echo $categories | grep -qiwF "$chosen_category" || sed -i "2s/\(.*\)/\1 $chosen_category/" $bmpath
-    new_categories+=("$chosen_category")
-    prompt_cat_again=$(echo -e "yes\nno" | dmenu -p "Add category again?")
-    [ "$prompt_cat_again" = "yes" ] || break
-do :; done
-
-echo "[$(tr -s ' ' ',' <<< ${new_categories[*]})]     $selection" >> $bmpath

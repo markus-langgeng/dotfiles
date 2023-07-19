@@ -21,7 +21,7 @@ fcd() {
 open() {
     local opts=( -not \( -wholename "*/.git" -prune \) -type f )
     case $1 in
-        "doc") xdg-open $(find "$HOME/Documents/" "${opts[@]}" | fzf) ;;
+        "d") xdg-open $(find "$HOME/Documents/" "${opts[@]}" | fzf) ;;
         "dl" ) xdg-open $(find "$HOME/Downloads/" "${opts[@]}" | fzf) ;;
         "m"  ) xdg-open $(find "$HOME/Music/"     "${opts[@]}" | fzf) ;;
         "p"  ) xdg-open $(find "$HOME/Pictures/"  "${opts[@]}" | fzf) ;;
@@ -29,5 +29,13 @@ open() {
     esac
 }
 
-getpath() { find ${1:-"$HOME"} -not \( -wholename "*/.git" -prune \) -type f -type f | fzf | tr -d '\n' | xclip -selection c }
+gfp() {
+    find ${1:-"$HOME"} -not \( -wholename "*/.git" -prune \) -type f \
+        | fzf | tr -d '\n' | xclip -selection c
+    }
+
+gdp() {
+    find ${1:-"$HOME"} -not \( -wholename "*/.git" -prune \) -type d \
+        | fzf | tr -d '\n' | xclip -selection c
+}
 
