@@ -4,15 +4,14 @@ sc1="gui (select region by yourself)"
 sc2="full (all monitors at the same time)"
 sc3="screen (specified monitor)"
 sc4="gui+upload"
-sc="$sc1\n$sc2\n$sc3\n$sc4"
 
 name="screenshot_$(date '+%Y-%m-%d_%H-%M')"
 outpath="$HOME/Pictures/screenshots/$name"
 
-case "$(printf "$sc" | dmenu -l 4 -p 'Screenshot mode')" in
-    $sc1) flameshot gui -c -p $outpath ;;
-    $sc2) flameshot full -c -p $outpath ;;
-    $sc3) flameshot screen -c -p $outpath ;;
-    $sc4) flameshot gui -u -c -p $outpath ;;
+case $(printf "%s\n%s\n%s\n%s" "$sc1" "$sc2" "$sc3" "$sc4"  | dmenu -l 4 -p "Screenshot mode") in
+    "$sc1" ) flameshot gui -c -p "$outpath" ;;
+    "$sc2" ) flameshot full -c -p "$outpath" ;;
+    "$sc3" ) flameshot screen -c -p "$outpath" ;;
+    "$sc4" ) flameshot gui -u -c -p "$outpath" ;;
 esac
 

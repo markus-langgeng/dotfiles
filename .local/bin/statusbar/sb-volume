@@ -1,6 +1,6 @@
 #!/bin/sh
 
 vol=$(wpctl get-volume @DEFAULT_AUDIO_SINK@ | awk '{print $2, $3}')
-mute=$(echo $vol | awk '{print $2}')
+mute=$(echo "$vol" | awk '{print $2}')
 vol=$( echo "${vol% \[MUTED\]}" | awk '{print $1 * 100}' )
-[ -z $mute ] && echo "$vol%" || echo "[x]$vol%"
+[ -z "$mute" ] && echo "$vol%" || echo "[x]$vol%"

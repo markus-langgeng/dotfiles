@@ -5,48 +5,54 @@ bmurl="$HOME/.local/share/bookmarks/urls"
 bmdir="$HOME/.local/share/bookmarks/directories"
 bmfile="$HOME/.local/share/bookmarks/files"
 
-[ ! -d "$HOME/.local/share/bookmarks" ] && mkdir $bmurl
-[ ! -f "$bmurl" ] && touch $bmurl && echo -e "# keywords/categories\n#\n" >> $bmurl
-[ ! -f "$bmdir" ] && touch $bmdir && echo -e "# keywords/categories\n#\n" >> $bmdir
-[ ! -f "$bmfile" ] && touch $bmfile && echo -e "# keywords/categories\n#\n" >> $bmfile
+[ ! -d "$HOME/.local/share/bookmarks" ] && mkdir "$bmurl"
+[ ! -f "$bmurl" ] && touch "$bmurl" && printf "# keywords/categories\n#\n" >> "$bmurl"
+[ ! -f "$bmdir" ] && touch "$bmdir" && printf "# keywords/categories\n#\n" >> "$bmdir"
+[ ! -f "$bmfile" ] && touch "$bmfile" && printf "# keywords/categories\n#\n" >> "$bmfile"
 
-kwurl=$(sed -E '2!d;s/^#|^# //;s/ /\n/g' $bmurl)
-kwdir=$(sed -E '2!d;s/^#|^# //;s/ /\n/g' $bmdir)
-kwfile=$(sed -E '2!d;s/^#|^# //;s/ /\n/g' $bmfile)
-chosenkw=""; all_chosenkw=(); selection=$(xclip -o -selection c)
+kwurl=$(sed -E '2!d;s/^#|^# //;s/ /\n/g' "$bmurl")
+kwdir=$(sed -E '2!d;s/^#|^# //;s/ /\n/g' "$bmdir")
+kwfile=$(sed -E '2!d;s/^#|^# //;s/ /\n/g' "$bmfile")
+# chosenkw=""; all_chosenkw=(); selection=$(xclip -o -selection c)
+chosenkw= ; all_chosenkw= ; selection=$(xclip -o -selection c)
 
-function choose_kw() {
-    local sel=$(echo "$selection" | sed 's/\(.\{50\}\).*/\1.../' )
-    local msg="Choose/create keyword for $sel"
-    chosenkw=$(echo -e "$1" | dmenu -p "$msg" | sed 's/ /_/g')
-    [ -z "$chosenkw" ] && exit || all_chosenkw+=("$chosenkw")
+choose_kw() {
+    sel="$(echo "$selection" | sed 's/\(.\{50\}\).*/\1.../' )"
+    msg="Choose/create keyword for $sel"
+    chosenkw=$(printf "%s" "$1" | dmenu -p "$msg" | sed 's/ /_/g')
+    [ -z "$chosenkw" ] && exit || all_chosenkw="$all_chosenkw $chosenkw"
 }
 
-function add_new_kw() {
-    echo "$1" | grep -qiwF "$2" || sed -i "2s/\(.*\)/\1 $2/" $3
+add_new_kw() {
+    echo "$1" | grep -qiwF "$2" || sed -i "2s/\(.*\)/\1 $2/" "$3"
 }
 
-function prompt_kw() {
+prompt_kw() {
     while
         choose_kw "$1"
-        [ ! -z "$chosenkw" ] && add_new_kw "$1" "$chosenkw" "$2"
-        local promptkw=$(echo -e "yes\nno" | dmenu -i -p "Add keyword again?")
+        [ -n "$chosenkw" ] && add_new_kw "$1" "$chosenkw" "$2"
+        promptkw="$(printf "yes\nno" | dmenu -i -p "Add keyword again?")"
         [ "$promptkw" = "yes" ] || break
     do :; done
 }
 
+add_bm() {
+    bmkw=$(echo "[${all_chosenkw# }]" | tr ' ' ',' )
+    echo "$bmkw    $selection" >> "$1"
+}
+
 if echo "$selection" | grep -E "$pattern"; then
-    grep -iwF "$selection" $bmurl && echo "ok" | dmenu -p "Url's already bookmarked" && exit;
+    grep -iwF "$selection" "$bmurl" && echo "ok" | dmenu -p "Url's already bookmarked" && exit
     prompt_kw "$kwurl" "$bmurl";
-    echo "[$(tr -s ' ' ',' <<< ${all_chosenkw[*]})]    $selection" >> $bmurl;
+    add_bm "$bmurl"
 elif [ -d "$selection" ]; then
-    grep -iwF "$selection" $bmdir && echo "ok" | dmenu -p "Dir's already bookmarked" && exit
+    grep -iwF "$selection" "$bmdir" && echo "ok" | dmenu -p "Dir's already bookmarked" && exit
     prompt_kw "$kwdir" "$bmdir"
-    echo "[$(tr -s ' ' ',' <<< ${all_chosenkw[*]})]    $selection" >> $bmdir
+    add_bm "$bmdir"
 elif [ -e "$selection" ]; then
-    grep -iwF "$selection" $bmfile && echo "ok" | dmenu -p "File's already bookmarked" && exit
+    grep -iwF "$selection" "$bmfile" && echo "ok" | dmenu -p "File's already bookmarked" && exit
     prompt_kw "$kwfile" "$bmfile"
-    echo "[$(tr -s ' ' ',' <<< ${all_chosenkw[*]})]    $selection" >> $bmfile
+    add_bm "$bmfile"
 else
     echo "ok" | dmenu -p "$selection is not a url, dir, nor file."
 fi

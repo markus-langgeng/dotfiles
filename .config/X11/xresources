@@ -96,7 +96,18 @@
 
 
 !! dwm
+
+!! Red colorscheme
 dwm.selbordercolor: #FF4500
 dwm.selbgcolor:     #da4939
 dmenu.selbgcolor:   #da4939
 ! #ff0800 candy apple
+
+!! Purple colorscheme
+! dwm.selbordercolor: #be4dff
+! dwm.selbgcolor:     #552583
+! dmenu.selbgcolor:   #552583
+
+! dwm.selbordercolor: #b30080
+! dwm.selbgcolor:     #4A0336
+! dmenu.selbgcolor:   #4A0336

@@ -87,8 +87,8 @@ return { -- LSP Configuration & Plugins
             local servers = {
                 clangd = {},
                 gopls = {},
-                -- pyright = {},
-                -- tsserver = {},
+                pyright = {},
+                tsserver = {},
                 lua_ls = {
                     Lua = {
                         workspace = { checkThirdParty = false },
