@@ -1,0 +1,5 @@
+
+[Default Applications]
+application/pdf=org.pwmt.zathura-pdf-mupdf.desktop
+inode/directory=file.desktop
+text/x-shellscript=nvim.desktop

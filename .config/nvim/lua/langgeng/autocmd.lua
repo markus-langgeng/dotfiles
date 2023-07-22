@@ -45,7 +45,7 @@ autocmd({ "FileType" }, {
 
 autocmd({ "FileType" }, {
     group = format_group,
-    pattern = { "dart", "cpp" },
+    pattern = { "dart", "cpp", "r" },
     callback = function()
         o.tabstop = 2
         o.shiftwidth = 2
