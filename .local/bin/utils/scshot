@@ -1,17 +1,16 @@
 #!/bin/sh
 
-sc1="gui (select region by yourself)"
-sc2="full (all monitors at the same time)"
-sc3="screen (specified monitor)"
-sc4="gui+upload"
-
+opt1="gui (select region by yourself)"
+opt2="full (all monitors at the same time)"
+opt3="screen (specified monitor)"
+opt4="gui+upload"
 name="screenshot_$(date '+%Y-%m-%d_%H-%M')"
-outpath="$HOME/Pictures/screenshots/$name"
+out="$HOME/Pictures/myphone/screenshots/"
+[ ! -d "$out" ] && out="$HOME/Pictures/screenshots"
 
-case $(printf "%s\n%s\n%s\n%s" "$sc1" "$sc2" "$sc3" "$sc4"  | dmenu -l 4 -p "Screenshot mode") in
-    "$sc1" ) flameshot gui -c -p "$outpath" ;;
-    "$sc2" ) flameshot full -c -p "$outpath" ;;
-    "$sc3" ) flameshot screen -c -p "$outpath" ;;
-    "$sc4" ) flameshot gui -u -c -p "$outpath" ;;
+case $(printf "%s\n%s\n%s\n%s" "$opt1" "$opt2" "$opt3" "$opt4"  | dmenu -l 4 -p "Screenshot mode") in
+    "$opt1" ) flameshot gui -p "$out/$name" ;;
+    "$opt2" ) flameshot full -p "$out/$name" ;;
+    "$opt3" ) flameshot screen -p "$out/$name" ;;
+    "$opt4" ) flameshot gui -u -p "$out/$name" ;;
 esac
-

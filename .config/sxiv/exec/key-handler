@@ -13,13 +13,13 @@
 # keysym as listed in /usr/include/X11/keysymdef.h without the "XK_" prefix.
 
 case "$1" in
-"c")    xclip -in -filter | tr '\n' ' ' | xclip -in -selection clipboard ;;
-"w")    while read file; do setwp "$file"; done ;;
-"x")    while read file; do rm "$file"; done ;;
-"C-d")    while read file; do xclip -selection clipboard -target image/png "$file"; done ;;
-"S-d")    while read file; do xclip -selection clipboard -target image/png "$file"; done ;;
-"C-a")  while read file; do mv "$file" "$HOME/Pictures/wallpapers/animals/"; done ;;
-"C-i")  while read file; do mv "$file" "$HOME/Pictures/wallpapers/illustrations/"; done ;;
-"C-s")  while read file; do mv "$file" "$HOME/Pictures/wallpapers/scenery/"; done ;;
+"c"  )  xclip -in -filter | tr '\n' ' ' | xclip -in -selection clipboard ;;
+"w"  )  while read -r file; do setwp "$file"; done ;;
+"x"  )  while read -r file; do rm "$file"; done ;;
+"C-d")  while read -r file; do xclip -selection clipboard -target image/png "$file"; done ;;
+"S-d")  while read -r file; do xclip -selection clipboard -target image/png "$file"; done ;;
+"C-a")  while read -r file; do mv "$file" "$HOME/Pictures/wallpapers/animals/"; done ;;
+"C-i")  while read -r file; do mv "$file" "$HOME/Pictures/wallpapers/illustrations/"; done ;;
+"C-s")  while read -r file; do mv "$file" "$HOME/Pictures/wallpapers/scenery/"; done ;;
 esac
 
