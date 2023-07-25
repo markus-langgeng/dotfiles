@@ -13,13 +13,12 @@ bmfile="$HOME/.local/share/bookmarks/files"
 kwurl=$(sed -E '2!d;s/^#|^# //;s/ /\n/g' "$bmurl")
 kwdir=$(sed -E '2!d;s/^#|^# //;s/ /\n/g' "$bmdir")
 kwfile=$(sed -E '2!d;s/^#|^# //;s/ /\n/g' "$bmfile")
-# chosenkw=""; all_chosenkw=(); selection=$(xclip -o -selection c)
 chosenkw= ; all_chosenkw= ; selection=$(xclip -o -selection c)
 
 choose_kw() {
     sel="$(echo "$selection" | sed 's/\(.\{50\}\).*/\1.../' )"
     msg="Choose/create keyword for $sel"
-    chosenkw=$(printf "%s" "$1" | dmenu -p "$msg" | sed 's/ /_/g')
+    chosenkw=$(printf "%s" "$1" | dmenu -F -p "$msg" | sed 's/ /_/g')
     [ -z "$chosenkw" ] && exit || all_chosenkw="$all_chosenkw $chosenkw"
 }
 
@@ -39,12 +38,14 @@ prompt_kw() {
 add_bm() {
     bmkw=$(echo "[${all_chosenkw# }]" | tr ' ' ',' )
     echo "$bmkw    $selection" >> "$1"
+    echo "ok" | dmenu -p "Bookmark added"
 }
 
 if echo "$selection" | grep -E "$pattern"; then
     grep -iwF "$selection" "$bmurl" && echo "ok" | dmenu -p "Url's already bookmarked" && exit
-    prompt_kw "$kwurl" "$bmurl";
+    prompt_kw "$kwurl" "$bmurl"
     add_bm "$bmurl"
+    [ -n "$all_chosenkw" ] && echo "$all_chosenkw"
 elif [ -d "$selection" ]; then
     grep -iwF "$selection" "$bmdir" && echo "ok" | dmenu -p "Dir's already bookmarked" && exit
     prompt_kw "$kwdir" "$bmdir"

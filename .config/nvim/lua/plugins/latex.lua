@@ -13,10 +13,10 @@ return {
             ol.foldlevel = 0
             ol.foldenable = true
 
-            g.vimtex_view_general_viewer = "zathura"
+            g.vimtex_view_method = "zathura"
             g.vimtex_imaps_enabled = 0
             g.vimtex_compiler_latexmk = {
-                build_dir = "out",
+                aux_dir = "aux",
                 callback = 1,
                 continuous = 1,
                 executable = "latexmk",

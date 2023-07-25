@@ -13,7 +13,6 @@ return { -- Highlight, edit, and navigate code
             { "nvim-treesitter/nvim-treesitter-textobjects", },
             { "JoosepAlviste/nvim-ts-context-commentstring", },
             { "andymass/vim-matchup", },
-            { "nvim-treesitter/playground",                  cmd = "TSPlaygroundToggle" },
             { "nvim-treesitter/nvim-treesitter-context", },
             {
                 -- xml and html autotag

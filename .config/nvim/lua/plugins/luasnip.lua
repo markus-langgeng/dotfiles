@@ -77,9 +77,13 @@ return {
             -- simple template
             s("s_template", fmt(
                 [[
+            %! TeX program = lualatex
             \documentclass{<>}
 
-            \usepackage{<>}
+            \usepackage{hyperref}
+            \usepackage{microtype}
+            \usepackage{fontspec}
+            \usepackage{amsmath,amsfonts,amsthm}
 
             \title{<>}
             \author{<>}
@@ -94,7 +98,6 @@ return {
             ]],
                 {
                     i(1, "article"),
-                    i(4, "hyperref"),
                     i(2, "Awesome Title"),
                     i(3, "Author"),
                     i(0, ""),

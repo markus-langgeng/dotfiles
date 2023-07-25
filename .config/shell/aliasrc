@@ -22,7 +22,10 @@ alias \
 	ffmpeg="ffmpeg -hide_banner" \
     convert="magick convert -verbose" \
     weather="curl wttr.in" \
-    df="df -h"
+    df="df -h" \
+    trp="trash-put" \
+    trl="trash-list" \
+    trr="trash-restore"
 
 # Colorize commands when possible.
 alias \
