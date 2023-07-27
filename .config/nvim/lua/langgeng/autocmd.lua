@@ -1,32 +1,31 @@
 local o = vim.opt
+local ol = vim.opt_local
 local g = vim.g
 local expand = vim.fn.expand
 local system = vim.fn.system
 
--- [[ autocmd & autogroup ]]
-local augroup = vim.api.nvim_create_augroup
-local on_save_group = augroup("OnSave", { clear = true })
-local yank_group = augroup("HighlightYank", {})
-local format_group = augroup("DartFormat", { clear = true })
-local reload_config_group = augroup("ReloadConfig", { clear = true })
-local ime = augroup("IME", { clear = true })
+local aug = vim.api.nvim_create_augroup
+local au = vim.api.nvim_create_autocmd
+local on_save_group = aug("OnSave", { clear = true })
+local yank_group = aug("HighlightYank", {})
+local format_group = aug("DartFormat", { clear = true })
+local reload_config_group = aug("ReloadConfig", { clear = true })
+local ime = aug("IME", { clear = true })
 
-local autocmd = vim.api.nvim_create_autocmd
 
 -- Delete trailing space
-autocmd({ "BufWritePre" }, {
+au({ "BufWritePre" }, {
     group = on_save_group,
     pattern = "*",
     command = [[%s/\s\+$//e]],
 })
-
-autocmd({ "BufWritePre" }, {
+au({ "BufWritePre" }, {
     group = on_save_group,
     pattern = "*",
     command = [[lua vim.lsp.buf.format()]],
 })
 
-autocmd("TextYankPost", {
+au("TextYankPost", {
     group = yank_group,
     pattern = "*",
     callback = function()
@@ -38,37 +37,37 @@ autocmd("TextYankPost", {
 })
 
 -- Stop auto comment on new line
-autocmd({ "FileType" }, {
+au({ "FileType" }, {
     pattern = "*",
     callback = function()
         o.formatoptions = o.formatoptions - { "c", "r", "o" }
     end
 })
 
-autocmd({ "FileType" }, {
+au({ "FileType" }, {
     group = format_group,
     pattern = { "dart", "cpp", "r" },
     callback = function()
-        o.tabstop = 2
-        o.shiftwidth = 2
-        o.softtabstop = 2
-    end
+        ol.tabstop = 2
+        ol.shiftwidth = 2
+        ol.softtabstop = 2
+    end,
 })
 
-autocmd({ "BufWritePost" }, {
+au({ "BufWritePost" }, {
     group = reload_config_group,
     pattern = { "sxhkdrc" },
-    command = [[!kill -10 $(pidof sxhkd)]]
+    command = [[silent !kill -10 $(pidof sxhkd)]]
 })
-
-autocmd({ "BufWritePost" }, {
+au({ "BufWritePost" }, {
     group = reload_config_group,
     pattern = { "xresources" },
-    command = [[!xrdb $HOME/.config/X11/xresources]]
+    command = [[silent !xrdb $HOME/.config/X11/xresources]]
 })
 
+
 local fcitx5state = system("fcitx5-remote")
-autocmd({ "InsertLeave" }, {
+au({ "InsertLeave" }, {
     group = ime,
     pattern = { "*" },
     callback = function()
@@ -76,7 +75,7 @@ autocmd({ "InsertLeave" }, {
         vim.cmd('silent !fcitx5-remote -c')
     end
 })
-autocmd({ "InsertEnter", "BufCreate", "BufEnter", "BufLeave" }, {
+au({ "InsertEnter", "BufCreate", "BufEnter", "BufLeave" }, {
     group = ime,
     pattern = { "*" },
     callback = function()

@@ -32,16 +32,6 @@ map("n", "<leader>j", "<cmd>lprev<CR>zz")
 map("n", "<leader>sb", [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><Left>]])
 map("n", "<leader>x", "<cmd>!chmod +x %<CR>", { silent = true })
 
-map("n", "<leader>ox", function()
-    local path = vim.fn.input({
-        prompt = "Open Explorer in > ",
-        default = "~",
-        completion = "file",
-    })
-    if (path == nil or path == '') then return end
-    vim.fn.system(string.format([[explorer.exe `wslpath -w "%s"`]], path))
-end, { desc = "[O]pen File E[X]plorer from nvim" })
-
 -- Diagnostic keymaps
 map("n", "[d", vim.diagnostic.goto_prev)
 map("n", "]d", vim.diagnostic.goto_next)
