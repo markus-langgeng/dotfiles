@@ -1,13 +1,15 @@
 local o = vim.opt
 local g = vim.g
 local expand = vim.fn.expand
+local system = vim.fn.system
 
 -- [[ autocmd & autogroup ]]
 local augroup = vim.api.nvim_create_augroup
-local on_save_group = augroup("langgeng", { clear = true })
+local on_save_group = augroup("OnSave", { clear = true })
 local yank_group = augroup("HighlightYank", {})
 local format_group = augroup("DartFormat", { clear = true })
 local reload_config_group = augroup("ReloadConfig", { clear = true })
+local ime = augroup("IME", { clear = true })
 
 local autocmd = vim.api.nvim_create_autocmd
 
@@ -63,4 +65,23 @@ autocmd({ "BufWritePost" }, {
     group = reload_config_group,
     pattern = { "xresources" },
     command = [[!xrdb $HOME/.config/X11/xresources]]
+})
+
+local fcitx5state = system("fcitx5-remote")
+autocmd({ "InsertLeave" }, {
+    group = ime,
+    pattern = { "*" },
+    callback = function()
+        fcitx5state = system("fcitx5-remote")
+        vim.cmd('silent !fcitx5-remote -c')
+    end
+})
+autocmd({ "InsertEnter", "BufCreate", "BufEnter", "BufLeave" }, {
+    group = ime,
+    pattern = { "*" },
+    callback = function()
+        if fcitx5state == 2 then
+            system("fcitx5-remote -o")
+        end
+    end,
 })

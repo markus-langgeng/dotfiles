@@ -1,41 +1,45 @@
 #!/bin/sh
 
-mkcd() { mkdir -pv "$1" && cd "$1" }
-mvcd() { mv -vi "$1" "$2" && cd "$2" }
+mkcd() { mkdir -pv "$1" && cd "$1" || exit; }
+mvcd() { mv -vi "$1" "$2" && cd "$2" || exit; }
+
+nobloat_find() {
+    find "$1" -not \( -wholename "*/.git" -prune \) \
+        -not \( -wholename "*/node_modules" -prune \) \
+        -type "$2" 2>/dev/null
+}
 
 fcd() {
-    local opts=( -not \( -wholename "*/.git" -prune \) -type d )
     case $1 in
-        "c" ) cd $(find "$HOME/.config/"    "${opts[@]}" | fzf) ;;
-        "sc") cd $(find "$HOME/.local/bin/" "${opts[@]}" | fzf) ;;
-        "sh") cd $(find "$HOME/.local/share/" "${opts[@]}" | fzf) ;;
+        "c"  ) cd "$(nobloat_find "$HOME/.config/"      "d" | fzf)" || exit ;;
+        "sc" ) cd "$(nobloat_find "$HOME/.local/bin/"   "d" | fzf)" || exit ;;
+        "sh" ) cd "$(nobloat_find "$HOME/.local/share/" "d" | fzf)" || exit ;;
 
-        "dl") cd "$HOME/Downloads/" ;;
-        "p" ) cd $(find "$HOME/Pictures/"   "${opts[@]}" | fzf) ;;
-        "m" ) cd $(find "$HOME/Music/"      "${opts[@]}" | fzf) ;;
-        "d" ) cd $(find "$HOME/Documents/"  "${opts[@]}" | fzf) ;;
-        *   ) cd $(find ${1:-"$HOME"} "${opts[@]}" >/dev/null 2>&1 | fzf) ;;
+        "dl" ) cd "$(nobloat_find "$HOME/Downloads/"    "d" | fzf)" || exit ;;
+        "p"  ) cd "$(nobloat_find "$HOME/Pictures/"     "d" | fzf)" || exit ;;
+        "m"  ) cd "$(nobloat_find "$HOME/Music/"        "d" | fzf)" || exit ;;
+        "d"  ) cd "$(nobloat_find "$HOME/Documents/"    "d" | fzf)" || exit ;;
+        *    ) cd "$(nobloat_find "$1"                  "d" | fzf)" || exit ;;
     esac
 }
 
 open() {
-    local opts=( -not \( -wholename "*/.git" -prune \) -type f )
     case $1 in
-        "d") xdg-open $(find "$HOME/Documents/" "${opts[@]}" | fzf) ;;
-        "dl" ) xdg-open $(find "$HOME/Downloads/" "${opts[@]}" | fzf) ;;
-        "m"  ) xdg-open $(find "$HOME/Music/"     "${opts[@]}" | fzf) ;;
-        "p"  ) xdg-open $(find "$HOME/Pictures/"  "${opts[@]}" | fzf) ;;
-        *    ) xdg-open $(find ${1:-"$HOME"} "${opts[@]}" >/dev/null 2>&1 | fzf) ;;
+        "d" ) xdg-open "$(nobloat_find "$HOME/Documents/" "f" | fzf)" ;;
+        "dl") xdg-open "$(nobloat_find "$HOME/Downloads/" "f" | fzf)" ;;
+        "m" ) xdg-open "$(nobloat_find "$HOME/Music/"     "f" | fzf)" ;;
+        "p" ) xdg-open "$(nobloat_find "$HOME/Pictures/"  "f" | fzf)" ;;
+        "~" ) xdg-open "$(nobloat_find "$HOME"            "f" | fzf)" ;;
     esac
 }
 
 gfp() {
-    find ${1:-"$HOME"} -not \( -wholename "*/.git" -prune \) -type f \
+    find "${1:-"$HOME"}" -not \( -wholename "*/.git" -prune \) -type f \
         | fzf | tr -d '\n' | xclip -selection c
-    }
+}
 
 gdp() {
-    find ${1:-"$HOME"} -not \( -wholename "*/.git" -prune \) -type d \
+    find "${1:-"$HOME"}" -not \( -wholename "*/.git" -prune \) -type d \
         | fzf | tr -d '\n' | xclip -selection c
 }
 
