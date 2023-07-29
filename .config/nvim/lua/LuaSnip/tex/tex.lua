@@ -1,0 +1,238 @@
+---@diagnostic disable: undefined-global
+
+--[[
+    inline math: $$, \( \), \begin{math}...\end{math}
+    display math: \[\], \begin{displaymath}...\end{displaymath}, \begin{equation}...\end{equation}
+
+]]
+
+local cond = require("LuaSnip.tex.utils.conditions")
+local helper = require("LuaSnip.helper")
+
+local make_gletters = function(trig, letter, result)
+    return s({ trig = trig, dscr = "Greek letter " .. letter, snippetType = "autosnippet" },
+        t(result), { condition = cond.in_mathzone, })
+end
+
+return {
+    -- href
+    s({ trig = "hr", dscr = "The hyperref package's href{}{} command (for url links)" },
+        fmta(
+            [[\href{<>}{<>}]],
+            {
+                i(1, "url"),
+                i(2, "display name"),
+            }
+        )
+    ),
+    s({ trig = "h1", dscr = "Top-level section", snippetType = "autosnippet" },
+        fmta(
+            [[\section{<>}]],
+            { i(1, "heading1") }
+        ),
+        { condition = cond.line_begin } -- set condition in the `opts` table
+    ),
+    s({ trig = "nn", dscr = "A generic [N]ew e[N]vironmennt" },
+        fmta(
+            [[
+              \begin{<>}
+                  <>
+              \end{<>}
+            ]],
+            {
+                i(1),
+                i(2),
+                rep(1),
+            }
+        ),
+        { condition = cond.line_begin }
+    ),
+
+
+    --[[ PREAMBLE ENV ]]
+    s({ trig = "custom-ol", dscr = "Customize the level of ordered list" },
+        fmta([[
+            \renewcommand{\labelenumii}{\arabic{enumi}.\arabic{enumii}}
+            \renewcommand{\labelenumiii}{\arabic{enumi}.\arabic{enumii}.\arabic{enumiii}}
+            \renewcommand{\labelenumiv}{\arabic{enumi}.\arabic{enumii}.\arabic{enumiii}.\arabic{enumiv}}<>
+            ]],
+            { i(0) }
+        ),
+        { condition = cond.in_preamble }
+    ),
+    --[[ PREAMBLE END ]]
+
+
+    s({ trig = "tii", dscr = "Italic", snippetType = "autosnippet" },
+        fmta("\\textit{<>}",
+            { d(1, helper.get_visual), }
+        )
+    ),
+    s({ trig = "tbb", dscr = "Bold", snippetType = "autosnippet" },
+        fmta("\\textbf{<>}",
+            { d(1, helper.get_visual), }
+        )
+    ),
+    s({ trig = "tuu", dscr = "Underline", snippetType = "autosnippet" },
+        fmta("\\underline{<>}",
+            { d(1, helper.get_visual), }
+        )
+    ),
+    s({ trig = "tmm", dscr = "Emphasis", snippetType = "autosnippet" },
+        fmta("\\emph{<>}",
+            { d(1, helper.get_visual), }
+        )
+    ),
+
+    make_gletters(";a", "alpha", "\\alpha"),
+    make_gletters(";b", "beta", "\\beta"),
+    make_gletters(";g", "gamma", "\\gamma"),
+    make_gletters(";d", "delta", "\\delta"),
+    make_gletters(";z", "zeta", "\\zeta"),
+    make_gletters(";i", "iota", "\\iota"),
+    make_gletters(";k", "kappa", "\\kappa"),
+    make_gletters(";l", "lambda", "\\lambda"),
+    make_gletters(";m", "mu", "\\mu"),
+    make_gletters(";n", "nu", "\\nu"),
+    make_gletters(";x", "xi", "\\xi"),
+    make_gletters(";o", "o", "\\o"),
+    make_gletters(";p", "pi", "\\pi"),
+    make_gletters(";r", "rho", "\\rho"),
+    make_gletters(";t", "tau", "\\tau"),
+    make_gletters(";u", "upsilon", "\\upsilon"),
+    make_gletters(";c", "chi", "\\chi"),
+
+    --[[ MATH RELATED ]]
+    s({ trig = "sqq", dscr = "Square root", snippetType = "autosnippet", },
+        fmta(
+            "\\sqrt{<>}",
+            { d(1, helper.get_visual), }
+        ),
+        { condition = cond.in_mathzone, }
+    ),
+
+    s({ trig = "rm", dscr = "Remove math formatting (upright-text)", snippetType = "autosnippet" },
+        fmta(
+            "\\mathrm{<>}",
+            { d(1, helper.get_visual), }
+        ),
+        { condition = cond.in_mathzone, }
+    ),
+
+    s({ trig = "([%a%d])^^", dscr = "Superscript", regTrig = true, wordTrig = false, snippetType = "autosnippet" },
+        fmta(
+            "<>^{<>}",
+            {
+                f(function(_, snip) return snip.captures[1] end),
+                d(1, helper.get_visual)
+            }
+        ), { condition = cond.in_mathzone }
+    ),
+
+    s({ trig = "([%a])__", dscr = "Subscript", regTrig = true, wordTrig = false, snippetType = "autosnippet" },
+        fmta(
+            "<>_{<>}",
+            {
+                f(function(_, snip) return snip.captures[1] end),
+                d(1, helper.get_visual)
+            }
+        ), { condition = cond.in_mathzone }
+    ),
+
+    s({ trig = "([^%a])ii", dscr = "Integral", snippetType = "autosnippet", regTrig = true, wordTrig = false },
+        fmta(
+            "<>\\int_{<>}^{<>} <> \\,dx",
+            {
+                f(function(_, snip) return snip.captures[1] end),
+                i(2, "-\\infty"),
+                i(3, "\\infty"),
+                d(1, helper.get_visual),
+            }
+        ), { condition = cond.in_mathzone, }
+    ),
+
+    s({ trig = "([^%a])ss", dscr = "Sum", snippetType = "autosnippet", regTrig = true, wordTrig = false },
+        fmta(
+            "<>\\sum_{<>}^{<>} <> ",
+            {
+                f(function(_, snip) return snip.captures[1] end),
+                i(2, "n=1"),
+                i(3, "\\infty"),
+                d(1, helper.get_visual)
+            }
+        ), { condition = cond.in_mathzone, }
+    ),
+
+    s({ trig = "([^%a])ll", dscr = "Limit", snippetType = "autosnippet", regTrig = true, wordTrig = false },
+        fmta(
+            "<>\\lim_{<>\\to<>} <> ",
+            {
+                f(function(_, snip) return snip.captures[1] end),
+                i(2, "x"),
+                i(3, "\\infty"),
+                d(1, helper.get_visual)
+            }
+        ), { condition = cond.in_mathzone, }
+    ),
+
+    -- Type the trigger and then type <C-s> or whatever the key to jump to the next node
+    s({ trig = "([^%a])ee", regTrig = true, wordTrig = false },
+        fmta(
+            "<>e^{<>}",
+            {
+                f(function(_, snip) return snip.captures[1] end),
+                d(1, helper.get_visual)
+            }
+        )
+    ),
+
+    s({ trig = "ff", dscr = "Fraction", snippetType = "autosnippet" },
+        fmta(
+            "\\frac{<>}{<>}",
+            { i(1), i(2), }
+        ),
+        { condition = cond.in_mathzone }
+    ),
+
+    s({ trig = "([^%a])mm", dscr = "Inline math", wordTrig = false, regTrig = true },
+        fmta(
+            "<>$<>$",
+            { -- preserve the space before the 'mm' trigger
+                f(function(_, snip) return snip.captures[1] end),
+                d(1, helper.get_visual),
+            }
+        )
+    ),
+
+    s({ trig = "([^%a])MM", dscr = "Display math with \\[ \\]", wordTrig = false, regTrig = true },
+        fmta(
+            "<>\\[ <> \\]",
+            { -- preserve the space before the 'mm' trigger
+                f(function(_, snip) return snip.captures[1] end),
+                d(1, helper.get_visual),
+            }
+        )
+    ),
+    --[[ MATH END ]]
+
+
+    --[[ TIKZ ENV ]]
+    s({ trig = "dd" },
+        fmta(
+            "\\draw [<>] ",
+            {
+                i(1, "params"),
+            }
+        ),
+        { condition = cond.in_tikz }
+    ),
+    --[[ TIKZ END ]]
+
+
+    --[[ inside specific environments ]]
+    s({ trig = "it", dscr = "The \\item command", snippetType = "autosnippet" },
+        t("\\item"),
+        { condition = cond.in_list_env * cond.line_begin }
+    ),
+
+}

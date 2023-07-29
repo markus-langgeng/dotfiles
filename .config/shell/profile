@@ -27,6 +27,9 @@ export R_HISTFILE="$XDG_CONFIG_HOME/R/history"
 export PARALLEL_HOME="$XDG_CONFIG_HOME/parallel"
 export GVIMINIT='let $MYGVIMRC = !has("nvim") ? "$XDG_CONFIG_HOME/vim/gvimrc" : "$XDG_CONFIG_HOME/nvim/init.gvim" | so $MYGVIMRC'
 export VIMINIT='let $MYVIMRC = !has("nvim") ? "$XDG_CONFIG_HOME/vim/vimrc" : "$XDG_CONFIG_HOME/nvim/init.lua" | so $MYVIMRC'
+export TEXMFHOME="$XDG_DATA_HOME/texmf"
+export TEXMFVAR="$XDG_CACHE_HOME/texlive/texmf-var"
+export TEXMFCONFIG="$XDG_CONFIG_HOME/texlive/texmf-config"
 # pnpm
 export NPM_CONFIG_USERCONFIG="$XDG_CONFIG_HOME/npm/npmrc"
 export PNPM_HOME="/home/nggeng/.local/share/pnpm"
@@ -48,4 +51,5 @@ export XMODIFIERS=@im=fcitx
 # Add ~/.local/bin to $PATH
 export PATH="$PATH:${$(find ~/.local/bin -type d -printf %p:)%%:}"
 export PATH="$PATH:$GOPATH/bin"
+export PATH="$PATH:$HOME/.config/composer/vendor/bin"
 

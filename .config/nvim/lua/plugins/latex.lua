@@ -29,6 +29,7 @@ M.config = function()
             "-interaction=nonstopmode",
         },
     }
+    -- g.vimtex_indent_lists = {}
 end
 
 return M

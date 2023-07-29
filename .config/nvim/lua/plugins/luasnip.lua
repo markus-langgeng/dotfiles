@@ -6,10 +6,10 @@ M = {
 }
 
 M.dependencies = {
-    "rafamadriz/friendly-snippets",
-    config = function()
-        require("luasnip.loaders.from_vscode").lazy_load()
-    end
+    -- "rafamadriz/friendly-snippets",
+    -- config = function()
+    --     require("luasnip.loaders.from_vscode").lazy_load()
+    -- end
 }
 
 M.opts = {
@@ -22,16 +22,17 @@ M.opts = {
 M.config = function()
     local map = vim.keymap.set
     local ls = require("luasnip")
-    local loadlua = require("luasnip.loaders.from_lua").load
+    local lazyload = require("luasnip.loaders.from_lua").lazy_load
 
     ls.config.set_config({
         history = true,
         update_events = "TextChanged,TextChangedI",
         enable_autosnippets = true,
         delete_check_events = "TextChanged",
+        store_selection_keys = "<Tab>",
     })
 
-    loadlua({ paths = { "~/.config/nvim/lua/snippets" } })
+    lazyload({ paths = { "~/.config/nvim/lua/LuaSnip/", } })
 
     map({ "i", "s" }, "<C-s>", function()
         if ls.expand_or_jumpable() then
