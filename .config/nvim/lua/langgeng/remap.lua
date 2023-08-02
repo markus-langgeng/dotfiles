@@ -20,7 +20,6 @@ map("v", "<", "<gv")
 
 map({ "n", "v" }, "<leader>d", [["_d]])
 
-map("i", "jk", "<Esc>")
 map("i", "<C-c>", "<Esc>")
 
 map("n", "Q", "<nop>")

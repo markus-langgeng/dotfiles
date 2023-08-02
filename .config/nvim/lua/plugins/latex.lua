@@ -2,6 +2,7 @@ local M
 M = {
     "lervag/vimtex",
     ft = { "tex" },
+    lazy = false,
 }
 
 M.config = function()
@@ -29,7 +30,6 @@ M.config = function()
             "-interaction=nonstopmode",
         },
     }
-    -- g.vimtex_indent_lists = {}
 end
 
 return M

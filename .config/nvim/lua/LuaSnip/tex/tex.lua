@@ -9,13 +9,30 @@
 local cond = require("LuaSnip.tex.utils.conditions")
 local helper = require("LuaSnip.helper")
 
-local make_gletters = function(trig, letter, result)
+local make_gletters = function(trig, letter, command)
     return s({ trig = trig, dscr = "Greek letter " .. letter, snippetType = "autosnippet" },
-        t(result), { condition = cond.in_mathzone, })
+        t(command), { condition = cond.in_mathzone, })
+end
+
+local make_pinyin_tones = function(trig, dscr, command)
+    return s(
+        {
+            trig = "([%a%d])" .. trig,
+            dscr = dscr .. " tone",
+            regTrig = true,
+            wordTrig = false,
+            snippetType = "autosnippet",
+        },
+        fmta("<>\\" .. command .. "{<>}",
+            {
+                f(function(_, snip) return snip.captures[1] end),
+                d(1, helper.get_visual),
+            }
+        ))
 end
 
 return {
-    -- href
+
     s({ trig = "hr", dscr = "The hyperref package's href{}{} command (for url links)" },
         fmta(
             [[\href{<>}{<>}]],
@@ -25,20 +42,27 @@ return {
             }
         )
     ),
-    s({ trig = "h1", dscr = "Top-level section", snippetType = "autosnippet" },
-        fmta(
-            [[\section{<>}]],
-            { i(1, "heading1") }
-        ),
-        { condition = cond.line_begin } -- set condition in the `opts` table
+
+    -- headings
+    s({ trig = "h1", dscr = "Level 1 heading", snippetType = "autosnippet" },
+        fmta([[\section{<>}]], { i(1, "") }),
+        { condition = cond.line_begin }
     ),
-    s({ trig = "nn", dscr = "A generic [N]ew e[N]vironmennt" },
-        fmta(
-            [[
-              \begin{<>}
-                  <>
-              \end{<>}
-            ]],
+    s({ trig = "h2", dscr = "Level 2 heading", snippetType = "autosnippet" },
+        fmta([[\subsection{<>}]], { i(1, "") }),
+        { condition = cond.line_begin }
+    ),
+    s({ trig = "h3", dscr = "Level3 heading", snippetType = "autosnippet" },
+        fmta([[\subsubsection{<>}]], { i(1, "") }),
+        { condition = cond.line_begin }
+    ),
+
+    s({ trig = "nn", dscr = "A generic new environmennt" },
+        fmta([[
+        \begin{<>}
+            <>
+        \end{<>}
+        ]],
             {
                 i(1),
                 i(2),
@@ -48,8 +72,12 @@ return {
         { condition = cond.line_begin }
     ),
 
+    s({ trig = "it", dscr = "The \\item command", snippetType = "autosnippet" },
+        t("\\item"),
+        { condition = cond.in_list_env * cond.line_begin }
+    ),
 
-    --[[ PREAMBLE ENV ]]
+    --[[ PREAMBLE ]]
     s({ trig = "custom-ol", dscr = "Customize the level of ordered list" },
         fmta([[
             \renewcommand{\labelenumii}{\arabic{enumi}.\arabic{enumii}}
@@ -57,6 +85,15 @@ return {
             \renewcommand{\labelenumiv}{\arabic{enumi}.\arabic{enumii}.\arabic{enumiii}.\arabic{enumiv}}<>
             ]],
             { i(0) }
+        ),
+        { condition = cond.in_preamble }
+    ),
+
+    s({ trig = "add-chinese-font", dscr = "Add chinese font support" },
+        t([[
+        \usepackage{xeCJK, xpinyin}
+        \setCJKmainfont{Noto Serif CJK SC}
+        ]]
         ),
         { condition = cond.in_preamble }
     ),
@@ -84,11 +121,23 @@ return {
         )
     ),
 
+    s({ trig = "pyy", dscr = "Use \\xpinyin command", snippetType = "autosnippet" },
+        fmta("\\xpinyin*{<>}",
+            { d(1, helper.get_visual), }
+        )
+    ),
+
+    make_pinyin_tones("-tt", "First", "="),
+    make_pinyin_tones("/tt", "Second", "'"),
+    make_pinyin_tones("vtt", "Third", "v"),
+    make_pinyin_tones("\\tt", "Fourth", "`"),
+
     make_gletters(";a", "alpha", "\\alpha"),
     make_gletters(";b", "beta", "\\beta"),
     make_gletters(";g", "gamma", "\\gamma"),
     make_gletters(";d", "delta", "\\delta"),
     make_gletters(";z", "zeta", "\\zeta"),
+    make_gletters(";e", "epsilon", "\\varepsilon"),
     make_gletters(";i", "iota", "\\iota"),
     make_gletters(";k", "kappa", "\\kappa"),
     make_gletters(";l", "lambda", "\\lambda"),
@@ -129,7 +178,7 @@ return {
         ), { condition = cond.in_mathzone }
     ),
 
-    s({ trig = "([%a])__", dscr = "Subscript", regTrig = true, wordTrig = false, snippetType = "autosnippet" },
+    s({ trig = "([%a%d])__", dscr = "Subscript", regTrig = true, wordTrig = false, snippetType = "autosnippet" },
         fmta(
             "<>_{<>}",
             {
@@ -153,7 +202,7 @@ return {
 
     s({ trig = "([^%a])ss", dscr = "Sum", snippetType = "autosnippet", regTrig = true, wordTrig = false },
         fmta(
-            "<>\\sum_{<>}^{<>} <> ",
+            "<>\\sum_{<>}^{<>} <>",
             {
                 f(function(_, snip) return snip.captures[1] end),
                 i(2, "n=1"),
@@ -165,7 +214,7 @@ return {
 
     s({ trig = "([^%a])ll", dscr = "Limit", snippetType = "autosnippet", regTrig = true, wordTrig = false },
         fmta(
-            "<>\\lim_{<>\\to<>} <> ",
+            "<>\\lim_{<>\\to<>} <>",
             {
                 f(function(_, snip) return snip.captures[1] end),
                 i(2, "x"),
@@ -183,7 +232,8 @@ return {
                 f(function(_, snip) return snip.captures[1] end),
                 d(1, helper.get_visual)
             }
-        )
+        ),
+        { condition = cond.in_mathzone, show_condition = cond.in_mathzone }
     ),
 
     s({ trig = "ff", dscr = "Fraction", snippetType = "autosnippet" },
@@ -194,7 +244,7 @@ return {
         { condition = cond.in_mathzone }
     ),
 
-    s({ trig = "([^%a])mm", dscr = "Inline math", wordTrig = false, regTrig = true },
+    s({ trig = "([^%a])mm", dscr = "Inline math", wordTrig = false, regTrig = true, },
         fmta(
             "<>$<>$",
             { -- preserve the space before the 'mm' trigger
@@ -203,8 +253,7 @@ return {
             }
         )
     ),
-
-    s({ trig = "([^%a])MM", dscr = "Display math with \\[ \\]", wordTrig = false, regTrig = true },
+    s({ trig = "([^%a])MM", dscr = "Display math", wordTrig = false, regTrig = true, },
         fmta(
             "<>\\[ <> \\]",
             { -- preserve the space before the 'mm' trigger
@@ -229,10 +278,5 @@ return {
     --[[ TIKZ END ]]
 
 
-    --[[ inside specific environments ]]
-    s({ trig = "it", dscr = "The \\item command", snippetType = "autosnippet" },
-        t("\\item"),
-        { condition = cond.in_list_env * cond.line_begin }
-    ),
 
 }
