@@ -3,3 +3,6 @@
 application/pdf=org.pwmt.zathura-pdf-mupdf.desktop
 inode/directory=file.desktop
 text/x-shellscript=nvim.desktop
+text/html=mullvad-browser.desktop
+x-scheme-handler/http=mullvad-browser.desktop
+x-scheme-handler/https=mullvad-browser.desktop

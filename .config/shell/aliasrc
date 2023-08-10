@@ -15,7 +15,7 @@ alias \
 	rsync="rsync -vrPlu" \
 	mkdir="mkdir -pv" \
     src="source $HOME/.config/zsh/.zshrc" \
-    iv="sxiv" \
+    iv="sxiv -a" \
 	yt="yt-dlp --embed-metadata -i" \
 	yta="yt -x -f bestaudio/best" \
 	ytt="yt --skip-download --write-thumbnail" \
@@ -51,3 +51,4 @@ alias \
     xdg-qf="xdg-mime query filetype" \
     xdg-qd="xdg-mime query default" \
     xdg-def="xdg-mime default"
+

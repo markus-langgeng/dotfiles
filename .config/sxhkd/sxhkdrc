@@ -18,3 +18,5 @@ super + shift + F9
     bm-open
 Print
     scshot
+# super + {f}
+#     firefox

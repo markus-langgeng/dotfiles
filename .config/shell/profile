@@ -6,7 +6,7 @@
 export EDITOR="nvim"
 export VISUAL="nvim"
 export TERMINAL="st"
-export BROWSER="firefox"
+export BROWSER="mullvad-browser"
 
 # xdg base dirs
 export XDG_CONFIG_HOME=$HOME/.config

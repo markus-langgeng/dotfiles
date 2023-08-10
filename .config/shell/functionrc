@@ -43,3 +43,6 @@ gdp() {
         | fzf | tr -d '\n' | xclip -selection c
 }
 
+img_shuf() {
+    find . -name '*' -exec file {} \; | grep -o -P '^.+: \w+ image' | awk '{gsub(":",""); print $1}'
+}
