@@ -19,6 +19,7 @@ fcd() {
         "p"  ) cd "$(nobloat_find "$HOME/Pictures/"     "d" | fzf)" || exit ;;
         "m"  ) cd "$(nobloat_find "$HOME/Music/"        "d" | fzf)" || exit ;;
         "d"  ) cd "$(nobloat_find "$HOME/Documents/"    "d" | fzf)" || exit ;;
+        "v"  ) cd "$(nobloat_find "$HOME/Videos/"       "d" | fzf)" || exit ;;
         *    ) cd "$(nobloat_find "$1"                  "d" | fzf)" || exit ;;
     esac
 }
@@ -45,4 +46,8 @@ gdp() {
 
 img_shuf() {
     find . -name '*' -exec file {} \; | grep -o -P '^.+: \w+ image' | awk '{gsub(":",""); print $1}'
+}
+
+simple_countdown() {
+    for i in `seq ${1:-10} -1 1` ; do echo -ne "\r$i " ; sleep 1 ; done ; figlet stop
 }

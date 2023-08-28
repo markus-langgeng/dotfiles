@@ -33,7 +33,7 @@ o.splitright = true
 o.termguicolors = true
 o.timeoutlen = 400
 
-o.swapfile = false
+o.swapfile = true
 o.backup = false
 o.undofile = true
 o.undodir = vim.fn.expand("~/.cache/nvim/undodir")

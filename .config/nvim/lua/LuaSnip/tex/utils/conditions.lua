@@ -10,16 +10,13 @@ M.in_mathzone = function()
     return vim.fn["vimtex#syntax#in_mathzone"]() == 1
 end
 
-function M.in_preamble()
-    return not env("document")
-end
-
-M.in_text = function()
-    return not M.in_mathzone() and not env("document")
-end
-
 M.in_comment = function() -- comment detection
     return vim.fn["vimtex#syntax#in_comment"]() == 1
+end
+
+M.has_xpinyin = function()
+    local exists = vim.fn.search([[^\\usepackage{xeCJK, xpinyin}]])
+    return exists ~= 0
 end
 
 M.is_even_line = function()
@@ -27,10 +24,23 @@ M.is_even_line = function()
     return ((line_number % 2) == 0)
 end
 
+M.on_first_line = function()
+    local line_number = vim.fn["line"](".")
+    return (line_number == 1)
+end
+
 -- generic environment detection
 M.in_env = function(name)
     local is_inside = vim.fn["vimtex#env#is_inside"](name)
     return (is_inside[1] > 0 and is_inside[2] > 0)
+end
+
+function M.in_preamble()
+    return not M.in_env("document")
+end
+
+M.in_text = function()
+    return not M.in_mathzone() and not M.in_env("document")
 end
 
 -- A few concrete environments---adapt as needed
@@ -55,7 +65,6 @@ end
 M.in_list_env = function()
     return M.in_env("itemize") or M.in_env("description") or M.in_env("enumerate") or M.in_env("thebibliography")
 end
-
 M.in_tikz = function()
     return M.in_env("tikzpicture")
 end

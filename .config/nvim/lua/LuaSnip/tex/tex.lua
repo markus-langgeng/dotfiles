@@ -80,22 +80,37 @@ return {
     --[[ PREAMBLE ]]
     s({ trig = "custom-ol", dscr = "Customize the level of ordered list" },
         fmta([[
-            \renewcommand{\labelenumii}{\arabic{enumi}.\arabic{enumii}}
-            \renewcommand{\labelenumiii}{\arabic{enumi}.\arabic{enumii}.\arabic{enumiii}}
-            \renewcommand{\labelenumiv}{\arabic{enumi}.\arabic{enumii}.\arabic{enumiii}.\arabic{enumiv}}<>
-            ]],
+        % set custom ol
+        \renewcommand{\labelenumii}{\arabic{enumi}.\arabic{enumii}}
+        \renewcommand{\labelenumiii}{\arabic{enumi}.\arabic{enumii}.\arabic{enumiii}}
+        \renewcommand{\labelenumiv}{\arabic{enumi}.\arabic{enumii}.\arabic{enumiii}.\arabic{enumiv}}<>
+        ]],
             { i(0) }
         ),
-        { condition = cond.in_preamble }
+        {
+            condition = cond.in_preamble * cond.line_begin,
+            show_condition = cond.in_preamble,
+        }
     ),
 
-    s({ trig = "add-chinese-font", dscr = "Add chinese font support" },
-        t([[
-        \usepackage{xeCJK, xpinyin}
-        \setCJKmainfont{Noto Serif CJK SC}
-        ]]
+    s({ trig = "pkg", dscr = "\\usepackage{} command", snippetType = "autosnippet" },
+        fmta("\\usepackage{<>}",
+            { i(0) }
         ),
-        { condition = cond.in_preamble }
+        { condition = cond.in_preamble * cond.line_begin, }
+    ),
+
+    s({ trig = "font-chinese", dscr = "Add chinese font support" },
+        fmta([[
+        \usepackage{xeCJK, xpinyin}
+        \setCJKmainfont{Noto Serif CJK SC}<>
+        ]],
+            { i(0) }
+        ),
+        {
+            condition = cond.in_preamble * cond.line_begin,
+            show_condition = cond.in_preamble,
+        }
     ),
     --[[ PREAMBLE END ]]
 
@@ -121,11 +136,30 @@ return {
         )
     ),
 
-    s({ trig = "pyy", dscr = "Use \\xpinyin command", snippetType = "autosnippet" },
+    s({ trig = "pyy", dscr = "Use \\pinyin command", snippetType = "autosnippet" },
+        fmta("\\pinyin{<>}",
+            { d(1, helper.get_visual), }
+        )
+    ),
+
+    s({ trig = "xyy", dscr = "Use \\xpinyin command", snippetType = "autosnippet" },
         fmta("\\xpinyin*{<>}",
             { d(1, helper.get_visual), }
         )
     ),
+
+    s({ trig = "syy", dscr = "Pinyin scope", snippetType = "autosnippet" },
+        fmta([[
+        \begin{pinyinscope}
+            <>
+        \end{pinyinscope}
+        ]],
+            { i(1), }
+        ),
+        { condition = cond.line_begin }
+    -- { condition = cond.has_xpinyin }
+    ),
+
 
     make_pinyin_tones("-tt", "First", "="),
     make_pinyin_tones("/tt", "Second", "'"),
@@ -273,10 +307,9 @@ return {
                 i(1, "params"),
             }
         ),
-        { condition = cond.in_tikz }
+        { condition = cond.in_tikz, show_condition = cond.in_tikz }
     ),
     --[[ TIKZ END ]]
-
 
 
 }
