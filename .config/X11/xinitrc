@@ -13,6 +13,7 @@ fcitx5 &
 sxhkd &
 picom -b &
 slstatus &
+mpd &
 
 xrdb ${XDG_CONFIG_HOME:-$HOME/.config}/X11/xresources & xrdbpid=$!	# Uncomment to use Xresources colors/settings on startup
 setwp .

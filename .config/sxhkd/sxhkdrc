@@ -20,3 +20,6 @@ Print
     scshot
 # super + {f}
 #     firefox
+
+shift + F12
+    setwp
