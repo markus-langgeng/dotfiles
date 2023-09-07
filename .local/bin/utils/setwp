@@ -2,10 +2,13 @@
 
 s="$HOME/Pictures/wallpapers/"
 p="$HOME/.config/wall.png"
+o="$HOME/.config/wall_option.txt"
 
-[ "$1" = "." ] && xwallpaper "${2:-"--zoom"}" "$p" && exit
+[ -n "$2" ] && echo "$2" > "$o"
+
+[ "$1" = "." ] && xwallpaper "$(cat "$o")" "$p" && exit
 [ -f "$1" ] && cp "$1" "$p"
 [ -d "$1" ] && cp "$(find "$1" -name "*.jpg" -o -name "*.jpeg" -o -name "*.png" -type f | shuf -n 1)" "$p"
 [ -z "$1" ] && cp "$(find "$s" -name "*.jpg" -o -name "*.jpeg" -o -name "*.png" -type f | shuf -n 1)" "$p"
 
-xwallpaper "${2:-"--zoom"}" "$p"
+xwallpaper "$(cat "$o")" "$p"
