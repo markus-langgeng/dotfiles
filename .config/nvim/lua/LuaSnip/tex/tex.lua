@@ -135,6 +135,16 @@ return {
             { d(1, helper.get_visual), }
         )
     ),
+    s({ trig = "tcc", dscr = "Text cite", snippetType = "autosnippet" },
+        fmta("\\textcite{<>}",
+            { d(1, helper.get_visual), }
+        )
+    ),
+    s({ trig = "pcc", dscr = "Parenthesis cite", snippetType = "autosnippet" },
+        fmta("\\parencite{<>}",
+            { d(1, helper.get_visual), }
+        )
+    ),
 
     s({ trig = "pyy", dscr = "Use \\pinyin command", snippetType = "autosnippet" },
         fmta("\\pinyin{<>}",
