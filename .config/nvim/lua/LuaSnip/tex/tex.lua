@@ -112,6 +112,43 @@ return {
             show_condition = cond.in_preamble,
         }
     ),
+
+    s({ trig = "setup_ref", dscr = "My common biblatex setup" },
+        fmta([[
+        \usepackage{hyperref} % always set at the end
+        \hypersetup{ }
+        \urlstyle{same}<>
+        ]],
+            { i(0) }
+        ),
+        {
+            condition = cond.in_preamble * cond.line_begin,
+            show_condition = cond.in_preamble,
+        }
+    ),
+
+    s({ trig = "setup_bib", dscr = "My common biblatex setup" },
+        fmta([[
+        \usepackage[
+        backend=biber,
+        bibstyle=authoryear,
+        citestyle=authoryear,
+        autocite=inline,
+        % hyperref=true,
+        ]{biblatex}
+        % \renewbibmacro{in:}{} % removes in
+        % \DeclareFieldFormat{pages}{#1} % removes pages
+        % \renewcommand*{\finentrypunct}{\ifboolexpr{togl {bbx:doi} and not test {\iffieldundef{doi}}}{}{\addperiod}}
+        \addbibresource{ref.bib}<>
+        ]],
+            { i(0) }
+        ),
+        {
+            condition = cond.in_preamble * cond.line_begin,
+            show_condition = cond.in_preamble,
+        }
+    ),
+
     --[[ PREAMBLE END ]]
 
 
@@ -142,6 +179,16 @@ return {
     ),
     s({ trig = "pcc", dscr = "Parenthesis cite", snippetType = "autosnippet" },
         fmta("\\parencite{<>}",
+            { d(1, helper.get_visual), }
+        )
+    ),
+    s({ trig = "sbs", dscr = "Subscript", snippetType = "autosnippet" },
+        fmta("\\textsubscript{<>}",
+            { d(1, helper.get_visual), }
+        )
+    ),
+    s({ trig = "sps", dscr = "Superscript", snippetType = "autosnippet" },
+        fmta("\\textsuperscript{<>}",
             { d(1, helper.get_visual), }
         )
     ),
@@ -310,16 +357,15 @@ return {
 
 
     --[[ TIKZ ENV ]]
-    s({ trig = "dd" },
+    s({ trig = "dd", snippetType = "autosnippet" },
         fmta(
-            "\\draw [<>] ",
+            "\\draw[<>] ",
             {
-                i(1, "params"),
+                i(1, ""),
             }
         ),
         { condition = cond.in_tikz, show_condition = cond.in_tikz }
     ),
     --[[ TIKZ END ]]
-
 
 }

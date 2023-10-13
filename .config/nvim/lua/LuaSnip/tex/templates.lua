@@ -13,11 +13,11 @@ return {
 
         \usepackage[<>]{geometry}
 
-
         % LANGUAGE & FONT ------------------------------------------------------
-        \usepackage{fontspec, polyglossia}
-        \setdefaultlanguage{english}
-        % \setotherlanguages{indonesian, chinese}
+        \usepackage{fontspec}
+        \usepackage{polyglossia}
+        \setdefaultlanguage[variant=indonesian]{malay}
+        \setotherlanguages{english}
 
         % \setmainfont{Times New Roman}
         % \setsansfont{Arial}
@@ -26,7 +26,18 @@ return {
 
 
         % PARAGRAPH & LINE SPACING & FORMATTING---------------------------------
-        \usepackage{microtype, lipsum}
+        \usepackage{microtype,lipsum,titlesec,titling}
+        \usepackage[indent=30pt]{parskip}
+        \usepackage{setspace}
+        % \onehalfspacing
+        % \titleformat*{\section}{\normalsize\bfseries}
+        % \renewcommand{\maketitle}{
+        %     \noindent\normalsize\theauthor
+        %     \vspace{1em}
+        %     \begin{center}
+        %         \large\bfseries\thetitle
+        %     \end{center}
+        % }
         %-----------------------------------------------------------------------
 
 
@@ -35,15 +46,7 @@ return {
 
 
         % REFERENCES -----------------------------------------------------------
-        \usepackage{hyperref} % always set at the end
-        \hypersetup{
-            colorlinks=true,
-            citecolor=blue,
-            linkcolor=blue,
-            urlcolor=blue,
-        }
         %-----------------------------------------------------------------------
-
 
         %-----------------------------------------------------------------------
         \title{<>}
@@ -72,13 +75,14 @@ return {
         fmta([[
         %! TeX program = lualatex
 
-        \documentclass{article}
+        \documentclass[12pt]{extarticle}
 
         \usepackage[<>]{geometry}
 
 
         % LANGUAGE & FONT ------------------------------------------------------
-        \usepackage{fontspec, polyglossia}
+        \usepackage{fontspec}
+        \usepackage{polyglossia}
         \setdefaultlanguage[variant=indonesian]{malay}
         \setotherlanguages{english}
         % \setotherlanguages{indonesian, chinese}
@@ -90,20 +94,16 @@ return {
 
 
         % PARAGRAPH & LINE SPACING & FORMATTING---------------------------------
-        \usepackage{microtype, lipsum}
-        \usepackage{titlesec}
-        \usepackage{titling}
-        \usepackage{parskip, setspace}
+        \usepackage{microtype,titlesec,titling,setspace,lipsum}
+        \usepackage[indent=30pt]{parskip}
         % \onehalfspacing
         % \titleformat*{\section}{\normalsize\bfseries}
-        % \setlength{\droptitle}{-20mm}
         % \renewcommand{\maketitle}{
-        %     \normalsize\theauthor
+        %     \noindent\normalsize\theauthor
         %     \vspace{1em}
         %     \begin{center}
-        %         \normalsize\bfseries\thetitle
+        %         \large\bfseries\thetitle
         %     \end{center}
-        %     \vspace{1.5em}
         % }
         %-----------------------------------------------------------------------
 
@@ -111,8 +111,13 @@ return {
         % BIBLYOGRAPHY ---------------------------------------------------------
         \usepackage[
         backend=biber,
-        bibstyle=authoryear-ibid
+        bibstyle=authoryear,
+        % citectyel=apa,
+        % hyperref=true,
         ]{biblatex}
+        % \renewbibmacro{in:}{} % removes in
+        % \DeclareFieldFormat{pages}{#1} % removes pages
+        % \renewcommand*{\finentrypunct}{\ifboolexpr{togl {bbx:doi} and not test {\iffieldundef{doi}}}{}{\addperiod}}
         \addbibresource{ref.bib}
         %-----------------------------------------------------------------------
 
@@ -157,34 +162,30 @@ return {
         fmta([[
         %! TEX TS-program = xelatex
 
-        \documentclass{article}
+        \documentclass[12pt]{extarticle}
 
         \usepackage[<>]{geometry}
 
 
         % LANGUAGE & FONT ------------------------------------------------------
         \usepackage{xeCJK, xpinyin}
+        \setmainfont{Times New Roman}
         \setCJKmainfont{Noto Serif CJK SC}
-        % \setCJKmainfont{Source Han Sans CN}
-        \xpinyinsetup{ratio={.8}, hsep={.5em}, vsep={1.2em}}
+        \xpinyinsetup{ratio={.6}, hsep={.6em plus .1em}, pysep={}}
         %-----------------------------------------------------------------------
 
 
         % PARAGRAPH & LINE SPACING & FORMATTING---------------------------------
-        \usepackage{microtype, lipsum}
-        % \usepackage{titlesec}
-        % \usepackage{titling}
-        % \usepackage{parskip, setspace}
+        \usepackage{microtype,titlesec,titling,setspace,lipsum}
+        \usepackage[indent=30pt]{parskip}
         % \onehalfspacing
         % \titleformat*{\section}{\normalsize\bfseries}
-        % \setlength{\droptitle}{-20mm}
         % \renewcommand{\maketitle}{
-        %     \normalsize\theauthor
+        %     \noindent\normalsize\theauthor
         %     \vspace{1em}
         %     \begin{center}
-        %         \normalsize\bfseries\thetitle
+        %         \large\bfseries\thetitle
         %     \end{center}
-        %     \vspace{1.5em}
         % }
         %-----------------------------------------------------------------------
 
@@ -192,11 +193,13 @@ return {
         % BIBLYOGRAPHY ---------------------------------------------------------
         \usepackage[
         backend=biber,
-        bibstyle=authoryear,
-        citestyle=numeric,
-        sorting=ynt,
-        hyperref=true,
+        bibstyle=authoryear-ibid,
+        citestyle=apa,
+        % hyperref=true,
         ]{biblatex}
+        % \renewbibmacro{in:}{} % removes in
+        % \DeclareFieldFormat{pages}{#1} % removes pages
+        % \renewcommand*{\finentrypunct}{\ifboolexpr{togl {bbx:doi} and not test {\iffieldundef{doi}}}{}{\addperiod}}
         \addbibresource{ref.bib}
         %-----------------------------------------------------------------------
 
@@ -241,35 +244,31 @@ return {
         fmta([[
         %! TEX TS-program = xelatex
 
-        \documentclass{article}
-        \usepackage[fontest=none]{ctex}
+        \documentclass[12pt]{extarticle}
 
         \usepackage[<>]{geometry}
 
 
         % LANGUAGE & FONT ------------------------------------------------------
-        \usepackage{xpinyin}
+        \usepackage{xeCJK, xpinyin}
+        \setmainfont{Times New Roman}
         \setCJKmainfont{Noto Serif CJK SC}
         \setCJKsansfont{Source Han Sans CN}
-        \xpinyinsetup{ratio={.8}, hsep={.5em}, vsep={1.2em}}
+        \xpinyinsetup{ratio={.6}, hsep={.6em plus .1em}, pysep={}}
         %-----------------------------------------------------------------------
 
 
         % PARAGRAPH & LINE SPACING & FORMATTING---------------------------------
-        \usepackage{microtype, lipsum}
-        % \usepackage{titlesec}
-        % \usepackage{titling}
-        % \usepackage{parskip, setspace}
+        \usepackage{microtype,titlesec,titling,setspace,lipsum}
+        \usepackage[indent=30pt]{parskip}
         % \onehalfspacing
         % \titleformat*{\section}{\normalsize\bfseries}
-        % \setlength{\droptitle}{-20mm}
         % \renewcommand{\maketitle}{
-        %     \normalsize\theauthor
+        %     \noindent\normalsize\theauthor
         %     \vspace{1em}
         %     \begin{center}
-        %         \normalsize\bfseries\thetitle
+        %         \large\bfseries\thetitle
         %     \end{center}
-        %     \vspace{1.5em}
         % }
         %-----------------------------------------------------------------------
 
@@ -277,11 +276,13 @@ return {
         % BIBLYOGRAPHY ---------------------------------------------------------
         \usepackage[
         backend=biber,
-        bibstyle=authoryear,
-        citestyle=numeric,
-        sorting=ynt,
-        hyperref=true,
+        bibstyle=authoryear-ibid,
+        citestyle=apa,
+        % hyperref=true,
         ]{biblatex}
+        % \renewbibmacro{in:}{} % removes in
+        % \DeclareFieldFormat{pages}{#1} % removes pages
+        % \renewcommand*{\finentrypunct}{\ifboolexpr{togl {bbx:doi} and not test {\iffieldundef{doi}}}{}{\addperiod}}
         \addbibresource{ref.bib}
         %-----------------------------------------------------------------------
 

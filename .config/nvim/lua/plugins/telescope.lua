@@ -1,7 +1,7 @@
 local M = {}
 M[1] = {
     "nvim-telescope/telescope.nvim",
-    tag = "0.1.1",
+    tag = "0.1.4",
     cmd = "Telescope",
     opts = {}
 }

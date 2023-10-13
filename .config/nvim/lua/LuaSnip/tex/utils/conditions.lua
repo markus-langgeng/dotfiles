@@ -15,8 +15,8 @@ M.in_comment = function() -- comment detection
 end
 
 M.has_xpinyin = function()
-    local exists = vim.fn.search([[^\\usepackage{xeCJK, xpinyin}]])
-    return exists ~= 0
+    local cur_ln = vim.fn["line"](".")
+    local xpy_exists = vim.fn.search([[^\\usepackage{xeCJK, xpinyin}]])
 end
 
 M.is_even_line = function()
