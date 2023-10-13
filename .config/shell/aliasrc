@@ -25,7 +25,8 @@ alias \
     df="df -h" \
     trp="trash-put" \
     trl="trash-list" \
-    trr="trash-restore"
+    trr="trash-restore" \
+    sx="startx"
 
 # Colorize commands when possible.
 alias \

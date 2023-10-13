@@ -23,3 +23,6 @@ Print
 
 shift + F12
     setwp
+
+alt + F7
+    echo t | tr -d '\n' | xclip -selection c

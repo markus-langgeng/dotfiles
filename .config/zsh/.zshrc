@@ -44,6 +44,7 @@ bindkey -v '^W' backward-delete-word
 
 # alias vimm='vim -u ${XDG_CONFIG_HOME:-$HOME/.config}/vim/vimrc'
 alias dotf='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
+# cat "${XDG_CONFIG_HOME:-$HOME/.config}/cool_ascii_arts/cows_fucking.txt"
 
 # plugins
 source /usr/share/zsh/plugins/zsh-history-substring-search/zsh-history-substring-search.zsh
