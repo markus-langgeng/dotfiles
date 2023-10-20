@@ -52,5 +52,7 @@ alias \
     xdg-qf="xdg-mime query filetype" \
     xdg-qd="xdg-mime query default" \
     xdg-def="xdg-mime default" \
-    spotdl="spotdl --config"
+    spotdl="spotdl --config" \
+    rime-i="rime_dir="$XDG_DATA_HOME/.config/fcitx5/rime" bash ~/Downloads/plum/rime-install" \
+    tmux-src="tmux source $XDG_CONFIG_HOME/tmux/tmux.conf"
 
