@@ -1,0 +1,4 @@
+#!/bin/sh
+
+echo "Tap $(toggle-touchpad --state)"
+kill -39 "$(pidof gocaudices)"

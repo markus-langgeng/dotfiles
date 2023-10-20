@@ -1,0 +1,11 @@
+#!/bin/sh
+
+tap=$(xinput list-props "AlpsPS/2 ALPS DualPoint TouchPad" | grep -E "libinput Tapping Enabled \([0-9]+\):" | awk '{print $5}')
+[ "$1" = "--state" ] && echo "$tap" && exit
+
+if [ "$tap" -eq 0 ]; then
+    xinput set-prop "AlpsPS/2 ALPS DualPoint TouchPad" "libinput Tapping Enabled" 1
+else
+    xinput set-prop "AlpsPS/2 ALPS DualPoint TouchPad" "libinput Tapping Enabled" 0
+
+fi
