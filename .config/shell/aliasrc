@@ -15,7 +15,7 @@ alias \
 	rsync="rsync -vrPlu" \
 	mkdir="mkdir -pv" \
     src="source $HOME/.config/zsh/.zshrc" \
-    iv="sxiv -a" \
+    iv="nsxiv -a" \
 	yt="yt-dlp --embed-metadata -i" \
 	yta="yt -x -f bestaudio/best" \
 	ytt="yt --skip-download --write-thumbnail" \

@@ -2,7 +2,33 @@
 [Default Applications]
 application/pdf=org.pwmt.zathura-pdf-mupdf.desktop
 inode/directory=file.desktop
-text/x-shellscript=nvim.desktop
-text/html=mullvad-browser.desktop
+
+text/plain=text.desktop
+text/csv=text.desktop
+text/xml=text.desktop
+text/html=text.desktop
+text/css=text.desktop
+text/javascript=text.desktop
+text/x-shellscript=text.desktop
+text/x-php=text.desktop
+text/x-diff=text.desktop
+text/x-c=text.desktop
+text/x-tex=text.desktop
+application/postscript=text.desktop
+application/javascript=text.desktop
+application/json=text.desktop
+
+image/png=img.desktop
+image/webp=img.desktop
+image/svg=img.desktop
+image/jpeg=img.desktop
+image/gif=img.desktop
+video/x-matroska=video.desktop
+video/mp4=video.desktop
+
 x-scheme-handler/http=mullvad-browser.desktop
 x-scheme-handler/https=mullvad-browser.desktop
+
+[Added Associations]
+x-scheme-handler/http=firefox.desktop
+x-scheme-handler/https=firefox.desktop
