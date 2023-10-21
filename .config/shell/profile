@@ -40,7 +40,7 @@ esac
 # pnpm end
 
 # fzf config
-export FZF_DEFAULT_OPTS="--cycle"
+export FZF_DEFAULT_OPTS="--cycle --ansi --reverse"
 export NODE_REPL_HISTORY="$XDG_DATA_HOME"/node_repl_history
 
 # IME

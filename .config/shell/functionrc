@@ -11,21 +11,19 @@ nobloat_find() {
 
 general_find() {
     case $1 in
-        "c"  ) nobloat_find "$HOME/.config/"      "${2:-d}" | fzf ;;
+        "c"  ) nobloat_find "$XDG_CONFIG_HOME/"      "${2:-d}" | fzf ;;
         "bi" ) nobloat_find "$HOME/.local/bin/"   "${2:-d}" | fzf ;;
-        "sh" ) nobloat_find "$HOME/.local/share/" "${2:-d}" | fzf ;;
+        "sh" ) nobloat_find "$XDG_DATA_HOME/" "${2:-d}" | fzf ;;
 
-        "d"  ) nobloat_find "$HOME/Documents/"                  "${2:-d}" | fzf ;;
-        "dks") nobloat_find "$HOME/Documents/kuliah/semester/"  "${2:-d}" | fzf ;;
-        "dko") nobloat_find "$HOME/Documents/kuliah/ospek/"     "${2:-d}" | fzf ;;
-        "dv" ) nobloat_find "$HOME/Documents/dev/"              "${2:-d}" | fzf ;;
-        "db" ) nobloat_find "$HOME/Documents/buku/"             "${2:-d}" | fzf ;;
+        "k"  ) nobloat_find "$XDG_COLLEGE_DIR"  "${2:-d}" | fzf ;;
+        "p"  ) nobloat_find "$XDG_PERSONAL_DIR" "${2:-d}" | fzf ;;
 
-        "pw" ) nobloat_find "$HOME/Pictures/wallpapers/"    "${2:-d}" | fzf ;;
-        "pp" ) nobloat_find "$HOME/Pictures/myphone/"       "${2:-d}" | fzf ;;
+        "w"  ) nobloat_find "$XDG_WALLPAPERS_DIR"    "${2:-d}" | fimg ;;
+        "pp" ) nobloat_find "$HOME/personal/sync/media/phone/"  "${2:-d}" \
+            | grep -iE "^*\.(png|jpg|jpeg|gif|jfif)$" | fimg ;;
 
-        "dl" ) nobloat_find "$HOME/Downloads/"  "${2:-d}" | fzf ;;
-        "m"  ) nobloat_find "$HOME/Music/"      "${2:-d}" | fzf ;;
+        "dl" ) nobloat_find "$XDG_DOWNLOAD_DIR"  "${2:-d}" | fzf ;;
+        "m"  ) nobloat_find "$XDG_MUSIC_DIR"      "${2:-d}" | fzf ;;
         "v"  ) nobloat_find "$HOME/Videos/"     "${2:-d}" | fzf ;;
         *    ) nobloat_find "$1"                "${2:-d}" | fzf ;;
     esac
@@ -36,7 +34,7 @@ fcd() {
 }
 
 open() {
-    xdg-open "$(general_find "${1:-d}" "f" )"
+    xdg-open "$(general_find "${1:-d}" "f" )" 2>/dev/null
 }
 
 gfp() {
