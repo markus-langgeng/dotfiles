@@ -11,7 +11,7 @@ nobloat_find() {
 
 general_find() {
 
-    while getopts :cbsk:v:w:p:d:m: opt; do
+    while getopts :cbsk:v:w:r:p:d:m: opt; do
         case $opt in
             c ) nobloat_find "$XDG_CONFIG_HOME/"   "${2:-d}" | fzf;;
             b ) nobloat_find "$HOME/.local/bin/"   "${2:-d}" | fzf;;
@@ -34,6 +34,12 @@ general_find() {
                 case "$OPTARG" in
                     i ) nobloat_find "$XDG_WALLPAPERS_DIR"  "${2:-d}" | fimg ;;
                     * ) nobloat_find "$XDG_WALLPAPERS_DIR"  "${2:-d}" | fzf ;;
+                esac ;;
+            r )
+                case "$OPTARG" in
+                    i  ) nobloat_find "$HOME/personal/sync/camera/phone/"  "${2:-d}" | fimg;;
+                    ii ) nobloat_find "$HOME/personal/sync/camera/phone/"  "${2:-d}" | grep -iE "^.*\.(png|jpg|jpeg|gif|webp|jfif)$" | fimg;;
+                    *  ) nobloat_find "$HOME/personal/sync/camera/phone/"  "${2:-d}" | fzf;;
                 esac ;;
             p )
                 case "$OPTARG" in

@@ -1,10 +1,6 @@
 #!/bin/sh
 
-i=0
-
-for f in ./*; do
-    fmt=".png"
-    n=$(printf "%03d" "$i")
-    mv "$f" "$n$fmt"
-    i="$i"+1
-done
+ls -t | head -28 | grep 'mp4$' | \
+    while read f; do
+        echo "$f" oaeuaoeu
+    done
