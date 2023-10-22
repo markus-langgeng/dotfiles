@@ -10,27 +10,59 @@ nobloat_find() {
 }
 
 general_find() {
-    case $1 in
-        "c"  ) nobloat_find "$XDG_CONFIG_HOME/"      "${2:-d}" | fzf ;;
-        "bi" ) nobloat_find "$HOME/.local/bin/"   "${2:-d}" | fzf ;;
-        "sh" ) nobloat_find "$XDG_DATA_HOME/" "${2:-d}" | fzf ;;
 
-        "k"  ) nobloat_find "$XDG_COLLEGE_DIR"  "${2:-d}" | fzf ;;
-        "p"  ) nobloat_find "$XDG_PERSONAL_DIR" "${2:-d}" | fzf ;;
+    while getopts :cbsk:v:w:p:d:m: opt; do
+        case $opt in
+            c ) nobloat_find "$XDG_CONFIG_HOME/"   "${2:-d}" | fzf;;
+            b ) nobloat_find "$HOME/.local/bin/"   "${2:-d}" | fzf;;
+            s ) nobloat_find "$XDG_DATA_HOME/"     "${2:-d}" | fzf;;
 
-        "w"  ) nobloat_find "$XDG_WALLPAPERS_DIR"    "${2:-d}" | fimg ;;
-        "pp" ) nobloat_find "$HOME/personal/sync/media/phone/"  "${2:-d}" \
-            | grep -iE "^*\.(png|jpg|jpeg|gif|jfif)$" | fimg ;;
+            k )
+                case "$OPTARG" in
+                    i  ) nobloat_find "$XDG_COLLEGE_DIR"  "${2:-d}" | fimg ;;
+                    ii ) nobloat_find "$XDG_COLLEGE_DIR"  "${2:-d}" | grep -iE "^.*\.(png|jpg|jpeg|gif|webp|jfif)$" | fimg ;;
+                    ''  ) nobloat_find "$XDG_COLLEGE_DIR"  "${2:-d}" | fzf ;;
+                    *  ) nobloat_find "$XDG_COLLEGE_DIR"  "${2:-d}" | fzf ;;
+                esac ;;
+            v )
+                case "$OPTARG" in
+                    i  ) nobloat_find "$XDG_PERSONAL_DIR"  "${2:-d}" | fimg ;;
+                    ii ) nobloat_find "$XDG_PERSONAL_DIR"  "${2:-d}" | grep -iE "^.*\.(png|jpg|jpeg|gif|webp|jfif)$" | fimg;;
+                    *  ) nobloat_find "$XDG_PERSONAL_DIR"  "${2:-d}" | fzf ;;
+                esac ;;
+            w )
+                case "$OPTARG" in
+                    i ) nobloat_find "$XDG_WALLPAPERS_DIR"  "${2:-d}" | fimg ;;
+                    * ) nobloat_find "$XDG_WALLPAPERS_DIR"  "${2:-d}" | fzf ;;
+                esac ;;
+            p )
+                case "$OPTARG" in
+                    i  ) nobloat_find "$HOME/personal/sync/media/phone/"  "${2:-d}" | fimg;;
+                    ii ) nobloat_find "$HOME/personal/sync/media/phone/"  "${2:-d}" | grep -iE "^.*\.(png|jpg|jpeg|gif|webp|jfif)$" | fimg;;
+                    *  ) nobloat_find "$HOME/personal/sync/media/phone/"  "${2:-d}" | fzf;;
+                esac ;;
+            d )
+                case "$OPTARG" in
+                    i  ) nobloat_find "$XDG_DOWNLOAD_DIR"  "${2:-d}" | fimg;;
+                    ii ) nobloat_find "$XDG_DOWNLOAD_DIR"  "${2:-d}" | grep -iE "^.*\.(png|jpg|jpeg|gif|webp|jfif)$" | fimg;;
+                    *  ) nobloat_find "$XDG_DOWNLOAD_DIR"  "${2:-d}" | fzf;;
+                esac ;;
+            m )
+                case "$OPTARG" in
+                    i  ) nobloat_find "$XDG_MUSIC_DIR"  "${2:-d}" | fimg;;
+                    ii ) nobloat_find "$XDG_MUSIC_DIR"  "${2:-d}" | grep -iE "^.*\.(png|jpg|jpeg|gif|webp|jfif)$" | fimg;;
+                    *  ) nobloat_find "$XDG_MUSIC_DIR"  "${2:-d}" | fzf;;
+                esac ;;
 
-        "dl" ) nobloat_find "$XDG_DOWNLOAD_DIR"  "${2:-d}" | fzf ;;
-        "m"  ) nobloat_find "$XDG_MUSIC_DIR"      "${2:-d}" | fzf ;;
-        "v"  ) nobloat_find "$HOME/Videos/"     "${2:-d}" | fzf ;;
-        *    ) nobloat_find "$1"                "${2:-d}" | fzf ;;
-    esac
+            * ) echo "Invalid option" ;;
+        esac
+    done
+
+    shift $((OPTIND -1))
 }
 
 fcd() {
-    cd "$(general_find "$1" )" || exit
+    cd "$(general_find "$1" "d")" || return
 }
 
 open() {
