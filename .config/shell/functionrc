@@ -1,4 +1,10 @@
-#!/bin/sh
+#!/bin/bash
+
+# dependencies:
+# find,
+# fzf,
+# ueberzug,
+# script that combines fzf+ueberzug (https://github.com/ueber-devel/ueberzug/blob/master/examples/fzfimg.sh)
 
 mkcd() { mkdir -pv "$1" && cd "$1" || exit; }
 mvcd() { mv -vi "$1" "$2" && cd "$2" || exit; }
@@ -9,78 +15,82 @@ nobloat_find() {
         -type "$2" 2>/dev/null
 }
 
+# find across system with predefined path with fzf or fimg
+# $1 -> the options [path_flag]:[i|ii|m]
+# $2 -> filetype for find command
 general_find() {
+    local conf_dir="$XDG_CONFIG_HOME/"
+    local bin_dir="$HOME/.local/bin/"
+    local data_dir="$XDG_DATA_HOME/"
+    local cllg_dir="$XDG_COLLEGE_DIR"
+    local prsn_dir="$XDG_PERSONAL_DIR"
+    local wall_dir="$XDG_WALLPAPERS_DIR"
+    local cam_dir="$HOME/personal/sync/camera/phone/"
+    local media_dir="$HOME/personal/sync/media/phone/"
+    local down_dir="$XDG_DOWNLOAD_DIR"
+    local music_dir="$XDG_MUSIC_DIR"
 
-    while getopts :cbsk:v:w:r:p:d:m: opt; do
+    while getopts :c:b:s:k:v:w:r:p:d:m: opt; do
         case $opt in
-            c ) nobloat_find "$XDG_CONFIG_HOME/"   "${2:-d}" | fzf;;
-            b ) nobloat_find "$HOME/.local/bin/"   "${2:-d}" | fzf;;
-            s ) nobloat_find "$XDG_DATA_HOME/"     "${2:-d}" | fzf;;
-
-            k )
-                case "$OPTARG" in
-                    i  ) nobloat_find "$XDG_COLLEGE_DIR"  "${2:-d}" | fimg ;;
-                    ii ) nobloat_find "$XDG_COLLEGE_DIR"  "${2:-d}" | grep -iE "^.*\.(png|jpg|jpeg|gif|webp|jfif)$" | fimg ;;
-                    ''  ) nobloat_find "$XDG_COLLEGE_DIR"  "${2:-d}" | fzf ;;
-                    *  ) nobloat_find "$XDG_COLLEGE_DIR"  "${2:-d}" | fzf ;;
-                esac ;;
-            v )
-                case "$OPTARG" in
-                    i  ) nobloat_find "$XDG_PERSONAL_DIR"  "${2:-d}" | fimg ;;
-                    ii ) nobloat_find "$XDG_PERSONAL_DIR"  "${2:-d}" | grep -iE "^.*\.(png|jpg|jpeg|gif|webp|jfif)$" | fimg;;
-                    *  ) nobloat_find "$XDG_PERSONAL_DIR"  "${2:-d}" | fzf ;;
-                esac ;;
-            w )
-                case "$OPTARG" in
-                    i ) nobloat_find "$XDG_WALLPAPERS_DIR"  "${2:-d}" | fimg ;;
-                    * ) nobloat_find "$XDG_WALLPAPERS_DIR"  "${2:-d}" | fzf ;;
-                esac ;;
-            r )
-                case "$OPTARG" in
-                    i  ) nobloat_find "$HOME/personal/sync/camera/phone/"  "${2:-d}" | fimg;;
-                    ii ) nobloat_find "$HOME/personal/sync/camera/phone/"  "${2:-d}" | grep -iE "^.*\.(png|jpg|jpeg|gif|webp|jfif)$" | fimg;;
-                    *  ) nobloat_find "$HOME/personal/sync/camera/phone/"  "${2:-d}" | fzf;;
-                esac ;;
-            p )
-                case "$OPTARG" in
-                    i  ) nobloat_find "$HOME/personal/sync/media/phone/"  "${2:-d}" | fimg;;
-                    ii ) nobloat_find "$HOME/personal/sync/media/phone/"  "${2:-d}" | grep -iE "^.*\.(png|jpg|jpeg|gif|webp|jfif)$" | fimg;;
-                    *  ) nobloat_find "$HOME/personal/sync/media/phone/"  "${2:-d}" | fzf;;
-                esac ;;
-            d )
-                case "$OPTARG" in
-                    i  ) nobloat_find "$XDG_DOWNLOAD_DIR"  "${2:-d}" | fimg;;
-                    ii ) nobloat_find "$XDG_DOWNLOAD_DIR"  "${2:-d}" | grep -iE "^.*\.(png|jpg|jpeg|gif|webp|jfif)$" | fimg;;
-                    *  ) nobloat_find "$XDG_DOWNLOAD_DIR"  "${2:-d}" | fzf;;
-                esac ;;
-            m )
-                case "$OPTARG" in
-                    i  ) nobloat_find "$XDG_MUSIC_DIR"  "${2:-d}" | fimg;;
-                    ii ) nobloat_find "$XDG_MUSIC_DIR"  "${2:-d}" | grep -iE "^.*\.(png|jpg|jpeg|gif|webp|jfif)$" | fimg;;
-                    *  ) nobloat_find "$XDG_MUSIC_DIR"  "${2:-d}" | fzf;;
-                esac ;;
-
-            * ) echo "Invalid option" ;;
+            c ) path_flag="$conf_dir";   type="${2:-d}"; flag_args="$OPTARG" ;;
+            b ) path_flag="$bin_dir";    type="${2:-d}"; flag_args="$OPTARG" ;;
+            s ) path_flag="$data_dir";   type="${2:-d}"; flag_args="$OPTARG" ;;
+            k ) path_flag="$cllg_dir";   type="${2:-d}"; flag_args="$OPTARG" ;;
+            v ) path_flag="$prsn_dir";   type="${2:-d}"; flag_args="$OPTARG" ;;
+            w ) path_flag="$wall_dir";   type="${2:-d}"; flag_args="$OPTARG" ;;
+            r ) path_flag="$cam_dir";    type="${2:-d}"; flag_args="$OPTARG" ;;
+            p ) path_flag="$media_dir";  type="${2:-d}"; flag_args="$OPTARG" ;;
+            d ) path_flag="$down_dir";   type="${2:-d}"; flag_args="$OPTARG" ;;
+            m ) path_flag="$music_dir";  type="${2:-d}"; flag_args="$OPTARG" ;;
+            * ) echo "Usage: general_find -[cbskvwrpdm][(iim)]"; return ;;
         esac
     done
 
+    case "$flag_args" in
+        i  ) nobloat_find "$path_flag" "$type" | fimg ;;
+        ii ) nobloat_find "$path_flag" "$type" | grep -iE "^.*\.(png|jpg|jpeg|gif|webp|jfif)$" | fimg ;;
+        m  ) nobloat_find "$path_flag" "$type" | fzf --multi ;;
+        im ) nobloat_find "$path_flag" "$type" | fimg --multi ;;
+        iim) nobloat_find "$path_flag" "$type" | grep -iE "^.*\.(png|jpg|jpeg|gif|webp|jfif)$" | fimg --multi ;;
+        *  ) nobloat_find "$path_flag" "$type" | fzf ;;
+    esac
     shift $((OPTIND -1))
+
 }
 
 fcd() {
+    if [[ $1 =~ (i|m) ]]; then
+        echo "fcd cannot use i or m arguments"; return
+    fi
     cd "$(general_find "$1" "d")" || return
 }
 
 open() {
-    xdg-open "$(general_find "${1:-d}" "f" )" 2>/dev/null
+    if [[ $1 == *m* ]]; then
+        for f in $(general_find "${1:-d}" "f"); do
+            xdg-open "$f"
+        done
+    else
+        general_find "${1:-d}" "f" | xargs xdg-open
+    fi
 }
 
 gfp() {
-    general_find "$1" "f" | tr -d '\n' | xclip -selection c
+    if [[ $1 == *m* ]]; then
+        general_find "$1" "f" | xclip -selection c
+    else
+        general_find "$1" "f" | tr -d '\n' | xclip -selection c
+    fi
 }
 
 gdp() {
-    general_find "$1" "d" | tr -d '\n' | xclip -selection c
+    if [[ $1 == *i* ]]; then
+        echo "fcd cannot use i arguments"; return
+    elif [[ $1 == *m* ]]; then
+        general_find "$1" "d" | xclip -selection c
+    else
+        general_find "$1" "d" | tr -d '\n' | xclip -selection c
+    fi
 }
 
 pms() {
