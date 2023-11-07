@@ -33,6 +33,29 @@ end
 
 return {
 
+    make_pinyin_tones("-tt", "First", "="),
+    make_pinyin_tones("/tt", "Second", "'"),
+    make_pinyin_tones("vtt", "Third", "v"),
+    make_pinyin_tones("\\tt", "Fourth", "`"),
+
+    make_gletters(";a", "alpha", "\\alpha"),
+    make_gletters(";b", "beta", "\\beta"),
+    make_gletters(";g", "gamma", "\\gamma"),
+    make_gletters(";d", "delta", "\\delta"),
+    make_gletters(";z", "zeta", "\\zeta"),
+    make_gletters(";e", "epsilon", "\\varepsilon"),
+    make_gletters(";i", "iota", "\\iota"),
+    make_gletters(";k", "kappa", "\\kappa"),
+    make_gletters(";l", "lambda", "\\lambda"),
+    make_gletters(";m", "mu", "\\mu"),
+    make_gletters(";n", "nu", "\\nu"),
+    make_gletters(";x", "xi", "\\xi"),
+    make_gletters(";o", "o", "\\o"),
+    make_gletters(";p", "pi", "\\pi"),
+    make_gletters(";r", "rho", "\\rho"),
+    make_gletters(";t", "tau", "\\tau"),
+    make_gletters(";u", "upsilon", "\\upsilon"),
+    make_gletters(";c", "chi", "\\chi"),
     s({ trig = "hr", dscr = "The hyperref package's href{}{} command (for url links)" },
         fmta(
             [[\href{<>}{<>}]],
@@ -43,7 +66,7 @@ return {
         )
     ),
 
-    -- headings
+    -- HEADING -----------------------------------------------------------------
     s({ trig = "h1", dscr = "Level 1 heading", snippetType = "autosnippet" },
         fmta([[\section{<>}]], { i(1, "") }),
         { condition = cond.line_begin }
@@ -56,28 +79,52 @@ return {
         fmta([[\subsubsection{<>}]], { i(1, "") }),
         { condition = cond.line_begin }
     ),
+    ----------------------------------------------------------------------------
 
     s({ trig = "nn", dscr = "A generic new environmennt" },
         fmta([[
-        \begin{<>}
+        \begin<>{<>}<>
             <>
         \end{<>}
         ]],
             {
+                c(2, {
+                    t(""),
+                    sn(1, { t("["), i(1), t("]") }),
+                    sn(1, { t("{"), i(1), t("}") }),
+                }),
                 i(1),
-                i(2),
+                c(3, {
+                    t(""),
+                    sn(1, { t("["), i(1), t("]") }),
+                    sn(1, { t("{"), i(1), t("}") }),
+                }),
+                i(4),
                 rep(1),
             }
         ),
         { condition = cond.line_begin }
     ),
 
-    s({ trig = "it", dscr = "The \\item command", snippetType = "autosnippet" },
+    s({ trig = "ii", dscr = "The \\item command", snippetType = "autosnippet" },
         t("\\item"),
         { condition = cond.in_list_env * cond.line_begin }
     ),
 
-    --[[ PREAMBLE ]]
+    s({ trig = "cmm", dscr = "Change to latex command", snippetType = "autosnippet" },
+        fmta("\\<><>{<>}",
+            {
+                d(2, helper.get_visual),
+                c(3, {
+                    t(""),
+                    sn(1, { t("["), i(1), t("]") }),
+                }),
+                i(1),
+            }
+        )
+    ),
+
+    -- COMMON PREAMBLE COMMANDS ------------------------------------------------
     s({ trig = "custom-ol", dscr = "Customize the level of ordered list" },
         fmta([[
         % set custom ol
@@ -94,64 +141,20 @@ return {
     ),
 
     s({ trig = "pkg", dscr = "\\usepackage{} command", snippetType = "autosnippet" },
-        fmta("\\usepackage{<>}",
-            { i(0) }
+        fmta("\\usepackage<>{<>}",
+            {
+                c(2, {
+                    t(""),
+                    sn(1, { t("["), i(1), t("]") }),
+                }),
+                i(1),
+            }
         ),
         { condition = cond.in_preamble * cond.line_begin, }
     ),
+    ----------------------------------------------------------------------------
 
-    s({ trig = "font-chinese", dscr = "Add chinese font support" },
-        fmta([[
-        \usepackage{xeCJK, xpinyin}
-        \setCJKmainfont{Noto Serif CJK SC}<>
-        ]],
-            { i(0) }
-        ),
-        {
-            condition = cond.in_preamble * cond.line_begin,
-            show_condition = cond.in_preamble,
-        }
-    ),
-
-    s({ trig = "setup_ref", dscr = "My common biblatex setup" },
-        fmta([[
-        \usepackage{hyperref} % always set at the end
-        \hypersetup{ }
-        \urlstyle{same}<>
-        ]],
-            { i(0) }
-        ),
-        {
-            condition = cond.in_preamble * cond.line_begin,
-            show_condition = cond.in_preamble,
-        }
-    ),
-
-    s({ trig = "setup_bib", dscr = "My common biblatex setup" },
-        fmta([[
-        \usepackage[
-        backend=biber,
-        bibstyle=authoryear,
-        citestyle=authoryear,
-        autocite=inline,
-        % hyperref=true,
-        ]{biblatex}
-        % \renewbibmacro{in:}{} % removes in
-        % \DeclareFieldFormat{pages}{#1} % removes pages
-        % \renewcommand*{\finentrypunct}{\ifboolexpr{togl {bbx:doi} and not test {\iffieldundef{doi}}}{}{\addperiod}}
-        \addbibresource{ref.bib}<>
-        ]],
-            { i(0) }
-        ),
-        {
-            condition = cond.in_preamble * cond.line_begin,
-            show_condition = cond.in_preamble,
-        }
-    ),
-
-    --[[ PREAMBLE END ]]
-
-
+    -- FONT STYLE --------------------------------------------------------------
     s({ trig = "tii", dscr = "Italic", snippetType = "autosnippet" },
         fmta("\\textit{<>}",
             { d(1, helper.get_visual), }
@@ -192,7 +195,9 @@ return {
             { d(1, helper.get_visual), }
         )
     ),
+    ----------------------------------------------------------------------------
 
+    -- XPINYIN -----------------------------------------------------------------
     s({ trig = "pyy", dscr = "Use \\pinyin command", snippetType = "autosnippet" },
         fmta("\\pinyin{<>}",
             { d(1, helper.get_visual), }
@@ -216,33 +221,9 @@ return {
         { condition = cond.line_begin }
     -- { condition = cond.has_xpinyin }
     ),
+    ----------------------------------------------------------------------------
 
-
-    make_pinyin_tones("-tt", "First", "="),
-    make_pinyin_tones("/tt", "Second", "'"),
-    make_pinyin_tones("vtt", "Third", "v"),
-    make_pinyin_tones("\\tt", "Fourth", "`"),
-
-    make_gletters(";a", "alpha", "\\alpha"),
-    make_gletters(";b", "beta", "\\beta"),
-    make_gletters(";g", "gamma", "\\gamma"),
-    make_gletters(";d", "delta", "\\delta"),
-    make_gletters(";z", "zeta", "\\zeta"),
-    make_gletters(";e", "epsilon", "\\varepsilon"),
-    make_gletters(";i", "iota", "\\iota"),
-    make_gletters(";k", "kappa", "\\kappa"),
-    make_gletters(";l", "lambda", "\\lambda"),
-    make_gletters(";m", "mu", "\\mu"),
-    make_gletters(";n", "nu", "\\nu"),
-    make_gletters(";x", "xi", "\\xi"),
-    make_gletters(";o", "o", "\\o"),
-    make_gletters(";p", "pi", "\\pi"),
-    make_gletters(";r", "rho", "\\rho"),
-    make_gletters(";t", "tau", "\\tau"),
-    make_gletters(";u", "upsilon", "\\upsilon"),
-    make_gletters(";c", "chi", "\\chi"),
-
-    --[[ MATH RELATED ]]
+    -- MATH RELATED ------------------------------------------------------------
     s({ trig = "sqq", dscr = "Square root", snippetType = "autosnippet", },
         fmta(
             "\\sqrt{<>}",
@@ -353,19 +334,8 @@ return {
             }
         )
     ),
-    --[[ MATH END ]]
+    ----------------------------------------------------------------------------
 
 
-    --[[ TIKZ ENV ]]
-    s({ trig = "dd", snippetType = "autosnippet" },
-        fmta(
-            "\\draw[<>] ",
-            {
-                i(1, ""),
-            }
-        ),
-        { condition = cond.in_tikz, show_condition = cond.in_tikz }
-    ),
-    --[[ TIKZ END ]]
 
 }

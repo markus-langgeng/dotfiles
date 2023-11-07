@@ -19,30 +19,34 @@ nobloat_find() {
 # $1 -> the options [path_flag]:[i|ii|m]
 # $2 -> filetype for find command
 general_find() {
-    local conf_dir="$XDG_CONFIG_HOME/"
     local bin_dir="$HOME/.local/bin/"
-    local data_dir="$XDG_DATA_HOME/"
+    local cam_dir="$HOME/personal/sync/camera/phone/"
     local cllg_dir="$XDG_COLLEGE_DIR"
+    local conf_dir="$XDG_CONFIG_HOME/"
+    local data_dir="$XDG_DATA_HOME/"                    # share
+    local down_dir="$XDG_DOWNLOAD_DIR"
+    local media_dir="$HOME/personal/sync/media/phone/"
+    local music_dir="$XDG_MUSIC_DIR"
     local prsn_dir="$XDG_PERSONAL_DIR"
     local wall_dir="$XDG_WALLPAPERS_DIR"
-    local cam_dir="$HOME/personal/sync/camera/phone/"
-    local media_dir="$HOME/personal/sync/media/phone/"
-    local down_dir="$XDG_DOWNLOAD_DIR"
-    local music_dir="$XDG_MUSIC_DIR"
 
-    while getopts :c:b:s:k:v:w:r:p:d:m: opt; do
+    if [ -z "${1:1}" ] || [ -z "$2" ]; then
+        printf "%s\t%s\n" "Usage:" "general_find -[bcCDmMskpw][(iim)] [type_of_file:f,d]"; return 1
+    fi
+
+    while getopts :b:c:C:D:m:M:s:k:p:w: opt; do
         case $opt in
-            c ) path_flag="$conf_dir";   type="${2:-d}"; flag_args="$OPTARG" ;;
-            b ) path_flag="$bin_dir";    type="${2:-d}"; flag_args="$OPTARG" ;;
-            s ) path_flag="$data_dir";   type="${2:-d}"; flag_args="$OPTARG" ;;
-            k ) path_flag="$cllg_dir";   type="${2:-d}"; flag_args="$OPTARG" ;;
-            v ) path_flag="$prsn_dir";   type="${2:-d}"; flag_args="$OPTARG" ;;
-            w ) path_flag="$wall_dir";   type="${2:-d}"; flag_args="$OPTARG" ;;
-            r ) path_flag="$cam_dir";    type="${2:-d}"; flag_args="$OPTARG" ;;
-            p ) path_flag="$media_dir";  type="${2:-d}"; flag_args="$OPTARG" ;;
-            d ) path_flag="$down_dir";   type="${2:-d}"; flag_args="$OPTARG" ;;
-            m ) path_flag="$music_dir";  type="${2:-d}"; flag_args="$OPTARG" ;;
-            * ) echo "Usage: general_find -[cbskvwrpdm][(iim)]"; return ;;
+            b ) path_flag="$bin_dir";    type="${2:-f}"; flag_args="$OPTARG" ;;
+            c ) path_flag="$conf_dir";   type="${2:-f}"; flag_args="$OPTARG" ;;
+            C ) path_flag="$cam_dir";    type="${2:-f}"; flag_args="$OPTARG" ;;
+            D ) path_flag="$down_dir";   type="${2:-f}"; flag_args="$OPTARG" ;;
+            m ) path_flag="$music_dir";  type="${2:-f}"; flag_args="$OPTARG" ;;
+            M ) path_flag="$media_dir";  type="${2:-f}"; flag_args="$OPTARG" ;;
+            k ) path_flag="$cllg_dir";   type="${2:-f}"; flag_args="$OPTARG" ;;
+            s ) path_flag="$data_dir";   type="${2:-f}"; flag_args="$OPTARG" ;;
+            p ) path_flag="$prsn_dir";   type="${2:-f}"; flag_args="$OPTARG" ;;
+            w ) path_flag="$wall_dir";   type="${2:-f}"; flag_args="$OPTARG" ;;
+            * ) printf "%s\t%s\n" "Usage:" "general_find -[bcCDmMskpw][(iim)] [type_of_file:f,d]"; return 1 ;;
         esac
     done
 
@@ -59,14 +63,18 @@ general_find() {
 }
 
 fcd() {
-    if [[ $1 =~ (i|m) ]]; then
-        echo "fcd cannot use i or m arguments"; return
+    if [ -z "${1:1}" ]; then
+        printf "%s\t%s\n%s\n" "Usage:" "fcd -[bcCDmMskpw]" "See general_find function."; return 1
+    elif [[ ${1:2} =~ (i|m) ]]; then
+        echo "fcd cannot use i or m arguments"
     fi
     cd "$(general_find "$1" "d")" || return
 }
 
 open() {
-    if [[ $1 == *m* ]]; then
+    if [ -z "${1:1}" ]; then
+        printf "%s\t%s\n%s\n" "Usage:" "open -[bcCDmMskpw][(iim)]" "See general_find function."; return 1
+    elif [[ ${1:2} == *m* ]]; then
         for f in $(general_find "${1:-d}" "f"); do
             xdg-open "$f"
         done
@@ -76,21 +84,23 @@ open() {
 }
 
 gfp() {
-    if [[ $1 == *m* ]]; then
-        general_find "$1" "f" | xclip -selection c
-    else
-        general_find "$1" "f" | tr -d '\n' | xclip -selection c
+    if [ -z "${1:1}" ]; then
+        printf "%s\t%s\n%s\n" "Usage:" "gfp -[bcCDmMskpw][(iim)]" "See general_find function."; return 1
+    elif [[ ${1:2} == *m* ]]; then
+        general_find "$1" "f" | xclip -selection c ; return
     fi
+    general_find "$1" "f" | tr -d '\n' | xclip -selection c
 }
 
 gdp() {
-    if [[ $1 == *i* ]]; then
+    if [ -z "${1:1}" ]; then
+        printf "%s\t%s\n%s\n" "Usage:" "gdp -[bcCDmMskpw][(m)]" "See general_find function."; return 1
+    elif [[ ${1:2} == *i* ]]; then
         echo "fcd cannot use i arguments"; return
     elif [[ $1 == *m* ]]; then
-        general_find "$1" "d" | xclip -selection c
-    else
-        general_find "$1" "d" | tr -d '\n' | xclip -selection c
+        general_find "$1" "d" | xclip -selection c ; return
     fi
+    general_find "$1" "d" | tr -d '\n' | xclip -selection c
 }
 
 pms() {

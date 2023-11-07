@@ -1,7 +1,7 @@
 local M
 M = {
     "L3MON4D3/LuaSnip",
-    version = "1.*", -- Replace <CurrentMajor> by the latest released major (first number of latest release)
+    version = "2.*", -- Replace <CurrentMajor> by the latest released major (first number of latest release)
     event = "InsertEnter",
 }
 
@@ -44,9 +44,17 @@ M.config = function()
             ls.jump(-1)
         end
     end, { desc = "Expand or jump to previous snippet item if available (luasnip)" })
+
+    map({ "i", "s" }, "<C-l>", function()
+        if ls.choice_active() then
+            ls.change_choice(1)
+        end
+    end, { desc = "Change choices in choice node snippet" })
+
     map({ "n" }, "<leader>sl", function()
         require("luasnip.extras.snippet_list").open()
     end, { desc = "Show [S]nippet [L]ist" })
+    vim.keymap.set("n", "<leader><leader>s", "<cmd>source ~/.config/nvim/lua/plugins/luasnip.lua<CR>")
 end
 
 return M
