@@ -26,3 +26,23 @@ shift + F12
 
 alt + F7
     echo t | tr -d '\n' | xclip -selection c
+
+
+XF86AudioPrev
+    mpc prev
+XF86AudioPlay
+    mpc toggle
+XF86AudioNext
+    mpc next
+super + F5
+    mpc stop
+
+
+super + alt + {k, b, m, c}
+   {kdenlive, $BROWSER, song-player, webcam}
+
+super + alt + {g, r}
+   xppen-settings; {gimp, krita}
+
+super + shift + {w, c, g, b}
+    firefox {"https://web.whatsapp.com", "https://classroom.google.com", "https://github.com"}

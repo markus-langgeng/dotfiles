@@ -1,59 +1,25 @@
 #!/bin/sh
 
-pattern="^https?://\w+\.\w+|^file:///|^about:\w+"
-bmurl="$HOME/.local/share/bookmarks/urls"
-bmdir="$HOME/.local/share/bookmarks/directories"
-bmfile="$HOME/.local/share/bookmarks/files"
+url_re="(((http|https|gopher|gemini|ftp|ftps|git)://|www\\.)[a-zA-Z0-9.]*[:;a-zA-Z0-9./+@$&%?$\#=_~-]*)|((magnet:\\?xt=urn:btih:)[a-zA-Z0-9]*)"
+bm_file="$HOME/.local/share/bookmarks/urls"
+kw=$(sed '/^$/ d;/^#/ d;s/[[:blank:]]\+.\+//;s/,/\n/g' "$bm_file" | sort -u)
+url=$(xclip -o -selection c)
 
-[ ! -d "$HOME/.local/share/bookmarks" ] && mkdir "$bmurl"
-[ ! -f "$bmurl" ] && touch "$bmurl" && printf "# keywords/categories\n#\n" >> "$bmurl"
-[ ! -f "$bmdir" ] && touch "$bmdir" && printf "# keywords/categories\n#\n" >> "$bmdir"
-[ ! -f "$bmfile" ] && touch "$bmfile" && printf "# keywords/categories\n#\n" >> "$bmfile"
-
-kwurl=$(sed -E '2!d;s/^#|^# //;s/ /\n/g' "$bmurl")
-kwdir=$(sed -E '2!d;s/^#|^# //;s/ /\n/g' "$bmdir")
-kwfile=$(sed -E '2!d;s/^#|^# //;s/ /\n/g' "$bmfile")
-chosenkw= ; all_chosenkw= ; selection=$(xclip -o -selection c)
-
-choose_kw() {
-    sel="$(echo "$selection" | sed 's/\(.\{50\}\).*/\1.../' )"
-    msg="Choose/create keyword for $sel"
-    chosenkw=$(printf "%s" "$1" | dmenu -F -p "$msg" | sed 's/ /_/g')
-    [ -z "$chosenkw" ] && exit || all_chosenkw="$all_chosenkw $chosenkw"
-}
-
-add_new_kw() {
-    echo "$1" | grep -qiwF "$2" || sed -i "2s/\(.*\)/\1 $2/" "$3"
-}
-
-prompt_kw() {
-    while
-        choose_kw "$1"
-        [ -n "$chosenkw" ] && add_new_kw "$1" "$chosenkw" "$2"
-        promptkw="$(printf "yes\nno" | dmenu -i -p "Add keyword again?")"
-        [ "$promptkw" = "yes" ] || break
-    do :; done
-}
-
-add_bm() {
-    bmkw=$(echo "[${all_chosenkw# }]" | tr ' ' ',' )
-    echo "$bmkw    $selection" >> "$1"
-    echo "ok" | dmenu -p "Bookmark added"
-}
-
-if echo "$selection" | grep -E "$pattern"; then
-    grep -iwF "$selection" "$bmurl" && echo "ok" | dmenu -p "Url's already bookmarked" && exit
-    prompt_kw "$kwurl" "$bmurl"
-    add_bm "$bmurl"
-    [ -n "$all_chosenkw" ] && echo "$all_chosenkw"
-elif [ -d "$selection" ]; then
-    grep -iwF "$selection" "$bmdir" && echo "ok" | dmenu -p "Dir's already bookmarked" && exit
-    prompt_kw "$kwdir" "$bmdir"
-    add_bm "$bmdir"
-elif [ -e "$selection" ]; then
-    grep -iwF "$selection" "$bmfile" && echo "ok" | dmenu -p "File's already bookmarked" && exit
-    prompt_kw "$kwfile" "$bmfile"
-    add_bm "$bmfile"
-else
-    echo "ok" | dmenu -p "$selection is not a url, dir, nor file."
+if ! echo "$url" | grep -qaEo "$url_re"; then
+    echo "" | dmenu -p "$(printf "\`%.15s...\`" "$url") is not a valid url"
+    exit 1
 fi
+
+if  grep -qw "$url" "$bm_file"; then
+    echo "Ok" | dmenu -p "Url is already bookmarked"
+    exit 1
+fi
+
+while
+    chosen_kw="$chosen_kw $(echo "$kw" | dmenu -i -p "Add or choose keywords" | sed 's/ /_/')"
+    [ -z "$(echo "$chosen_kw" | sed 's/ //' )" ] && exit 1
+    more_kw=$(printf "yes\nno" | dmenu -p "Add more keywords?")
+    if [ "$more_kw" != "yes" ]; then break; fi
+do :; done
+
+printf "%s           %s\n" "$(echo "$chosen_kw" | sed 's/ //;s/ /,/g')" "$url" >> "$bm_file"

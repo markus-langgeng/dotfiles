@@ -12,17 +12,16 @@
 # where C/M/S indicate Ctrl/Meta(Alt)/Shift modifier states and KEY is the X
 # keysym as listed in /usr/include/X11/keysymdef.h without the "XK_" prefix.
 
-while read -r file; do
-    case "$1" in
-        "c"  ) xclip -in -filter | tr '\n' ' ' | xclip -in -selection clipboard ;;
-        "w"  ) setwp "$file" ;;
-        "x"  ) trash-put "$file" ;;
-        "b"  ) realpath "$file" | tr -d '\n' | xclip -selection c; bm-this ;;
-        "n"  ) echo "$file" | tr -d '\n' | xclip -selection c ;;
-        "C-d") xclip -selection clipboard -target image/png "$file" ;;
-        "C-a") mv "$file" "$HOME/Pictures/wallpapers/animals/" ;;
-        "C-i") mv "$file" "$HOME/Pictures/wallpapers/illustrations/" ;;
-        "C-s") mv "$file" "$HOME/Pictures/wallpapers/scenery/" ;;
-    esac
-done
-
+# while read -r file; do
+#     case "$1" in
+#         "c"  ) xclip -in -filter | tr '\n' ' ' | xclip -in -selection clipboard ;;
+#         "w"  ) setwp "$file" ;;
+#         "x"  ) echo "$file" ;;
+#         "b"  ) realpath "$file" | tr -d '\n' | xclip -selection c; bm-this ;;
+#         "n"  ) echo "$file" | tr -d '\n' | xclip -selection c ;;
+#         "C-d") xclip -selection clipboard -target image/png "$file" ;;
+#         "C-a") mv "$file" "$HOME/Pictures/wallpapers/animals/" ;;
+#         "C-i") mv "$file" "$HOME/Pictures/wallpapers/illustrations/" ;;
+#         "C-s") mv "$file" "$HOME/Pictures/wallpapers/scenery/" ;;
+#     esac
+# done

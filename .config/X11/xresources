@@ -1,6 +1,4 @@
-! dwm.font: monospace:pixelsize=13:antialias=true:autohint=true
-! dmenu.font: monospace:pixelsize=13:antialias=true:autohint=true
-! st.font: monospace:pixelsize=13:antialias=true:autohint=true
+*.font: Liberation Mono:pixelsize=13:antialias=true:autohint=true
 
 !! tomorrow dark
 ! special
@@ -98,9 +96,9 @@
 !! dwm
 
 !! Red colorscheme
-dwm.selbordercolor: #FF4500
-dwm.selbgcolor:     #da4939
-dmenu.selbgcolor:   #da4939
+! dwm.selbordercolor: #FF4500
+! dwm.selbgcolor:     #da4939
+! dmenu.selbgcolor:   #da4939
 ! #ff0800 candy apple
 
 !! Purple colorscheme
@@ -111,3 +109,54 @@ dmenu.selbgcolor:   #da4939
 ! dwm.selbordercolor: #b30080
 ! dwm.selbgcolor:     #4A0336
 ! dmenu.selbgcolor:   #4A0336
+
+
+!! Gray colorscheme
+dwm.selbordercolor: #737373
+dwm.selbgcolor:     #000000
+dmenu.selbgcolor:   #000000
+
+
+!!!!!!!!!!!!!!!!!!!!!!!!!
+!! Urxvt Configuration !!
+!!!!!!!!!!!!!!!!!!!!!!!!!
+! do not scroll with output
+URxvt*scrollTtyOutput: false
+! scroll in relation to buffer (with mouse scroll or Shift+Page Up)
+URxvt*scrollWithBuffer: true
+! scroll back to the bottom on keypress
+URxvt*scrollTtyKeypress: true
+URxvt.secondaryScreen: 1
+URxvt.secondaryScroll: 0
+URxvt.font: xft:Liberation Mono:size=10:style=Regular:antialias=true, \
+    xft:Symbols Nerd Font:size=10:antialias=true:autohint=true, \
+    xft:Noto Color Emoji:size=10:antialias=true:autohint=true, \
+    xft:Noto Sans CJK JP:size=15:antialias=true:autohint=true
+URxvt.scrollBar: false
+URxvt.letterSpace: -1
+URxvt.lineSpace: -1
+
+ URxvt.perl-ext-common:  default,matcher,resize-font
+
+!! Disable printing the terminal contents when pressing PrintScreen.
+URxvt.print-pipe: "cat > /dev/null"
+
+!! Clickable URLs
+URxvt.perl-ext-common: default,matcher
+URxvt.url-launcher: /usr/bin/xdg-open
+URxvt.matcher.button: 1
+URxvt.matcher.rend.0: Uline Bold fg5
+!! Yankable URLs (no mouse)
+URxvt.perl-ext: default,url-select
+URxvt.keysym.M-u: perl:url-select:select_next
+URxvt.url-select.launcher: /usr/bin/xdg-open
+URxvt.url-select.underline: true
+
+!! Changing font size on the fly
+ URxvt.keysym.C-Down:  resize-font:smaller
+ URxvt.keysym.C-Up:    resize-font:bigger
+ URxvt.iso14755: false
+ URxvt.iso14755_52: false
+
+URxvt.depth: 32
+URxvt.background: [80]#000000

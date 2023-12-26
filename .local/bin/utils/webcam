@@ -1,5 +1,6 @@
 #!/bin/sh
 
-setsid -f st -n float-term -g 45x18-14-14 \
+#setsid -f st -n float-term -g 45x18-14-14 \
+setsid -f st -n float-term -g 45x18-5-5 \
 -e mpv -quiet --untimed --vf-add=hflip \
 /dev/video0 >/dev/null 2>&1

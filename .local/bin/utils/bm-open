@@ -1,10 +1,5 @@
 #!/bin/sh
 
-bmurl=$(sed -E '/(^\s*$|^#)/ d;s/^/[url]    /' "$HOME/.local/share/bookmarks/urls")
-bmdir=$(sed -E '/(^\s*$|^#)/ d;s/^/[dir]    /' "$HOME/.local/share/bookmarks/directories")
-bmfile=$(sed -E '/(^\s*$|^#)/ d;s/^/[file]    /' "$HOME/.local/share/bookmarks/files")
-choice=$(printf "%s\n%s\n%s" "$bmurl" "$bmdir" "$bmfile" | dmenu -i -l 10 -p "Open bookmark:")
+url=$(sed '/^$/ d;/^#/ d' "$HOME/.local/share/bookmarks/urls" | awk '{printf("%-50s %s\n", $1, $2)}')
 
-[ -z "$choice" ] && exit
-echo "$choice" | awk '{print $3}' | tr -d '\n' | xclip -selection c
-xdg-open "$(echo "$choice" | awk '{print $3}')"
+xdg-open "$(echo "$url" | dmenu -i -l 19 -p "Open bookmark:" | awk '{print $2}')"

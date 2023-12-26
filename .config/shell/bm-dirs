@@ -1,0 +1,26 @@
+c    "$XDG_CONFIG_HOME"
+
+# share dir
+sh   "$XDG_DATA_HOME"
+st   "$XDG_STATE_HOME"
+ff   "$XDG_DATA_HOME/fonts/"
+
+dl   "$XDG_DOWNLOAD_DIR"
+
+b    "$HOME/.local/bin/"
+
+# kuliah
+k    "$HOME/kuliah"
+1    "$HOME/kuliah/semester_1"
+
+# bacaan
+bk   "$HOME/personal/buku/"
+jl   "$HOME/personal/jurnal"
+
+sm   "$HOME/personal/sync/media/phone/"
+sc   "$HOME/personal/sync/camera/phone/"
+ss   "$HOME/personal/sync/screenshots"
+
+m    "$HOME/music/"
+p    "$HOME/personal/"
+w    "$HOME/wallpapers/"

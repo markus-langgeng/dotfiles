@@ -5,102 +5,30 @@
 # fzf,
 # ueberzug,
 # script that combines fzf+ueberzug (https://github.com/ueber-devel/ueberzug/blob/master/examples/fzfimg.sh)
+# qf (custom script to `quick find` files, see qf file for usage)
 
 mkcd() { mkdir -pv "$1" && cd "$1" || exit; }
 mvcd() { mv -vi "$1" "$2" && cd "$2" || exit; }
 
-nobloat_find() {
-    find "$1" -not \( -wholename "*/.git" -prune \) \
-        -not \( -wholename "*/node_modules" -prune \) \
-        -type "$2" 2>/dev/null
-}
-
-# find across system with predefined path with fzf or fimg
-# $1 -> the options [path_flag]:[i|ii|m]
-# $2 -> filetype for find command
-general_find() {
-    local bin_dir="$HOME/.local/bin/"
-    local cam_dir="$HOME/personal/sync/camera/phone/"
-    local cllg_dir="$XDG_COLLEGE_DIR"
-    local conf_dir="$XDG_CONFIG_HOME/"
-    local data_dir="$XDG_DATA_HOME/"                    # share
-    local down_dir="$XDG_DOWNLOAD_DIR"
-    local media_dir="$HOME/personal/sync/media/phone/"
-    local music_dir="$XDG_MUSIC_DIR"
-    local prsn_dir="$XDG_PERSONAL_DIR"
-    local wall_dir="$XDG_WALLPAPERS_DIR"
-
-    if [ -z "${1:1}" ] || [ -z "$2" ]; then
-        printf "%s\t%s\n" "Usage:" "general_find -[bcCDmMskpw][(iim)] [type_of_file:f,d]"; return 1
-    fi
-
-    while getopts :b:c:C:D:m:M:s:k:p:w: opt; do
-        case $opt in
-            b ) path_flag="$bin_dir";    type="${2:-f}"; flag_args="$OPTARG" ;;
-            c ) path_flag="$conf_dir";   type="${2:-f}"; flag_args="$OPTARG" ;;
-            C ) path_flag="$cam_dir";    type="${2:-f}"; flag_args="$OPTARG" ;;
-            D ) path_flag="$down_dir";   type="${2:-f}"; flag_args="$OPTARG" ;;
-            m ) path_flag="$music_dir";  type="${2:-f}"; flag_args="$OPTARG" ;;
-            M ) path_flag="$media_dir";  type="${2:-f}"; flag_args="$OPTARG" ;;
-            k ) path_flag="$cllg_dir";   type="${2:-f}"; flag_args="$OPTARG" ;;
-            s ) path_flag="$data_dir";   type="${2:-f}"; flag_args="$OPTARG" ;;
-            p ) path_flag="$prsn_dir";   type="${2:-f}"; flag_args="$OPTARG" ;;
-            w ) path_flag="$wall_dir";   type="${2:-f}"; flag_args="$OPTARG" ;;
-            * ) printf "%s\t%s\n" "Usage:" "general_find -[bcCDmMskpw][(iim)] [type_of_file:f,d]"; return 1 ;;
-        esac
-    done
-
-    case "$flag_args" in
-        i  ) nobloat_find "$path_flag" "$type" | fimg ;;
-        ii ) nobloat_find "$path_flag" "$type" | grep -iE "^.*\.(png|jpg|jpeg|gif|webp|jfif)$" | fimg ;;
-        m  ) nobloat_find "$path_flag" "$type" | fzf --multi ;;
-        im ) nobloat_find "$path_flag" "$type" | fimg --multi ;;
-        iim) nobloat_find "$path_flag" "$type" | grep -iE "^.*\.(png|jpg|jpeg|gif|webp|jfif)$" | fimg --multi ;;
-        *  ) nobloat_find "$path_flag" "$type" | fzf ;;
-    esac
-    shift $((OPTIND -1))
-
-}
-
 fcd() {
-    if [ -z "${1:1}" ]; then
-        printf "%s\t%s\n%s\n" "Usage:" "fcd -[bcCDmMskpw]" "See general_find function."; return 1
-    elif [[ ${1:2} =~ (i|m) ]]; then
-        echo "fcd cannot use i or m arguments"
-    fi
-    cd "$(general_find "$1" "d")" || return
-}
-
-open() {
-    if [ -z "${1:1}" ]; then
-        printf "%s\t%s\n%s\n" "Usage:" "open -[bcCDmMskpw][(iim)]" "See general_find function."; return 1
-    elif [[ ${1:2} == *m* ]]; then
-        for f in $(general_find "${1:-d}" "f"); do
-            xdg-open "$f"
-        done
-    else
-        general_find "${1:-d}" "f" | xargs xdg-open
-    fi
-}
-
-gfp() {
-    if [ -z "${1:1}" ]; then
-        printf "%s\t%s\n%s\n" "Usage:" "gfp -[bcCDmMskpw][(iim)]" "See general_find function."; return 1
-    elif [[ ${1:2} == *m* ]]; then
-        general_find "$1" "f" | xclip -selection c ; return
-    fi
-    general_find "$1" "f" | tr -d '\n' | xclip -selection c
+    [ -z "$1" ] && return 1
+    my_cmd="$(qf "$1" "d")"
+    [ -z "$my_cmd" ] && return 1
+    cd "$(eval "$my_cmd")" || exit
 }
 
 gdp() {
-    if [ -z "${1:1}" ]; then
-        printf "%s\t%s\n%s\n" "Usage:" "gdp -[bcCDmMskpw][(m)]" "See general_find function."; return 1
-    elif [[ ${1:2} == *i* ]]; then
-        echo "fcd cannot use i arguments"; return
-    elif [[ $1 == *m* ]]; then
-        general_find "$1" "d" | xclip -selection c ; return
-    fi
-    general_find "$1" "d" | tr -d '\n' | xclip -selection c
+    [ -z "$1" ] && return 1
+    my_cmd="$(qf "$1" "d" "$2")"
+    [ -z "$my_cmd" ] && return 1
+    eval "$my_cmd --multi | sed 's/^/\"/;s/$/\"/' | tr '\n' ' ' | xclip -selection c"
+}
+
+gfp() {
+    [ -z "$1" ] && return 1
+    my_cmd="$(qf "$1" "f" "$2")"
+    [ -z "$my_cmd" ] && return 1
+    eval "$my_cmd --multi | sed 's/^/\"/;s/$/\"/' | tr '\n' ' ' | xclip -selection c"
 }
 
 pms() {

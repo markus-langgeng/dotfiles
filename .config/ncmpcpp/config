@@ -19,7 +19,7 @@
 ## MPD clients (eg. ncmpc) also use that location.
 ##
 #
-lyrics_directory = ~/.config/ncmpcpp/lyrics
+lyrics_directory = ~/.local/share/lyrics
 #
 ##### connection settings #####
 #
@@ -83,7 +83,7 @@ visualizer_output_name = "my_fifo"
 ##
 ## If you set format to 44100:16:2, make it 'yes'.
 ##
-visualizer_in_stereo = yes
+visualizer_in_stereo = no
 #
 ##
 ## Note: set below to >=10 only if you have synchronization issues with
@@ -378,7 +378,6 @@ visualizer_spectrum_smooth_look = yes
 ## Available values: classic, alternative.
 ##
 #user_interface = classic
-user_interface = alternative
 #
 #data_fetching_delay = yes
 #
@@ -407,7 +406,6 @@ user_interface = alternative
 #
 #header_text_scrolling = yes
 #
-#cyclic_scrolling = no
 cyclic_scrolling = yes
 #
 # lyrics_fetchers = azlyrics, genius, musixmatch, sing365, justsomelyrics, jahlyrics, plyrics, tekstowo, zeneszoveg, internet
@@ -445,26 +443,26 @@ store_lyrics_in_song_dir = yes
 ## media_library, playlist_editor, tag_editor, outputs, visualizer, clock,
 ## lyrics, last_fm.
 ##
-#screen_switcher_mode = playlist, browser
+screen_switcher_mode = playlist, browser
 #
 ##
 ## Note: You can define startup screen by choosing screen from the list above.
 ##
-#startup_screen = playlist
+startup_screen = visualizer
 #
 ##
 ## Note: You can define startup slave screen by choosing screen from the list
 ## above or an empty value for no slave screen.
 ##
-#startup_slave_screen = ""
+startup_slave_screen = playlist
 #
-#startup_slave_screen_focus = no
+startup_slave_screen_focus = yes
 #
 ##
 ## Default width of locked screen (in %).  Acceptable values are from 20 to 80.
 ##
 #
-#locked_screen_width_part = 50
+locked_screen_width_part = 40
 #
 #ask_for_locked_screen_width_part = yes
 #
@@ -513,8 +511,8 @@ regular_expressions = perl
 #
 #media_library_sort_by_mtime = no
 #
-#enable_window_title = yes
-enable_window_title = no
+enable_window_title = yes
+#enable_window_title = no
 #
 ##
 ## Note: You can choose default search mode for search engine. Available modes

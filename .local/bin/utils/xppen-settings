@@ -1,0 +1,39 @@
+#!/bin/sh
+
+if ! xsetwacom list devices | grep -q "9 inch PenTablet"; then
+    exit 1
+fi
+
+stylus="9 inch PenTablet stylus"
+eraser="9 inch PenTablet eraser"
+
+xsetwacom set "$stylus" MapToOutput 1920x1080+0+0
+xsetwacom set "$eraser" MapToOutput 1920x1080+0+0
+xsetwacom set "$stylus" Rotate cw
+# xsetwacom set "$eraser" Rotate cw
+
+# Default area with digimend driver: 0 0 32767 32767 (for 16:9 = 32810 18431)
+# Default area without digimend driver: 0 0 46024 25908 (already 16:9)
+xsetwacom set "$stylus" ResetArea
+# xsetwacom set "$stylus" Area 0 0 32810 18431
+# xsetwacom set "$eraser" Area 0 0 46024 25908
+
+# Remap
+# xsetwacom set "$eraser" Button 1 "key +shift ampersand -shift"
+# xsetwacom set "$eraser" Button 2 "key +ctrl z -ctrl"
+# xsetwacom set "$eraser" Button 3 "key shift"
+# xsetwacom set "$eraser" Button 8 "key r"
+# xsetwacom set "$eraser" Button 9 "key +ctrl t -ctrl"
+# xsetwacom set "$eraser" Button 10 "key s"
+# xsetwacom set "$eraser" Button 11 "key s"
+# xsetwacom set "$eraser" Button 12 "key s"
+# xsetwacom set "$stylus" AbsWheelUp "key +ctrl plus -ctrl"
+# xsetwacom set "$stylus" AbsWheelDown "key +ctrl minus -ctrl"
+
+# Configuration data trimming and suppression
+# The event of this device are not legion; better to not filter any for sensitivity
+# Minimal trimming is also good.
+xsetwacom --set "$stylus" Suppress 0 # data pt.s filtered, default is 2, 0-100
+xsetwacom --set "$stylus" RawSample 1 # data pt.s trimmed, default is 4, 1-20
+
+sudo input-remapper-control --command start --device "9 inch PenTablet" --preset "xppen-test"

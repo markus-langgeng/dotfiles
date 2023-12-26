@@ -15,6 +15,7 @@ export XDG_DATA_HOME=$HOME/.local/share
 export XDG_STATE_HOME=$HOME/.local/state
 
 # Clean up
+export ANDROID_HOME="$XDG_DATA_HOME"/android
 export ZDOTDIR="$XDG_CONFIG_HOME/zsh/"
 export XINITRC="$XDG_CONFIG_HOME/X11/xinitrc"
 export LESSHISTFILE="$XDG_STATE_HOME/less/history"
@@ -25,11 +26,10 @@ export R_HOME_USER="$XDG_CONFIG_HOME/R"
 export R_PROFULE_USER="$XDG_CONFIG_HOME/R/profile"
 export R_HISTFILE="$XDG_CONFIG_HOME/R/history"
 export PARALLEL_HOME="$XDG_CONFIG_HOME/parallel"
-export GVIMINIT='let $MYGVIMRC = !has("nvim") ? "$XDG_CONFIG_HOME/vim/gvimrc" : "$XDG_CONFIG_HOME/nvim/init.gvim" | so $MYGVIMRC'
-export VIMINIT='let $MYVIMRC = !has("nvim") ? "$XDG_CONFIG_HOME/vim/vimrc" : "$XDG_CONFIG_HOME/nvim/init.lua" | so $MYVIMRC'
 export TEXMFHOME="$XDG_DATA_HOME/texmf"
 export TEXMFVAR="$XDG_CACHE_HOME/texlive/texmf-var"
 export TEXMFCONFIG="$XDG_CONFIG_HOME/texlive/texmf-config"
+export CUDA_CACHE_PATH="$XDG_CACHE_HOME"/nv
 # pnpm
 export NPM_CONFIG_USERCONFIG="$XDG_CONFIG_HOME/npm/npmrc"
 export PNPM_HOME="/home/nggeng/.local/share/pnpm"
@@ -40,6 +40,7 @@ esac
 # pnpm end
 
 # fzf config
+export FZF_DEFAULT_COMMAND="find . -not \( -iwholename '*/.git' -prune \) -not \( -iwholename '*/node_modules' -prune \) -not \( -iwholename '*cache*' -prune \) -type f "
 export FZF_DEFAULT_OPTS="--cycle --ansi --reverse"
 export NODE_REPL_HISTORY="$XDG_DATA_HOME"/node_repl_history
 
