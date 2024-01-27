@@ -5,21 +5,25 @@ sh   "$XDG_DATA_HOME"
 st   "$XDG_STATE_HOME"
 ff   "$XDG_DATA_HOME/fonts/"
 
-dl   "$XDG_DOWNLOAD_DIR"
+dl   "$HOME/downloads/"
 
 b    "$HOME/.local/bin/"
 
 # kuliah
 k    "$HOME/kuliah"
+h    "$HOME/hsk/2/mock_test/"
 1    "$HOME/kuliah/semester_1"
+bmr  "$HOME/personal/latex_beamer_themes"
 
 # bacaan
 bk   "$HOME/personal/buku/"
 jl   "$HOME/personal/jurnal"
 
-sm   "$HOME/personal/sync/media/phone/"
-sc   "$HOME/personal/sync/camera/phone/"
-ss   "$HOME/personal/sync/screenshots"
+sp   "$HOME/sync/pictures/"
+si   "$HOME/sync/pictures/Instander/"
+sc   "$HOME/sync/DCIM/Camera/"
+ss   "$HOME/sync/DCIM/Screenshots"
+sd   "$HOME/sync/documents/"
 
 m    "$HOME/music/"
 p    "$HOME/personal/"

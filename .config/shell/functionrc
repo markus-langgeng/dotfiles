@@ -43,6 +43,14 @@ pmq() {
     pacman -Qsq "$1" | fzf --multi --preview 'pacman -Qi {1}; pacman -Qo {1}' | xargs -ro pacman -Qi
 }
 
+yys() {
+    yay -Ssq | fzf --multi --preview 'yay -Si {1}; yay -Qi {1}' | xargs -ro yay -S
+}
+
+yyq() {
+    yay -Qsq "$1" | fzf --multi --preview 'yay -Qi {1}; yay -Qo {1}' | xargs -ro yay -Qi
+}
+
 img_shuf() {
     find . -name '*' -exec file {} \; | grep -o -P '^.+: \w+ image' | awk '{gsub(":",""); print $1}'
 }

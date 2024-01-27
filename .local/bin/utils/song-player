@@ -1,6 +1,5 @@
 #!/bin/sh
 
-setsid -f st -n float-term -g 90x22-5+5 \
--e ncmpcpp \
-/dev/video0 >/dev/null 2>&1
+if pgrep "ncmpcpp"; then exit; fi
+setsid -f st -n float-term -g 90x22-5+5 -e ncmpcpp >/dev/null 2>&1
 

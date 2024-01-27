@@ -1,5 +1,8 @@
 #!/bin/sh
 
-url=$(sed '/^$/ d;/^#/ d' "$HOME/.local/share/bookmarks/urls" | awk '{printf("%-50s %s\n", $1, $2)}')
+url=$(sed '/^$/ d;/^#/ d' "$HOME/.config/shell/bm-urls" | awk '{printf("%-50s %s %5s\n", $1, $2, $3)}')
+url=$(echo "$url" | dmenu -i -l 19 -p "Open bookmark:" | awk '{printf "%s %5s", $2, $3}')
+brwsr=xdg-open
+[ "$(echo "$url" | awk '{print $2}')" = "ff" ] && brwsr=firefox
+$brwsr "$(echo "$url" | awk '{print $1}')"
 
-xdg-open "$(echo "$url" | dmenu -i -l 19 -p "Open bookmark:" | awk '{print $2}')"

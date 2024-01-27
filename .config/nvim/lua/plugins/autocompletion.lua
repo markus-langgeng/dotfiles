@@ -27,7 +27,7 @@ M.config = function()
             end,
         },
         completion = {
-            completeopt = "menu,menuone,noinsert",
+            completeopt = "menu,menuone,preview,noinsert",
         },
         mapping = cmp.mapping.preset.insert {
             ["<C-n>"] = cmp.mapping.select_next_item(),
@@ -35,10 +35,8 @@ M.config = function()
             ["<C-d>"] = cmp.mapping.scroll_docs(4),
             ["<C-u>"] = cmp.mapping.scroll_docs(-4),
             ["<C-Space>"] = cmp.mapping.complete {},
-            ["<C-y>"] = cmp.mapping.confirm {
-                behavior = cmp.ConfirmBehavior.Insert,
-                select = true,
-            },
+            ["<C-y>"] = cmp.mapping.confirm { behavior = cmp.ConfirmBehavior.Insert, select = true },
+            ["<CR>"] = cmp.mapping.confirm { behavior = cmp.ConfirmBehavior.Insert, select = true },
         },
         sources = {
             { name = "nvim_lsp" },
@@ -81,7 +79,7 @@ M.config = function()
         sources = cmp.config.sources({
             { name = "async_path" },
             { name = "cmdline" },
-        })
+        }),
     })
 end
 

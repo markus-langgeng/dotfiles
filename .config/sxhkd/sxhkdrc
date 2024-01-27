@@ -46,3 +46,6 @@ super + alt + {g, r}
 
 super + shift + {w, c, g, b}
     firefox {"https://web.whatsapp.com", "https://classroom.google.com", "https://github.com"}
+
+XF86Calculator
+    my-calc

@@ -8,7 +8,7 @@ M.dependencies = {
     "andymass/vim-matchup",
 }
 
-local ensure = { "lua", "vimdoc", "vim", "comment", "diff", "c", }
+local ensure = { "lua", "vimdoc", "vim", "comment", "diff", "c", "jsdoc"}
 local ignore = { "latex" }
 
 M.opts = {

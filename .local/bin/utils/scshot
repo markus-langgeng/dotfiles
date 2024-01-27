@@ -5,7 +5,7 @@ opt2="full (all monitors at the same time)"
 opt3="screen (specified monitor)"
 opt4="gui+upload"
 name="screenshot_$(date '+%Y-%m-%d_%H-%M')"
-out="$HOME/personal/sync/screenshots/phone"
+out="$HOME/sync/DCIM/Screenshots"
 [ ! -d "$out" ] && mkdir "$out"
 
 case $(printf "%s\n%s\n%s\n%s" "$opt1" "$opt2" "$opt3" "$opt4"  | dmenu -l 4 -p "Screenshot mode") in

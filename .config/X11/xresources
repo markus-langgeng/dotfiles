@@ -62,38 +62,44 @@
 ! *.color15:      #ffffff
 
 
-!! railcasts dark
-! special
+!!!!!!!!!!!!!!!!!!!!
+!! railcasts dark !!
+!!!!!!!!!!!!!!!!!!!!
+
+!! special
 *.foreground:   #e6e1dc
 *.background:   #2b2b2b
+!!*.background:   #000000
 *.cursorColor:  #e6e1dc
-! black
-*.color0:       #2b2b2b
-*.color8:       #5a647e
-! red
+!! black
+*.color0:       #000000
+*.color8:       #2b2b2b
+!! red
 *.color1:       #da4939
 *.color9:       #ff4500
-! green
+!! green
 *.color2:       #789339
 *.color10:      #a5c261
-! yellow
+!! yellow
 *.color3:       #ffbb4d
 *.color11:      #ffc66d
-! blue
+!! blue
 *.color4:       #4f88b0
 *.color12:      #6d9cbe
-! magenta
+!! magenta
 *.color5:       #b6b3eb
 *.color13:      #b6b3eb
-! cyan
+!! cyan
 *.color6:       #00CED1
 *.color14:      #00CED1
-! white
+!! white
 *.color7:       #e6e1dc
 *.color15:      #f9f7f3
 
 
-!! dwm
+!!!!!!!!!
+!! dwm !!
+!!!!!!!!!
 
 !! Red colorscheme
 ! dwm.selbordercolor: #FF4500
@@ -116,47 +122,3 @@ dwm.selbordercolor: #737373
 dwm.selbgcolor:     #000000
 dmenu.selbgcolor:   #000000
 
-
-!!!!!!!!!!!!!!!!!!!!!!!!!
-!! Urxvt Configuration !!
-!!!!!!!!!!!!!!!!!!!!!!!!!
-! do not scroll with output
-URxvt*scrollTtyOutput: false
-! scroll in relation to buffer (with mouse scroll or Shift+Page Up)
-URxvt*scrollWithBuffer: true
-! scroll back to the bottom on keypress
-URxvt*scrollTtyKeypress: true
-URxvt.secondaryScreen: 1
-URxvt.secondaryScroll: 0
-URxvt.font: xft:Liberation Mono:size=10:style=Regular:antialias=true, \
-    xft:Symbols Nerd Font:size=10:antialias=true:autohint=true, \
-    xft:Noto Color Emoji:size=10:antialias=true:autohint=true, \
-    xft:Noto Sans CJK JP:size=15:antialias=true:autohint=true
-URxvt.scrollBar: false
-URxvt.letterSpace: -1
-URxvt.lineSpace: -1
-
- URxvt.perl-ext-common:  default,matcher,resize-font
-
-!! Disable printing the terminal contents when pressing PrintScreen.
-URxvt.print-pipe: "cat > /dev/null"
-
-!! Clickable URLs
-URxvt.perl-ext-common: default,matcher
-URxvt.url-launcher: /usr/bin/xdg-open
-URxvt.matcher.button: 1
-URxvt.matcher.rend.0: Uline Bold fg5
-!! Yankable URLs (no mouse)
-URxvt.perl-ext: default,url-select
-URxvt.keysym.M-u: perl:url-select:select_next
-URxvt.url-select.launcher: /usr/bin/xdg-open
-URxvt.url-select.underline: true
-
-!! Changing font size on the fly
- URxvt.keysym.C-Down:  resize-font:smaller
- URxvt.keysym.C-Up:    resize-font:bigger
- URxvt.iso14755: false
- URxvt.iso14755_52: false
-
-URxvt.depth: 32
-URxvt.background: [80]#000000

@@ -1,0 +1,5 @@
+#!/bin/sh
+
+if pgrep "bc"; then exit; fi
+setsid -f st -n float-term -g 50x20-5+5 -e bc -l >/dev/null 2>&1
+

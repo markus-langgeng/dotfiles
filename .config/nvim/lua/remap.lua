@@ -10,8 +10,8 @@ map("n", "<C-u>", "<C-u>zz")
 map("n", "n", "nzzzv")
 map("n", "N", "Nzzzv")
 
-map("n", "[q", "<cmd>cprev<CR>")
-map("n", "]q", "<cmd>cnext<CR>")
+map("n", "<C-k>", "<cmd>cprev<CR>zz")
+map("n", "<C-j>", "<cmd>cnext<CR>zz")
 
 map("x", "<leader>p", [["_dP]])
 
@@ -35,10 +35,10 @@ map("n", "<leader>sb", [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><Left>]])
 map("n", "<leader>x", "<cmd>!chmod +x %<CR>", { silent = true })
 
 -- Diagnostic keymaps
-map("n", "<leader>e", vim.diagnostic.open_float)
-map("n", "[d", vim.diagnostic.goto_prev)
-map("n", "]d", vim.diagnostic.goto_next)
-map("n", "<leader>q", vim.diagnostic.setloclist)
+map("n", "<leader>e", vim.diagnostic.open_float, { desc = "DIAG: Show diagnostic [E]rror on float window" })
+map("n", "[d", vim.diagnostic.goto_prev, { desc = "DIAG: Go to previous diagnostic" })
+map("n", "]d", vim.diagnostic.goto_next, { desc = "DIAG: Go to next diagnostic" })
+map("n", "<leader>q", vim.diagnostic.setloclist, { desc = "DIAG: Make [Q]uickfixlist from diagnostic" })
 
 -- Simple file operation
 -- Thanks to 🙏 Theodore Alenas for the trick

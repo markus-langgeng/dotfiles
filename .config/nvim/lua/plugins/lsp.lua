@@ -19,7 +19,6 @@ local on_attach = function(_, bufnr)
 
     nmap("<leader>rn", vim.lsp.buf.rename, "[R]e[n]ame")
     nmap("<leader>ca", vim.lsp.buf.code_action, "[C]ode [A]ction")
-
     nmap("gd", require("telescope.builtin").lsp_definitions, "[G]oto [D]efinition")
     nmap("gr", require("telescope.builtin").lsp_references, "[G]oto [R]eferences")
     nmap("gI", require("telescope.builtin").lsp_implementations, "[G]oto [I]mplementation")
@@ -29,7 +28,7 @@ local on_attach = function(_, bufnr)
 
     -- See `:help K` for why this keymap
     nmap("K", vim.lsp.buf.hover, "Hover Documentation")
-    nmap("<C-k>", vim.lsp.buf.signature_help, "Signature Documentation")
+    nmap("<C-h>", vim.lsp.buf.signature_help, "Signature Documentation")
 
     -- Lesser used LSP functionality
     nmap("gD", vim.lsp.buf.declaration, "[G]oto [D]eclaration")
@@ -63,6 +62,7 @@ local servers = {
 
     clangd = {},
     texlab = {},
+    ansiblels = {},
 }
 
 M.config = function()
@@ -86,46 +86,77 @@ M.config = function()
     capabilities = require("cmp_nvim_lsp").default_capabilities(capabilities)
 
     -- Ensure the servers above are installed
-    local mason_lspconfig = require "mason-lspconfig"
+    local mason_lspconfig = require("mason-lspconfig")
 
     mason_lspconfig.setup {
         ensure_installed = vim.tbl_keys(servers),
     }
 
-    mason_lspconfig.setup_handlers {
-        function(server_name)
-            if server_name == "clangd" then
-                require("lspconfig")[server_name].setup({
-                    autostart = false,
-                    capabilities = capabilities,
-                    on_attach = on_attach,
-                    settings = servers[server_name],
-                })
-            elseif server_name == "phpactor" then
-                require("lspconfig")[server_name].setup({
-                    capabilities = capabilities,
-                    on_attach = on_attach,
-                    settings = servers[server_name],
-                    init_actions = {
-                        ["language_server_phpstan.enabled"] = false,
-                        ["language_server_psalm.enabled"] = true,
-                        ["language_server_php_cs_fixer.enabled"] = true,
-                        ["language_server_completion.trim_leading_dollar"] = true,
-                        ["language_server.diagnostics_on_update"] = false,
-                        ["indexer.exclude_patterns"] =
-                        '["/vendor/**/Tests/**/*","/vendor/**/tests/**/*","/var/cache/**/*","/vendor/composer/**/*","/tests/**/*","/vendor/**"]',
-                    },
-                })
-            else
-                require("lspconfig")[server_name].setup({
-                    capabilities = capabilities,
-                    on_attach = on_attach,
-                    settings = servers[server_name],
-                    filetypes = (servers[server_name] or {}).filetypes,
-                })
-            end
+    local handlers = {
+        -- The first entry (without a key) will be the default handler
+        -- and will be called for each installed server that doesn't have
+        -- a dedicated handler.
+        function(server_name)  -- default handler (optional)
+            require("lspconfig")[server_name].setup {
+                capabilities = capabilities,
+                on_attach = on_attach,
+                settings = servers[server_name],
+            }
         end,
+        ["clangd"] = function()
+            require("lspconfig")["clangd"].setup({
+                autostart = false,
+                capabilities = capabilities,
+                on_attach = on_attach,
+                settings = servers["clangd"],
+            })
+        end,
+        ["phpactor"] = function()
+            require("lspconfig")["phpactor"].setup({
+                capabilities = capabilities,
+                on_attach = on_attach,
+            })
+        end
     }
+
+    mason_lspconfig.setup({ handlers = handlers })
+
+    local Float = require "plenary.window.float"
+    local function showWindow(title, syntax, contents)
+        local out = {};
+        for match in string.gmatch(contents, "[^\n]+") do
+            table.insert(out, match);
+        end
+
+        local float = Float.percentage_range_window(0.6, 0.4, { winblend = 0 }, {
+            title = title,
+            topleft = "╭",
+            topright = "╮",
+            top = "─",
+            left = "│",
+            right = "│",
+            botleft = "╰",
+            botright = "╯",
+            bot = "─",
+        })
+
+        vim.api.nvim_buf_set_option(float.bufnr, "filetype", syntax)
+        vim.api.nvim_buf_set_lines(float.bufnr, 0, -1, false, out)
+    end
+
+    function LspPhpactorDumpConfig()
+        local results, _ = vim.lsp.buf_request_sync(0, "phpactor/debug/config", { ["return"] = true })
+        for _, res in pairs(results or {}) do
+            showWindow("Phpactor LSP Configuration", "json", res["result"])
+        end
+    end
+
+    function LspPhpactorStatus()
+        local results, _ = vim.lsp.buf_request_sync(0, "phpactor/status", { ["return"] = true })
+        for _, res in pairs(results or {}) do
+            showWindow("Phpactor Status", "markdown", res["result"])
+        end
+    end
 end
 
 -- UI Customization

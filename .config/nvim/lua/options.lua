@@ -52,6 +52,9 @@ o.foldenable = false -- Disable folding at startup.
 -- o.backup = false
 -- o.undofile = true
 -- o.undodir = vim.fn.expand("~/.cache/nvim/undodir")
+o.undodir = os.getenv("HOME") .. "/.cache/nvim/undodir"
+o.undofile = true
+
 
 -- Stop auto comment on new line
 vim.api.nvim_create_autocmd({ "FileType" }, {

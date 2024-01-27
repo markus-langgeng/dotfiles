@@ -1,7 +1,7 @@
 #!/bin/sh
 
 url_re="(((http|https|gopher|gemini|ftp|ftps|git)://|www\\.)[a-zA-Z0-9.]*[:;a-zA-Z0-9./+@$&%?$\#=_~-]*)|((magnet:\\?xt=urn:btih:)[a-zA-Z0-9]*)"
-bm_file="$HOME/.local/share/bookmarks/urls"
+bm_file="$HOME/.config/shell/bm-urls"
 kw=$(sed '/^$/ d;/^#/ d;s/[[:blank:]]\+.\+//;s/,/\n/g' "$bm_file" | sort -u)
 url=$(xclip -o -selection c)
 
@@ -10,16 +10,20 @@ if ! echo "$url" | grep -qaEo "$url_re"; then
     exit 1
 fi
 
-if  grep -qw "$url" "$bm_file"; then
+if  grep -qwx "$url" "$bm_file"; then
     echo "Ok" | dmenu -p "Url is already bookmarked"
     exit 1
 fi
 
 while
-    chosen_kw="$chosen_kw $(echo "$kw" | dmenu -i -p "Add or choose keywords" | sed 's/ /_/')"
+    chosen_kw="$chosen_kw $(echo "$kw" | dmenu -i -p "Add or choose keywords" | sed 's/ /_/g')"
     [ -z "$(echo "$chosen_kw" | sed 's/ //' )" ] && exit 1
     more_kw=$(printf "yes\nno" | dmenu -p "Add more keywords?")
     if [ "$more_kw" != "yes" ]; then break; fi
 do :; done
 
-printf "%s           %s\n" "$(echo "$chosen_kw" | sed 's/ //;s/ /,/g')" "$url" >> "$bm_file"
+open_with=$(printf "xdg-open\nfirefox" | dmenu -p "Open with?")
+[ "$open_with" = "firefox" ] && open_with="ff"
+[ "$open_with" = "xdg-open" ] && open_with=""
+
+printf "%s           %s %11s\n" "$(echo "$chosen_kw" | sed 's/ //;s/ /,/g')" "$url" "$open_with" | sed 's/\s*$//' >> "$bm_file"

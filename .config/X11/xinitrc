@@ -1,20 +1,20 @@
 #!/bin/sh
 
+setxkbmap -layout "us,us" -variant "dvp," -option "ctrl:swapcaps,grp:win_space_toggle"
+xmodmap -e "keycode 37 = Super_L"   # My super key is physically broken
+xmodmap -e "clear lock"             # Remove capslock
+xcape -e "Control_L=Escape"         # Turn capslock to ESC when pressed alone
+
 # Always use nvidia to render bc 490 driver cannot do hybrid *sadge*
 xrandr --setprovideroutputsource modesetting NVIDIA-0
 xrandr --auto
 xrandr --dpi 96
 
-autostart="mpd fcitx5 sxhkd picom slstatus"
+autostart="mpd fcitx5 unclutter sxhkd slstatus"
 
 for program in $autostart; do
 	pidof -sx "$program" || "$program" &
 done >/dev/null 2>&1
-
-setxkbmap -layout "us,us" -variant "dvp," -option "ctrl:swapcaps,grp:win_space_toggle"
-xmodmap -e "keycode 37 = Super_L"   # My super key is physically broken
-xmodmap -e "clear lock"             # Remove capslock
-xcape -e "Control_L=Escape"         # Turn capslock to ESC when pressed alone
 
 # fcitx5 &
 # sxhkd &
@@ -24,6 +24,13 @@ xcape -e "Control_L=Escape"         # Turn capslock to ESC when pressed alone
 
 xrdb "${XDG_CONFIG_HOME:-$HOME/.config}"/X11/xresources & xrdbpid=$!	# Uncomment to use Xresources colors/settings on startup
 setwp .
+
+# Set CAPS key=ESC|CTRL and CTRL key=SUPER
+setxkbmap -layout "us,us" -variant "dvp," -option "ctrl:swapcaps,grp:win_space_toggle"
+xmodmap -e "keycode 37 = Super_L"   # My super key is physically broken
+xmodmap -e "clear lock"             # Remove capslock
+xcape -e "Control_L=Escape"         # Turn capslock to ESC when pressed alone
+
 # Ensure that xrdb has finished running before moving on to start the WM/DE.
 [ -n "$xrdbpid" ] && wait "$xrdbpid"
 while :; do
