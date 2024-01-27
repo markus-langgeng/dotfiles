@@ -1,5 +1,6 @@
 #!/bin/sh
 
+# Set CAPS key=ESC|CTRL and CTRL key=SUPER
 setxkbmap -layout "us,us" -variant "dvp," -option "ctrl:swapcaps,grp:win_space_toggle"
 xmodmap -e "keycode 37 = Super_L"   # My super key is physically broken
 xmodmap -e "clear lock"             # Remove capslock
@@ -24,12 +25,6 @@ done >/dev/null 2>&1
 
 xrdb "${XDG_CONFIG_HOME:-$HOME/.config}"/X11/xresources & xrdbpid=$!	# Uncomment to use Xresources colors/settings on startup
 setwp .
-
-# Set CAPS key=ESC|CTRL and CTRL key=SUPER
-setxkbmap -layout "us,us" -variant "dvp," -option "ctrl:swapcaps,grp:win_space_toggle"
-xmodmap -e "keycode 37 = Super_L"   # My super key is physically broken
-xmodmap -e "clear lock"             # Remove capslock
-xcape -e "Control_L=Escape"         # Turn capslock to ESC when pressed alone
 
 # Ensure that xrdb has finished running before moving on to start the WM/DE.
 [ -n "$xrdbpid" ] && wait "$xrdbpid"

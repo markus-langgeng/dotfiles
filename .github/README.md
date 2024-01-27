@@ -10,32 +10,28 @@ link to it whenever it is mentioned here.
 - OS: [Arch Linux](https://wiki.archlinux.org/title/Installation_guide)
 - Shell: [zsh](https://www.zsh.org)
 - WM (Window Manager)/~~DE (Desktop Environment)~~: [dwm](https://dwm.suckless.org/)
-- Terminal Emulator: [st](https://st.suckless.org/)
+- Terminal Emulator: [Luke's st](https://github.com/lukesmithxyz/st)
 - App Launcher: [dmenu](https://tools.suckless.org/dmenu)
 - Status Bar: [slstatus](https://st.suckless.org/)
-- Text Editor: [neovim](https://github.com/neovim/neovim/) + [vim](https://github.com/vim/vim)
-- Browser: [firefox](https://www.mozilla.org/en-US/firefox/)
+- Text Editor: [neovim](https://github.com/neovim/neovim/)
+- Browser: [mullvad](https://mullvad.net/en/browser) + [firefox](https://www.mozilla.org/en-US/firefox/)
 - PDF Viewer: [zathura](https://pwmt.org/projects/zathura/)
-- Image Viewer: [sxiv](https://github.com/xyb3rt/sxiv)
+- Image Viewer: [nsxiv](https://github.com/nsxiv/nsxiv)
 - Video Player: [mpv](https://mpv.io/)
 - Screenshot: [flameshot](https://github.com/flameshot-org/flameshot)
 - Hot Key: [sxhkd](https://github.com/baskerville/sxhkd)
-- Compositor: [picom-git](https://github.com/yshui/picom)
-- Audio: wireplumber
+- Compositor: -
 - IME: fcitx5
 
 ## Installation
 To install my dotfiles, simply download or `git clone` or `curl` or `wget` this repo.
 
-## Keybindings
-TBD
-
-## Software setups
-TBD but I want to fill this section with applications that are kind of hard to
-setup (e.g. Hardening Firefox, IME and the packages I installed, why I chose a
-certain kb layout and the kb remap)
+## Suckless programs that I use
+[st](https://github.com/markus-langgeng/st)
+[dwm](https://github.com/markus-langgeng/dwm)
+[dmenu](https://github.com/markus-langgeng/dmenu)
+[slstatus](https://github.com/markus-langgeng/slstatus)
 
 ## Wishlist
 1. Learn to use R instead of gui spreadsheet program
-2. Try URXVT
-3. Try Artix
+2. Try Artix

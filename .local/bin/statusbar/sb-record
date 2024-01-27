@@ -1,0 +1,4 @@
+#!/bin/sh
+
+record_status=$(pgrep "record-desktop")
+[ -n "$record_status" ] && echo "[REC] | " || echo " "
