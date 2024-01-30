@@ -1,6 +1,0 @@
-#!/bin/sh
-
-ls -t | head -28 | grep 'mp4$' | \
-    while read f; do
-        echo "$f" oaeuaoeu
-    done

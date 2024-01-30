@@ -165,6 +165,16 @@ return {
             { d(1, helper.get_visual), }
         )
     ),
+    s({ trig = "tsl", dscr = "Slanted", snippetType = "autosnippet" },
+        fmta("\\textsl{<>}",
+            { d(1, helper.get_visual), }
+        )
+    ),
+    s({ trig = "tcl", dscr = "Color", snippetType = "autosnippet" },
+        fmta("\\textcolor{<>}{<>}",
+            { i(1, "red"), d(2, helper.get_visual) }
+        )
+    ),
     s({ trig = "tuu", dscr = "Underline", snippetType = "autosnippet" },
         fmta("\\underline{<>}",
             { d(1, helper.get_visual), }

@@ -2,7 +2,7 @@
 
 s="$HOME/Pictures/wallpapers/"
 p="$HOME/.config/wall.png"
-o="$HOME/.config/wall_option.txt"
+o="$HOME/.config/wall-option.txt"
 
 [ -n "$2" ] && echo "$2" > "$o"
 

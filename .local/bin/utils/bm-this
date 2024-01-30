@@ -10,7 +10,7 @@ if ! echo "$url" | grep -qaEo "$url_re"; then
     exit 1
 fi
 
-if  grep -qwx "$url" "$bm_file"; then
+if  awk '{print $2}' "$bm_file" | grep -qx "$url"; then
     echo "Ok" | dmenu -p "Url is already bookmarked"
     exit 1
 fi

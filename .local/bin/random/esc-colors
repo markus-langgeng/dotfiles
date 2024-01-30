@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 
 # from http://jafrog.com/2013/11/23/colors-in-terminal.html
 for code in {30..37}; do \

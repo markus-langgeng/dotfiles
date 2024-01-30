@@ -42,6 +42,7 @@ super + alt + {k, b, m, c}
 super + alt + {g, r}
    xppen-settings; {gimp, krita}
 
+# don't use `m`, it's for moving floating window to center
 super + shift + {w, c, g, b}
     firefox {"https://web.whatsapp.com", "https://classroom.google.com", "https://github.com"}
 

@@ -16,6 +16,7 @@ export XDG_STATE_HOME=$HOME/.local/state
 
 # Clean up
 export ANDROID_HOME="$XDG_DATA_HOME"/android
+export ANSIBLE_HOME="$XDG_DATA_HOME"/ansible
 export ZDOTDIR="$XDG_CONFIG_HOME/zsh/"
 export XINITRC="$XDG_CONFIG_HOME/X11/xinitrc"
 export LESSHISTFILE="$XDG_STATE_HOME/less/history"

@@ -16,7 +16,6 @@ prime,dotfiles			https://github.com/ThePrimeagen/.dotfiles          ff
 tj,nvim,dotfiles			https://github.com/tjdevries/config_manager/tree/master/xdg_config/nvim          ff
 dwm,dwm_border			https://github.com/szatanjl/dwm/commit/1529909466206016f2101457bbf37c67195714c8          ff
 grep,shell			https://searx.fmac.xyz/search?q=can+i+grep+on+a+specific+line
-dwm,suckless			https://dwm.suckless.org/patches/alpha/
 lemmy,firefox_css			https://lemmy.world/c/FirefoxCSS@fedia.io
 fontconf			https://unix.stackexchange.com/questions/338047/how-does-fontconfig-actually-work
 fontconf			https://wiki.archlinux.org/title/Font_configuration/Examples#Default_fonts
@@ -159,3 +158,9 @@ latex,beamer           https://www.overleaf.com/learn/latex/Beamer
 beamer           https://github.com/martinbjeldbak/ultimate-beamer-theme-list          ff
 beamer,template           https://tex.stackexchange.com/questions/146529/design-a-custom-beamer-theme-from-scratch
 beamer,template           https://jeromebelleman.gitlab.io/posts/publishing/beamerthemes/
+beamer,guide           https://mirror.unpad.ac.id/ctan/macros/latex/contrib/beamer/doc/beameruserguide.pdf
+beamer,template           https://www.r-bloggers.com/2011/11/create-your-own-beamer-template/
+suckless           https://tools.suckless.org/
+website           https://motherfuckingwebsite.com/
+website           http://bettermotherfuckingwebsite.com/
+website           https://bestmotherfucking.website/
