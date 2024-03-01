@@ -39,27 +39,3 @@ map("n", "<leader>e", vim.diagnostic.open_float, { desc = "DIAG: Show diagnostic
 map("n", "[d", vim.diagnostic.goto_prev, { desc = "DIAG: Go to previous diagnostic" })
 map("n", "]d", vim.diagnostic.goto_next, { desc = "DIAG: Go to next diagnostic" })
 map("n", "<leader>q", vim.diagnostic.setloclist, { desc = "DIAG: Make [Q]uickfixlist from diagnostic" })
-
--- Simple file operation
--- Thanks to 🙏 Theodore Alenas for the trick
--- Execute command that is typed in a buffer
--- 1. Type `"s` to save command to a register (s for shell)
--- 2. Type `Shift+D` or `Shift+Y` to save the command/text
--- 3. Type `@c` to play the register
-map("n", "<leader>ls", function()
-    vim.cmd("vsplit | enew")
-    vim.opt_local.buftype = "nofile"
-    vim.opt_local.bufhidden = "hide"
-    vim.opt_local.swapfile = false
-    vim.opt_local.buflisted = false
-    vim.opt_local.filetype = "ls-scratch"
-    local custom_find = {
-        [[.!find ./]],
-        [[-not \( -wholename "*/.git" -prune \)]],
-        [[-not \( -wholename "*/node_modules" -prune \)]],
-        [[-type f]],
-        [[2>/dev/null]],
-        [[| sed 's/^.\///g']],
-    }
-    vim.cmd(table.concat(custom_find, " "))
-end, { desc = "Do vsplit+enew and `find` files" })

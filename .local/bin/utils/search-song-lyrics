@@ -16,4 +16,4 @@ fi
 
 title=$(echo "$title" | sed 's/[[:punct:]]//g;s/ /-/g')
 url=$(printf "https://genius.com/%s-%s-lyrics" "$artist" "$title")
-st -e "$BROWSER" "$url"
+setsid -f st -e "$BROWSER" "$url"

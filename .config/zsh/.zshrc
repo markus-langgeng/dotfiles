@@ -8,7 +8,6 @@ stty stop undef	# Disable ctrl-s to freeze terminal.
 setopt interactive_comments
 
 # Lines configured by zsh-newuser-install
-HISTFILE="${XDG_STATE_HOME:-$HOME/.cache}"/zsh/hsitory
 histsize=1000
 SAVEHIST=1000
 
@@ -23,6 +22,7 @@ zstyle ':completion:*' matcher-list '' 'm:{a-zA-Z}={A-Za-z}' 'r:|[._-]=* r:|=*' 
 # https://stackoverflow.com/questions/23152157/how-does-the-zsh-list-colors-syntax-work/23568183#23568183
 eval $(dircolors)           # so $LS_COLORS is exported
 zstyle ':completion:*' list-colors ${(s.:.)LS_COLORS}
+zstyle ':completion:*' cache-path $XDG_CACHE_HOME/zsh/zcompcache
 zmodload zsh/complist
 compinit -d $XDG_CACHE_HOME/zsh/zcompdump-$ZSH_VERSION
 _comp_options+=(globdots)	# Include hidden files.

@@ -3,13 +3,11 @@ local M = {
     dependencies = {
         -- Snippet Engine & its associated nvim-cmp source
         "saadparwaiz1/cmp_luasnip", -- Snippets source for nvim-cmp
-        "L3MON4D3/cmp-luasnip-choice",
+        "hrsh7th/cmp-buffer",
 
         -- Adds LSP completion capabilities
         "hrsh7th/cmp-nvim-lsp", -- LSP source for nvim-cmp
         "hrsh7th/cmp-nvim-lsp-signature-help",
-        "hrsh7th/cmp-nvim-lsp-document-symbol",
-        "hrsh7th/cmp-cmdline",
         "hrsh7th/cmp-emoji",
         "FelipeLema/cmp-async-path",
     },
@@ -41,20 +39,19 @@ M.config = function()
         sources = {
             { name = "nvim_lsp" },
             { name = "luasnip" },
-            { name = "luasnip_choice" },
             { name = "nvim_lsp_signature_help" },
-            { name = "nvim_lsp_document_symbol", }, -- trigger by typing `/@` in the prompt
             { name = "async_path" },
-            { name = "emoji" },                     -- trigger by typing `:`
+            { name = "buffer",                 keyword_length = 5 },
+            { name = "emoji" }, -- trigger by typing `:`
         },
         formatting = {
             format = function(entry, vim_item)
                 vim_item.menu = ({
                     nvim_lsp = "[LSP]",
                     luasnip = "[snip]",
-                    luasnip_choice = "[choice]",
                     async_path = "[path]",
                     cmdline = "[cmd]",
+                    buffer = "[buf]",
                     emoji = "[emoji]",
                 })[entry.source.name]
                 return vim_item
@@ -64,22 +61,6 @@ M.config = function()
             completion = cmp.config.window.bordered(),
             documentation = cmp.config.window.bordered(),
         }
-    })
-
-    -- `/` cmdline setup
-    cmp.setup.cmdline("/", {
-        mapping = cmp.mapping.preset.cmdline(),
-        sources = cmp.config.sources({
-            { name = "nvim_lsp_document_symbol" },
-        })
-    })
-
-    cmp.setup.cmdline(":", {
-        mapping = cmp.mapping.preset.cmdline(),
-        sources = cmp.config.sources({
-            { name = "async_path" },
-            { name = "cmdline" },
-        }),
     })
 end
 

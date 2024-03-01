@@ -50,9 +50,9 @@ M.keys = {
     { "<leader>sgi",     "<cmd>Telescope git_files<CR>",   desc = "TLSC: [S]earch [GI]t files" },
     { "<leader>sop",     "<cmd>Telescope vim_options<CR>", desc = "TLSC: [S]earch all [OP]tions" },
     { "<leader>scm",     "<cmd>Telescope commands<CR>",    desc = "TLSC: [S]earch [C]o[M]mand" },
-    { "<leader>skm",     "<cmd>Telescope keymaps<CR>",     desc = "TLSC: [S]earch [K]ey[M]aps" },
+    { "<leader>skm",     "<cmd>Telescope keymaps<CR>",     desc = "TLSC: [S]earch [K]ey [M]aps" },
     { "<leader>shl",     "<cmd>Telescope highlights<CR>",  desc = "TLSC: [S]earch [H]igh[L]ights" },
-    { "<leader>se",      "<cmd>Telescope emoji<CR>",       desc = "TLSC: [S]earch [E]moji" },
+    { "<leader>sm",      "<cmd>Telescope man_pages<CR>",   desc = "TLSC: [S]earch [M]an Pages" },
     {
         "<leader>/",
         function()

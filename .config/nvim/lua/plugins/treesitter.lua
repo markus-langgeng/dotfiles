@@ -6,9 +6,11 @@ local M = {
 
 M.dependencies = {
     "andymass/vim-matchup",
+    "JoosepAlviste/nvim-ts-context-commentstring",
+    "numToStr/Comment.nvim",
 }
 
-local ensure = { "lua", "vimdoc", "vim", "comment", "diff", "c", "jsdoc"}
+local ensure = { "lua", "vimdoc", "vim", "comment", "diff", "c", "jsdoc" }
 local ignore = { "latex" }
 
 M.opts = {
@@ -25,6 +27,12 @@ M.opts = {
 
 M.config = function()
     require("nvim-treesitter.configs").setup(M.opts)
+    vim.g.matchup_override_vimtex = 1
+    vim.g.skip_ts_commentstring_module = true
+    require("ts_context_commentstring").setup { enable_autocmd = false, }
+    require("Comment").setup { pre_hook =
+        require("ts_context_commentstring.integrations.comment_nvim").create_pre_hook(),
+    }
 end
 
 return M

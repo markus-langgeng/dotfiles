@@ -3,8 +3,8 @@
 -- see :h luasnip-conditions
 local M = {}
 
-M.line_begin = require("luasnip.extras.expand_conditions").line_begin
-M.line_end = require("luasnip.extras.expand_conditions").line_end
+M.line_begin = require("luasnip.extras.conditions.expand").line_begin
+M.line_end = require("luasnip.extras.conditions.expand").line_end
 
 M.in_mathzone = function()
     return vim.fn["vimtex#syntax#in_mathzone"]() == 1

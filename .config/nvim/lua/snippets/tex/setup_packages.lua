@@ -9,91 +9,138 @@
 local cond = require("snippets.tex.utils.conditions")
 local helper = require("snippets.helper")
 
+-- local make_usepackage = function(_, _, user_arg1, user_arg2)
+--     vim.print(vim.inspect(user_arg1))
+--     return string.format("\\usepackage[]{%s}", user_arg1)
+-- end
+
+local make_section_title = function(_, _, title)
+    return string.format("%s %s %s", "%%", string.upper(title),
+        string.rep("%", 80 - 4 - string.len(title)))
+end
+
+local page_layout_pkgs = {
+    geometry = { left = "4cm", top = "3cm", right = "3cm", bottom = "3cm", "showframe" },
+    blindtext = "",
+}
+
+local setup_packages = function(trig, dscr, title, packages)
+    packages = packages or {}
+
+    local sect_separator = string.rep("%", 80)
+    local sect_title = make_section_title(title)
+    local result = string.format("%s\n%s\n", sect_separator, sect_title)
+
+    -- for k, v in pairs(packages) do
+    --     print(vim.inspect(k), vim.inspect(v), v[1])
+    -- end
+
+    s({ trig = trig, dscr = dscr }, fmta(result, {}))
+
+    result = result .. sect_separator
+    print(result)
+
+    -- return s({ trig = trig, dscr = dscr },
+    --     fmta(result)
+    -- )
+end
+
 --[[ setup common configuration for some packages ]]
 return {
-    s({ trig = "setup_page_layout", dscr = "Setup default page layout" },
+
+    -- setup_packages("setup_page_layout", "Setup default layout", "Page Layout", page_layout_pkgs),
+
+    s({ trig = "s_pagelayout", dscr = "Setup default page layout" },
         fmta([[
-
-        %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-        %% PAGE LAYOUT %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-        \usepackage[<><>]{geometry}
-        %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
+        <sect_separator>
+        <sect_title>
+        \usepackage[<page_size>,<margins>,<showframe>]{geometry}
+        <sect_separator>
         ]],
             {
-                i(1, "a4paper,"),
-                i(2, "left=4cm,top=3cm,right=3cm,bottom=3cm,showframe"),
+                sect_separator = t(string.rep("%", 80)),
+                sect_title = f(make_section_title, {}, { user_args = { "page layout" } }),
+                page_size = i(1, "a4paper"),
+                margins = c(2, {
+                    i(nil, "left=4cm,top=3cm,right=3cm,bottom=3cm"),
+                    i(nil, "left=3cm,top=3cm,right=3cm,bottom=3cm"),
+                    i(nil, "")
+                }),
+                showframe = c(3, { t(""), t("showframe"), }),
             }
         ),
-        {
-            condition = cond.in_preamble * cond.line_begin,
-            show_condition = cond.in_preamble,
-        }
+        { condition = cond.in_preamble * cond.line_begin, show_condition = cond.in_preamble }
     ),
 
-    s({ trig = "setup_lang_font_id", dscr = "Setup default fonts" },
+    s({ trig = "s_langfont_id", dscr = "Setup default languages and fonts" },
         fmta([[
-
-        %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-        %% LANGUAGE and FONT %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+        <sect_separator>
+        <sect_title>
         \usepackage{indentfirst,polyglossia,fontspec}
-        \setdefaultlanguage[<>]{<>}
-        \setotherlanguages{<>}
-
-        % \setmainfont{Times New Roman}
-        % \setsansfont{Arial}
-        % \setmonofont{}
-        %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
+        <mainlang_otherlang>
+        % \setmainfont{Times New Roman} % \setmainfont{Times New Roman}
+        % \setsansfont{Arial}           % \setsansfont{Arial}
+        % \setmonofont{}                % \setmonofont{}
+        <sect_separator>
         ]],
             {
-                i(2, "variant=indonesian"),
-                i(1, "malay"),
-                i(3, "english"),
+                sect_separator = t(string.rep("%", 80)),
+                sect_title = f(make_section_title, {}, { user_args = { "Languages and Fonts" } }),
+                mainlang_otherlang = c(1, {
+                    sn(nil,
+                        { i(1), t({ "\\setdefaultlanguage[variant=indonesian]{malay}", "\\setotherlanguages{english}" }) }),
+                    sn(nil,
+                        { i(1), t({ "\\setdefaultlanguage{english}", "\\setotherlanguages[variant=indonesian]{malay}" }) }),
+                }),
             }
         ),
-        {
-            condition = cond.in_preamble * cond.line_begin,
-            show_condition = cond.in_preamble,
-        }
+        { condition = cond.in_preamble * cond.line_begin, show_condition = cond.in_preamble }
     ),
 
-    s({ trig = "setup_lang_font_zh", dscr = "Setup default fonts" },
+    s({ trig = "s_langfont_zh", dscr = "Setup default languages and fonts for chinese" },
         fmta([[
-
-        %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-        %% LANGUAGE and FONT %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+        <sect_separator>
+        <sect_title>
         \usepackage{indentfirst,xeCJK,xpinyin}
-        % \setdefaultlanguage[]{}
-        % \setotherlanguages{}
-
-        % \setmainfont{Times New Roman}
-        \setCJKmainfont{<>}
-        \setCJKsansfont{<>} % Source Han Sans CN, BabelStone Han
+        \setCJKmainfont{<main>}
+        \setCJKsansfont{<sans>} % Source Han Sans CN, BabelStone Han
         \xpinyinsetup{ratio={.6}, hsep={.6em plus .1em}, pysep={}}
-        %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
+        <sect_separator>
         ]],
             {
-                i(1, "Noto Serif CJK SC"),
-                i(2, "Source Han Sans CN"),
+                sect_separator = t(string.rep("%", 80)),
+                sect_title = f(make_section_title, {}, { user_args = { "Languages and Fonts for chinese" } }),
+                main = i(1, "Noto Serif CJK SC"),
+                sans = i(2, "Source Hna Sans CN"),
             }
         ),
-        {
-            condition = cond.in_preamble * cond.line_begin,
-            show_condition = cond.in_preamble,
-        }
+        { condition = cond.in_preamble * cond.line_begin, show_condition = cond.in_preamble }
     ),
 
-    s({ trig = "setup_par_line", dscr = "Setup paragraph and line spacing" },
+    s({ trig = "s_parline", dscr = "Setup default paragagraph and line spacing" },
         fmta([[
-
-        %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-        %% PARAGRAPH and LINE SPACING %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+        <sect_separator>
+        <sect_title>
         \usepackage{microtype,titlesec,titling,setspace,lipsum}
-        \usepackage<>{parskip}
+        \usepackage[<indent>]{parskip}
         \onehalfspacing
-        %% (reformat title and sections below here) %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+        <sect_separator>
+        ]],
+            {
+                sect_separator = t(string.rep("%", 80)),
+                sect_title = f(make_section_title, {}, { user_args = { "Paragraph and Line Spacing" } }),
+                indent = c(1, {
+                    i(nil, "indent=30pt"),
+                    i(nil, "indent=25pt"),
+                    i(nil, "indent=20pt"),
+                    i(nil, ""),
+                }),
+            }
+        ),
+        { condition = cond.in_preamble * cond.line_begin, show_condition = cond.in_preamble }
+    ),
+
+    --[[ %% (reformat title and sections below here) %%%%%%%%%%%%%%%%%%%%%%%%%%%%
         % \renewcommand{\maketitle}{
         %     \noindent\normalsize\theauthor
         %     \begin{center}
@@ -101,22 +148,67 @@ return {
         %     \end{center}
         %     \vspace{1em}
         % }
-        % \titleformat*{\section}{\normalsize\bfseries}
-        %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+        % \titleformat*{\section}{\normalsize\bfseries} ]]
 
+    s({ trig = "s_img", dscr = "Setup default settings to import images" },
+        fmta([[
+        <sect_separator>
+        <sect_title>
+        \usepackage{graphicx}
+        \graphicspath{{<path>/}}
+        <sect_separator>
         ]],
-            { c(1, {
-                t(""),
-                sn(1, { t("[indent="), i(1, "30"), t("pt]") }),
-            })
+            {
+                sect_separator = t(string.rep("%", 80)),
+                sect_title = f(make_section_title, {}, { user_args = { "Paragraph and Line Spacing" } }),
+                path = i(1, "img"),
             }
         ),
-        {
-            condition = cond.in_preamble * cond.line_begin,
-            show_condition = cond.in_preamble,
-        }
+        { condition = cond.in_preamble * cond.line_begin, show_condition = cond.in_preamble }
     ),
 
+    s({ trig = "s_bib", dscr = "Setup default settings for bibliography" },
+        fmta([[
+        <sect_separator>
+        <sect_title>
+        \usepackage[
+        backend=biber,
+        style=authoryear,
+        hyperref=true,
+        ]{biblatex}
+        %% (reformat stuff below here) %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+        % \renewbibmacro{in:}{} % removes in
+        % \DeclareFieldFormat{pages}{#1} % removes pages
+        % \renewcommand*{\finentrypunct}{\ifboolexpr{togl {bbx:doi} and not test {\iffieldundef{doi}}}{}{\addperiod}}
+        \addbibresource{ref.bib}
+        <sect_separator>
+        ]],
+            {
+                sect_separator = t(string.rep("%", 80)),
+                sect_title = f(make_section_title, {}, { user_args = { "Paragraph and Line Spacing" } }),
+            }
+        ),
+        { condition = cond.in_preamble * cond.line_begin, show_condition = cond.in_preamble }
+    ),
+
+    -- always load this at the end of preamble
+    s({ trig = "s_hyperref", dscr = "Setup hypperref" },
+        fmta([[
+        <sect_separator>
+        <sect_title>
+        \usepackage{hyperref}
+        \hypersetup{colorlinks=true,citecolor=blue,linkcolor=blue,urlcolor=blue}
+        \urlstyle{same}
+        <sect_separator>
+        ]],
+            {
+                sect_separator = t(string.rep("%", 80)),
+                sect_title = f(make_section_title, {}, { user_args = { "references" } }),
+            }),
+        { condition = cond.in_preamble * cond.line_begin, show_condition = cond.in_preamble }
+    ),
+
+    --------------------------------
     s({ trig = "setup_tikz", dscr = "Setup tikz" },
         fmta([[
 
@@ -130,26 +222,6 @@ return {
 
         ]],
             { i(1, ",arrows.meta,mindmap,backgrounds"), }
-        ),
-        {
-            condition = cond.in_preamble * cond.line_begin,
-            show_condition = cond.in_preamble,
-        }
-    ),
-
-    s({ trig = "setup_include_img", dscr = "Setup to include image" },
-        fmta([[
-
-        %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-        %% INCLUDE IMAGE %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-        \usepackage{graphicx}
-        \graphicspath{{<>/}}
-        %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-        ]],
-            {
-                i(1, "img")
-            }
         ),
         {
             condition = cond.in_preamble * cond.line_begin,
@@ -198,67 +270,5 @@ return {
             show_condition = cond.in_preamble,
         }
     ),
-
-    s({ trig = "setup_biblatex", dscr = "My common biblatex setup" },
-        fmta([[
-
-        %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-        %% BIBLYOGRAPHY %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-        \usepackage[
-        backend=biber,
-        style=authoryear,
-        hyperref=true,
-        ]{biblatex}
-        %% (reformat stuff below here) %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-        % \renewbibmacro{in:}{} % removes in
-        % \DeclareFieldFormat{pages}{#1} % removes pages
-        % \renewcommand*{\finentrypunct}{\ifboolexpr{togl {bbx:doi} and not test {\iffieldundef{doi}}}{}{\addperiod}}
-        \addbibresource{ref.bib}<>
-        %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-        ]],
-            { i(0) }
-        ),
-        {
-            condition = cond.in_preamble * cond.line_begin,
-            show_condition = cond.in_preamble,
-        }
-    ),
-
-    -- always load this at the end of preamble
-    s({ trig = "setup_hyperref", dscr = "My common biblatex setup" },
-        fmta([[
-
-        %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-        %% REFERENCES %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-        \usepackage{hyperref}
-        \hypersetup{<>}
-        \urlstyle{same}
-        %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-        ]],
-            {
-                i(1, "colorlinks=true, citecolor=blue, linkcolor=blue, urlcolor=blue"),
-            }
-        ),
-        {
-            condition = cond.in_preamble * cond.line_begin,
-            show_condition = cond.in_preamble,
-        }
-    ),
-
-    -- s({ trig = "qw", name = "inline code", dscr = "inline code, ft escape" },
-    --     fmta([[
-    --     \mintinline{<>}<>
-    --     ]],
-    --         {
-    --             i(1, "text"),
-    --             c(2, {
-    --                 sn(nil, { t("{"), i(1), t("}") }),
-    --                 sn(nil, { t("|"), i(1), t("|") })
-    --             }),
-    --         }
-    --     ), {}),
-
 
 }

@@ -4,9 +4,9 @@ local M = {
 }
 
 M.opts = {
-    keep_roots = true,
-    link_roots = true,
-    link_children = true,
+    -- keep_roots = true,
+    -- link_roots = true,
+    -- link_children = true,
     update_events = { "TextChanged", "TextChangedI" },
     enable_autosnippets = true,
     delete_check_events = "TextChanged",

@@ -20,7 +20,7 @@ fi
 
 [ -z "$fp" ] && exit 1
 
-find_cmd="find \"$(eval "echo $fp")\""
+find_cmd="find -L \"$(eval "echo $fp")\""
 find_cmd="$find_cmd -not \( -iwholename \"*/.git\" -prune \)"
 find_cmd="$find_cmd -not \( -iwholename \"*/node_modules\" -prune \)"
 find_cmd="$find_cmd -not \( -iwholename \"*cache*\" -prune \)"

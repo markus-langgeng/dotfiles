@@ -25,7 +25,7 @@ done >/dev/null 2>&1
 
 xrdb "${XDG_CONFIG_HOME:-$HOME/.config}"/X11/xresources & xrdbpid=$!	# Uncomment to use Xresources colors/settings on startup
 setwp .
-xautolock -time 5 -locker slock &
+xautolock -time 15 -locker slock &
 
 # Ensure that xrdb has finished running before moving on to start the WM/DE.
 [ -n "$xrdbpid" ] && wait "$xrdbpid"

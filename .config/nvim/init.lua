@@ -66,16 +66,4 @@ local opts = { -- lazy vim config opts
 }
 
 require("lazy").setup("plugins", opts) -- search directory called "plugins"
-local hl = vim.api.nvim_set_hl
-hl(0, "WinSeparator", { bg = "none" })
-hl(0, "Normal", { bg = "none" })
-hl(0, "NormalFloat", { bg = "none" })
-hl(0, "ModeMsg", { bg = "none" })
-hl(0, "SignColumn", { bg = "none" })
-hl(0, "LineNrAbove", { fg = "LightGray" })
-hl(0, "LineNrBelow", { fg = "LightGray" })
-hl(0, "Comment", { fg = "#5f8787", italic = true })
-hl(0, "MatchParen", { fg = "#ff9e3b", reverse = true, bold = true })
--- hl(0, "CursorLine", { bg = "Gray20"})
--- hl(0, "ColorColumn", { bg = "Gray20"})
--- hl(0, "Visual", { bg = "Gray30"})
+require("highlights")

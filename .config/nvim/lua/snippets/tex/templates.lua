@@ -9,18 +9,11 @@ return {
         fmta([[
         %! TeX program = lualatex
 
-        \documentclass[a4paper,12pt]{extarticle}
-
-        <>
-
-        <>
-
-        <>
-
+        \documentclass[<paper_size>,<font_size>,]{extarticle}
 
         %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-        \title{<>}
-        \author{<>}
+        \title{<title>}
+        \author{<author>}
         %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 
@@ -32,20 +25,10 @@ return {
         \end{document}
         ]],
             {
-                c(3, {
-                    t("% setup_page_layout"),
-                    sn(nil, { t("setup_page_layout"), i(1) }), -- Expand end enter in insert mode so that it could suggest another snippet to expand
-                }),
-                c(4, {
-                    t("% setup_lang_font_id"),
-                    sn(nil, { t("setup_lang_font_id"), i(1) }),
-                }),
-                c(5, {
-                    t("% setup_par_line"),
-                    sn(nil, { t("setup_par_line"), i(1) }),
-                }),
-                i(1, "The Title"),
-                i(2, "The Author"),
+                paper_size = i(3, "a4paper"),
+                font_size = i(4, "12pt"),
+                title = i(1, "The Title"),
+                author = i(2, "The Author"),
                 i(0),
             }
         ),
@@ -58,16 +41,15 @@ return {
 
         \documentclass[a4paper,12pt]{extarticle}
 
-        <>
+        % s_pagelayout
 
-        <>
+        % s_langfont_id
 
-        <>
+        % s_parline
 
-        <>
+        % s_bib
 
-        <>
-
+        % s_hyperref
 
         %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
         \title{<>}
@@ -85,26 +67,6 @@ return {
         \end{document}
         ]],
             {
-                c(3, {
-                    t("% setup_page_layout"),
-                    sn(nil, { t("setup_page_layout"), i(1) }),
-                }),
-                c(4, {
-                    t("% setup_lang_font_id"),
-                    sn(nil, { t("setup_lang_font_id"), i(1) }),
-                }),
-                c(5, {
-                    t("% setup_par_line"),
-                    sn(nil, { t("setup_par_line"), i(1) }),
-                }),
-                c(6, {
-                    t("% setup_biblatex"),
-                    sn(nil, { t("setup_biblatex"), i(1) }),
-                }),
-                c(7, {
-                    t("% setup_hyperref"),
-                    sn(nil, { t("setup_hyperref"), i(1) }),
-                }),
                 i(1, "The Title"),
                 i(2, "The Name"),
                 i(0),
@@ -247,11 +209,11 @@ return {
         % \usecolortheme{}
 
         %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-        \title[<>]{<>}
-        \subtitle{<>}
-        \author[<>]{<>}
-        \institute[<>]{<>}
-        \date[<>]{<>}
+        \title[<otitle>]{<title>}
+        \subtitle{<subtitle>}
+        \author[<oauthor>]{<author>}
+        \institute[<oinstitute>]{<institute>}
+        \date[<odate>]{<date>}
 
         % \logo{\includegraphics...}
         %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -265,19 +227,19 @@ return {
         \end{document}
         ]],
             {
-                i(2, "Short Title"),
-                i(1, "Awesome Full-length Title"),
-                i(4, "Langgeng, Nggenglang"),
-                i(3, "M.~Langgeng\\inst{1} \\and M.~Nggenglang\\inst{2}"),
-                i(5, "Nice Subtitle"),
-                i(7, "UB"),
-                i(6, "\\inst{1} Fakultas Ilmu Budaya\\\\Universitas Brawijaya \\and \\inst{2} Fakultas Ilmu Budaya\\\\Universitas Brawijaya"),
-                i(9, "KB 2024"),
-                i(8, "Konferensi Besar, April 2024"),
+                otitle     = i(2, "Short Title"),
+                title      = i(1, "Awesome Full-length Title"),
+                subtitle   = i(3, "Nice Subtitle"),
+                oauthor    = i(5, "Langgeng, Nggenglang"),
+                author     = i(4, "M.~Langgeng\\inst{1} \\and M.~Nggenglang\\inst{2}"),
+                oinstitute = i(7, "UB"),
+                institute  = i(6,
+                    "\\inst{1} Fakultas Ilmu Budaya\\\\Universitas Brawijaya \\and \\inst{2} Fakultas Ilmu Budaya\\\\Universitas Brawijaya"),
+                odate      = i(9, "KB 2024"),
+                date       = i(8, "Suatu Pertemuan, April 2024 wkwkw"),
                 i(0, ""),
             }
         ),
         { condition = cond.on_first_line, show_condition = cond.on_first_line }
     ),
 }
-

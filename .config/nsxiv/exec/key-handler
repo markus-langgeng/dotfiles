@@ -16,6 +16,7 @@ while read -r file; do
     case "$1" in
         "c"  ) echo "$file" | tr -d '\n' | xclip -selection c ;;
         "w"  ) setwp "$file" ;;
+        "d"  ) trash-put "$file" ;;
         "C-a") mv "$file" "$HOME/wallpapers/animals/" ;;
         "C-i") mv "$file" "$HOME/wallpapers/illustrations" ;;
         "C-s") mv "$file" "$HOME/wallpapers/scenery" ;;
