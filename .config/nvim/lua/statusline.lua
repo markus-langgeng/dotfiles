@@ -1,5 +1,28 @@
 local M = {}
 
+M.vim_modes = {
+    ["n"] = "NORMAL",
+    ["no"] = "NORMAL",
+    ["v"] = "VISUAL",
+    ["V"] = "VISUAL LINE",
+    [""] = "VISUAL BLOCK",
+    ["s"] = "SELECT",
+    ["S"] = "SELECT LINE",
+    [""] = "SELECT BLOCK",
+    ["i"] = "INSERT",
+    ["ic"] = "INSERT",
+    ["R"] = "REPLACE",
+    ["Rv"] = "VISUAL REPLACE",
+    ["c"] = "COMMAND",
+    ["cv"] = "VIM EX",
+    ["ce"] = "EX",
+    ["r"] = "PROMPT",
+    ["rm"] = "MOAR",
+    ["r?"] = "CONFIRM",
+    ["!"] = "SHELL",
+    ["t"] = "TERMINAL",
+}
+
 function M.diagnostic_status()
     local num_errors = #vim.diagnostic.get(0, { severity = vim.diagnostic.severity.ERROR })
     local diag_msg = {}
@@ -26,17 +49,33 @@ function M.diagnostic_status()
 end
 
 function M.statusline()
-    local parts = {
-        -- [[ %-.15([%l,%v]%) %=%<%F%= %-.15(%y %P%) ]],
-        -- vim.fn.luaeval(require("statusline").diagnostic_status()),
-        [[ %-.15([%l:%p%%]%)]],
+    -- [[ %-.15([%l,%v]%) %=%<%F%= %-.15(%y %P%) ]],
+    -- vim.fn.luaeval(require("statusline").diagnostic_status()),
 
-        [[%-.15(%{luaeval("require('statusline').diagnostic_status()")}%)]],
+    local parts = {}
 
-        [[%=%<%F%= ]],
+    local cur_mode = vim.api.nvim_get_mode().mode
+    cur_mode = M.vim_modes[cur_mode]
+    local diags = M.diagnostic_status() or ""
 
-        [[%-.20(%y %P%) ]],
-    }
+    if diags ~= "" then
+        table.insert(parts, string.format("%%(-- %s -- [%s]%%)", cur_mode, diags))
+    else
+        table.insert(parts, string.format("%%(-- %s --%%)", cur_mode))
+    end
+
+    if vim.bo.filetype == "TelescopePrompt" or vim.bo.filetype == "lazy" or vim.bo.filetype == "mason" then
+        return " " .. table.concat(parts, " ")
+    end
+
+    table.insert(parts, "%(%{get(b:,'gitsigns_status','')}|%{get(b:,'gitsigns_head','')}%)")
+
+    table.insert(parts, "%=%(%F%)%=")
+    table.insert(parts, "%(%y")
+    table.insert(parts, "(%l,%v,%p%%)%)")
+
+    parts[1] = " " .. parts[1]
+    parts[#parts] = parts[#parts] .. " "
 
     return table.concat(parts, " ")
 end

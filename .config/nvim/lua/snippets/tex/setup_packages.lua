@@ -9,46 +9,111 @@
 local cond = require("snippets.tex.utils.conditions")
 local helper = require("snippets.helper")
 
--- local make_usepackage = function(_, _, user_arg1, user_arg2)
---     vim.print(vim.inspect(user_arg1))
---     return string.format("\\usepackage[]{%s}", user_arg1)
--- end
-
 local make_section_title = function(_, _, title)
     return string.format("%s %s %s", "%%", string.upper(title),
         string.rep("%", 80 - 4 - string.len(title)))
 end
 
-local page_layout_pkgs = {
-    geometry = { left = "4cm", top = "3cm", right = "3cm", bottom = "3cm", "showframe" },
-    blindtext = "",
+local parline_pkg = {
+    ["microtype"] = {},
+    ["titlesec"] = {},
+    ["titling"] = {},
+    ["setspace"] = {},
+    ["lipsum"] = {},
+    ["parskip"] = { indent = "30pt" },
+    ["geometry"] = { left = "4cm", top = "3cm", right = "3cm", bottom = "3cm" },
 }
 
-local setup_packages = function(trig, dscr, title, packages)
-    packages = packages or {}
-
-    local sect_separator = string.rep("%", 80)
-    local sect_title = make_section_title(title)
-    local result = string.format("%s\n%s\n", sect_separator, sect_title)
-
-    -- for k, v in pairs(packages) do
-    --     print(vim.inspect(k), vim.inspect(v), v[1])
-    -- end
-
-    s({ trig = trig, dscr = dscr }, fmta(result, {}))
-
-    result = result .. sect_separator
-    print(result)
-
-    -- return s({ trig = trig, dscr = dscr },
-    --     fmta(result)
-    -- )
+local make_usepackage_string = function (packages, options)
+    packages = packages or ""
+    options = options or ""
+    local res = "\\usepackage"
+    if (string.match(packages, ",") and options == "") or ( packages ~= "" and options == "") then --multiple package
+        res = res .. "{" .. packages .. "}"
+    elseif options ~= "" and packages ~= "" then
+        res = res .. "[" .. options .. "]{" .. packages .. "}"
+    else
+        return "aoeuaoeu"
+    end
+    print(res)
+    return res
 end
+
+local mytest = function(position, packages)
+    return d(position, function()
+        local choices = {}
+        table.insert(choices, t(""))
+
+        local options_jump_stop = {} -- use this inside fmta
+        local options_value = {} -- use this in nodes
+        local options_insert_nodes = {} -- use this in nodes
+
+        local pkgs_without_opts = {}
+        local my_usepackages_cmd = ""
+
+        for pkg_name, options in pairs(packages) do
+            if next(options) ~= nil then
+                local concat = ""
+                for key, value in pairs(options) do
+                    concat = concat .. key .. "=<" .. key .. ">,"
+                    options_value[pkg_name] = options
+                    options_insert_nodes[key] = value
+                end
+                options_jump_stop[pkg_name] = concat
+            else
+                table.insert(pkgs_without_opts, pkg_name)
+            end
+        end
+
+        my_usepackages_cmd = my_usepackages_cmd .. make_usepackage_string(table.concat(pkgs_without_opts, ","))
+
+        for pkg_name, options in pairs(options_jump_stop) do
+            my_usepackages_cmd = string.format("%s\n%s", my_usepackages_cmd, make_usepackage_string(pkg_name, options))
+        end
+
+        -- local element_num = 1
+        -- for k, v in pairs(options_insert_nodes) do
+        --     options_insert_nodes[k] = "i(" .. element_num .. "," .. v .. ")"
+        --     element_num = element_num + 1
+        -- end
+
+        print(
+            -- "jump_stop = " .. vim.inspect(options_jump_stop),
+            -- "\nopt_values = " .. vim.inspect(options_value),
+            -- "\n w/o opt : " .. vim.inspect(pkgs_without_opts),
+            "\n w/ opt : " .. vim.inspect(my_usepackages_cmd),
+            "insert nodes : " .. vim.inspect(options_insert_nodes)
+        )
+
+        -- TODO:
+        return sn(nil, fmta([[]], {
+            function ()
+                local M = {}
+                return M
+            end
+        }))
+    end)
+end
+
+
 
 --[[ setup common configuration for some packages ]]
 return {
 
-    -- setup_packages("setup_page_layout", "Setup default layout", "Page Layout", page_layout_pkgs),
+    s({ trig = "tesd", dscr = "Setup default page layout" },
+        fmta([[
+        <sect_separator>
+        <sect_title>
+        <packages>
+        <sect_separator>
+        ]],
+            {
+                sect_separator = t(string.rep("%", 80)),
+                sect_title = f(make_section_title, {}, { user_args = { "page layout" } }),
+                packages = mytest(1, parline_pkg),
+            }),
+        { condition = cond.in_preamble and cond.line_begin, show_condition = cond.in_preamble }
+    ),
 
     s({ trig = "s_pagelayout", dscr = "Setup default page layout" },
         fmta([[
@@ -69,7 +134,7 @@ return {
                 showframe = c(3, { t(""), t("showframe"), }),
             }
         ),
-        { condition = cond.in_preamble * cond.line_begin, show_condition = cond.in_preamble }
+        { condition = cond.in_preamble and cond.line_begin, show_condition = cond.in_preamble }
     ),
 
     s({ trig = "s_langfont_id", dscr = "Setup default languages and fonts" },
@@ -94,7 +159,7 @@ return {
                 }),
             }
         ),
-        { condition = cond.in_preamble * cond.line_begin, show_condition = cond.in_preamble }
+        { condition = cond.in_preamble and cond.line_begin, show_condition = cond.in_preamble }
     ),
 
     s({ trig = "s_langfont_zh", dscr = "Setup default languages and fonts for chinese" },
@@ -114,7 +179,7 @@ return {
                 sans = i(2, "Source Hna Sans CN"),
             }
         ),
-        { condition = cond.in_preamble * cond.line_begin, show_condition = cond.in_preamble }
+        { condition = cond.in_preamble and cond.line_begin, show_condition = cond.in_preamble }
     ),
 
     s({ trig = "s_parline", dscr = "Setup default paragagraph and line spacing" },
@@ -137,7 +202,7 @@ return {
                 }),
             }
         ),
-        { condition = cond.in_preamble * cond.line_begin, show_condition = cond.in_preamble }
+        { condition = cond.in_preamble and cond.line_begin, show_condition = cond.in_preamble }
     ),
 
     --[[ %% (reformat title and sections below here) %%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -164,7 +229,7 @@ return {
                 path = i(1, "img"),
             }
         ),
-        { condition = cond.in_preamble * cond.line_begin, show_condition = cond.in_preamble }
+        { condition = cond.in_preamble and cond.line_begin, show_condition = cond.in_preamble }
     ),
 
     s({ trig = "s_bib", dscr = "Setup default settings for bibliography" },
@@ -188,7 +253,7 @@ return {
                 sect_title = f(make_section_title, {}, { user_args = { "Paragraph and Line Spacing" } }),
             }
         ),
-        { condition = cond.in_preamble * cond.line_begin, show_condition = cond.in_preamble }
+        { condition = cond.in_preamble and cond.line_begin, show_condition = cond.in_preamble }
     ),
 
     -- always load this at the end of preamble
@@ -205,10 +270,11 @@ return {
                 sect_separator = t(string.rep("%", 80)),
                 sect_title = f(make_section_title, {}, { user_args = { "references" } }),
             }),
-        { condition = cond.in_preamble * cond.line_begin, show_condition = cond.in_preamble }
+        { condition = cond.in_preamble and cond.line_begin, show_condition = cond.in_preamble }
     ),
 
     --------------------------------
+
     s({ trig = "setup_tikz", dscr = "Setup tikz" },
         fmta([[
 
@@ -223,10 +289,7 @@ return {
         ]],
             { i(1, ",arrows.meta,mindmap,backgrounds"), }
         ),
-        {
-            condition = cond.in_preamble * cond.line_begin,
-            show_condition = cond.in_preamble,
-        }
+        { condition = cond.in_preamble and cond.line_begin, show_condition = cond.in_preamble }
     ),
 
     s({ trig = "setup_tabularx", dscr = "Setup for tabularx" },
@@ -243,10 +306,7 @@ return {
                 i(1, "1.5")
             }
         ),
-        {
-            condition = cond.in_preamble * cond.line_begin,
-            show_condition = cond.in_preamble,
-        }
+        { condition = cond.in_preamble and cond.line_begin, show_condition = cond.in_preamble }
     ),
 
     s({ trig = "setup_bg_img", dscr = "Setup background image. Need to load eso-pic package before tikz" },
@@ -265,10 +325,7 @@ return {
                 i(1, "image_name"),
             }
         ),
-        {
-            condition = cond.in_preamble * cond.line_begin,
-            show_condition = cond.in_preamble,
-        }
+        { condition = cond.in_preamble and cond.line_begin, show_condition = cond.in_preamble }
     ),
 
 }

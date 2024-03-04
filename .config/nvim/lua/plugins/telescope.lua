@@ -67,7 +67,7 @@ M.keys = {
     {
         "<leader>scf",
         function()
-            require("telescope.builtin").find_files({ cwd = "~/.config/nvim" })
+            require("telescope.builtin").find_files({ cwd = vim.fn.stdpath("config") })
         end,
         desc = "TLSC: [S]earch nvim [C]on[F]ig files"
     },

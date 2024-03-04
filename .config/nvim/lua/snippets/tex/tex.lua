@@ -155,37 +155,38 @@ return {
     ----------------------------------------------------------------------------
 
     -- FONT STYLE --------------------------------------------------------------
-    s({ trig = "tii", dscr = "Italic", snippetType = "autosnippet" },
+    -- I changed this from `tii` to `xii` because my `t` key is broken
+    s({ trig = "xii", dscr = "Italic", snippetType = "autosnippet" }, -- tii
         fmta("\\textit{<>}",
             { d(1, helper.get_visual), }
         )
     ),
-    s({ trig = "tbb", dscr = "Bold", snippetType = "autosnippet" },
+    s({ trig = "xbb", dscr = "Bold", snippetType = "autosnippet" }, -- tbb
         fmta("\\textbf{<>}",
             { d(1, helper.get_visual), }
         )
     ),
-    s({ trig = "tsl", dscr = "Slanted", snippetType = "autosnippet" },
+    s({ trig = "xsl", dscr = "Slanted", snippetType = "autosnippet" }, -- tsl
         fmta("\\textsl{<>}",
             { d(1, helper.get_visual), }
         )
     ),
-    s({ trig = "tcl", dscr = "Color", snippetType = "autosnippet" },
+    s({ trig = "xcl", dscr = "Color", snippetType = "autosnippet" }, -- tcl
         fmta("\\textcolor{<>}{<>}",
             { i(1, "red"), d(2, helper.get_visual) }
         )
     ),
-    s({ trig = "tuu", dscr = "Underline", snippetType = "autosnippet" },
+    s({ trig = "xuu", dscr = "Underline", snippetType = "autosnippet" }, -- tuu
         fmta("\\underline{<>}",
             { d(1, helper.get_visual), }
         )
     ),
-    s({ trig = "tmm", dscr = "Emphasis", snippetType = "autosnippet" },
+    s({ trig = "xmm", dscr = "Emphasis", snippetType = "autosnippet" }, -- tmm
         fmta("\\emph{<>}",
             { d(1, helper.get_visual), }
         )
     ),
-    s({ trig = "tcc", dscr = "Text cite", snippetType = "autosnippet" },
+    s({ trig = "xcc", dscr = "Text cite", snippetType = "autosnippet" }, -- tcc
         fmta("\\textcite{<>}",
             { d(1, helper.get_visual), }
         )
@@ -217,7 +218,8 @@ return {
     s({ trig = "xyy", dscr = "Use \\xpinyin command", snippetType = "autosnippet" },
         fmta("\\xpinyin*{<>}",
             { d(1, helper.get_visual), }
-        )
+        ),
+        { condition = cond.has_xpinyin and cond.in_document }
     ),
 
     s({ trig = "syy", dscr = "Pinyin scope", snippetType = "autosnippet" },
@@ -228,7 +230,7 @@ return {
         ]],
             { i(1), }
         ),
-        { condition = cond.line_begin }
+        { condition = cond.line_begin and cond.in_document and cond.has_xpinyin}
     -- { condition = cond.has_xpinyin }
     ),
     ----------------------------------------------------------------------------
@@ -239,7 +241,7 @@ return {
             "\\sqrt{<>}",
             { d(1, helper.get_visual), }
         ),
-        { condition = cond.in_mathzone, }
+        { condition = cond.in_mathzone }
     ),
 
     s({ trig = "rm", dscr = "Remove math formatting (upright-text)", snippetType = "autosnippet" },
@@ -247,7 +249,7 @@ return {
             "\\mathrm{<>}",
             { d(1, helper.get_visual), }
         ),
-        { condition = cond.in_mathzone, }
+        { condition = cond.in_mathzone }
     ),
 
     s({ trig = "([%a%d])^^", dscr = "Superscript", regTrig = true, wordTrig = false, snippetType = "autosnippet" },

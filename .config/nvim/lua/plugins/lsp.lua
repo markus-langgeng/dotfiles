@@ -62,6 +62,7 @@ local servers = {
 
     clangd = {},
     texlab = {},
+    bashls = {},
     ansiblels = {},
 }
 
