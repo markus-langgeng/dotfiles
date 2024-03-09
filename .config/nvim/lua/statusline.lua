@@ -1,3 +1,6 @@
+local env = require("os").getenv
+local expand = vim.fn.expand
+
 local M = {}
 
 M.vim_modes = {
@@ -48,6 +51,27 @@ function M.diagnostic_status()
     return table.concat(diag_msg, " ")
 end
 
+-- Truncate file path except for the directory after `~` and direct parent
+-- directory of current file
+-- Truncate only if filepath is longer than 30 character
+function M.shorten_path()
+    local home_dir = env("HOME") or ""
+    local filepath = string.gsub(expand("%:p:h"), home_dir, "~")
+    local parts = vim.split(filepath, "/", { plain = true })
+    local shorten_path = ""
+    if string.len(filepath) < 30 then
+        return filepath .. "/"
+    end
+    for i, v in ipairs(parts) do
+        if i > 2 and i < #parts then
+            shorten_path = shorten_path .. string.sub(v, 1, 1) .. "/"
+        else
+            shorten_path = shorten_path .. v .. "/"
+        end
+    end
+    return shorten_path
+end
+
 function M.statusline()
     -- [[ %-.15([%l,%v]%) %=%<%F%= %-.15(%y %P%) ]],
     -- vim.fn.luaeval(require("statusline").diagnostic_status()),
@@ -69,7 +93,7 @@ function M.statusline()
     end
 
     table.insert(parts, "%(%{get(b:,'gitsigns_status','')}|%{get(b:,'gitsigns_head','')}%)")
-    table.insert(parts, "%=%(%F%)%=")
+    table.insert(parts, "%=%(" .. M.shorten_path() .. "%)%=")
     table.insert(parts, "%(%y")
     table.insert(parts, "(%l,%v,%p%%)%)")
 

@@ -60,6 +60,7 @@ M.langfont_cn = function()
     local res = string.format([[
     %s
     \usepackage{xeCJK,xpinyin}
+    \xpinyinsetup{ratio={.6}, hsep={.6em plus .1em}, pysep={}}
     %s
     %s
     ]], title, fonts, M.separator)
