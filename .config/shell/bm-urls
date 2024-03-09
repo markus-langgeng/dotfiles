@@ -173,6 +173,6 @@ latex           https://mirror.unpad.ac.id/ctan/info/texbytopic/TeXbyTopic.pdf
 perpustakaan,online           https://drive.google.com/drive/folders/1ldRFSeIRNEd5iG7wOtNc2Vln3cgTmcZx
 scan,virus           https://virustotal.com/
 literature,marxism           http://ressources-socius.info/index.php/reeditions/18-reeditions-d-articles/150-literature
-lua,pattern           http://lua-users.org/wiki/PatternsTutorial
+lua,string,pattern           http://lua-users.org/wiki/PatternsTutorial
 luasnip,latex,nvim           https://ejmastnak.com/tutorials/vim-latex/luasnip/
 table,lua           http://lua-users.org/wiki/TablesTutorial

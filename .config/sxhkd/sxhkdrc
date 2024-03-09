@@ -52,3 +52,8 @@ XF86Calculator
 # Stop recording
 super + shift + Print
     pkill -SIGINT -P $(pgrep record-desktop)
+
+# Getting sick of not being able to do anything if my RAM usage suddenly sky
+# rocketed because of a couple of tabs!!
+alt + shift + F4
+    pkill firefox; pkill mullvadbrowser

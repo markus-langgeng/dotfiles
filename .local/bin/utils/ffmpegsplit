@@ -1,0 +1,44 @@
+#!/bin/sh
+
+# Requires ffmpeg and .ffmetadata file
+
+input_media="$1"
+ffmetadata="$2"
+
+[ ! -f "$2" ] && echo "The first file should be the audio/video, the second should be the .ffmetadata file." && exit
+
+echo "Enter output directory (default to audio/video file name): "; read -r output
+
+[ -z "$output" ] && output=${1%%.*}
+[ ! -d "$output" ] && mkdir "$output"
+
+cmd="ffmpeg -i \"$input_media\" -nostdin -y"
+ext=${input_media##*.} # greedy matching pattern
+start_time=
+end_time=
+chapter_title=
+
+while read -r line; do
+
+    if [ "$(echo "$line" | cut -c1-6)" = "START=" ]; then
+        start_time=$(echo "$line" | cut -d"=" -f2) # in nanoseconds
+        start_time=$(echo "scale=0; $start_time/1000" | bc -l) # in microsecond
+    elif [ "$(echo "$line" | cut -c1-4)" = "END=" ]; then
+        end_time=$(echo "$line" | cut -d"=" -f2)
+        end_time=$(echo "scale=0; $end_time/1000" | bc -l)
+    elif [ "$(echo "$line" | cut -c1-6)" = "title=" ]; then
+        chapter_title=${line#title=}
+    fi
+
+    if [ -n "$start_time" ] && [ -n "$end_time" ] && [ -n "$chapter_title" ]; then
+        # TODO: check time input and add the appropriate unit
+        cmd="ffmpeg -i \"$input_media\" -nostdin -y -ss \"${start_time}us\" -to \"${end_time}us\" -vn -c copy \"$output/$chapter_title.$ext\""
+        echo "$cmd"
+        start_time=""
+        end_time=""
+        chapter_title=""
+    fi
+
+    eval "$cmd"
+
+done < "$ffmetadata"

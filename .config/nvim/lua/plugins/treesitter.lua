@@ -7,6 +7,7 @@ local M = {
 M.dependencies = {
     "andymass/vim-matchup",
     "JoosepAlviste/nvim-ts-context-commentstring",
+    "nvim-treesitter/nvim-treesitter-context",
     "numToStr/Comment.nvim",
 }
 

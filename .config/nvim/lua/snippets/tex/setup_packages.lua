@@ -1,331 +1,241 @@
 ---@diagnostic disable: undefined-global
 
---[[
-    inline math: $$, \( \), \begin{math}...\end{math}
-    display math: \[\], \begin{displaymath}...\end{displaymath}, \begin{equation}...\end{equation}
-
-]]
-
 local cond = require("snippets.tex.utils.conditions")
 local helper = require("snippets.helper")
 
-local make_section_title = function(_, _, title)
-    return string.format("%s %s %s", "%%", string.upper(title),
-        string.rep("%", 80 - 4 - string.len(title)))
+local M = {}
+
+M.separator = string.rep("%", 80)
+M.section_title = function(title)
+    title = title or ""
+    return string.format("%s %s %s", string.rep("%", 2), title, string.rep("%", 80 - (title):len() - 4))
 end
 
-local parline_pkg = {
-    ["microtype"] = {},
-    ["titlesec"] = {},
-    ["titling"] = {},
-    ["setspace"] = {},
-    ["lipsum"] = {},
-    ["parskip"] = { indent = "30pt" },
-    ["geometry"] = { left = "4cm", top = "3cm", right = "3cm", bottom = "3cm" },
-}
-
-local make_usepackage_string = function (packages, options)
-    packages = packages or ""
-    options = options or ""
-    local res = "\\usepackage"
-    if (string.match(packages, ",") and options == "") or ( packages ~= "" and options == "") then --multiple package
-        res = res .. "{" .. packages .. "}"
-    elseif options ~= "" and packages ~= "" then
-        res = res .. "[" .. options .. "]{" .. packages .. "}"
-    else
-        return "aoeuaoeu"
-    end
-    print(res)
+M.pagelayout = function(papersize, left, top, right, bottom)
+    local title = M.section_title("PAGELAYOUT")
+    local res = string.format([[
+    %s
+    \usepackage[%s,left=%s,top=%s,right=%s,bottom=%s,]{geometry}
+    %s
+    ]], title, papersize, left, top, right, bottom, M.separator)
     return res
 end
 
-local mytest = function(position, packages)
-    return d(position, function()
-        local choices = {}
-        table.insert(choices, t(""))
+M.langfont = function(mainlang, fonts)
+    local title = M.section_title("LANGUAGE & FONTS")
 
-        local options_jump_stop = {} -- use this inside fmta
-        local options_value = {} -- use this in nodes
-        local options_insert_nodes = {} -- use this in nodes
+    if mainlang == "id" then
+        mainlang = "\\setdefaultlanguage[variant=indonesian]{malay}"
+    else
+        mainlang = "\\setdefaultlanguage{english}"
+    end
 
-        local pkgs_without_opts = {}
-        local my_usepackages_cmd = ""
+    if fonts == "ms" then
+        fonts = [[\setmainfont{Times New Roman} % Liberation Serif
+    \setsansfont{Arial} % Liberation Sans
+    \setmonofont{Courier New} % Liberation Mono]]
+    else
+        fonts = [[\setmainfont{Liberation Serif} % Times New Roman
+    \setsansfont{Liberation Sans} % Arial
+    \setmonofont{Liberation Mono}]]
+    end
 
-        for pkg_name, options in pairs(packages) do
-            if next(options) ~= nil then
-                local concat = ""
-                for key, value in pairs(options) do
-                    concat = concat .. key .. "=<" .. key .. ">,"
-                    options_value[pkg_name] = options
-                    options_insert_nodes[key] = value
-                end
-                options_jump_stop[pkg_name] = concat
-            else
-                table.insert(pkgs_without_opts, pkg_name)
-            end
-        end
+    local res = string.format([[
+    %s
+    \usepackage{polyglossia,fontspec}
+    %s
+    %s
+    %s
+    ]], title, mainlang, fonts, M.separator)
 
-        my_usepackages_cmd = my_usepackages_cmd .. make_usepackage_string(table.concat(pkgs_without_opts, ","))
-
-        for pkg_name, options in pairs(options_jump_stop) do
-            my_usepackages_cmd = string.format("%s\n%s", my_usepackages_cmd, make_usepackage_string(pkg_name, options))
-        end
-
-        -- local element_num = 1
-        -- for k, v in pairs(options_insert_nodes) do
-        --     options_insert_nodes[k] = "i(" .. element_num .. "," .. v .. ")"
-        --     element_num = element_num + 1
-        -- end
-
-        print(
-            -- "jump_stop = " .. vim.inspect(options_jump_stop),
-            -- "\nopt_values = " .. vim.inspect(options_value),
-            -- "\n w/o opt : " .. vim.inspect(pkgs_without_opts),
-            "\n w/ opt : " .. vim.inspect(my_usepackages_cmd),
-            "insert nodes : " .. vim.inspect(options_insert_nodes)
-        )
-
-        -- TODO:
-        return sn(nil, fmta([[]], {
-            function ()
-                local M = {}
-                return M
-            end
-        }))
-    end)
+    return res
 end
 
+M.langfont_cn = function()
+    local title = M.section_title("CHINESE LANGUAGE & FONTS")
+    local fonts = [[\setCJKmainfont{Noto Serif CJK SC}
+    \setCJKsansfont{Noto Sans CJK SC}
+    \setCJKmonofont{Noto Sans Mono CJK SC}]]
 
+    local res = string.format([[
+    %s
+    \usepackage{xeCJK,xpinyin}
+    %s
+    %s
+    ]], title, fonts, M.separator)
 
---[[ setup common configuration for some packages ]]
-return {
+    return res
+end
 
-    s({ trig = "tesd", dscr = "Setup default page layout" },
-        fmta([[
-        <sect_separator>
-        <sect_title>
-        <packages>
-        <sect_separator>
-        ]],
-            {
-                sect_separator = t(string.rep("%", 80)),
-                sect_title = f(make_section_title, {}, { user_args = { "page layout" } }),
-                packages = mytest(1, parline_pkg),
-            }),
-        { condition = cond.in_preamble and cond.line_begin, show_condition = cond.in_preamble }
-    ),
+M.parline = function(type)
+    -- TODO: buat kondisi utk makalah (perlu format chapter, section, toc)
+    local title = M.section_title("PARAGRAPH & LINES")
+    local reformat_sections
 
-    s({ trig = "s_pagelayout", dscr = "Setup default page layout" },
-        fmta([[
-        <sect_separator>
-        <sect_title>
-        \usepackage[<page_size>,<margins>,<showframe>]{geometry}
-        <sect_separator>
-        ]],
-            {
-                sect_separator = t(string.rep("%", 80)),
-                sect_title = f(make_section_title, {}, { user_args = { "page layout" } }),
-                page_size = i(1, "a4paper"),
-                margins = c(2, {
-                    i(nil, "left=4cm,top=3cm,right=3cm,bottom=3cm"),
-                    i(nil, "left=3cm,top=3cm,right=3cm,bottom=3cm"),
-                    i(nil, "")
-                }),
-                showframe = c(3, { t(""), t("showframe"), }),
-            }
-        ),
-        { condition = cond.in_preamble and cond.line_begin, show_condition = cond.in_preamble }
-    ),
+    if type == "makalah" then
 
-    s({ trig = "s_langfont_id", dscr = "Setup default languages and fonts" },
-        fmta([[
-        <sect_separator>
-        <sect_title>
-        \usepackage{indentfirst,polyglossia,fontspec}
-        <mainlang_otherlang>
-        % \setmainfont{Times New Roman} % \setmainfont{Times New Roman}
-        % \setsansfont{Arial}           % \setsansfont{Arial}
-        % \setmonofont{}                % \setmonofont{}
-        <sect_separator>
-        ]],
-            {
-                sect_separator = t(string.rep("%", 80)),
-                sect_title = f(make_section_title, {}, { user_args = { "Languages and Fonts" } }),
-                mainlang_otherlang = c(1, {
-                    sn(nil,
-                        { i(1), t({ "\\setdefaultlanguage[variant=indonesian]{malay}", "\\setotherlanguages{english}" }) }),
-                    sn(nil,
-                        { i(1), t({ "\\setdefaultlanguage{english}", "\\setotherlanguages[variant=indonesian]{malay}" }) }),
-                }),
-            }
-        ),
-        { condition = cond.in_preamble and cond.line_begin, show_condition = cond.in_preamble }
-    ),
+        reformat_sections = [[\renewcommand{\thechapter}{\Roman{chapter}}
+    \renewcommand{\thesection}{\arabic{chapter}.\arabic{section}}
 
-    s({ trig = "s_langfont_zh", dscr = "Setup default languages and fonts for chinese" },
-        fmta([[
-        <sect_separator>
-        <sect_title>
-        \usepackage{indentfirst,xeCJK,xpinyin}
-        \setCJKmainfont{<main>}
-        \setCJKsansfont{<sans>} % Source Han Sans CN, BabelStone Han
-        \xpinyinsetup{ratio={.6}, hsep={.6em plus .1em}, pysep={}}
-        <sect_separator>
-        ]],
-            {
-                sect_separator = t(string.rep("%", 80)),
-                sect_title = f(make_section_title, {}, { user_args = { "Languages and Fonts for chinese" } }),
-                main = i(1, "Noto Serif CJK SC"),
-                sans = i(2, "Source Hna Sans CN"),
-            }
-        ),
-        { condition = cond.in_preamble and cond.line_begin, show_condition = cond.in_preamble }
-    ),
+    \titleformat{\chapter}[display] %% shape
+    {\bfseries\normalsize\center} %% format
+    {\MakeUppercase\chaptertitlename \ \thechapter} %% label
+    {-1.2em} %% sep
+    {\MakeUppercase} %% before-code [] %% aftercode
 
-    s({ trig = "s_parline", dscr = "Setup default paragagraph and line spacing" },
-        fmta([[
-        <sect_separator>
-        <sect_title>
-        \usepackage{microtype,titlesec,titling,setspace,lipsum}
-        \usepackage[<indent>]{parskip}
-        \onehalfspacing
-        <sect_separator>
-        ]],
-            {
-                sect_separator = t(string.rep("%", 80)),
-                sect_title = f(make_section_title, {}, { user_args = { "Paragraph and Line Spacing" } }),
-                indent = c(1, {
-                    i(nil, "indent=30pt"),
-                    i(nil, "indent=25pt"),
-                    i(nil, "indent=20pt"),
-                    i(nil, ""),
-                }),
-            }
-        ),
-        { condition = cond.in_preamble and cond.line_begin, show_condition = cond.in_preamble }
-    ),
+    \titleformat{\section}
+    {\bfseries\normalsize}
+    {\thesection\quad}
+    {0em}
+    {}
 
-    --[[ %% (reformat title and sections below here) %%%%%%%%%%%%%%%%%%%%%%%%%%%%
-        % \renewcommand{\maketitle}{
-        %     \noindent\normalsize\theauthor
-        %     \begin{center}
-        %         \large\bfseries\thetitle %large,Large,LARGE,huge,Huge,HUGE
-        %     \end{center}
-        %     \vspace{1em}
-        % }
-        % \titleformat*{\section}{\normalsize\bfseries} ]]
+    \titleformat{\subsection}
+    {\bfseries\normalsize}
+    {\thesubsection\quad}
+    {0em}
+    {}
 
-    s({ trig = "s_img", dscr = "Setup default settings to import images" },
-        fmta([[
-        <sect_separator>
-        <sect_title>
-        \usepackage{graphicx}
-        \graphicspath{{<path>/}}
-        <sect_separator>
-        ]],
-            {
-                sect_separator = t(string.rep("%", 80)),
-                sect_title = f(make_section_title, {}, { user_args = { "Paragraph and Line Spacing" } }),
-                path = i(1, "img"),
-            }
-        ),
-        { condition = cond.in_preamble and cond.line_begin, show_condition = cond.in_preamble }
-    ),
+    \titlespacing{\chapter}{0em}{-3em}{1em}
 
-    s({ trig = "s_bib", dscr = "Setup default settings for bibliography" },
-        fmta([[
-        <sect_separator>
-        <sect_title>
-        \usepackage[
-        backend=biber,
-        style=authoryear,
-        hyperref=true,
-        ]{biblatex}
-        %% (reformat stuff below here) %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-        % \renewbibmacro{in:}{} % removes in
-        % \DeclareFieldFormat{pages}{#1} % removes pages
-        % \renewcommand*{\finentrypunct}{\ifboolexpr{togl {bbx:doi} and not test {\iffieldundef{doi}}}{}{\addperiod}}
-        \addbibresource{ref.bib}
-        <sect_separator>
-        ]],
-            {
-                sect_separator = t(string.rep("%", 80)),
-                sect_title = f(make_section_title, {}, { user_args = { "Paragraph and Line Spacing" } }),
-            }
-        ),
-        { condition = cond.in_preamble and cond.line_begin, show_condition = cond.in_preamble }
-    ),
+    \titlecontents{chapter} %% omit backslash
+    [0em]
+    {\vspace{1em}} %% above-code
+    {\bfseries\MakeUppercase\chaptertitlename \ \thecontentslabel\quad\uppercase} %% numbered-entry-format
+    {\bfseries\uppercase} %% numberedless-entry-format
+    {\ \titlerule*[.75em]{.}\contentspage} %% filler-page-format]]
 
-    -- always load this at the end of preamble
-    s({ trig = "s_hyperref", dscr = "Setup hypperref" },
-        fmta([[
-        <sect_separator>
-        <sect_title>
-        \usepackage{hyperref}
-        \hypersetup{colorlinks=true,citecolor=blue,linkcolor=blue,urlcolor=blue}
-        \urlstyle{same}
-        <sect_separator>
-        ]],
-            {
-                sect_separator = t(string.rep("%", 80)),
-                sect_title = f(make_section_title, {}, { user_args = { "references" } }),
-            }),
-        { condition = cond.in_preamble and cond.line_begin, show_condition = cond.in_preamble }
-    ),
+    else
 
-    --------------------------------
+        reformat_sections = [[\renewcommand{\maketitle}{ %% change layout for title and author
+    %% tiny,scriptsize,footnotesize,small,normalsize,large,Large,LARGE,huge,Huge,HUGE
+    \noindent\normalsize\theauthor
+    \begin{center}
+        \large\bfseries\thetitle
+    \end{center}
+    \vspace{1em}
+    }]]
 
-    s({ trig = "setup_tikz", dscr = "Setup tikz" },
-        fmta([[
+    end
 
-        %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-        %% TIKZ %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-        % \usepackage{eso-pic} % load before tikz
-        \usepackage{tikz}
-        \usetikzlibrary{calc,positioning<>}
-        %% (reformat/define stuff below here) %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-        %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+    local res = string.format([[
+    %s
+    \usepackage{microtype,setspace,indentfirst}
+    \usepackage{titlesec,titling,titletoc}
+    \usepackage[indent=30pt,skip=15pt]{parskip}
+    \onehalfspacing
 
-        ]],
-            { i(1, ",arrows.meta,mindmap,backgrounds"), }
-        ),
-        { condition = cond.in_preamble and cond.line_begin, show_condition = cond.in_preamble }
-    ),
+    %s
+    %s
+    ]], title, reformat_sections, M.separator)
 
-    s({ trig = "setup_tabularx", dscr = "Setup for tabularx" },
-        fmta([[
+    return res
+end
 
-        %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-        %% TABULARX %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-        \usepackage{array,tabularx}
-        % \renewcommand{\arraystretch}{<>} % add padding on top of cell
-        %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+-- use this as last package
+M.references = function()
+    local title = M.section_title("HYPERREF")
+    local res = string.format([[
+    %s
+    \usepackage{hyperref}
+    \hypersetup{colorlinks=true,citecolor=blue,linkcolor=blue,urlcolor=blue}
+    \urlstyle{same}
+    %s
+    ]], title, M.separator)
+    return res
+end
 
-        ]],
-            {
-                i(1, "1.5")
-            }
-        ),
-        { condition = cond.in_preamble and cond.line_begin, show_condition = cond.in_preamble }
-    ),
+M.bibliography = function()
+    local title = M.section_title("BIBLIOGRAPHY")
+    local res = string.format([[
+    %s
+    \usepackage[
+    backend=biber,
+    style=authoryear,
+    hyperref=true,
+    ]{biblatex}
 
-    s({ trig = "setup_bg_img", dscr = "Setup background image. Need to load eso-pic package before tikz" },
-        fmta([[
-        \AddToShipoutPictureBG{
-            \begin{tikzpicture}[remember picture, overlay]
-                \node[opacity=.25,inner sep=0pt]
-                    at (current page.center){
-                    \includegraphics[width=<>,<>]{<>}};
-            \end{tikzpicture}
-        }
-        ]],
-            {
-                i(2, "\\paperwidth"),
-                i(3, "height=\\paperheight"),
-                i(1, "image_name"),
-            }
-        ),
-        { condition = cond.in_preamble and cond.line_begin, show_condition = cond.in_preamble }
-    ),
+    \addbibresource{ref.bib}
+    %% \DeclareFieldFormat{url}{\url{#1}}
+    %% \renewbibmacro{in:}{} %% removes in
+    %% \DeclareFieldFormat{pages}{#1} %% removes pages
+    %% \renewcommand*{\finentrypunct}{\ifboolexpr{togl {bbx:doi} and not test {\iffieldundef{doi}}}{}{\addperiod}}
+    %s
+    ]], title, M.separator)
+    return res
+end
 
-}
+return M
+
+--     s({ trig = "s_img", dscr = "Setup default settings to import images" },
+--         fmta([[
+--         <sect_separator>
+--         <sect_title>
+--         \usepackage{graphicx}
+--         \graphicspath{{<path>/}}
+--         <sect_separator>
+--         ]],
+--             {
+--                 sect_separator = t(string.rep("%", 80)),
+--                 sect_title = f(make_section_title, {}, { user_args = { "Paragraph and Line Spacing" } }),
+--                 path = i(1, "img"),
+--             }
+--         ),
+--         { condition = cond.in_preamble and cond.line_begin, show_condition = cond.in_preamble }
+--     ),
+
+--     --------------------------------
+--
+--     s({ trig = "setup_tikz", dscr = "Setup tikz" },
+--         fmta([[
+--
+--         %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+--         %% TIKZ %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+--         % \usepackage{eso-pic} % load before tikz
+--         \usepackage{tikz}
+--         \usetikzlibrary{calc,positioning<>}
+--         %% (reformat/define stuff below here) %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+--         %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+--
+--         ]],
+--             { i(1, ",arrows.meta,mindmap,backgrounds"), }
+--         ),
+--         { condition = cond.in_preamble and cond.line_begin, show_condition = cond.in_preamble }
+--     ),
+--
+--     s({ trig = "setup_tabularx", dscr = "Setup for tabularx" },
+--         fmta([[
+--
+--         %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+--         %% TABULARX %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+--         \usepackage{array,tabularx}
+--         % \renewcommand{\arraystretch}{<>} % add padding on top of cell
+--         %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+--
+--         ]],
+--             {
+--                 i(1, "1.5")
+--             }
+--         ),
+--         { condition = cond.in_preamble and cond.line_begin, show_condition = cond.in_preamble }
+--     ),
+--
+--     s({ trig = "setup_bg_img", dscr = "Setup background image. Need to load eso-pic package before tikz" },
+--         fmta([[
+--         \AddToShipoutPictureBG{
+--             \begin{tikzpicture}[remember picture, overlay]
+--                 \node[opacity=.25,inner sep=0pt]
+--                     at (current page.center){
+--                     \includegraphics[width=<>,<>]{<>}};
+--             \end{tikzpicture}
+--         }
+--         ]],
+--             {
+--                 i(2, "\\paperwidth"),
+--                 i(3, "height=\\paperheight"),
+--                 i(1, "image_name"),
+--             }
+--         ),
+--         { condition = cond.in_preamble and cond.line_begin, show_condition = cond.in_preamble }
+--     ),
+--
+-- }

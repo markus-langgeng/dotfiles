@@ -14,13 +14,12 @@ au({ "TextYankPost" }, {
 
 au({ "BufWritePre" }, { -- Delete trailing spaces
     pattern = "*",
-    command = [[%s/\s\+$//e]],
+    callback = function ()
+        local curpos = vim.api.nvim_win_get_cursor(0)
+        vim.cmd([[%s/\s\+$//e]])
+        vim.api.nvim_win_set_cursor(0, curpos)
+    end
 })
-
--- au({ "BufWritePre" }, {
---     pattern = "*",
---     command = [[lua vim.lsp.buf.format()]],
--- })
 
 au({ "BufWritePost" }, {
     group = group_reload_conf,

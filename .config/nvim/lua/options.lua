@@ -14,13 +14,11 @@ o.tabstop = 4
 o.softtabstop = 4
 
 o.number = true
-o.numberwidth = 2
 o.relativenumber = true
 o.cursorline = true
 o.guicursor = ""
 o.signcolumn = "yes"
 o.colorcolumn = "80"
-o.scrolloff = 8
 o.splitbelow = true
 o.splitright = true
 o.termguicolors = true

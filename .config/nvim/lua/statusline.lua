@@ -2,7 +2,7 @@ local M = {}
 
 M.vim_modes = {
     ["n"] = "NORMAL",
-    ["no"] = "NORMAL",
+    ["no"] = "OPERATION PENDING",
     ["v"] = "VISUAL",
     ["V"] = "VISUAL LINE",
     [""] = "VISUAL BLOCK",
@@ -55,7 +55,7 @@ function M.statusline()
     local parts = {}
 
     local cur_mode = vim.api.nvim_get_mode().mode
-    cur_mode = M.vim_modes[cur_mode]
+    cur_mode = M.vim_modes[cur_mode] or cur_mode
     local diags = M.diagnostic_status() or ""
 
     if diags ~= "" then
@@ -69,7 +69,6 @@ function M.statusline()
     end
 
     table.insert(parts, "%(%{get(b:,'gitsigns_status','')}|%{get(b:,'gitsigns_head','')}%)")
-
     table.insert(parts, "%=%(%F%)%=")
     table.insert(parts, "%(%y")
     table.insert(parts, "(%l,%v,%p%%)%)")

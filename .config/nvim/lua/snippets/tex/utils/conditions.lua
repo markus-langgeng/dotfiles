@@ -11,6 +11,16 @@ local in_env = function(name)
     return (is_inside[1] > 0 and is_inside[2] > 0)
 end
 
+local has_pkg = function (name)
+    local lines = vim.api.nvim_buf_get_lines(0, 0, -1, false)
+    for _, line in ipairs(lines) do
+        if line:match("^\\usepackage{[%a*,%s?]*" .. name .. "[,%s?%a*]*}") then
+            return true
+        end
+    end
+    return false
+end
+
 local even_line = function()
     local line_number = vim.fn["line"](".")
     return ((line_number % 2) == 0)
@@ -49,17 +59,10 @@ local bullets = function() return in_env("itemize") or in_env("enumerate") end
 
 local bib_env = function() return in_env("thebibliography") end
 local tikz_env = function() return in_env("tikzpicture") end
-local xpinyin = function()
-    local lines = vim.api.nvim_buf_get_lines(0, 0, -1, false)
-    for _, line in ipairs(lines) do
-        if line:match("^\\usepackage%b{xpinyin}") then
-            return true
-        end
-    end
-    return false
-end
+local xpinyin = function() return has_pkg("xpinyin") end
+local fontspec = function() return has_pkg("fontspec") end
+local biblatex = function() return has_pkg("biblatex") end
 
--- gabungan kondisi-kondisi sebelumnya
 local list_env = function()
     return in_env("itemize") or in_env("description") or in_env("enumerate") or
         in_env("thebibliography")
@@ -90,5 +93,7 @@ M.in_list_env = make_condition(list_env)
 M.in_bib = make_condition(bib_env)
 M.in_tikz = make_condition(tikz_env)
 M.has_xpinyin = make_condition(xpinyin)
+M.has_fontspec = make_condition(fontspec)
+M.has_biblatex = make_condition(biblatex)
 
 return M

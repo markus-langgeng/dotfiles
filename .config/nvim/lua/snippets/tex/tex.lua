@@ -8,6 +8,7 @@
 
 local cond = require("snippets.tex.utils.conditions")
 local helper = require("snippets.helper")
+local set_pkg = require("snippets.tex.setup_packages")
 
 local make_gletters = function(trig, letter, command)
     return s({ trig = trig, dscr = "Greek letter " .. letter, snippetType = "autosnippet" },
@@ -29,6 +30,17 @@ local make_pinyin_tones = function(trig, dscr, command)
                 d(1, helper.get_visual),
             }
         ))
+end
+
+local individual_latex_pkg = function(trig, package)
+    package = package or function() return "" end
+    return s({ trig = trig }, fmta(package,
+            {}),
+        { -- for some reason, I can't use the `*` operator, instead need to use `and`
+            condition = cond.line_begin and cond.in_preamble,
+            show_condition = cond.line_begin and cond.in_preamble
+        }
+    )
 end
 
 return {
@@ -212,14 +224,15 @@ return {
     s({ trig = "pyy", dscr = "Use \\pinyin command", snippetType = "autosnippet" },
         fmta("\\pinyin{<>}",
             { d(1, helper.get_visual), }
-        )
+        ),
+        { condition = cond.has_xpinyin * cond.in_document }
     ),
 
     s({ trig = "xyy", dscr = "Use \\xpinyin command", snippetType = "autosnippet" },
         fmta("\\xpinyin*{<>}",
             { d(1, helper.get_visual), }
         ),
-        { condition = cond.has_xpinyin and cond.in_document }
+        { condition = cond.has_xpinyin * cond.in_document }
     ),
 
     s({ trig = "syy", dscr = "Pinyin scope", snippetType = "autosnippet" },
@@ -230,8 +243,48 @@ return {
         ]],
             { i(1), }
         ),
-        { condition = cond.line_begin and cond.in_document and cond.has_xpinyin}
-    -- { condition = cond.has_xpinyin }
+        { condition = cond.line_begin * cond.in_document * cond.has_xpinyin }
+    ),
+    ----------------------------------------------------------------------------
+
+    -- BIBLIOGRAPHY -------------------------------------------------------------
+    s({ trig = "pbb", dscr = "Default option for print bibliography", snippetType = "autosnippet" },
+        fmta("\\printbibliography[title=<>]",
+            { i(1, "Daftar Pustaka"), }
+        ),
+        { condition = cond.in_document  }
+    ),
+    ----------------------------------------------------------------------------
+
+    -- LATEX PACKAGES -----------------------------------------------------------
+    individual_latex_pkg("pagelayout", set_pkg.pagelayout("a4paper", "4cm", "3cm", "3cm", "3cm")),
+    individual_latex_pkg("langfont", set_pkg.langfont("id")),
+    individual_latex_pkg("langfont_cn", set_pkg.langfont_cn()),
+    individual_latex_pkg("parline", set_pkg.parline()),
+    individual_latex_pkg("parline_makalah", set_pkg.parline("makalah")),
+    individual_latex_pkg("bibliography", set_pkg.bibliography()),
+    individual_latex_pkg("references", set_pkg.references()),
+    ----------------------------------------------------------------------------
+
+
+    -- FONTSPEC ----------------------------------------------------------------
+    s({ trig = "xrm", dscr = "text roman (serif)", snippetType = "autosnippet" },
+        fmta("\\textrm{<>}",
+            { d(1, helper.get_visual) }
+        ),
+        { condition = cond.in_document * cond.has_fontspec }
+    ),
+    s({ trig = "xsn", dscr = "text sans serif font", snippetType = "autosnippet" },
+        fmta("\\textsf{<>}",
+            { d(1, helper.get_visual) }
+        ),
+        { condition = cond.in_document * cond.has_fontspec }
+    ),
+    s({ trig = "xmn", dscr = "text mono font", snippetType = "autosnippet" },
+        fmta("\\texttt{<>}",
+            { d(1, helper.get_visual) }
+        ),
+        { condition = cond.in_document * cond.has_fontspec }
     ),
     ----------------------------------------------------------------------------
 
