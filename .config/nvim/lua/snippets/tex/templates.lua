@@ -1,75 +1,91 @@
----@diagnostic disable: undefined-global
-
-local cond = require("snippets.tex.utils.conditions")
-local helper = require("snippets.helper")
-local set_pkg = require("snippets.tex.setup_packages")
-
--- Utility functions
-
-local make_docclass = function(class, papersize, fontsize, engine)
-    class = class or "extarticle"
-    papersize = papersize or "a4paper"
-    fontsize = fontsize or "12pt"
-    engine = engine or "lualatex"
-    local res = string.format([[
-    %%! TeX program = lualatex
-
-    %s
-    ]], "\\documentclass[" .. papersize .. "," .. fontsize .. "]{" .. class .. "}")
-
-    if engine == "xelatex" then
-        res = string.format([[
-    %%! TeX TS-program = xelatex
-
-    %s
-    ]], "\\documentclass[" .. papersize .. "," .. fontsize .. "]{" .. class .. "}")
-    end
-
-    return res
-end
-
-local make_title = function(title, author)
-    local filename = vim.fn.expand("%:t:r"):gsub("%p+", " "):gsub("(%l)(%w*)",
-        function(a, b) return string.upper(a) .. b end
-    )
-    if title == nil then
-        title = title or filename
-    else
-        title = title .. " " .. filename
-    end
-    author = author or "Author"
-
-    local separator = string.rep("%", 80)
-    local res = string.format([[%s
-    \title{%s}
-    \author{%s}
-    \date{\today}
-    %s
-    ]], separator, title, author, separator)
-
-    return res
-end
-
-local final_string = function(doclass, packages, title, body)
-    packages = packages or {}
-    packages = "\n" .. table.concat(packages, "\n\n")
-    local res = string.format([[%s
-    %s
-
-    %s
-
-
-    %s
-    ]], doclass, packages, title, body)
-
-    return res
-end
+-- ---@diagnostic disable: undefined-global
+--
+--
+-- local cond = require("snippets.tex.utils.conditions")
+-- local helper = require("snippets.helper")
+-- local set_pkg = require("snippets.tex.templates.packages")
+-- local env = require("os").getenv
+--
+-- -- Utility functions
+--
+-- local make_docclass = function(class, papersize, fontsize, engine)
+--     class = class or "extarticle"
+--     papersize = papersize or "a4paper"
+--     fontsize = fontsize or "12pt"
+--     engine = engine or "lualatex"
+--     local res = string.format([[
+--     %%! TeX program = lualatex
+--
+--     %s
+--     ]], "\\documentclass[" .. papersize .. "," .. fontsize .. "]{" .. class .. "}")
+--
+--     if engine == "xelatex" then
+--         res = string.format([[
+--     %%! TeX TS-program = xelatex
+--
+--     %s
+--     ]], "\\documentclass[" .. papersize .. "," .. fontsize .. "]{" .. class .. "}")
+--     end
+--
+--     return res
+-- end
+--
+-- local make_title = function(title, author)
+--     local filename = vim.fn.expand("%:t:r"):gsub("%p+", " "):gsub("(%l)(%w*)",
+--         function(a, b) return string.upper(a) .. b end
+--     )
+--     if title == nil then
+--         title = title or filename
+--     else
+--         title = title .. " " .. filename
+--     end
+--     author = author or env("USER")
+--
+--     local separator = string.rep("%", 80)
+--     local res = string.format([[%s
+--     \title{%s}
+--     \author{%s}
+--     \date{\today}
+--     %s
+--     ]], separator, title, author, separator)
+--
+--     return res
+-- end
+--
+-- local make_body = function ()
+--     -- TODO: add \printbibliography[] maybe?
+--     local res = [[\begin{document}
+--     \maketitle
+--
+--     <>
+--
+--     \end{document}
+--     ]]
+--
+--     return res
+-- end
+--
+-- local final_string = function(doclass, packages, title, body)
+--     packages = packages or {}
+--     packages = "\n" .. table.concat(packages, "\n\n")
+--     local res = string.format([[%s
+--     %s
+--
+--     %s
+--
+--
+--     %s
+--     ]], doclass, packages, title, body)
+--
+--     return res
+-- end
 
 
 -- basic template
 -- tugas -> author, lang, font=ms, bib
 -- makalah -> author, lang, font=ms, bib, cover
-local make_article = function(trig, type, author, mainlang, font, engine)
+
+--[[ local make_article = function(trig, type, author, mainlang, font, engine)
     trig = trig or ""
 
     -- predefined options
@@ -97,37 +113,31 @@ local make_article = function(trig, type, author, mainlang, font, engine)
         end
         table.insert(packages, set_pkg.bibliography())
         -- TODO: buat utk cover
+        table.insert(packages, set_pkg.graphicx())
     else
         doclass = make_docclass(_, papersize, "12pt", engine)
         title = make_title(_, author)
     end
+    local body = make_body()
 
     table.insert(packages, set_pkg.references()) -- put this last
-    -- TODO: add \printbibliography[] maybe?
-    local body = [[\begin{document}
-    \maketitle
-
-    <>
-
-    \end{document}
-    ]]
 
     local res = final_string(doclass, packages, title, body)
     return s({ trig = trig },
         fmta(res, { i(1) }),
         { condition = cond.on_first_line, show_condition = cond.on_first_line }
     )
-end
+end ]]
 
 
 return {
-    make_article("t_basic", _, "Langgeng", "id", _, _),
-    make_article("t_basic_cina", _, "Langgeng", "id", _, "xelatex"),
-    make_article("t_tugas", "tugas", "Markus Langgeng I. S.", "id", "ms", _),
-    make_article("t_tugas_cina", "tugas", "Markus Langgeng I. S.", "id", "ms", "xelatex"),
-    make_article("t_makalah", "makalah", "Nama: Markus Langgeng Iman Saputra\\\\NIM: 235110400111021", "id", "ms", _),
-    make_article("t_makalah_cina", "makalah", "Nama: Markus Langgeng Iman Saputra\\\\NIM: 235110400111021", "id", "ms",
-        "xelatex"),
+    -- make_article("t_basic", _, "Langgeng", "id", _, _),
+    -- make_article("t_basic_cina", _, "Langgeng", "id", _, "xelatex"),
+    -- make_article("t_tugas", "tugas", "Markus Langgeng I. S.", "id", "ms", _),
+    -- make_article("t_tugas_cina", "tugas", "Markus Langgeng I. S.", "id", "ms", "xelatex"),
+    -- make_article("t_makalah", "makalah", "Nama: Markus Langgeng Iman Saputra\\\\NIM: 235110400111021", "id", "ms", _),
+    -- make_article("t_makalah_cina", "makalah", "Nama: Markus Langgeng Iman Saputra\\\\NIM: 235110400111021", "id", "ms",
+    --     "xelatex"),
 }
 
 --

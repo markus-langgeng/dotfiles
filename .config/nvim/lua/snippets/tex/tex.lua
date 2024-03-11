@@ -8,7 +8,12 @@
 
 local cond = require("snippets.tex.utils.conditions")
 local helper = require("snippets.helper")
-local set_pkg = require("snippets.tex.setup_packages")
+local packages = require("snippets.tex.templates.packages")
+local preamble = require("snippets.tex.templates.preamble")
+local body = require("snippets.tex.templates.body")
+local doctypes = require("snippets.tex.utils.enums").Types
+local engines = require("snippets.tex.utils.enums").Engines
+local docclasses = require("snippets.tex.utils.enums").Classes
 
 local make_gletters = function(trig, letter, command)
     return s({ trig = trig, dscr = "Greek letter " .. letter, snippetType = "autosnippet" },
@@ -30,6 +35,16 @@ local make_pinyin_tones = function(trig, dscr, command)
                 d(1, helper.get_visual),
             }
         ))
+end
+
+local make_preamble = function(trig, template)
+    return s({ trig = trig }, fmta(template,
+            {}),
+        {
+            condition = cond.on_first_line,
+            show_condition = cond.on_first_line,
+        }
+    )
 end
 
 local individual_latex_pkg = function(trig, package)
@@ -78,17 +93,21 @@ return {
         )
     ),
 
-    -- HEADING -----------------------------------------------------------------
-    s({ trig = "h1", dscr = "Level 1 heading", snippetType = "autosnippet" },
-        fmta([[\section{<>}]], { i(1, "") }),
+    -- HEADINGS ----------------------------------------------------------------
+    s({ trig = "ch", dscr = "Chapter", snippetType = "autosnippet" },
+        fmta([[\chapter{<>} \label{ch:<>}]], { d(1, helper.get_visual), rep(1) }),
         { condition = cond.line_begin }
     ),
-    s({ trig = "h2", dscr = "Level 2 heading", snippetType = "autosnippet" },
-        fmta([[\subsection{<>}]], { i(1, "") }),
+    s({ trig = "h1", dscr = "Level 1 section", snippetType = "autosnippet" },
+        fmta([[\section{<>} \label{sec:<>}]], { d(1, helper.get_visual), rep(1) }),
         { condition = cond.line_begin }
     ),
-    s({ trig = "h3", dscr = "Level3 heading", snippetType = "autosnippet" },
-        fmta([[\subsubsection{<>}]], { i(1, "") }),
+    s({ trig = "h2", dscr = "Level 2 section", snippetType = "autosnippet" },
+        fmta([[\subsection{<>} \label{ssec:<>}]], { d(1, helper.get_visual), rep(1) }),
+        { condition = cond.line_begin }
+    ),
+    s({ trig = "h3", dscr = "Level3 section", snippetType = "autosnippet" },
+        fmta([[\subsubsection{<>} \label{sssec:<>}]], { d(1, helper.get_visual), rep(1) }),
         { condition = cond.line_begin }
     ),
     ----------------------------------------------------------------------------
@@ -252,18 +271,43 @@ return {
         fmta("\\printbibliography[title=<>]",
             { i(1, "Daftar Pustaka"), }
         ),
-        { condition = cond.in_document  }
+        { condition = cond.in_document * cond.has_biblatex }
     ),
     ----------------------------------------------------------------------------
 
-    -- LATEX PACKAGES -----------------------------------------------------------
-    individual_latex_pkg("pagelayout", set_pkg.pagelayout("a4paper", "4cm", "3cm", "3cm", "3cm")),
-    individual_latex_pkg("langfont", set_pkg.langfont("id")),
-    individual_latex_pkg("langfont_cn", set_pkg.langfont_cn()),
-    individual_latex_pkg("parline", set_pkg.parline()),
-    individual_latex_pkg("parline_makalah", set_pkg.parline("makalah")),
-    individual_latex_pkg("bibliography", set_pkg.bibliography()),
-    individual_latex_pkg("references", set_pkg.references()),
+    -- LATEX PREAMBLES----------------------------------------------------------
+    make_preamble("p_basic",
+        preamble.build_preamble_template(doctypes.biasa, engines.lualatex, docclasses.article, false)),
+    make_preamble("p_tugas",
+        preamble.build_preamble_template(doctypes.tugas, engines.lualatex, docclasses.article, false)),
+    make_preamble("p_tugas_cina",
+        preamble.build_preamble_template(doctypes.tugas, engines.xelatex, docclasses.article, true)),
+    make_preamble("p_makalah",
+        preamble.build_preamble_template(doctypes.makalah, engines.lualatex,
+            docclasses.report, false)),
+    make_preamble("p_makalah_cina",
+        preamble.build_preamble_template(doctypes.makalah, engines.xelatex,
+            docclasses.report, true)),
+    ----------------------------------------------------------------------------
+
+    -- LATEX BODY --------------------------------------------------------------
+    s({ trig = "titlepage" }, fmta(body.titlepage(), {}),
+        {
+            condition = cond.line_begin and cond.in_document,
+            show_condition = cond.line_begin and cond.in_document,
+        }),
+    ----------------------------------------------------------------------------
+
+
+    -- LATEX PACKAGES ----------------------------------------------------------
+    individual_latex_pkg("pagelayout", packages.page_layout_group.build()),
+    individual_latex_pkg("langfont", packages.language_and_font_group.build()),
+    individual_latex_pkg("langfont_cn", packages.language_and_font_chinese_group.build()),
+    individual_latex_pkg("parline", packages.paragraph_and_line_group.build()),
+    individual_latex_pkg("parline_makalah", packages.paragraph_and_line_group.build(doctypes.makalah.name)),
+    individual_latex_pkg("bibliography", packages.bibliography_group.build()),
+    individual_latex_pkg("add_images", packages.images_group.build()),
+    individual_latex_pkg("references", packages.references_group.build()),
     ----------------------------------------------------------------------------
 
 

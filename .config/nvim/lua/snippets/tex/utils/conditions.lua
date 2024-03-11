@@ -14,7 +14,7 @@ end
 local has_pkg = function (name)
     local lines = vim.api.nvim_buf_get_lines(0, 0, -1, false)
     for _, line in ipairs(lines) do
-        if line:match("^\\usepackage{[%a*,%s?]*" .. name .. "[,%s?%a*]*}") then
+        if line:match("^\\usepackage%[?.*%]?{[%a*,%s?]*" .. name .. "[,%s?%a*]*}") then
             return true
         end
     end
@@ -61,6 +61,7 @@ local bib_env = function() return in_env("thebibliography") end
 local tikz_env = function() return in_env("tikzpicture") end
 local xpinyin = function() return has_pkg("xpinyin") end
 local fontspec = function() return has_pkg("fontspec") end
+local graphicx = function() return has_pkg("graphicx") end
 local biblatex = function() return has_pkg("biblatex") end
 
 local list_env = function()
@@ -94,6 +95,7 @@ M.in_bib = make_condition(bib_env)
 M.in_tikz = make_condition(tikz_env)
 M.has_xpinyin = make_condition(xpinyin)
 M.has_fontspec = make_condition(fontspec)
+M.has_graphicx = make_condition(graphicx)
 M.has_biblatex = make_condition(biblatex)
 
 return M
