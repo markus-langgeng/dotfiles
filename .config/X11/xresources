@@ -125,6 +125,9 @@ URxvt.keysym.M-v: perl:clipboard:paste
 !! dwm !!
 !!!!!!!!!
 
+dwm.borderpx: 2
+dwm.showbar: 1
+
 !! Red colorscheme
 ! dwm.selbordercolor: #FF4500
 ! dwm.selbgcolor:     #da4939
@@ -142,9 +145,10 @@ URxvt.keysym.M-v: perl:clipboard:paste
 
 
 !! Gray colorscheme
-dwm.selbordercolor: #737373
-dwm.selbgcolor:     #000000
-dmenu.selbgcolor:   #000000
+dwm.selbordercolor:   #737373
+dwm.normbordercolor:  #1a1a1a
+dwm.selbgcolor:       #000000
+dmenu.selbgcolor:     #000000
 
 
 
