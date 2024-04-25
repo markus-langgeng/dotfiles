@@ -1,6 +1,6 @@
 -- dark colorschemes (it's good enough): torte, koehler, pablo*, habamax*, industry, lunaperche*
 -- vim.cmd("colorscheme habamax")
-require("options")
+require("options") -- add options on top because of definition of leaders key
 require("remap")
 require("autocmd")
 

@@ -45,6 +45,7 @@ M.config = function()
     end, { desc = "Show [S]nippet [L]ist" })
 
     map("n", "<leader><leader>s", function ()
+        require("luasnip.session.snippet_collection").clear_snippets()
         require("luasnip.loaders.from_lua").load({paths = "~/.config/nvim/lua/snippets/"})
     end, { desc = "Reload [S]nippets"} )
 end

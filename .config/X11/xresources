@@ -1,4 +1,5 @@
 *.font: Liberation Mono:pixelsize=13:antialias=true:autohint=true
+st.font: Liberation Mono:pixelsize=15:antialias=true:autohint=true
 
 !! tomorrow dark
 ! special
@@ -124,9 +125,6 @@ URxvt.keysym.M-v: perl:clipboard:paste
 !!!!!!!!!
 !! dwm !!
 !!!!!!!!!
-
-dwm.borderpx: 2
-dwm.showbar: 1
 
 !! Red colorscheme
 ! dwm.selbordercolor: #FF4500

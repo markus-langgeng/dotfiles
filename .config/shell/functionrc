@@ -36,7 +36,7 @@ pms() {
 }
 
 pmr() {
-    pacman -Ssq "$1" | fzf --multi --preview 'pacman -Si {1}; pacman -Qi {1}' | xargs -ro sudo pacman -Rns
+    pacman -Ssq "$1" | fzf --multi --preview 'pacman -Qi {1}; pacman -Qi {1}' | xargs -ro sudo pacman -Rns
 }
 
 pmq() {

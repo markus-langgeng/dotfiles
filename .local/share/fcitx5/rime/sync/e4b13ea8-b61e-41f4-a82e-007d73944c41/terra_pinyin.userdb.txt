@@ -1,0 +1,8 @@
+# Rime user dictionary
+#@/db_name	terra_pinyin
+#@/db_type	userdb
+#@/rime_version	1.10.0
+#@/tick	1
+#@/user_id	e4b13ea8-b61e-41f4-a82e-007d73944c41
+a5 	啊	c=1 d=1 t=1
+ni3 hao3 	你好	c=1 d=1 t=1

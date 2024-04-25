@@ -177,3 +177,25 @@ lua,string,pattern           http://lua-users.org/wiki/PatternsTutorial
 luasnip,latex,nvim           https://ejmastnak.com/tutorials/vim-latex/luasnip/
 table,lua           http://lua-users.org/wiki/TablesTutorial
 latex,template,titlepage           https://tex.stackexchange.com/questions/209993/how-to-customize-my-titlepage
+roff,neatroff           https://litcave.rudi.ir/neatroff.pdf
+roff,neatroff           https://litcave.rudi.ir/neatstart.pdf
+roff,heirloom           https://heirloom.sourceforge.net/doctools.html
+roff,troff           https://www.troff.org/
+translate,enid           https://translate.google.com/?sl=en&tl=id&op=translate
+markdown           https://google.github.io/styleguide/docguide/style.html
+latex,input,include           https://en.wikibooks.org/wiki/LaTeX/Modular_Documents
+freebsd           https://vermaden.wordpress.com/2020/09/07/quare-freebsd/
+freebsd           https://freebsdfoundation.org/wp-content/uploads/2017/10/FreeBSD-is-Not-a-Linux-Distro.pdf
+freebsd           https://www.over-yonder.net/~fullermd/rants/bsd4linux/01
+freebsd           https://vez.mrsk.me/freebsd-defaults.html
+linguistic           https://docs.google.com/document/d/1DhL0-d9BBwHFunfMzzCxusSTLLOB7vuBnWAx29PyFO0/edit          ff
+wubi,IME           https://madmansnest.com/2018/03/26/wubi-introduction.html
+wubi,IME           https://chinesemac.org/wubi/hua.html
+wubi,IME           http://backsla.sh/talks/wubi/
+IME,           http://www.studymongolian.net/technical/how-to-create-linux-input-method-editor/
+latex,references,cross-referencing           https://en.wikibooks.org/wiki/LaTeX/Labels_and_Cross-referencing
+latex,linguistic           https://en.wikibooks.org/wiki/LaTeX
+rime           https://dvel.me/posts/rime-ice/#%e4%b8%8a%e6%89%8b%e4%bf%ae%e6%94%b9
+rime           https://github.com/iDvel/rime-ice          ff
+rime           https://www.10101.io/2019/01/30/rime-configuration
+rime           https://github.com/WithdewHua/rime-configuration          ff

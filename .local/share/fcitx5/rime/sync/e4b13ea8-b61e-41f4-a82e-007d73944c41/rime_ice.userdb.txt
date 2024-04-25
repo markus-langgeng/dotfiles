@@ -1,0 +1,31 @@
+# Rime user dictionary
+#@/db_name	rime_ice
+#@/db_type	userdb
+#@/rime_version	1.10.0
+#@/tick	25
+#@/user_id	e4b13ea8-b61e-41f4-a82e-007d73944c41
+an 	按	c=1 d=1 t=25
+can 	参	c=1 d=1 t=25
+duan wu jie 	端午节	c=1 d=0.985112 t=25
+ge qu 	歌曲	c=2 d=1.96561 t=25
+gu qin 	古琴	c=1 d=0.97531 t=25
+ha ha ha 	哈哈哈	c=1 d=0.99005 t=25
+han 	汉	c=1 d=0.985112 t=25
+han hong 	韩红	c=1 d=0.97531 t=25
+lao dong 	劳动	c=1 d=1 t=25
+lu 	路	c=1 d=0.980199 t=25
+meng gu 	蒙古	c=1 d=0.985112 t=25
+min qu 	民曲	c=1 d=0.99005 t=25
+mo li hua 	茉莉花	c=1 d=0.99005 t=25
+ni hao shi jie 	你好世界	c=1 d=1 t=25
+ru yuan 	如愿	c=2 d=1.99501 t=25
+sai ma 	赛马	c=1 d=0.980199 t=25
+shi jian 	实践	c=1 d=1 t=25
+shi li 	示例	c=1 d=1 t=25
+wu yue 	五月	c=1 d=0.99005 t=25
+xiao bai yang 	小白杨	c=1 d=0.995012 t=25
+yi hao 	一号	c=1 d=0.995012 t=25
+zhe shi ge 	这是个	c=0 d=0.099005 t=25
+zhe shi ge zi dong jiu cuo 	这是个自动纠错	c=1 d=0.995012 t=25
+zhong guo 	中国	c=1 d=0.995012 t=25
+zi dong jiu cuo 	自动纠错	c=0 d=0.099005 t=25

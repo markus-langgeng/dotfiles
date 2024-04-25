@@ -1,8 +1,10 @@
 ---@diagnostic disable: undefined-global
 
-local cond = require("snippets.tex.utils.conditions")
 local helper = require("snippets.helper")
 
+---just testing
+---@param index table
+---@return function
 local mytest = function(index)
     return f(function(args)
         --            ^ is a list of tables, so it looks like this { {}, {}, {},  {}}
@@ -22,9 +24,7 @@ return {
 
     s("todo", t("TODO: ")),
     s("fix", t("FIX: ")),
-    s("warn", t("WARN: ")),
     s("note", t("NOTE: ")),
-    s("perf", t("PERF: ")),
 
     -- s("curtime", f(function()
     --     return os.date("%D - %H:%M")

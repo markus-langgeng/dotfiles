@@ -16,6 +16,10 @@ while read -r file; do
     case "$1" in
         "c"  ) echo "$file" | tr -d '\n' | xclip -selection c ;;
         "w"  ) setwp "$file" ;;
+        "r"  )
+            nname=$( find ./* | sed "s/\.\///;s/\..*$//" | dmenu -i -p "Rename file into")
+            ext="${file##*.}"
+            [ -n "$nname" ] && mv "$file" "${nname}.${ext}" ;;
         "d"  ) trash-put "$file" ;;
         "C-a") mv "$file" "$HOME/wallpapers/animals/" ;;
         "C-i") mv "$file" "$HOME/wallpapers/illustrations" ;;

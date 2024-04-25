@@ -4,6 +4,7 @@ local system = vim.fn.system
 
 local group_reload_conf = aug("ReloadConfig", { clear = true })
 local group_ime = aug("IME", { clear = true })
+local group_vimtex = aug("Close vimtex buffer", { clear = true })
 
 au({ "TextYankPost" }, {
     pattern = "*",
@@ -14,7 +15,7 @@ au({ "TextYankPost" }, {
 
 au({ "BufWritePre" }, { -- Delete trailing spaces
     pattern = "*",
-    callback = function ()
+    callback = function()
         local curpos = vim.api.nvim_win_get_cursor(0)
         vim.cmd([[%s/\s\+$//e]])
         vim.api.nvim_win_set_cursor(0, curpos)
@@ -54,3 +55,10 @@ au({ "InsertEnter", "BufCreate", "BufEnter", "BufLeave" }, {
     end,
 })
 
+-- -- do :bwipeout so that VimtexEventQuit can be used
+-- -- see :h vimtex-events
+-- au("QuitPre", {
+--     group = group_vimtex,
+--     pattern = { "tex", "bib" },
+--     command = [[:%bwipeout]]
+-- })

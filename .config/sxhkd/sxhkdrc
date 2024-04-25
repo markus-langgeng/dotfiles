@@ -43,7 +43,7 @@ super + alt + {g, r}
    xppen-settings; {gimp, krita}
 
 # don't use `m`, it's for moving floating window to center
-super + shift + {w, c, g, b}
+super + shift + {w, c, g}
     firefox {"https://web.whatsapp.com", "https://classroom.google.com", "https://github.com"}
 
 XF86Calculator

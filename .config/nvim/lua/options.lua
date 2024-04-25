@@ -1,7 +1,7 @@
 local o = vim.opt
-local ol = vim.opt_local
 local g = vim.g
 
+-- Define leaders key on top of everything
 g.mapleader = " "
 g.maplocalleader = ","
 
