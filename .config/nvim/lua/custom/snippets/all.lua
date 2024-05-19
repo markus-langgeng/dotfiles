@@ -1,6 +1,6 @@
 ---@diagnostic disable: undefined-global
 
-local helper = require("snippets.helper")
+local helper = require("custom.snippets.utils.helper")
 
 ---just testing
 ---@param index table

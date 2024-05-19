@@ -1,8 +1,8 @@
 -- dark colorschemes (it's good enough): torte, koehler, pablo*, habamax*, industry, lunaperche*
 -- vim.cmd("colorscheme habamax")
-require("options") -- add options on top because of definition of leaders key
-require("remap")
-require("autocmd")
+
+vim.g.mapleader = " "
+vim.g.maplocalleader = ","
 
 local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
 if not vim.loop.fs_stat(lazypath) then
@@ -62,8 +62,10 @@ local opts = { -- lazy vim config opts
                 "-",
             },
         },
-    }
+    },
+	change_detection = {
+		notify = false,
+	},
 }
 
-require("lazy").setup("plugins", opts) -- search directory called "plugins"
-require("highlights")
+require("lazy").setup({import = "custom/plugins" }, opts) -- search directory called "plugins"

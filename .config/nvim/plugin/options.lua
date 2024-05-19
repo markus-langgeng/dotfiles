@@ -1,9 +1,4 @@
 local o = vim.opt
-local g = vim.g
-
--- Define leaders key on top of everything
-g.mapleader = " "
-g.maplocalleader = ","
 
 -- Indenting
 o.expandtab = true
@@ -21,23 +16,24 @@ o.signcolumn = "yes"
 o.colorcolumn = "80"
 o.splitbelow = true
 o.splitright = true
-o.termguicolors = true
 o.timeoutlen = 400
 o.mouse = ""
 o.winbar = "%= %t %m %="
 o.statusline = [[%!v:lua.require("statusline").statusline()]]
 o.laststatus = 3
 o.whichwrap:append("<>[]hl")       -- go to previous/next line with h,l,left arrow and right arrow when cursor reaches end/beginning of line
-o.updatetime = 250                 -- interval for writing swap file to disk, also used by gitsigns
+o.updatetime = 100                 -- interval for writing swap file to disk, also used by gitsigns
 o.shellcmdflag = "-ic"             -- interactive shell
-o.completeopt = "menuone,noselect" -- Set completeopt to have a better completion experience
 o.hlsearch = false
 o.incsearch = true
+o.lazyredraw = true
+o.inccommand = "split"
 o.showmode = false
 o.ignorecase = true
 o.smartcase = true
 o.wrap = false
 o.isfname:append("@-@")
+o.shortmess:append("Ic")
 
 -- treesitter fold
 o.foldmethod = "expr"
