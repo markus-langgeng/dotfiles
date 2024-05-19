@@ -33,7 +33,7 @@ o.ignorecase = true
 o.smartcase = true
 o.wrap = false
 o.isfname:append("@-@")
-o.shortmess:append("Ic")
+o.shortmess:append("c")
 
 -- treesitter fold
 o.foldmethod = "expr"
