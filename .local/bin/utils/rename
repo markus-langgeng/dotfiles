@@ -1,0 +1,9 @@
+#!/bin/sh
+
+i=1
+while [ $i -lt 125 ]
+do
+    nama=$(sed -n "$i"p daftar_nama | tr -d '\n')
+    cp "Sertifikat News Anchor - $i.pdf" "nama/Sertifikat News Anchor - $nama.pdf"
+    i=$(( $i + 1 ))
+done

@@ -1,0 +1,25 @@
+#!/bin/sh
+
+title="Blank Title"
+
+final_template=$(
+cat << EOM
+%! TEX TS-program = xelatex
+
+\documentclass[a4paper,12pt]{report}
+
+
+
+\title{}
+\author{Markus Langgeng I. S.}
+\date{\today}
+
+
+
+\begin{document}
+
+
+
+\end{document}
+EOM
+)

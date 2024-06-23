@@ -1,0 +1,88 @@
+#!/bin/sh
+
+[ -z "$1" ] && exit 1
+
+theme_name="$1"
+theme_file="beamertheme$theme_name.sty"
+inner_file="beamerinnertheme$theme_name.sty"
+outer_file="beameroutertheme$theme_name.sty"
+font_file="beamerfonttheme$theme_name.sty"
+color_file="beamercolortheme$theme_name.sty"
+
+[ -f "$theme_file" ] && echo "File $theme_file already exsists" && exit 1
+[ -f "$inner_file" ] && echo "File $inner_file already exsiss" && exi 1
+[ -f "$outer_file" ] && echo "File $outer_file already exsiss" && exi 1
+[ -f "$font_file" ] && echo "File $font_file already exsiss" && exi 1
+[ -f "$color_file" ] && echo "File $color_file already exsiss" && exi 1
+
+touch "$inner_file" "$outer_file" "$font_file" "$color_file" "$theme_file"
+
+# \defbeamertemplate*{}{} --> for overriding default function
+# \setbeamertemplate{} --> for setting element
+
+cat << EOF >> "$theme_file"
+\mode<presentation>
+
+% Requirement
+\RequirePackage{tikz}
+
+% Settings
+\usecolortheme{$theme_name}
+\usefonttheme{$theme_name}
+\useinnertheme{$theme_name}
+\useoutertheme{$theme_name}
+
+% \setbeamertemplate{navigation symbols}{}
+% \setbeamertemplate{blocks}[rounded][shadow=true]
+
+\mode<all>
+EOF
+
+
+cat << EOF >> "$inner_file"
+\mode<presentation>
+
+\setbeamertemplate{background}{
+    \begin{tikzpicture}
+    \useasboundingbox (0,0) rectangle(\the\paperwidth,\the\paperheight);
+    \fill[color=brown] (0,2) rectangle (\the\paperwidth,\the\paperheight);
+    \fill[color=orange] (0,0) rectangle(2.95,1.9);
+    \fill[color=blue!50!cyan!80] (3.05,0) rectangle(\the\paperwidth,1.9);
+    \ifnum\thepage>1\relax%
+        \fill[white,opacity=1] (0,0) rectangle(\the\paperwidth,\the\paperheight);
+    \fi
+    \end{tikzpicture}
+}
+
+% Title page
+\defbeamertemplate*{title page}{$1}[1][]
+{
+   \vskip6cm%
+        \begin{beamercolorbox}[wd=12cm,leftskip=3cm,sep=8pt,#1]{title page header}
+            \usebeamerfont{title}\inserttitle\par%
+        \end{beamercolorbox}%
+        \vskip0.75cm%
+        \begin{beamercolorbox}[wd=12cm,leftskip=3cm,#1]{author}
+            \usebeamerfont{author}\insertauthor%
+        \end{beamercolorbox}
+        \vskip0.2cm%
+        \begin{beamercolorbox}[wd=12cm,leftskip=3cm,#1]{date}
+            \usebeamerfont{author}\insertdate%
+        \end{beamercolorbox}
+  \vfill
+}
+EOF
+
+
+
+
+
+cat << EOF >> "$outer_file"
+EOF
+
+
+
+
+
+cat << EOF >> "$color_file"
+EOF
