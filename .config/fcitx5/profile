@@ -1,14 +1,14 @@
 [Groups/0]
 # Group Name
-Name="Group 2"
+Name="Group 1"
 # Layout
-Default Layout=us
+Default Layout=us-dvp
 # Default Input Method
 DefaultIM=rime
 
 [Groups/0/Items/0]
 # Name
-Name=keyboard-us
+Name=keyboard-us-dvp
 # Layout
 Layout=
 
@@ -20,15 +20,15 @@ Layout=
 
 [Groups/1]
 # Group Name
-Name="Group 1"
+Name="Group 2"
 # Layout
-Default Layout=us-dvp
+Default Layout=us
 # Default Input Method
 DefaultIM=rime
 
 [Groups/1/Items/0]
 # Name
-Name=keyboard-us-dvp
+Name=keyboard-us
 # Layout
 Layout=
 
@@ -39,6 +39,6 @@ Name=rime
 Layout=
 
 [GroupOrder]
-0="Group 2"
-1="Group 1"
+0="Group 1"
+1="Group 2"
 

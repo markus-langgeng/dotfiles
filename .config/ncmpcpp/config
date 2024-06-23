@@ -377,7 +377,7 @@ visualizer_spectrum_smooth_look = yes
 #
 ## Available values: classic, alternative.
 ##
-#user_interface = classic
+# user_interface = classic
 #
 #data_fetching_delay = yes
 #
@@ -530,7 +530,6 @@ enable_window_title = yes
 #
 #search_engine_default_search_mode = 1
 #
-# external_editor = nano
 external_editor = nvim
 #
 ## Note: set to yes if external editor is a console application.

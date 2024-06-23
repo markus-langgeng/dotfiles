@@ -2,30 +2,1056 @@
 #@/db_name	rime_ice
 #@/db_type	userdb
 #@/rime_version	1.10.0
-#@/tick	25
+#@/tick	1852
 #@/user_id	e4b13ea8-b61e-41f4-a82e-007d73944c41
-an 	按	c=1 d=1 t=25
-can 	参	c=1 d=1 t=25
-duan wu jie 	端午节	c=1 d=0.985112 t=25
-ge qu 	歌曲	c=2 d=1.96561 t=25
-gu qin 	古琴	c=1 d=0.97531 t=25
-ha ha ha 	哈哈哈	c=1 d=0.99005 t=25
-han 	汉	c=1 d=0.985112 t=25
-han hong 	韩红	c=1 d=0.97531 t=25
-lao dong 	劳动	c=1 d=1 t=25
-lu 	路	c=1 d=0.980199 t=25
-meng gu 	蒙古	c=1 d=0.985112 t=25
-min qu 	民曲	c=1 d=0.99005 t=25
-mo li hua 	茉莉花	c=1 d=0.99005 t=25
-ni hao shi jie 	你好世界	c=1 d=1 t=25
-ru yuan 	如愿	c=2 d=1.99501 t=25
-sai ma 	赛马	c=1 d=0.980199 t=25
-shi jian 	实践	c=1 d=1 t=25
-shi li 	示例	c=1 d=1 t=25
-wu yue 	五月	c=1 d=0.99005 t=25
-xiao bai yang 	小白杨	c=1 d=0.995012 t=25
-yi hao 	一号	c=1 d=0.995012 t=25
-zhe shi ge 	这是个	c=0 d=0.099005 t=25
-zhe shi ge zi dong jiu cuo 	这是个自动纠错	c=1 d=0.995012 t=25
-zhong guo 	中国	c=1 d=0.995012 t=25
-zi dong jiu cuo 	自动纠错	c=0 d=0.099005 t=25
+A 	A	c=2 d=1.65832 t=1852
+B 	B	c=1 d=1 t=1852
+a 	啊	c=2 d=0.952708 t=1852
+ai 	爱	c=1 d=1 t=1852
+ai ren 	爱人	c=1 d=0.932394 t=1852
+an 	安	c=2 d=1.8481 t=1852
+an 	按	c=1 d=1 t=1852
+an hui 	安徽	c=3 d=2.6624 t=1852
+ao men 	澳门	c=2 d=1.97516 t=1852
+ba 	把	c=8 d=4.18492 t=1852
+bai xing 	百姓	c=1 d=0.873716 t=1852
+bai xing men 	百姓们	c=7 d=4.52214 t=1852
+ban zi you 	半自由	c=0 d=0.0767206 t=1852
+ban zi you yu su 	半自由语素	c=1 d=0.771052 t=1852
+bang 	帮	c=1 d=0.946485 t=1852
+bang ni 	帮你	c=2 d=1.5541 t=1852
+bang zhu 	帮助	c=2 d=1.91259 t=1852
+bao 	包	c=3 d=2.29287 t=1852
+bao 	抱	c=1 d=0.951229 t=1852
+bao qi lai 	包起来	c=1 d=0.650509 t=1852
+bao zhe 	包着	c=2 d=1.10146 t=1852
+bao zhe 	抱着	c=1 d=0.615697 t=1852
+bei 	北	c=4 d=3.21037 t=1852
+bei 	被	c=3 d=1.5866 t=1852
+bei da 	北大	c=1 d=0.913931 t=1852
+bei ding wei 	被定为	c=0 d=0.0941765 t=1852
+bei ding wei ji ben 	被定为基本	c=1 d=0.946485 t=1852
+bei jing 	北京	c=9 d=6.69135 t=1852
+bei lin 	碑林	c=1 d=1.08216 t=1852
+bei tong 	悲痛	c=0 d=0.0918512 t=1852
+ben 	本	c=2 d=1.8793 t=1852
+ben ming nian 	本命年	c=5 d=4.91615 t=1852
+bi sai 	比赛	c=2 d=1.57178 t=1852
+bi zi 	鼻子	c=1 d=0.941765 t=1852
+bian 	边	c=0 d=0.0625002 t=1852
+bian cheng 	变成	c=0 d=0.0763379 t=1852
+bian cheng le 	变成了	c=0 d=0.0759572 t=1852
+bie ku 	别哭	c=1 d=0.88692 t=1852
+bie ting 	别听	c=2 d=0.997606 t=1852
+bin guan 	宾馆	c=1 d=0.97531 t=1852
+bing le 	病了	c=1 d=0.932394 t=1852
+bo hai 	渤海	c=1 d=0.937067 t=1852
+bu 	不	c=11 d=3.27589 t=1852
+bu dao 	不到	c=1 d=0.621885 t=1852
+bu dui 	不对	c=2 d=1.02138 t=1852
+bu fen 	部分	c=2 d=1.95551 t=1852
+bu hao 	不好	c=1 d=0.955997 t=1852
+bu jin 	不仅	c=1 d=0.384812 t=1852
+bu ke qi 	不客气	c=1 d=0.995012 t=1852
+bu ke xue 	不科学	c=1 d=0.918512 t=1852
+bu liao le 	不了了	c=1 d=0.683861 t=1852
+bu neng 	不能	c=3 d=1.5469 t=1852
+bu qu guo bei jing 	不去过北京	c=1 d=0.88692 t=1852
+bu shang lai 	不上来	c=1 d=0.88692 t=1852
+bu xiao you san wu hou wei da 	不孝有三无后为大	c=3 d=2.81888 t=1852
+bu yi yang 	不一样	c=1 d=0.900325 t=1852
+bu zhe me ren wei 	不这么认为	c=1 d=0.451581 t=1852
+bu zhi bu jue 	不知不觉	c=1 d=0.932394 t=1852
+cai 	彩	c=3 d=2.23361 t=1852
+cai 	菜	c=1 d=0.965605 t=1852
+cai lun 	蔡伦	c=1 d=1 t=1852
+cai na 	采纳	c=1 d=0.543351 t=1852
+cai xian chan 	彩线缠	c=2 d=1.71871 t=1852
+can 	参	c=1 d=1 t=1852
+cao 	肏	c=1 d=0.99005 t=1852
+cao shu 	草书	c=4 d=3.7208 t=1852
+cha 	差	c=1 d=0.995012 t=1852
+cha 	茶	c=2 d=1.87077 t=1852
+cha bie 	差别	c=2 d=1.95123 t=1852
+cha you 	茶友	c=1 d=0.904837 t=1852
+chan chen 	谗臣	c=1 d=0.447088 t=1852
+chang chang 	常常	c=1 d=0.615697 t=1852
+chang jiang 	长江	c=1 d=0.980199 t=1852
+chang jiang zhong xia you ping yuan 	长江中下游平原	c=1 d=0.909373 t=1852
+chang shi 	常识	c=1 d=0.99005 t=1852
+chang shi jian 	长时间	c=0 d=0.0927743 t=1852
+chang wei 	肠胃	c=2 d=1.92218 t=1852
+chang zheng 	长征	c=3 d=2.88014 t=1852
+che 	车	c=1 d=0.680451 t=1852
+chen 	沉	c=1 d=0.763379 t=1852
+chen 	陈	c=1 d=0.767206 t=1852
+cheng gong 	成功	c=1 d=0.946485 t=1852
+chi 	吃	c=5 d=2.34308 t=1852
+chi hao 	吃好	c=1 d=0.955997 t=1852
+chi le 	吃了	c=1 d=0.878095 t=1852
+chi zong zi 	吃粽子	c=1 d=0.856415 t=1852
+chong qing 	重庆	c=1 d=0.97531 t=1852
+chong yang jie 	重阳节	c=1 d=0.985112 t=1852
+chu guo 	楚国	c=8 d=3.98932 t=1852
+chu guo ren men 	楚国人们	c=1 d=0.802519 t=1852
+chu wang 	楚王	c=4 d=2.92492 t=1852
+chu wang mian qian 	楚王面前	c=1 d=0.479505 t=1852
+chu wu 	初五	c=2 d=1.17344 t=1852
+chuan 	船	c=1 d=0.985112 t=1852
+chuan er 	船儿	c=0 d=0.0774916 t=1852
+chuan shou 	传授	c=1 d=0.97531 t=1852
+chuan tong 	传统	c=1 d=0.33454 t=1852
+chuan tong jie ri 	传统节日	c=1 d=0.932394 t=1852
+chun 	春	c=1 d=0.99005 t=1852
+chun jie 	春节	c=1 d=0.970446 t=1852
+ci 	词	c=2 d=1.48387 t=1852
+ci gen 	词根	c=1 d=0.786628 t=1852
+ci su 	词素	c=1 d=0.913931 t=1852
+ci yu 	词语	c=0 d=0.167015 t=1852
+ci yu zi 	词语字	c=2 d=1.91678 t=1852
+cong ci yi hou 	从此以后	c=2 d=1.07426 t=1852
+cong ming 	聪明	c=2 d=1.13777 t=1852
+da 	大	c=4 d=2.77367 t=1852
+da 	答	c=1 d=1 t=1852
+da chen 	大臣	c=4 d=2.44018 t=1852
+da da 	大大	c=1 d=0.970446 t=1852
+da dian hua 	打电话	c=2 d=1.83932 t=1852
+da jia 	大家	c=3 d=1.90133 t=1852
+da jia hao 	大家好	c=2 d=1.37259 t=1852
+da shi tou 	大石头	c=1 d=0.621885 t=1852
+da yi 	大衣	c=2 d=1.97032 t=1852
+da yu 	大禹	c=1 d=0.97531 t=1852
+dai 	带	c=1 d=0.891366 t=1852
+dai fu 	大夫	c=1 d=0.767206 t=1852
+dai zu 	傣族	c=1 d=0.960789 t=1852
+dan 	单	c=1 d=0.895834 t=1852
+dan fang mian 	单方面	c=1 d=0.900325 t=1852
+dan shi 	但是	c=2 d=1.29464 t=1852
+dang 	当	c=1 d=0.960789 t=1852
+dang ran 	当然	c=1 d=0.814647 t=1852
+dao 	倒	c=1 d=0.985112 t=1852
+dao 	到	c=7 d=4.7888 t=1852
+dao jiao 	道教	c=1 d=0.923116 t=1852
+dao ku qi lai 	到哭起来	c=1 d=0.755784 t=1852
+dao le 	到了	c=1 d=0.778838 t=1852
+dao shui 	倒水	c=1 d=0.666977 t=1852
+dao yu 	岛屿	c=1 d=0.890612 t=1852
+de 	地	c=1 d=0.597501 t=1852
+de 	得	c=5 d=2.46413 t=1852
+de 	的	c=43 d=12.2531 t=1852
+de shi hou 	的时候	c=1 d=1.06322 t=1852
+deng 	等	c=1 d=0.860708 t=1852
+di fang 	地方	c=1 d=0.535261 t=1852
+di guo 	敌国	c=2 d=1.15983 t=1852
+di li 	地理	c=9 d=7.39258 t=1852
+di su 	低速	c=0 d=0.0995012 t=1852
+di su sun 	低速孙	c=1 d=1 t=1852
+di xing 	地形	c=1 d=0.860708 t=1852
+di yi 	第一	c=2 d=1.95123 t=1852
+dian cong 	点从	c=1 d=0.985112 t=1852
+dian de 	点的	c=0 d=0.097531 t=1852
+dian de fei ji 	点的飞机	c=1 d=0.980199 t=1852
+dian yi 	奠仪	c=1 d=1 t=1852
+diao 	掉	c=2 d=0.907775 t=1852
+diu 	丢	c=0 d=0.066034 t=1852
+diu dao 	丢到	c=3 d=2.37918 t=1852
+diu dao shui li 	丢到水里	c=1 d=0.574072 t=1852
+diu shui li 	丢水里	c=1 d=0.66365 t=1852
+dong 	东	c=4 d=3.62821 t=1852
+dong bei 	东北	c=1 d=0.865022 t=1852
+dong bei ping yuan 	东北平原	c=1 d=0.900325 t=1852
+dong ci 	动词	c=1 d=0.970446 t=1852
+dong han 	东汉	c=1 d=0.965605 t=1852
+dong ting 	洞庭	c=3 d=1.74442 t=1852
+dong ting hu 	洞庭湖	c=3 d=2.56117 t=1852
+dong xi 	东西	c=1 d=0.985112 t=1852
+dong yue tai shan 	东岳泰山	c=1 d=0.856415 t=1852
+dou 	都	c=9 d=4.0289 t=1852
+dou mei er 	都美儿	c=0 d=0.0726149 t=1852
+dou mei er yong you kan dao 	都美儿拥有看到	c=1 d=0.729789 t=1852
+dou shi 	都是	c=1 d=0.329559 t=1852
+du 	度	c=0 d=0.0951229 t=1852
+du ci yu 	度词语	c=1 d=0.955997 t=1852
+duan wu jie 	端午节	c=6 d=3.99486 t=1852
+duan wu jie de you lai 	端午节的由来	c=1 d=0.349938 t=1852
+dui 	对	c=0 d=0.099005 t=1852
+dui bu qi 	对不起	c=1 d=0.923116 t=1852
+duo 	多	c=3 d=2.62351 t=1852
+duo he 	多喝	c=0 d=0.0909373 t=1852
+duo le 	多了	c=0 d=0.0985112 t=1852
+duo yin jie 	多音节	c=1 d=0.909373 t=1852
+e 	饿	c=1 d=0.524663 t=1852
+e hua 	恶化	c=1 d=0.980199 t=1852
+e mei shan 	峨眉山	c=1 d=0.970446 t=1852
+e zhe 	饿着	c=1 d=0.865022 t=1852
+er 	二	c=1 d=0.951229 t=1852
+er 	儿	c=1 d=0.852347 t=1852
+er 	而	c=3 d=1.71534 t=1852
+er duo 	耳朵	c=2 d=1.84644 t=1852
+er qie 	而且	c=1 d=0.392586 t=1852
+er wan wu qian li chang zheng 	二万五千里长征	c=1 d=0.995012 t=1852
+er zi 	儿子	c=1 d=0.995012 t=1852
+fa 	法	c=1 d=0.965605 t=1852
+fa ding jia ri 	法定假日	c=1 d=0.927743 t=1852
+fa zhan 	发展	c=0 d=0.0995012 t=1852
+fa zhan han yu 	发展汉语	c=1 d=1 t=1852
+fan 	反	c=3 d=1.10766 t=1852
+fan 	饭	c=3 d=2.09894 t=1852
+fan ge ming 	反革命	c=1 d=0.946485 t=1852
+fan jing shan 	梵净山	c=1 d=0.99005 t=1852
+fan shi 	饭食	c=1 d=0.965605 t=1852
+fan tuan 	饭团	c=11 d=7.06288 t=1852
+fang 	放	c=1 d=1 t=1852
+fang zi 	房子	c=1 d=1 t=1852
+fei chang 	非常	c=2 d=1.24503 t=1852
+fei fa 	非法	c=1 d=0.960789 t=1852
+fei ji 	飞机	c=0 d=0.097531 t=1852
+fen bu 	分布	c=1 d=0.860708 t=1852
+fen fen 	纷纷	c=1 d=0.965605 t=1852
+fo jiao 	佛教	c=0 d=0.0951229 t=1852
+fo jiao wu da ming shan 	佛教五大名山	c=1 d=0.955997 t=1852
+fu 	夫	c=1 d=0.965605 t=1852
+fu 	福	c=6 d=4.91396 t=1852
+fu jian 	福建	c=1 d=0.995012 t=1852
+fu jin de 	附近的	c=1 d=0.759572 t=1852
+fu nv jie 	妇女节	c=1 d=0.927743 t=1852
+fu wu qi 	服务器	c=1 d=0.980199 t=1852
+fu xi 	复习	c=1 d=0.873716 t=1852
+gan 	干	c=1 d=0.390628 t=1852
+gan jin 	赶紧	c=1 d=0.680451 t=1852
+gan mang 	赶忙	c=1 d=0.771052 t=1852
+gan xie 	感谢	c=1 d=0.995012 t=1852
+gan zou 	赶走	c=2 d=0.942245 t=1852
+gang 	刚	c=1 d=0.909373 t=1852
+gao su 	告诉	c=2 d=1.61882 t=1852
+gao su wo 	告诉我	c=1 d=0.923116 t=1852
+ge 	个	c=3 d=1.78149 t=1852
+ge qu 	歌曲	c=2 d=1.96561 t=1852
+gei 	给	c=5 d=4.00791 t=1852
+gei ni 	给你	c=1 d=0.878095 t=1852
+gei wo 	给我	c=1 d=0.900325 t=1852
+gen 	根	c=1 d=0.778801 t=1852
+gen 	跟	c=1 d=1 t=1852
+gen ben 	根本	c=2 d=0.935421 t=1852
+geng 	更	c=1 d=0.603506 t=1852
+geng jia qiang da 	更加强大	c=1 d=0.425283 t=1852
+gong 	工	c=1 d=0.810584 t=1852
+gong chan dang 	共产党	c=6 d=5.24166 t=1852
+gong chan zhu yi 	共产主义	c=3 d=2.97516 t=1852
+gong he guo 	共和国	c=1 d=0.891366 t=1852
+gong ren 	工人	c=2 d=1.36647 t=1852
+gong ye hua 	工业化	c=1 d=0.798516 t=1852
+gong zuo 	工作	c=1 d=0.995012 t=1852
+gong zuo de 	工作的	c=1 d=0.960789 t=1852
+gu dai jiao yu 	古代教育	c=1 d=0.806541 t=1852
+gu dai ke ji 	古代科技	c=1 d=0.932394 t=1852
+gu qin 	古琴	c=1 d=0.97531 t=1852
+gu shi 	故事	c=5 d=3.7657 t=1852
+guan ai 	关爱	c=0 d=0.0995012 t=1852
+guan ai nv hai 	关爱女孩	c=1 d=1 t=1852
+guan yu 	关于	c=2 d=1.59448 t=1852
+guang gao he zuo 	广告合作	c=1 d=0.955997 t=1852
+guang xi 	广西	c=2 d=1.77064 t=1852
+gui zhou 	贵州	c=1 d=0.995012 t=1852
+gun gun 	滚滚	c=1 d=0.637628 t=1852
+guo 	国	c=1 d=0.431711 t=1852
+guo 	过	c=3 d=2.36108 t=1852
+guo ce 	国策	c=1 d=0.951229 t=1852
+guo de 	过的	c=1 d=0.332871 t=1852
+guo gong he zuo 	国共合作	c=1 d=0.960789 t=1852
+guo ji 	国际	c=0 d=0.0946485 t=1852
+guo ji jie ri 	国际节日	c=1 d=0.951229 t=1852
+guo jia 	国家	c=4 d=1.38552 t=1852
+guo jun 	国君	c=1 d=0.433874 t=1852
+guo lai 	过来	c=2 d=1.36754 t=1852
+guo min dang 	国民党	c=2 d=1.8029 t=1852
+guo qing jie 	国庆节	c=1 d=1 t=1852
+guo qing jie ri 	国庆节日	c=1 d=0.895834 t=1852
+guo xing 	国兴	c=0 d=0.0941765 t=1852
+guo xing jia ri 	国兴假日	c=1 d=0.946485 t=1852
+ha ha ha 	哈哈哈	c=1 d=0.99005 t=1852
+ha ha ha ha 	哈哈哈哈	c=1 d=1 t=1852
+hai 	还	c=1 d=0.472367 t=1852
+hai er 	孩儿	c=1 d=0.891366 t=1852
+hai nan 	海南	c=1 d=1.05687 t=1852
+hai nan dao yu 	海南岛屿	c=1 d=0.965605 t=1852
+hai rang ni 	还让你	c=1 d=0.965605 t=1852
+hai yang 	海洋	c=1 d=0.879402 t=1852
+hai you 	还有	c=1 d=0.995012 t=1852
+han 	汉	c=3 d=2.45847 t=1852
+han chao 	汉朝	c=2 d=1.75207 t=1852
+han hong 	韩红	c=1 d=0.97531 t=1852
+han shi 	寒食	c=1 d=0.873716 t=1852
+han yu 	汉语	c=0 d=0.0995012 t=1852
+han zu 	汉族	c=1 d=0.869358 t=1852
+hao 	好	c=3 d=1.30348 t=1852
+hao de 	好的	c=5 d=2.98844 t=1852
+hao jiu 	好久	c=2 d=0.966232 t=1852
+hao le 	好了	c=0 d=0.0923116 t=1852
+hao ma 	好吗	c=1 d=0.904837 t=1852
+hao ren 	好人	c=1 d=0.527292 t=1852
+he 	和	c=6 d=5.24315 t=1852
+he dian er 	喝点儿	c=1 d=0.995012 t=1852
+he liu 	河流	c=1 d=0.924004 t=1852
+he nan 	河南	c=1 d=0.918512 t=1852
+he yang 	和样	c=1 d=0.960789 t=1852
+hei long jiang 	黑龙江	c=2 d=1.86814 t=1852
+hei se de 	黑色的	c=0 d=0.0946485 t=1852
+hen 	很	c=6 d=2.83238 t=1852
+hen chang shi jian 	很长时间	c=1 d=0.960789 t=1852
+hen duo 	很多	c=0 d=0.0927743 t=1852
+hen duo chang shi jian 	很多长时间	c=1 d=0.932394 t=1852
+hen duo nian 	很多年	c=0 d=0.0965605 t=1852
+hen hao 	很好	c=1 d=1 t=1852
+hen jiu yi qian 	很久以前	c=1 d=0.865022 t=1852
+hen kuai 	很快	c=1 d=0.588605 t=1852
+hen lei 	很累	c=1 d=0.985112 t=1852
+heng shan 	恒山	c=1 d=0.891366 t=1852
+heng shan 	衡山	c=1 d=0.882497 t=1852
+hong bao 	红包	c=1 d=0.865022 t=1852
+hong jun 	红军	c=9 d=8.48674 t=1852
+hong se de 	红色的	c=1 d=0.941765 t=1852
+hong ze hu 	洪泽湖	c=1 d=0.856415 t=1852
+hou 	后	c=1 d=0.927743 t=1852
+hou lai 	后来	c=2 d=1.17157 t=1852
+hou tian 	后天	c=1 d=0.946485 t=1852
+hu 	湖	c=5 d=3.15288 t=1852
+hu bei 	湖北	c=1 d=0.932394 t=1852
+hu nan 	湖南	c=1 d=1 t=1852
+hu po 	湖泊	c=1 d=0.900325 t=1852
+hu shi 	护士	c=1 d=0.763379 t=1852
+hua 	画	c=1 d=0.970446 t=1852
+hua bei ping yuan 	华北平原	c=1 d=0.904837 t=1852
+hua cha 	花茶	c=1 d=1 t=1852
+hua dao 	划到	c=1 d=0.491644 t=1852
+hua er 	画儿	c=1 d=0.97531 t=1852
+hua jia 	画家	c=1 d=0.748264 t=1852
+hua qi 	划起	c=1 d=0.970446 t=1852
+hua quan 	花圈	c=1 d=0.985112 t=1852
+hua shan 	华山	c=1 d=0.88692 t=1852
+hua tuo 	华佗	c=2 d=1.84366 t=1852
+hua zhe 	画着	c=1 d=0.774916 t=1852
+huai hua 	坏话	c=2 d=0.985614 t=1852
+huang 	黄	c=1 d=0.941765 t=1852
+huang he 	黄河	c=1 d=0.985112 t=1852
+huang liang 	荒凉	c=1 d=0.529935 t=1852
+huang shan 	荒山	c=1 d=0.960789 t=1852
+huang shan 	黄山	c=1 d=0.965605 t=1852
+hui 	会	c=3 d=2.2827 t=1852
+hui 	回	c=1 d=0.891366 t=1852
+hui da 	回答	c=1 d=0.843665 t=1852
+hui guo 	回国	c=1 d=0.980199 t=1852
+hui yi 	汇义	c=1 d=0.932394 t=1852
+hui zu 	回族	c=1 d=0.860708 t=1852
+huo dong 	活动	c=1 d=0.955997 t=1852
+huo yao 	火药	c=1 d=0.99005 t=1852
+ji 	及	c=1 d=0.980199 t=1852
+ji 	级	c=0 d=0.174537 t=1852
+ji an 	积案	c=0 d=0.0904837 t=1852
+ji an ren kou 	积案人口	c=1 d=0.909373 t=1852
+ji bai 	几百	c=1 d=0.839457 t=1852
+ji bai 	击败	c=1 d=0.843665 t=1852
+ji bei tong 	级悲痛	c=1 d=0.923116 t=1852
+ji ben 	基本	c=0 d=0.0941765 t=1852
+ji ben guo ce 	基本国策	c=1 d=0.904837 t=1852
+ji dan 	鸡蛋	c=2 d=1.99501 t=1852
+ji de 	记得	c=0 d=0.0748264 t=1852
+ji hua de 	计划的	c=1 d=0.923116 t=1852
+ji hua sheng yu 	计划生育	c=2 d=1.67188 t=1852
+ji mu di shi 	级目的是	c=1 d=0.97531 t=1852
+ji nian 	纪念	c=3 d=1.68823 t=1852
+ji yao 	即要	c=1 d=0.965605 t=1852
+ji yao 	辑要	c=1 d=0.970446 t=1852
+ji zhe 	记者	c=1 d=0.729789 t=1852
+jia 	加	c=1 d=0.606531 t=1852
+jia 	家	c=7 d=3.41158 t=1852
+jia ri 	假日	c=0 d=0.279267 t=1852
+jian 	见	c=0 d=0.0763379 t=1852
+jian bian cheng 	见变成	c=1 d=0.767206 t=1852
+jian dang jie 	建党节	c=1 d=0.904837 t=1852
+jian jian de 	渐渐地	c=2 d=1.14641 t=1852
+jian jun jie 	建军节	c=1 d=0.909373 t=1852
+jian yi 	建议	c=6 d=2.12887 t=1852
+jiang 	将	c=5 d=1.52442 t=1852
+jiang 	江	c=4 d=1.76555 t=1852
+jiang bian 	江边	c=1 d=0.687289 t=1852
+jiang gu shi 	讲故事	c=1 d=0.323033 t=1852
+jiang li 	江里	c=1 d=0.955997 t=1852
+jiang shui zhong 	江水中	c=1 d=0.650509 t=1852
+jiang xi 	江西	c=4 d=3.34411 t=1852
+jiang zhong 	江中	c=1 d=0.56836 t=1852
+jiao 	叫	c=5 d=2.62461 t=1852
+jiao shi 	教师	c=1 d=0.839457 t=1852
+jiao wo 	叫我	c=1 d=0.786628 t=1852
+jiao xue 	教学	c=2 d=1.58915 t=1852
+jiao yuan 	教员	c=1 d=0.847894 t=1852
+jiao zi 	饺子	c=1 d=0.847894 t=1852
+jie 	接	c=-1 d=0 t=1852
+jie cha 	解茶	c=1 d=0.937067 t=1852
+jie kou 	接口	c=0 d=0.0937067 t=1852
+jie ling 	节令	c=2 d=1.87883 t=1852
+jie qi 	节气	c=1 d=0.918512 t=1852
+jie qing 	节庆	c=0 d=0.0918512 t=1852
+jie qing jia ri 	节庆假日	c=1 d=0.923116 t=1852
+jie ri 	节日	c=4 d=2.88894 t=1852
+jie shao 	介绍	c=1 d=0.810584 t=1852
+jie shao yi xia 	介绍一下	c=1 d=0.794534 t=1852
+jin 	进	c=1 d=0.562705 t=1852
+jin chao 	晋朝	c=1 d=0.970446 t=1852
+jin tian 	今天	c=2 d=1.95123 t=1852
+jin xian dai 	近现代	c=0 d=0.0932394 t=1852
+jin xian dai jia ri 	近现代假日	c=1 d=0.937067 t=1852
+jing 	井	c=1 d=0.571209 t=1852
+jing ai de 	敬爱的	c=1 d=0.900325 t=1852
+jing chang 	经常	c=2 d=0.902147 t=1852
+jiu 	久	c=1 d=0.88692 t=1852
+jiu 	九	c=1 d=0.891366 t=1852
+jiu 	就	c=14 d=5.19319 t=1852
+jiu 	酒	c=1 d=1 t=1852
+jiu bei 	就被	c=1 d=0.591555 t=1852
+jiu chi 	就吃	c=1 d=0.680451 t=1852
+jiu dao 	就到	c=1 d=0.980199 t=1852
+jiu hua shan 	九华山	c=1 d=0.985112 t=1852
+jiu yue 	九月	c=1 d=0.946485 t=1852
+ju 	局	c=1 d=1 t=1852
+ju ran 	居然	c=2 d=1.03098 t=1852
+jue 	觉	c=1 d=0.891366 t=1852
+jue de 	觉得	c=3 d=1.28177 t=1852
+jue ding 	决定	c=1 d=0.923116 t=1852
+kai shi 	开始	c=1 d=0.913931 t=1852
+kai shu 	楷书	c=5 d=4.66795 t=1852
+kai ti 	楷体	c=1 d=1 t=1852
+kan 	看	c=2 d=1.82857 t=1852
+kan chuan er 	看船儿	c=1 d=0.778801 t=1852
+kan dao 	看到	c=1 d=0.825077 t=1852
+kan fa 	看法	c=2 d=1.76222 t=1852
+kan qi lai 	看起来	c=0 d=0.097531 t=1852
+kan zhe 	看着	c=0 d=0.0946485 t=1852
+ke 	可	c=2 d=1.76986 t=1852
+ke ji 	科技	c=1 d=0.802519 t=1852
+ke shi 	可是	c=8 d=3.44625 t=1852
+ke yi 	可以	c=2 d=1.70469 t=1852
+ku 	哭	c=1 d=0.790571 t=1852
+ku 	苦	c=1 d=0.806541 t=1852
+ku qi lai 	哭起来	c=0 d=0.0752014 t=1852
+kuai 	块	c=0 d=0.097531 t=1852
+kuai 	快	c=3 d=1.56151 t=1852
+kuai qing jin 	块请进	c=1 d=0.980199 t=1852
+kuai zuo xia 	快坐下	c=1 d=0.99005 t=1852
+kui zeng 	馈赠	c=1 d=0.995012 t=1852
+kun lun shan 	昆仑山	c=2 d=1.83946 t=1852
+lai 	来	c=3 d=1.96847 t=1852
+lai bei jing 	来北京	c=0 d=0.0965605 t=1852
+lai bei jing hen duo nian le 	来北京很多年了	c=1 d=0.970446 t=1852
+lai dao le 	来到了	c=1 d=0.625002 t=1852
+lai de shi hou 	来的时候	c=1 d=0.918512 t=1852
+lai zi ji 	来自己	c=1 d=0.806541 t=1852
+lao 	捞	c=1 d=0.882497 t=1852
+lao dong 	劳动	c=1 d=1 t=1852
+lao dong jie 	劳动节	c=2 d=1.88544 t=1852
+lao dong li 	劳动力	c=1 d=0.97531 t=1852
+lao shi 	老师	c=9 d=7.74691 t=1852
+lao zhang 	老张	c=1 d=0.951229 t=1852
+le 	了	c=26 d=9.16171 t=1852
+li 	里	c=3 d=1.76008 t=1852
+li liang 	力量	c=1 d=0.856415 t=1852
+li pin 	礼品	c=1 d=1 t=1852
+li shi 	历史	c=3 d=2.90697 t=1852
+li shu 	隶书	c=5 d=4.53029 t=1852
+li shu 	隶属	c=1 d=0.980199 t=1852
+lian 	连	c=0 d=0.0865022 t=1852
+lian he 	联合	c=1 d=0.45612 t=1852
+lian he qi lai 	联合起来	c=1 d=0.65377 t=1852
+lian ta de 	连他的	c=1 d=0.869358 t=1852
+lian xi 	练习	c=4 d=3.19952 t=1852
+liang ci 	量词	c=2 d=1.93605 t=1852
+liang ge xi 	两个喜	c=1 d=0.995012 t=1852
+liang ge xi 	两个昔	c=1 d=0.99005 t=1852
+liang tian 	两天	c=2 d=1.87883 t=1852
+liao 	料	c=1 d=0.932394 t=1852
+liao le 	了了	c=1 d=0.687289 t=1852
+lin 	林	c=1 d=0.99005 t=1852
+liu 	刘	c=1 d=0.965605 t=1852
+liu 	流	c=1 d=0.640824 t=1852
+liu fang 	流放	c=0 d=0.104656 t=1852
+liu fang dao le 	流放到了	c=1 d=0.522046 t=1852
+liu fang le 	流放了	c=1 d=0.744532 t=1852
+liu tang 	流淌	c=1 d=0.644036 t=1852
+liu yi er tong jie 	六一儿童节	c=1 d=0.937067 t=1852
+long 	龙	c=1 d=0.847894 t=1852
+long hu shan 	龙虎山	c=1 d=0.946485 t=1852
+long zhou 	龙舟	c=2 d=1.58291 t=1852
+lu 	路	c=1 d=0.980199 t=1852
+lu kou 	路口	c=1 d=0.99005 t=1852
+lu shan 	庐山	c=1 d=0.97531 t=1852
+luo ba zu 	珞巴族	c=1 d=0.882497 t=1852
+lv 	旅	c=1 d=0.995012 t=1852
+lv 	绿	c=1 d=0.99005 t=1852
+lv cha 	绿茶	c=1 d=0.99005 t=1852
+lv shi 	律师	c=2 d=1.34803 t=1852
+ma 	吗	c=4 d=3.29986 t=1852
+ma 	妈	c=1 d=0.97531 t=1852
+ma 	马	c=1 d=0.985112 t=1852
+ma shang 	马上	c=1 d=0.737123 t=1852
+mai shui guo 	买水果	c=1 d=0.913931 t=1852
+mai shui guo 	卖水果	c=1 d=0.918512 t=1852
+mai wan 	卖完	c=1 d=0.932394 t=1852
+mai wan le 	卖完了	c=0 d=0.0941765 t=1852
+man 	满	c=1 d=0.88692 t=1852
+man man 	慢慢	c=1 d=0.904837 t=1852
+man zu 	满族	c=1 d=0.865022 t=1852
+man zu 	满足	c=1 d=0.856415 t=1852
+mang le 	忙了	c=1 d=0.985112 t=1852
+mao gong ding 	毛公鼎	c=1 d=0.937067 t=1852
+mao ze dong 	毛泽东	c=3 d=2.87563 t=1852
+me 	么	c=1 d=0.882497 t=1852
+mei 	没	c=1 d=0.737123 t=1852
+mei guan xi 	没关系	c=1 d=0.937067 t=1852
+mei guo duo jiu 	没过多久	c=1 d=0.554327 t=1852
+mei kan dao 	没看到	c=1 d=0.980199 t=1852
+mei nian 	每年	c=3 d=2.43784 t=1852
+mei nian de 	每年的	c=1 d=0.324652 t=1852
+mei qu guo 	没去过	c=2 d=1.68742 t=1852
+mei wen ti 	没问题	c=1 d=1 t=1852
+mei you 	没有	c=6 d=3.94794 t=1852
+men 	们	c=7 d=3.47203 t=1852
+men 	门	c=1 d=0.802519 t=1852
+men kou 	门口	c=1 d=0.909373 t=1852
+meng gu 	蒙古	c=2 d=1.74464 t=1852
+meng zi 	孟子	c=1 d=1 t=1852
+mi luo jiang 	汨罗江	c=0 d=0.0625002 t=1852
+mi luo jiang bian 	汨罗江边	c=1 d=0.628135 t=1852
+mian ji 	面积	c=1 d=0.878095 t=1852
+mian qian 	面前	c=1 d=0.715372 t=1852
+mie wang 	灭亡	c=1 d=0.903828 t=1852
+mie wang le 	灭亡了	c=1 d=0.588605 t=1852
+min qu 	民曲	c=1 d=0.99005 t=1852
+min zu 	民族	c=2 d=1.8131 t=1852
+ming 	明	c=1 d=0.985112 t=1852
+ming shan 	名山	c=1 d=0.951229 t=1852
+ming zi 	名字	c=1 d=0.918512 t=1852
+mo he 	漠河	c=1 d=0.941765 t=1852
+mo li hua 	茉莉花	c=1 d=0.99005 t=1852
+mu 	木	c=1 d=0.932394 t=1852
+mu 	目	c=1 d=0.927743 t=1852
+mu di shi 	目的是	c=1 d=1.08216 t=1852
+mu qin 	母亲	c=1 d=0.771052 t=1852
+na 	那	c=3 d=2.87774 t=1852
+na ben shu 	那本书	c=1 d=0.895834 t=1852
+na er 	那儿	c=1 d=0.904837 t=1852
+na ge 	那个	c=2 d=1.71668 t=1852
+na xian nian 	那现年	c=2 d=1.95551 t=1852
+na xie 	那些	c=2 d=1.99005 t=1852
+na xie nian 	那些年	c=1 d=0.985112 t=1852
+nan 	南	c=4 d=3.11953 t=1852
+nan bei 	南北	c=1 d=0.97531 t=1852
+nan bei cha yi 	南北差异	c=1 d=0.97531 t=1852
+nan chang 	南昌	c=1 d=0.932394 t=1852
+nan chang qi yi 	南昌起义	c=1 d=0.985112 t=1852
+nan hai 	南海	c=2 d=1.94575 t=1852
+nan sha 	南沙	c=1 d=0.965605 t=1852
+nao dong fang 	闹洞房	c=5 d=4.8623 t=1852
+ne 	呢	c=1 d=0.606531 t=1852
+nei he 	内核	c=1 d=0.985112 t=1852
+nei meng gu 	内蒙古	c=1 d=0.951229 t=1852
+neng 	能	c=2 d=0.716738 t=1852
+ni 	你	c=17 d=11.7114 t=1852
+ni de 	你的	c=1 d=0.99005 t=1852
+ni hao 	你好	c=2 d=1.99501 t=1852
+ni hao shi jie 	你好世界	c=1 d=1 t=1852
+ni kan qi lai 	你看起来	c=1 d=0.980199 t=1852
+ni men 	你们	c=6 d=3.51614 t=1852
+ni xiang hao le 	你想好了	c=1 d=1 t=1852
+ni yao 	你要	c=0 d=0.0909373 t=1852
+ni yao duo he yi dian er 	你要多喝一点儿	c=1 d=0.913931 t=1852
+nian 	年	c=5 d=4.04404 t=1852
+nian 	黏	c=1 d=0.767206 t=1852
+nian zi you ci su 	年自由词素	c=1 d=0.763379 t=1852
+nin 	您	c=0 d=0.0946485 t=1852
+nin kan zhe hei se de 	您看着黑色的	c=1 d=0.951229 t=1852
+ning xia 	宁夏	c=1 d=0.946485 t=1852
+nong 	农	c=1 d=1.04925 t=1852
+nong li 	农历	c=1 d=0.913931 t=1852
+nong sang 	农桑	c=1 d=0.960789 t=1852
+nong shu 	弄书	c=1 d=0.946485 t=1852
+nong zheng 	农政	c=1 d=0.97531 t=1852
+nu li 	努力	c=1 d=0.965605 t=1852
+nv 	女	c=1 d=1 t=1852
+nv hai 	女孩	c=0 d=0.0995012 t=1852
+o 	哦	c=1 d=0.918512 t=1852
+peng you 	朋友	c=1 d=0.99005 t=1852
+peng you men 	朋友们	c=1 d=0.927743 t=1852
+pin yin 	拼音	c=2 d=1.99501 t=1852
+ping wei 	评委	c=1 d=0.980199 t=1852
+ping yuan 	平原	c=0 d=0.0891366 t=1852
+po yang 	鄱阳	c=1 d=0.839457 t=1852
+pu ren 	仆人	c=5 d=3.30023 t=1852
+pu tao 	葡萄	c=3 d=2.94561 t=1852
+pu tuo shan 	普陀山	c=1 d=0.980199 t=1852
+qi lai 	起来	c=3 d=1.82986 t=1852
+qi min yao shu 	齐民要术	c=1 d=0.941765 t=1852
+qi xi jie 	七夕节	c=1 d=0.980199 t=1852
+qi yi 	起义	c=1 d=0.937067 t=1852
+qi yi de 	奇异的	c=1 d=0.657047 t=1852
+qi yun shan 	齐云山	c=1 d=0.937067 t=1852
+qi zhong 	其中	c=1 d=0.351692 t=1852
+qiang da 	强大	c=1 d=0.609571 t=1852
+qin 	亲	c=1 d=0.932394 t=1852
+qin chao 	秦朝	c=1 d=0.955997 t=1852
+qin mei 	亲美	c=1 d=0.937067 t=1852
+qin mi 	亲密	c=2 d=1.87897 t=1852
+qin mi ai ren 	亲密爱人	c=1 d=0.955997 t=1852
+qing 	请	c=3 d=2.71772 t=1852
+qing chao 	清朝	c=1 d=0.995012 t=1852
+qing cheng shan 	青城山	c=1 d=0.941765 t=1852
+qing jin 	请进	c=0 d=0.097531 t=1852
+qing ming jie 	清明节	c=2 d=1.89319 t=1852
+qing song 	轻松	c=2 d=1.97521 t=1852
+qiong xiong ji e 	穷凶极恶	c=1 d=0.97531 t=1852
+qiu shou qi yi 	秋收起义	c=1 d=0.995012 t=1852
+qu 	去	c=3 d=1.68375 t=1852
+qu guo 	去过	c=1 d=0.995012 t=1852
+qu guo bei jing 	去过北京	c=0 d=0.0882497 t=1852
+qu nian 	去年	c=1 d=0.941765 t=1852
+qu yuan 	屈原	c=39 d=11.8641 t=1852
+quan shu 	全书	c=1 d=0.980199 t=1852
+que 	却	c=1 d=0.449329 t=1852
+ran 	然	c=1 d=0.806541 t=1852
+ran hou 	然后	c=6 d=3.17839 t=1852
+rang 	让	c=2 d=1.37586 t=1852
+rang ta 	让他	c=1 d=0.535261 t=1852
+re ai 	热爱	c=1 d=0.970446 t=1852
+re ai zi ji 	热爱自己	c=1 d=0.396531 t=1852
+ren 	人	c=3 d=1.52507 t=1852
+ren kou 	人口	c=2 d=1.63879 t=1852
+ren kou jie gou 	人口结构	c=1 d=0.946485 t=1852
+ren kou jie kou 	人口接口	c=1 d=0.941765 t=1852
+ren kou yan bian 	人口演变	c=1 d=0.937067 t=1852
+ren men 	人们	c=2 d=1.37242 t=1852
+ren min 	人民	c=2 d=0.814647 t=1852
+reng 	仍	c=1 d=0.557106 t=1852
+reng 	扔	c=1 d=0.559898 t=1852
+reng jin 	扔进	c=1 d=0.562705 t=1852
+ri 	日	c=0 d=0.0891366 t=1852
+ru 	入	c=1 d=0.99005 t=1852
+ru 	如	c=1 d=0.985112 t=1852
+ru guo 	如果	c=2 d=1.84644 t=1852
+ru guo de shi 	如果的事	c=1 d=0.869358 t=1852
+ru le 	入了	c=0 d=0.0631284 t=1852
+ru yuan 	如愿	c=2 d=1.99501 t=1852
+rui 	瑞	c=1 d=0.774916 t=1852
+run yue 	闰月	c=1 d=0.99005 t=1852
+sa 	萨	c=1 d=0.980199 t=1852
+sa ma 	撒吗	c=1 d=1 t=1852
+sai ma 	赛马	c=1 d=0.980199 t=1852
+san 	三	c=1 d=0.970446 t=1852
+san ba 	三八	c=1 d=0.923116 t=1852
+san da 	三大	c=0 d=0.183115 t=1852
+san da bei lin 	三大碑林	c=2 d=1.95551 t=1852
+san da ping yuan 	三大平原	c=1 d=0.895834 t=1852
+san shan 	三山	c=1 d=1.04877 t=1852
+san shi pan 	散氏盘	c=1 d=0.946485 t=1852
+sao chen 	扫尘	c=1 d=0.852144 t=1852
+sao chen 	扫陈	c=1 d=0.847894 t=1852
+sha 	杀	c=1 d=0.839457 t=1852
+shan dong 	山东	c=1 d=0.904837 t=1852
+shan mai 	山脉	c=1 d=0.869358 t=1852
+shan xi 	山西	c=1 d=0.909373 t=1852
+shan xi 	陕西	c=2 d=1.87954 t=1852
+shang 	上	c=3 d=2.116 t=1852
+shang 	商	c=1 d=0.985112 t=1852
+shang chao 	商超	c=1 d=0.88692 t=1852
+shang dian 	商店	c=1 d=0.970446 t=1852
+shang hai 	上海	c=2 d=1.76812 t=1852
+shang le 	上了	c=0 d=0.0650509 t=1852
+shang xin 	伤心	c=2 d=1.26738 t=1852
+shao 	少	c=2 d=1.74327 t=1852
+shao min zu 	少民族	c=1 d=0.955997 t=1852
+shao sheng 	少生	c=0 d=0.099005 t=1852
+shao shu 	少数	c=1 d=1 t=1852
+shao shu min zu 	少数民族	c=2 d=1.75532 t=1852
+she me 	社么	c=1 d=0.946485 t=1852
+she tou 	舌头	c=1 d=0.860708 t=1852
+shen 	神	c=1 d=0.551563 t=1852
+shen 	身	c=1 d=0.540641 t=1852
+shen me 	什么	c=4 d=2.97712 t=1852
+shen me shi hou 	什么时候	c=1 d=0.995012 t=1852
+shen nong 	神农	c=1 d=0.99005 t=1852
+sheng 	省	c=2 d=1.73777 t=1852
+sheng ri 	生日	c=0 d=0.0923116 t=1852
+sheng wu 	生物	c=3 d=2.6878 t=1852
+sheng yu 	生育	c=1 d=0.927743 t=1852
+shi 	事	c=1 d=0.918512 t=1852
+shi 	是	c=8 d=4.11365 t=1852
+shi 	食	c=1 d=0.995012 t=1852
+shi da ming cha 	十大名茶	c=1 d=0.985112 t=1852
+shi dian 	试点	c=0 d=0.0985112 t=1852
+shi dian duo 	十点多	c=1 d=0.995012 t=1852
+shi dian duo le 	试点多了	c=1 d=0.99005 t=1852
+shi er 	事儿	c=1 d=0.839457 t=1852
+shi fen 	十分	c=1 d=0.394554 t=1852
+shi hou 	时候	c=2 d=1.41711 t=1852
+shi jian 	实践	c=2 d=1.99501 t=1852
+shi li 	示例	c=1 d=1 t=1852
+shi qi 	时期	c=2 d=1.47211 t=1852
+shi ti 	尸体	c=7 d=4.05763 t=1852
+shi tou 	石头	c=1 d=0.965605 t=1852
+shou 	手	c=1 d=0.895834 t=1852
+shou sang 	守丧	c=2 d=1.95551 t=1852
+shu 	书	c=3 d=2.3312 t=1852
+shu fa 	书法	c=2 d=1.80562 t=1852
+shui 	水	c=3 d=1.9097 t=1852
+shui li 	水里	c=1 d=0.898609 t=1852
+shuo 	说	c=8 d=4.07717 t=1852
+si 	四	c=1 d=0.985112 t=1852
+si chuan 	四川	c=1 d=0.97531 t=1852
+si da 	四大	c=0 d=0.302252 t=1852
+si da fa ming 	四大发明	c=1 d=0.937067 t=1852
+si da hai yang 	四大海洋	c=1 d=0.932394 t=1852
+si da he liu 	四大河流	c=1 d=0.97531 t=1852
+si da hu po 	四大湖泊	c=1 d=0.83527 t=1852
+si da ming shan 	四大名山	c=1 d=0.927743 t=1852
+si da nong shu 	四大农书	c=1 d=0.985112 t=1852
+si long 	四龙	c=1 d=0.960789 t=1852
+song 	宋	c=1 d=0.980199 t=1852
+song 	送	c=2 d=1.80715 t=1852
+song chao 	宋朝	c=1 d=0.878095 t=1852
+song gei 	送给	c=1 d=0.927743 t=1852
+song shan 	嵩山	c=1 d=0.895834 t=1852
+su 	素	c=1 d=0.965605 t=1852
+sui 	随	c=3 d=1.03889 t=1852
+sui bian 	随便	c=1 d=0.965605 t=1852
+sui ran 	虽然	c=1 d=0.810584 t=1852
+sun 	孙	c=0 d=0.0995012 t=1852
+suo 	所	c=2 d=1.92218 t=1852
+suo yi 	所以	c=4 d=2.13004 t=1852
+ta 	他	c=24 d=10.4324 t=1852
+ta de 	他的	c=5 d=2.68413 t=1852
+ta de ming zi 	他的名字	c=1 d=0.371577 t=1852
+ta men 	他们	c=14 d=4.78404 t=1852
+ta men 	她们	c=1 d=1 t=1852
+ta shi 	他是	c=1 d=0.985112 t=1852
+ta shuo 	他说	c=1 d=0.499074 t=1852
+tai 	太	c=1 d=0.847894 t=1852
+tai wan 	台湾	c=1 d=0.955997 t=1852
+te bie 	特别	c=1 d=0.909373 t=1852
+te bie xing zheng qu 	特别行政区	c=1 d=0.995012 t=1852
+teng 	疼	c=4 d=3.61958 t=1852
+ti 	体	c=1 d=0.878095 t=1852
+ti chang 	提倡	c=1 d=0.99005 t=1852
+ti chu 	提出	c=3 d=1.67796 t=1852
+ti li 	体力	c=1 d=0.88692 t=1852
+ti yi 	提议	c=1 d=0.511709 t=1852
+ti yu 	体育	c=1 d=0.882497 t=1852
+tian jin 	天津	c=1 d=0.970446 t=1852
+tian zhe me re 	天这么热	c=1 d=0.960789 t=1852
+tiao 	条	c=0 d=0.0631284 t=1852
+tiao 	跳	c=4 d=2.00666 t=1852
+tiao jiang 	跳江	c=2 d=1.49199 t=1852
+tiao ru le 	条入了	c=1 d=0.634448 t=1852
+ting dao 	听到	c=2 d=1.41999 t=1852
+ting dao sheng yin 	听到声音	c=1 d=0.767206 t=1852
+ting shuo 	听说	c=5 d=3.00085 t=1852
+ting yin yue 	听音乐	c=1 d=1 t=1852
+tong nian 	同年	c=1 d=0.955997 t=1852
+tou 	头	c=1 d=0.856415 t=1852
+tu di 	土地	c=1 d=0.873716 t=1852
+tu jia 	土家	c=1 d=0.900325 t=1852
+tu su jiu 	屠苏酒	c=2 d=1.97516 t=1852
+tuan 	团	c=3 d=1.46415 t=1852
+tun 	吞	c=1 d=0.56836 t=1852
+wai guo ren 	外国人	c=1 d=0.965605 t=1852
+wan 	万	c=1 d=0.97531 t=1852
+wan an 	晚安	c=1 d=1 t=1852
+wan er 	玩儿	c=1 d=0.946485 t=1852
+wan hun wan yu 	晚婚晚育	c=0 d=0.099005 t=1852
+wan hun wan yu shao sheng 	晚婚晚育少生	c=1 d=0.995012 t=1852
+wang qian zou 	往前走	c=1 d=0.985112 t=1852
+wei 	为	c=3 d=1.72677 t=1852
+wei 	位	c=5 d=3.48464 t=1852
+wei 	微	c=1 d=0.860708 t=1852
+wei da 	伟大	c=2 d=1.19729 t=1852
+wei jiao 	围剿	c=1 d=0.985112 t=1852
+wei le 	为了	c=4 d=2.65044 t=1852
+wei le 	围了	c=2 d=1.35529 t=1852
+wei shen me 	为什么	c=1 d=0.802519 t=1852
+wei wu er 	维吾尔	c=2 d=1.73529 t=1852
+wei xian 	危险	c=1 d=0.985112 t=1852
+wei ye 	韦叶	c=5 d=2.98643 t=1852
+wei zhi 	位置	c=1 d=0.88692 t=1852
+wen 	问	c=1 d=0.826959 t=1852
+wo 	我	c=23 d=12.8358 t=1852
+wo de 	我的	c=1 d=0.965605 t=1852
+wo de ming zi 	我的名字	c=1 d=0.755784 t=1852
+wo guo 	我国	c=0 d=0.0923116 t=1852
+wo guo sheng ri de shi hou 	我国生日的时候	c=1 d=0.927743 t=1852
+wo jia 	我家	c=1 d=0.814647 t=1852
+wo lai 	我来	c=1 d=0.786628 t=1852
+wo men 	我们	c=7 d=3.76935 t=1852
+wo men bu yi yang 	我们不一样	c=5 d=4.73469 t=1852
+wo nan guo 	我难过	c=3 d=2.74738 t=1852
+wo xiang 	我想	c=2 d=1.64899 t=1852
+wo yao 	我要	c=0 d=0.0970446 t=1852
+wo yao xian chi fan 	我要先吃饭	c=1 d=0.97531 t=1852
+wo ye shi 	我也是	c=1 d=1 t=1852
+wu 	无	c=1 d=0.923116 t=1852
+wu da ming shan 	五大名山	c=0 d=0.0951229 t=1852
+wu long cha 	乌龙茶	c=1 d=0.995012 t=1852
+wu nian 	五年	c=1 d=0.32628 t=1852
+wu si qing nian jie 	五四青年节	c=1 d=0.900325 t=1852
+wu tai shan 	五台山	c=1 d=0.960789 t=1852
+wu xian 	无线	c=1 d=0.927743 t=1852
+wu xian 	无限	c=1 d=1 t=1852
+wu yi lao dong jie 	五一劳动节	c=1 d=0.932394 t=1852
+wu yue 	五岳	c=1 d=0.900325 t=1852
+wu yue 	五月	c=2 d=1.67429 t=1852
+wu yue 	无约	c=2 d=1.70004 t=1852
+wu yue chu wu 	五月初五	c=3 d=1.59322 t=1852
+xi 	西	c=4 d=3.22932 t=1852
+xi gao dong di 	西高东低	c=1 d=0.970446 t=1852
+xi guan 	习惯	c=2 d=1.82259 t=1852
+xi huan 	喜欢	c=5 d=3.9327 t=1852
+xi huan ta 	喜欢他	c=1 d=0.410656 t=1852
+xi nan 	西南	c=1 d=0.932394 t=1852
+xi su 	习俗	c=2 d=1.69619 t=1852
+xi wang 	希望	c=2 d=1.4439 t=1852
+xi zang 	西藏	c=2 d=1.87883 t=1852
+xian 	先	c=1 d=1 t=1852
+xian chan 	线缠	c=1 d=0.752014 t=1852
+xian chi fan 	先吃饭	c=0 d=0.0970446 t=1852
+xian fa 	宪法	c=0 d=0.0960789 t=1852
+xian nian 	现年	c=0 d=0.0970446 t=1852
+xian sheng 	先生	c=8 d=2.83325 t=1852
+xian zai 	现在	c=3 d=2.37597 t=1852
+xiang 	向	c=1 d=0.995012 t=1852
+xiang 	想	c=6 d=3.2581 t=1852
+xiang 	香	c=1 d=0.99005 t=1852
+xiang gang 	香港	c=1 d=0.980199 t=1852
+xiang hao le 	想好了	c=0 d=0.0995012 t=1852
+xiang shi 	想使	c=1 d=0.416862 t=1852
+xiang ying 	相应	c=1 d=0.99005 t=1852
+xiang zhi 	香纸	c=1 d=0.995012 t=1852
+xiao 	小	c=1 d=0.99005 t=1852
+xiao 	消	c=2 d=1.29842 t=1852
+xiao bai yang 	小白杨	c=1 d=0.995012 t=1852
+xiao gou 	小狗	c=1 d=0.941765 t=1852
+xiao hua 	消化	c=1 d=0.965605 t=1852
+xiao jie 	小姐	c=3 d=2.76019 t=1852
+xiao zhuan 	小篆	c=4 d=3.65556 t=1852
+xie dai 	携带	c=2 d=0.828425 t=1852
+xie ru 	写入	c=0 d=0.0960789 t=1852
+xie ru xian fa 	写入宪法	c=1 d=0.965605 t=1852
+xie xie 	谢谢	c=2 d=1.76257 t=1852
+xie xie ni 	谢谢你	c=1 d=1 t=1852
+xin 	信	c=1 d=0.506617 t=1852
+xin jiang 	新疆	c=2 d=1.75113 t=1852
+xing 	性	c=1 d=0.900325 t=1852
+xing shu 	行书	c=3 d=2.75024 t=1852
+xing zheng qu hua 	行政区划	c=1 d=0.843665 t=1852
+xiong huang jiu 	雄黄酒	c=1 d=1 t=1852
+xiu 	休	c=1 d=0.913931 t=1852
+xiu hao 	休好	c=1 d=0.913931 t=1852
+xu ci 	虚词	c=0 d=0.0955997 t=1852
+xu ci yu 	虚词语	c=1 d=0.960789 t=1852
+xu yao 	需要	c=1 d=0.99005 t=1852
+xue 	学	c=4 d=2.68453 t=1852
+xue de kuai 	学得快	c=1 d=1 t=1852
+xue hao le 	学好了	c=1 d=0.927743 t=1852
+xue xi 	学习	c=3 d=2.50971 t=1852
+xue xi bu cuo 	学习不错	c=1 d=0.895834 t=1852
+xue xiao 	学校	c=3 d=2.53315 t=1852
+xun zhao 	寻找	c=1 d=0.690734 t=1852
+ya 	呀	c=1 d=0.913931 t=1852
+yan 	言	c=1 d=0.904837 t=1852
+yan bian 	演变	c=0 d=0.0932394 t=1852
+yan bian cheng 	演变成	c=1 d=0.99005 t=1852
+yan bian cheng le 	言变成了	c=1 d=0.763379 t=1852
+yan dang shan 	雁荡山	c=2 d=1.96531 t=1852
+yan jing 	眼睛	c=3 d=2.58685 t=1852
+yan yuan 	演员	c=1 d=0.856415 t=1852
+yan zhe 	沿着	c=1 d=0.683861 t=1852
+yang 	样	c=1 d=0.909373 t=1852
+yao 	要	c=4 d=2.06588 t=1852
+yao chi 	要吃	c=0 d=0.0946485 t=1852
+yao shi 	要是	c=1 d=0.831104 t=1852
+yao yuan 	遥远	c=1 d=0.524663 t=1852
+ye 	也	c=11 d=6.38376 t=1852
+ye ting 	叶挺	c=1 d=0.923116 t=1852
+ye zi 	叶子	c=1 d=0.895834 t=1852
+yi 	一	c=1 d=0.918512 t=1852
+yi 	意	c=2 d=0.937067 t=1852
+yi dian er 	一点儿	c=0 d=0.0909373 t=1852
+yi ding 	一定	c=1 d=0.941765 t=1852
+yi ge 	一个	c=7 d=3.20853 t=1852
+yi ge ren 	一个人	c=1 d=0.852144 t=1852
+yi ge wan shang 	一个晚上	c=1 d=0.937067 t=1852
+yi hao 	一号	c=1 d=0.995012 t=1852
+yi hou 	以后	c=3 d=1.86712 t=1852
+yi hui er 	一会儿	c=1 d=0.97531 t=1852
+yi jing 	已经	c=2 d=1.83249 t=1852
+yi jing mai wan le 	已经卖完了	c=1 d=0.946485 t=1852
+yi kuai 	一块	c=1 d=0.618783 t=1852
+yi nian zhong 	一年中	c=2 d=1.90727 t=1852
+yi qi 	一起	c=3 d=2.46764 t=1852
+yi qi zhao 	一起找	c=1 d=0.951229 t=1852
+yi qian 	以前	c=1 d=0.344728 t=1852
+yi shu 	艺术	c=2 d=1.56196 t=1852
+yi si 	意思	c=2 d=1.97045 t=1852
+yi tian 	一天	c=4 d=2.13096 t=1852
+yi wei 	一位	c=1 d=0.83527 t=1852
+yi wei 	以为	c=0 d=0.0506617 t=1852
+yi wei zhen 	以为真	c=1 d=0.509156 t=1852
+yi xia 	一下	c=1 d=0.814647 t=1852
+yi xiang 	一项	c=1 d=0.900325 t=1852
+yi xie 	一些	c=2 d=0.893127 t=1852
+yi xin 	一心	c=1 d=0.414783 t=1852
+yi yi 	意义	c=0 d=0.0937067 t=1852
+yi zhi 	一直	c=1 d=0.715338 t=1852
+yi zu 	彝族	c=1 d=0.904837 t=1852
+yin jie 	音节	c=1 d=0.946485 t=1852
+yin jiu 	饮酒	c=2 d=1.93239 t=1852
+yin shua shu 	印刷术	c=1 d=0.995012 t=1852
+yin wei 	因为	c=2 d=1.76885 t=1852
+yin yue 	音乐	c=1 d=0.970446 t=1852
+ying gai 	应该	c=1 d=0.923116 t=1852
+ying yu 	英语	c=1 d=1 t=1852
+yong 	永	c=1 d=0.771052 t=1852
+yong 	用	c=8 d=5.41879 t=1852
+yong lai 	用来	c=1 d=0.97531 t=1852
+yong li 	用力	c=1 d=0.960789 t=1852
+yong you 	拥有	c=0 d=0.0726149 t=1852
+you 	有	c=15 d=5.13814 t=1852
+you dian tian 	有点甜	c=2 d=1.75181 t=1852
+you du 	有毒	c=0 d=0.0918512 t=1852
+you du zai de 	有毒在的	c=1 d=0.923116 t=1852
+you sheng 	优生	c=1 d=1 t=1852
+you yi ge 	有一个	c=1 d=0.873716 t=1852
+you yi wei 	有一位	c=1 d=0.367879 t=1852
+you yu 	由于	c=1 d=0.537944 t=1852
+you yu fa 	由于法	c=0 d=0.0937067 t=1852
+you yu fa yi yi 	由于法意义	c=1 d=0.941765 t=1852
+you zhe 	有着	c=1 d=0.932394 t=1852
+yu 	与	c=5 d=3.82022 t=1852
+yu 	语	c=2 d=1.77084 t=1852
+yu fa 	愈发	c=1 d=0.946485 t=1852
+yu fa 	语法	c=3 d=2.87283 t=1852
+yu fu 	渔夫	c=2 d=1.3467 t=1852
+yu shi 	于是	c=3 d=1.03905 t=1852
+yu su 	语素	c=1 d=0.918512 t=1852
+yu xia 	鱼虾	c=5 d=2.79446 t=1852
+yu yan 	语言	c=1 d=0.951229 t=1852
+yuan 	元	c=1 d=0.941765 t=1852
+yuan 	员	c=2 d=1.36535 t=1852
+yuan chao 	元朝	c=1 d=0.882497 t=1852
+yuan dan 	元旦	c=3 d=2.6961 t=1852
+yuan xiao jie 	元宵节	c=1 d=0.955997 t=1852
+yue 	月	c=3 d=2.89307 t=1852
+yue 	越	c=1 d=0.937067 t=1852
+yue zi 	月子	c=2 d=1.99501 t=1852
+zai 	再	c=3 d=2.0269 t=1852
+zai 	在	c=11 d=4.46164 t=1852
+zai de 	在的	c=0 d=0.0918512 t=1852
+zai diu 	再丢	c=1 d=0.66365 t=1852
+zai hen jiu 	在很久	c=1 d=0.343009 t=1852
+zai jian 	再见	c=2 d=1.77105 t=1852
+zai na er 	在那儿	c=2 d=1.85215 t=1852
+zai qian 	在前	c=1 d=0.904837 t=1852
+zai wai mian wan 	在外面玩	c=0 d=0.0927743 t=1852
+zai wai mian wan er 	在外面玩儿	c=1 d=0.932394 t=1852
+zai ye mei you 	再也没有	c=0 d=0.0650509 t=1852
+zai ye mei you shang le 	再也没有上了	c=1 d=0.65377 t=1852
+zai yong 	再用	c=1 d=0.737123 t=1852
+zai zhan guo 	在战国	c=1 d=0.843665 t=1852
+zai zhe li 	在这里	c=1 d=0.339596 t=1852
+zan men 	咱们	c=3 d=1.23001 t=1852
+zang 	藏	c=1 d=0.913931 t=1852
+zao fan 	早饭	c=0 d=0.0946485 t=1852
+zao fan yao chi hao 	早饭要吃好	c=1 d=0.951229 t=1852
+zao zhi shu 	造纸术	c=1 d=0.985112 t=1852
+zen me 	怎么	c=1 d=0.891366 t=1852
+zen me ban 	怎么办	c=2 d=0.91994 t=1852
+zen me le 	怎么了	c=2 d=1.51424 t=1852
+zen me yang 	怎么样	c=4 d=3.84889 t=1852
+zhan guo 	战国	c=1 d=1.00212 t=1852
+zhan guo de shi hou 	战国的时候	c=1 d=0.869358 t=1852
+zhan guo shi qi 	战国时期	c=1 d=0.348192 t=1852
+zhao 	找	c=3 d=2.68664 t=1852
+zhao 	照	c=1 d=1 t=1852
+zhao dai ke ren 	招待客人	c=1 d=0.980199 t=1852
+zhao dao 	找到	c=2 d=1.74831 t=1852
+zhao ji de 	找记得	c=1 d=0.752014 t=1852
+zhao le 	找了	c=1 d=0.479505 t=1852
+zhao yi zhao 	找一找	c=1 d=0.71177 t=1852
+zhao zhao 	找找	c=1 d=0.740818 t=1852
+zhe 	着	c=2 d=0.803942 t=1852
+zhe 	者	c=1 d=0.726149 t=1852
+zhe 	这	c=4 d=1.88355 t=1852
+zhe ben shu 	这本书	c=2 d=1.851 t=1852
+zhe gai 	这该	c=2 d=0.915352 t=1852
+zhe ge 	这个	c=5 d=3.23612 t=1852
+zhe jiang 	浙江	c=1 d=0.995012 t=1852
+zhe li 	这里	c=1 d=0.985112 t=1852
+zhe shi 	这是	c=1 d=0.923116 t=1852
+zhe shi ge 	这是个	c=0 d=0.099005 t=1852
+zhe shi ge zi dong jiu cuo 	这是个自动纠错	c=1 d=0.995012 t=1852
+zhe yang 	这样	c=3 d=1.89783 t=1852
+zhen 	真	c=0 d=0.0506617 t=1852
+zheng ce 	政策	c=1 d=0.913931 t=1852
+zheng shi ren ke 	正式认可	c=1 d=0.900325 t=1852
+zhi dao 	知道	c=2 d=1.94099 t=1852
+zhi nan zhen 	指南针	c=1 d=0.980199 t=1852
+zhi xia shi 	直辖市	c=1 d=1 t=1852
+zhi yuan 	职员	c=2 d=1.37527 t=1852
+zhong 	中	c=2 d=1.36 t=1852
+zhong da 	重大	c=1 d=0.970446 t=1852
+zhong gong zhong yang 	中共中央	c=1 d=0.927743 t=1852
+zhong guo 	中国	c=7 d=5.04649 t=1852
+zhong guo ren de ming zi 	中国人的名字	c=1 d=0.909373 t=1852
+zhong guo san shan 	中国三山	c=1 d=0.995012 t=1852
+zhong hua ren min 	中华人民	c=1 d=0.88692 t=1852
+zhong nan shan 	终南山	c=1 d=0.873716 t=1852
+zhong qiu jie 	中秋节	c=2 d=1.91693 t=1852
+zhong yao 	中药	c=1 d=0.995012 t=1852
+zhong ying 	中英	c=0 d=0.099005 t=1852
+zhong ying dui 	中英对	c=1 d=0.995012 t=1852
+zhong ying dui zhao 	中英对照	c=1 d=0.995012 t=1852
+zhou chao 	周朝	c=2 d=1.83446 t=1852
+zhou en lai 	周恩来	c=1 d=0.918512 t=1852
+zhou qi 	周期	c=1 d=0.99005 t=1852
+zhu 	住	c=2 d=1.89449 t=1852
+zhu de 	朱德	c=1 d=0.927743 t=1852
+zhu guan 	主观	c=1 d=0.794534 t=1852
+zhu jiang 	主讲	c=1 d=0.995012 t=1852
+zhu jiang 	珠江	c=1 d=1 t=1852
+zhu ni sheng ri kuai le 	祝你生日快乐	c=2 d=1.80067 t=1852
+zhu yao nei rong 	主要内容	c=1 d=0.970446 t=1852
+zhu zai 	住在	c=1 d=0.941765 t=1852
+zhua zhou 	抓周	c=2 d=1.99501 t=1852
+zhuan shu 	篆书	c=2 d=1.73949 t=1852
+zhuang zu 	壮族	c=2 d=1.6995 t=1852
+zhuo zi 	桌子	c=1 d=0.852144 t=1852
+zi 	子	c=4 d=2.88275 t=1852
+zi 	字	c=1 d=1.04635 t=1852
+zi 	自	c=1 d=0.83527 t=1852
+zi dong jiu cuo 	自动纠错	c=0 d=0.099005 t=1852
+zi ji 	自己	c=4 d=1.97372 t=1852
+zi ji de 	自己的	c=1 d=0.97531 t=1852
+zi sha 	自杀	c=2 d=1.50585 t=1852
+zi yan zi yu 	自言自语	c=1 d=0.927743 t=1852
+zi you 	自由	c=0 d=0.0755784 t=1852
+zi you ci su 	自由词素	c=1 d=0.835529 t=1852
+zi yuan 	资源	c=4 d=3.3812 t=1852
+zi zhi qu 	自治区	c=2 d=1.75471 t=1852
+zong zi 	粽子	c=4 d=2.59503 t=1852
+zou 	走	c=1 d=0.995012 t=1852
+zou dao le 	走到了	c=1 d=0.718924 t=1852
+zu guo 	祖国	c=5 d=2.70569 t=1852
+zui hou 	最后	c=1 d=1 t=1852
+zuo 	做	c=4 d=2.79214 t=1852
+zuo cai 	做菜	c=1 d=0.960789 t=1852
+zuo tian 	昨天	c=3 d=2.63012 t=1852
+zuo wei 	作为	c=1 d=0.99005 t=1852
+zuo yong 	作用	c=2 d=1.81425 t=1852
+zuo you 	左右	c=1 d=1 t=1852
+zuo yue zi 	坐月子	c=1 d=0.995012 t=1852
+zuo zhe 	作者	c=1 d=0.733447 t=1852

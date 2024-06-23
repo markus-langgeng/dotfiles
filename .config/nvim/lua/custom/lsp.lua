@@ -4,14 +4,15 @@ local on_attach = function(_, bufnr)
         vim.keymap.set("n", keys, func, { buffer = bufnr, desc = desc })
     end
 
+    -- wrap the require("telescope.builtin") in an anonymus function to lazy load
     nmap("<leader>rn", vim.lsp.buf.rename, "[R]e[n]ame")
     nmap("<leader>ca", vim.lsp.buf.code_action, "[C]ode [A]ction")
-    nmap("gd", require("telescope.builtin").lsp_definitions, "[G]oto [D]efinition")
-    nmap("gr", require("telescope.builtin").lsp_references, "[G]oto [R]eferences")
-    nmap("gI", require("telescope.builtin").lsp_implementations, "[G]oto [I]mplementation")
-    nmap("<leader>D", require("telescope.builtin").lsp_type_definitions, "Type [D]efinition")
-    nmap("<leader>ds", require("telescope.builtin").lsp_document_symbols, "[D]ocument [S]ymbols")
-    nmap("<leader>ws", require("telescope.builtin").lsp_dynamic_workspace_symbols, "[W]orkspace [S]ymbols")
+    nmap("gd", function() require("telescope.builtin").lsp_definitions() end, "[G]oto [D]efinition")
+    nmap("gr", function() require("telescope.builtin").lsp_references() end, "[G]oto [R]eferences")
+    nmap("gI", function() require("telescope.builtin").lsp_implementations() end, "[G]oto [I]mplementation")
+    nmap("<leader>D", function() require("telescope.builtin").lsp_type_definitions() end, "Type [D]efinition")
+    nmap("<leader>ds", function() require("telescope.builtin").lsp_document_symbols() end, "[D]ocument [S]ymbols")
+    nmap("<leader>ws", function() require("telescope.builtin").lsp_dynamic_workspace_symbols() end, "[W]orkspace [S]ymbols")
 
     -- See `:help K` for why this keymap
     nmap("K", vim.lsp.buf.hover, "Hover Documentation")
@@ -44,7 +45,7 @@ local servers = {
         Lua = {
             workspace = { checkThirdParty = false },
             -- NOTE: toggle below to ignore Lua_LS's noisy `missing-fields` warnings
-            diagnostics = { disable = { 'missing-fields' } },
+            diagnostics = { disable = { "missing-fields" } },
         },
     },
 
@@ -84,7 +85,7 @@ local handlers = {
     -- The first entry (without a key) will be the default handler
     -- and will be called for each installed server that doesn't have
     -- a dedicated handler.
-    function(server_name)  -- default handler (optional)
+    function(server_name) -- default handler (optional)
         require("lspconfig")[server_name].setup {
             capabilities = capabilities,
             on_attach = on_attach,
@@ -154,4 +155,3 @@ require("lspconfig.ui.windows").default_options.border = "rounded"
 --         showWindow("Phpactor Status", "markdown", res["result"])
 --     end
 -- end
-

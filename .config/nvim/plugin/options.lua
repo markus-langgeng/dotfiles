@@ -35,6 +35,10 @@ o.wrap = false
 o.isfname:append("@-@")
 o.shortmess:append("c")
 
+-- o.scrolloff = 999
+o.scrolloff = 10
+vim.keymap.set("n", "<leader>m", function() vim.opt.scrolloff = 999 - vim.o.scrolloff end)
+
 -- treesitter fold
 o.foldmethod = "expr"
 o.foldexpr = "nvim_treesitter#foldexpr()"
@@ -48,3 +52,6 @@ o.foldenable = false -- Disable folding at startup.
 -- o.undodir = vim.fn.expand("~/.cache/nvim/undodir")
 o.undodir = os.getenv("HOME") .. "/.cache/nvim/undodir"
 o.undofile = true
+
+
+

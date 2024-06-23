@@ -55,6 +55,7 @@ alias \
     ir-xppen-stop="sudo sudo input-remapper-control --command stop --device '9 inch PenTablet' && clear-capslock" \
     input-remapper-gtk="sudo input-remapper-gtk" \
     ir="sudo input-remapper-gtk" \
-    adb='HOME="$XDG_DATA_HOME"/android adb'
+    adb='HOME="$XDG_DATA_HOME"/android adb' \
+    news="newsraft"
 
 # rime-i="rime_dir=$XDG_DATA_HOME/.config/fcitx5/rime bash ~/Downloads/plum/rime-install" \

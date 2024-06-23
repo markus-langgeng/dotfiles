@@ -161,7 +161,7 @@ local new_env = function()
     return s({ trig = "nn", }, fmta(str, { i(1), i(0), rep(1) }),
         {
             condition = conditions.line_begin * conditions.latex.env.document,
-            show_condition = conditions.line_begin_show * conditions.latex.env.document
+            show_condition = conditions.latex.env.document
         }
     )
 end
@@ -227,10 +227,14 @@ local empty = function()
                 }),
                 title = i(2, ""),
                 author = i(3, "Markus Langgeng I. S."),
-                class = i(4, "article"),
+                class = i(4, "extarticle"),
                 content = i(0, "")
             }
-        ))
+        ),
+        {
+            condition = conditions.line_begin * conditions.first_line,
+            condition_show =  conditions.first_line
+        })
 end
 table.insert(M, empty())
 

@@ -1,4 +1,6 @@
 # Control volume
+# Require mpd-mpris (aur), playerctl, mpd
+
 XF86AudioRaiseVolume
     wpctl set-volume -l 1.0 @DEFAULT_AUDIO_SINK@ 2%+
 XF86AudioLowerVolume
@@ -7,6 +9,21 @@ XF86AudioMute
     wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle
 XF86AudioMicMute
     wpctl set-mute @DEFAULT_AUDIO_SOURCE@ toggle
+
+XF86AudioPrev
+    playerctl previous
+XF86AudioPlay
+    playerctl play-pause
+XF86AudioNext
+    playerctl next
+
+super + XF86AudioPlay
+    playerctl stop
+super + XF86AudioPrev
+    playerctld unshift
+super + XF86AudioNext
+    playerctld shift
+
 
 # Need the toggle-touchpad
 XF86TouchpadToggle
@@ -26,16 +43,6 @@ alt + F7
     echo t | tr -d '\n' | xclip -selection c
 
 
-XF86AudioPrev
-    mpc prev
-XF86AudioPlay
-    mpc toggle
-XF86AudioNext
-    mpc next
-super + F5
-    mpc stop
-
-
 super + alt + {k, b, m, c}
    {kdenlive, $BROWSER, song-player, webcam}
 
@@ -43,8 +50,8 @@ super + alt + {g, r}
    xppen-settings; {gimp, krita}
 
 # don't use `m`, it's for moving floating window to center
-super + shift + {w, c, g}
-    firefox {"https://web.whatsapp.com", "https://classroom.google.com", "https://github.com"}
+super + shift + {w, c, g, s}
+    firefox {"https://web.whatsapp.com", "https://classroom.google.com", "https://github.com", "https://scholar.google.com"}
 
 XF86Calculator
     my-calc

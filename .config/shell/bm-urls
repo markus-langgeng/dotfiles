@@ -47,7 +47,7 @@ latex,beamer			https://www.reddit.com/r/linux/comments/585n6l/what_do_you_use_to
 latex,chinese			https://tex.stackexchange.com/questions/17611/how-does-one-type-chinese-in-latex
 autocommand,lua			https://www.reddit.com/r/neovim/comments/ua3wzb/could_someone_please_help_me_convert_my/
 latex			https://www.ejmastnak.com/tutorials/vim-latex/intro/
-latex,snippet,luasnip			https://evesdropper.github.io/files/luasnip
+latex,snippet,luasnip			https://evesdropper.dev/files/luasnip/
 latex,math			https://tex.stackexchange.com/questions/40492/what-are-the-differences-between-align-equation-and-displaymath
 latex,reddit			https://www.reddit.com/r/unixporn/comments/jtjol5/comment/gc7pjgq/
 latex,reddit			https://www.reddit.com/r/unixporn/comments/jtjol5/comment/gc8381i/
@@ -199,3 +199,16 @@ rime           https://dvel.me/posts/rime-ice/#%e4%b8%8a%e6%89%8b%e4%bf%ae%e6%94
 rime           https://github.com/iDvel/rime-ice          ff
 rime           https://www.10101.io/2019/01/30/rime-configuration
 rime           https://github.com/WithdewHua/rime-configuration          ff
+mpv,chapters           https://github.com/mar04/chapters_for_mpv          ff
+jurnal,research,riset,free           https://www.freefullpdf.com/
+video_bakat           https://drive.google.com/drive/folders/1Bo9fp-DSymeZJpzXjDySE6Vx041Os7_6          ff
+encore,univ,medpar           https://docs.google.com/file/d/1rEXQx89IHNCEEKIqceU6bTyibJMHk7I-/edit?usp=docslist_api&filetype=msexcel          ff
+makalah,tugas,mki,primordialisme           https://docs.google.com/document/d/1ymL7eHn7ilzl7wwZalC1XP96u_ChOHwVK5jueOECpaY/edit?usp=sharing          ff
+makalah,tugas,sastra,analisis,propp,morphology           https://docs.google.com/document/d/1xr9OpK0h8vOWNXxGD9feE42tXklKWGyiuzQFp6fgjqo/edit?usp=sharing          ff
+mki,tugas_akhir,konservasi,budaya,tari,ronggeng           https://docs.google.com/document/d/1YDGrPelPkm8C3D69SuEaIChOZHwASThvuB4Fu4RV3E4/edit          ff
+chinese,bisai           https://drive.google.com/drive/folders/156jL5RNt66QZ07HHuLgqejLYvJpVK093          ff
+ddl,movie           https://web.stagatv.com
+comic           https://getcomics.org/
+neovim,plugins           https://dotfyle.com/neovim/plugins/trending
+free_books           https://www.pdfdrive.com/
+fonts,chinese           https://www.fonts.net.cn/fonts-zh/tag-fangzheng-1.html

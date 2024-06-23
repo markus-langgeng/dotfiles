@@ -1,19 +1,25 @@
 #!/bin/sh
-artist=$(mpc -f "%albumartist%" current | sed 's/\//-and-/g;s/[[:punct:]]//g;s/\s/-/g')
-title=$(mpc -f "%title%" current)
 
-# handle stuff inside ()
-if echo "$title" | grep -iE "\(with|\(feat"; then
-    title=$(echo "$title" | sed 's/ (.*)//')
-else
-    title=$(echo "$title" | sed 's/[()]//g')
-fi
+site="https://genius.com/"
+first_address_path=$(mpc -f "[[%artist% ]%title% lyrics]" current | sed "s/\s/-/g")
 
-# remove `remastered` or `live` and others
-if echo "$title" | grep -iwE "remastered|hidden track|rough mix|live at|jam-along|acoustic"; then
-    title=$(echo "$title" | sed 's/ -.*//')
-fi
+setsid -f st -e "$BROWSER" "$site$first_address_path"
 
-title=$(echo "$title" | sed 's/[[:punct:]]//g;s/ /-/g')
-url=$(printf "https://genius.com/%s-%s-lyrics" "$artist" "$title")
-setsid -f st -e "$BROWSER" "$url"
+# artist=$(mpc -f "%albumartist%" current | sed 's/\//-and-/g;s/[[:punct:]]//g;s/\s/-/g')
+# title=$(mpc -f "%title%" current)
+#
+# # handle stuff inside ()
+# if echo "$title" | grep -iE "\(with|\(feat"; then
+#     title=$(echo "$title" | sed 's/ (.*)//')
+# else
+#     title=$(echo "$title" | sed 's/[()]//g')
+# fi
+#
+# # remove `remastered` or `live` and others
+# if echo "$title" | grep -iwE "remastered|hidden track|rough mix|live at|jam-along|acoustic"; then
+#     title=$(echo "$title" | sed 's/ -.*//')
+# fi
+#
+# title=$(echo "$title" | sed 's/[[:punct:]]//g;s/ /-/g')
+# url=$(printf "https://genius.com/%s-%s-lyrics" "$artist" "$title")
+# setsid -f st -e "$BROWSER" "$url"

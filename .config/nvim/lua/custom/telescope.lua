@@ -9,7 +9,7 @@ require("telescope").setup({
             },
             i = {
                 ["<ESC>"] = actions.close,
-                ["<C-u>"] = false,
+                -- ["<C-u>"] = false,
                 ["<M-p>"] = layout.toggle_preview,
             },
         },
@@ -56,7 +56,7 @@ map("n", "<leader>sg", builtin.live_grep, { desc = "Telescope: [G]rep string acc
 
 map("n", "<leader>shl", builtin.highlights, { desc = "Telescope: [H]ighlights" })
 map("n", "<leader>sop", builtin.vim_options, { desc = "Telescope: [O]ptions" })
-map("n", "<leader>smx", builtin.marks, { desc = "Telescope: [M]rks" })
+map("n", "<leader>smx", builtin.marks, { desc = "Telescope: [M]arks" })
 
 map("n", "<leader>sc", function()
     builtin.find_files({ cwd = vim.fn.stdpath("config") })

@@ -4,8 +4,8 @@ return {
     event = "BufReadPost",
     dependencies = {
         "andymass/vim-matchup",
-        "numToStr/Comment.nvim",
-        "JoosepAlviste/nvim-ts-context-commentstring",
+        { "numToStr/Comment.nvim", event = "VeryLazy" },
+        { "JoosepAlviste/nvim-ts-context-commentstring", event = "VeryLazy" },
     },
     config = function()
         require("custom.treesitter")

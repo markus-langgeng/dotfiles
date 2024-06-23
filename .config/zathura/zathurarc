@@ -10,5 +10,6 @@ include "night"
 # Startup options
 #
 set adjust-open width
+set recolor
 
 set database "sqlite"
