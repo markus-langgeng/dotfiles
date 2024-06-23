@@ -1,0 +1,19 @@
+include "%L"
+
+<Multi_key> <minus> <v> : "ǖ"
+<Multi_key> <v> <minus> : "ǖ"
+<Multi_key> <underscore> <v> : "ǖ"
+
+<Multi_key> <apostrophe> <v> : "ǘ"
+<Multi_key> <v> <apostrophe> : "ǘ"
+
+<Multi_key> <v> <v> : "ǚ"
+<Multi_key> <v> <c> : "ǚ"
+<Multi_key> <c> <v> : "ǚ"
+<Multi_key> <quotedbl> <v> : "ǚ"
+<Multi_key> <v> <quotedbl> : "ǚ"
+
+<Multi_key> <backslash> <v> : "ǜ"
+<Multi_key> <v> <backslash> : "ǜ"
+<Multi_key> <grave> <v> : "ǜ"
+<Multi_key> <v> <grave> : "ǜ"
