@@ -1,3 +1,18 @@
 [submodule ".config/mpv/scripts/file-browser"]
 	path = .config/mpv/scripts/file-browser
 	url = https://github.com/CogentRedTester/mpv-file-browser
+[submodule ".config/suckless/dmenu"]
+	path = .config/suckless/dmenu
+	url = https://github.com/markus-langgeng/dmenu
+[submodule ".config/suckless/dwm"]
+	path = .config/suckless/dwm
+	url = https://github.com/markus-langgeng/dwm
+[submodule ".config/suckless/slstatus"]
+	path = .config/suckless/slstatus
+	url = https://github.com/markus-langgeng/slstatus
+[submodule ".config/suckless/st"]
+	path = .config/suckless/st
+	url = https://github.com/markus-langgeng/st
+[submodule ".config/suckless/slock"]
+	path = .config/suckless/slock
+	url = https://git.suckless.org/slock
