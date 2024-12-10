@@ -1,0 +1,10 @@
+#!/bin/sh
+
+FILE="$(date +'%Y-%m-%d-%H%M%S')_$(uuidgen | cut -d- -f1)_screenshot.png"
+if [ "$1" == "-s" ]; then
+    grim -g "$(slurp -d)" - | wl-copy -t image/png
+else
+    grim - | wl-copy -t image/png
+fi
+# setsid -f $SHELL -c "echo 'no\nyes' | fzf"
+# if "--save" == "$2"; then wl-paste > "$HOME/sync/DCIM/Screenshots/$FILE"

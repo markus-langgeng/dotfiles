@@ -1,0 +1,35 @@
+#!/bin/sh
+# Toggle screencasting
+
+filename="$(date +%Y-%m-%d-%H%M%S)_$(uuidgen | cut -d- -f1)_screencast.mkv"
+outpath="$HOME/downloads"
+geometry=
+check="$(pgrep -fl wf-recorder)"
+
+record() {
+    if [ -n "$check" ]; then
+        notify-send -t 1000 "Screen Recording has been stopped"
+        killall wf-recorder
+    else
+        notify-send -t 1000 "Screen Recording has been started"
+        if [ -n "$geometry" ]; then
+            echo "$geometry"
+            wf-recorder -a -c h264_vaapi -g "$geometry" -f "${outpath}/${filename}"
+        else
+            wf-recorder -a -c h264_vaapi -f "${outpath}/${filename}"
+        fi
+    fi
+}
+
+case "$1" in
+    "status"|"stat"|"st")
+        [ -n "$check" ] && printf "%s" "[ ]" || printf " "
+        ;;
+    "sel"|"select"|"-s")
+        geometry="$(slurp)"
+        record
+        ;;
+    *)
+        record
+        ;;
+esac

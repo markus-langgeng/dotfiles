@@ -1,0 +1,11 @@
+#!/bin/sh
+
+if pgrep -af "mpv -quiet --untimed --vf-add=hflip /dev/video0"; then exit; fi
+
+#-e mpv -quiet --untimed --vf-add=hflip \
+#setsid -f st -n float-term -g 45x18-14-14 \
+setsid -f footclient -T "floatterm MPV_WEBCAM" -w "350x200" \
+    mpv av://v4l2:/dev/video0 \
+    --osc=no \
+    --profile=low-latency \
+    --untimed /dev/video0 >/dev/null 2>&1

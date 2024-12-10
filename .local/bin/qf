@@ -1,0 +1,33 @@
+#!/bin/sh
+# quickly find by using bookmark dirs
+
+# $1 = file path
+# $2 = file type
+# $3 = image preview or filter only image with preview (optional)
+# returns a chain of command stored inside a string but does not run the command
+# the reason is so that the command is being run inside zshrc and it doesn't create a new process
+
+bm="$XDG_CONFIG_HOME/shell/bm-dirs"
+
+[ -z "$bm" ] && touch "$bm"
+[ -z "$1" ] && exit 1
+
+if [ -d "$1" ]; then
+    fp="$1"
+elif [ -n "$1" ]; then
+    fp=$(awk "/^$1\s/{print \$2}" "$bm" )
+fi
+
+[ -z "$fp" ] && exit 1
+
+find_cmd="find -L \"$(eval "echo $fp")\""
+find_cmd="$find_cmd -not \( -iwholename \"*/.git\" -prune \)"
+find_cmd="$find_cmd -not \( -iwholename \"*/node_modules\" -prune \)"
+find_cmd="$find_cmd -not \( -iwholename \"*cache*\" -prune \)"
+find_cmd="$find_cmd -type \"${2:-d}\""
+
+fzf_preview_cmd="fzf"
+# [ "$3" = "i" ] && fzf_preview_cmd="fimg"
+# [ "$3" = "ii" ] && fzf_preview_cmd="grep -iE \"^.*\.(png|jpg|jpeg|gif|webp|jfif)$\" | fimg"
+
+printf "%s | %s" "$find_cmd" "$fzf_preview_cmd"

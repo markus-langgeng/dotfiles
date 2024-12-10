@@ -1,0 +1,3 @@
+#!/bin/sh
+export "$(dbus-launch)"
+GDK_BACKEND=x11 setsid -f /usr/local/bin/praat --hide-picture "$@"

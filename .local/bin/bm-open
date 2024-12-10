@@ -1,0 +1,33 @@
+#!/bin/sh
+
+export FZF_DEFAULT_OPTS="$FZF_DEFAULT_OPTS \
+    --multi \
+    --info=hidden \
+    --no-scrollbar "
+
+bm="$HOME/.config/shell/bm-urls"
+bm_type="url"
+
+if [ "$1" = "book" ] || [ "$1" = "-k" ]; then
+    [ -d "$HOME/personal/buku/" ] && bk="$HOME/personal/buku/"
+    [ -d "$HOME/hsk" ] && hsk="$HOME/hsk/"
+    bm_type="book"
+    selected=$(find "$bk" "$hsk" -type f \( -iname "*pdf" \
+        -o -iname "*epub" \
+        -o -iname "*cbr" \
+        -o -iname "*cbt" \
+        -o -iname "*cb7" \
+        -o -iname "*cbz" \
+        -o -iname "*cba" \
+        -o -iname "*djvu" \
+        -o -iname "*ps" \
+        -o -iname "*pdf" \) | sort | fzf )
+elif [ "$1" = "frequent" ] || [ "$1" = "-f" ]; then
+    selected=$(sed -n '/^\[ FREQUENT BOOKMARK \]$/,/^\[ FREQUENT BOOKMARK END \]$/p;' "$bm" | sed '1d;$d;/^$/ d;/^#/ d;' | fzf )
+else
+    selected=$(sed -n '/^\[ REGULAR BOOKMARK \]$/,/^\[ REGULAR BOOKMARK END \]$/p;' "$bm" | sed '1d;$d;/^$/ d;/^#/ d;' | fzf )
+fi
+
+# example uses {} but you can use whatever, such as -I{} or -Ifoo
+[ "url" = "$bm_type" ] && echo "$selected" | tr -s " " | cut -d" " -f2 | xargs -r -I{} setsid -f "$BROWSER" {}
+[ "book" = "$bm_type" ] && echo "$selected" | parallel -r -X zathura

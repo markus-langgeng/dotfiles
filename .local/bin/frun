@@ -1,0 +1,13 @@
+#!/bin/sh
+
+[ "$(pgrep -f "footclient -T floatterm -w 700x200 frun" | wc -l )" -gt 1 ] && exit
+# if pgrep -f "floatterm"; then exit; fi
+export FZF_DEFAULT_OPTS="$FZF_DEFAULT_OPTS \
+    --info=hidden \
+    --no-scrollbar \
+    --bind=enter:replace-query+print-query"
+IFS=:
+set -f
+
+find -L $PATH -maxdepth 1 -type f -perm -100 -print 2>/dev/null | sed "s!.*/!!" | sort -u | fzf | xargs -r -n3 setsid -f
+unset IFS

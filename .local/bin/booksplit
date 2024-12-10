@@ -1,0 +1,65 @@
+#!/bin/sh
+
+# Requires ffmpeg and either *.ffmetadata file or regular timestamp file
+#
+# If you already have the timestamp, create a timestamp file and the conten should follow this format:
+#   00:XX:XX Chapter 1
+#   00:XX:XX Chapter 2
+#   00:XX:XX Chapter so on and so forth
+#
+
+[ ! -f "$2" ] && printf "The first file should be the audio, the second should be the timecodes.\\n" && exit
+
+echo "Enter the album/book title (will make a directory with this name):"; read -r booktitle
+echo "Enter the artist (optional):"; read -r artist
+echo "Enter the publication year (optional):"; read -r year
+
+inputaudio="$1"
+ext="${1##*.}"
+start=""; end=""; title=""; track=0; total=0; file=""
+
+escbook="$(echo "$booktitle" | tr '-' ' ' |  tr -d '[:punct:]' | tr '[:upper:]' '[:lower:]' | tr ' ' '-' | sed "s/-\+/-/g;s/\(^-\|-\$\)//g")"
+cmd="ffmpeg -i $inputaudio -nostdin -y"
+[ -n "$artist" ] && cmd="$cmd -metadata artist=$artist "
+[ -n "$year" ] && cmd="$cmd -metadata year=$year "
+cmd="$cmd -metadata track=$track -metadata total=$total -ss $start -to $end -vn -c:a copy $file"
+total=$(grep -c title "$2")
+
+! mkdir -p "$escbook" &&
+    echo "Do you have write access in this directory?" &&
+    exit 1
+
+[ "${2##*.}" = "ffmetadata" ] && ffmetadata_file="true"
+
+while read -r x;
+do
+    file="$escbook/$title.$ext"
+
+    if [ -n "$ffmetadata_file" ]; then
+        if echo "$x" | grep -qE "START|END|title"; then
+            [ "${x%%=*}" = "START" ] && start=$(echo "${x##*=}" | sed 's/.\{9\}$//')
+            [ "${x%%=*}" = "END"   ] && end=$(echo "${x##*=}" | sed 's/.\{9\}$//')
+            [ "${x%%=*}" = "title" ] && title=$(echo "${x##*=}" | tr '-' ' ' | tr -d '[:punct:]' | tr '[:upper:]' '[:lower]' | tr ' ' '-' | sed "s/-\+/-/g;s/\(^-\|-\$\)//g")
+
+            if [ -n "$start" ] && [ -n "$end" ] && [ -n "$title" ]; then
+                start=$(date -d@"$start" -u +%H:%M:%S)
+                end=$(date -d@"$end" -u +%H:%M:%S)
+                track=$((track+1))
+                file="$escbook/$title.$ext"
+                # echo "${cmd}"
+                ffmpeg -i "$inputaudio" -nostdin -y -metadata track="$track" -metadata total="$total" -ss "$start" -to "$end" -vn -c:a copy "$file"
+                start=""; end=""; title="";
+            fi
+        fi
+    else
+        echo "$1" "$2" "${2##*.}"
+        total="$(wc -l < "$2")"
+        end="$(echo "$x" | cut -d' ' -f1)"
+        title="$(echo "$x" | cut -d' ' -f2 | tr '-' ' ' | tr -d '[:punct:]' | tr '[:upper:]' '[:lower]' | tr ' ' '-' | sed "s/-\+/-/g;s/\(^-\|-\$\)//g" )"
+        file="$escbook/$title.$ext"
+        track=$((track+1))
+        # echo "hi"
+        ffmpeg -i "$inputaudio" -nostdin -y -metadata track="$track" -metadata total="$total" -ss "$start" -to "$end" -vn -c:a copy "$file"
+        start="$end"
+    fi
+done < "$2"

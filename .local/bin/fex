@@ -1,0 +1,33 @@
+#!/bin/sh
+
+# FZF_DEFAULT_COMMAND="find . -type d" fzf \
+#     --color=bw \
+#     --preview='tree -C {}' \
+#     --bind='ctrl-r:reload(eval $FZF_DEFAULT_COMMAND)' \
+#     --bind='del:execute(rm -ri {})' \
+#     --bind='del:+reload(eval $FZF_DEFAULT_COMMAND)' \
+#     --header='CTRL-R to refresh the list | CTRL-P to toggle the preview | DEL to delete the current directory'
+
+find .  -type d | fzf --multi --height=80% --border=sharp \
+--preview='tree -C {}' --preview-window='45%,border-sharp' \
+--prompt='Dirs > ' \
+--bind='enter:execute($EDITOR {+})' \
+--bind='del:execute(rm -ri {+})' \
+--bind='ctrl-p:toggle-preview' \
+--bind='ctrl-d:change-prompt(Dirs > )' \
+--bind='ctrl-d:+reload(find -type d)' \
+--bind='ctrl-d:+change-preview(tree -C {})' \
+--bind='ctrl-d:+refresh-preview' \
+--bind='ctrl-f:change-prompt(Files > )' \
+--bind='ctrl-f:+reload(find -type f)' \
+--bind='ctrl-f:+change-preview(bat {})' \
+--bind='ctrl-f:+refresh-preview' \
+--bind='ctrl-a:select-all' \
+--bind='ctrl-x:deselect-all' \
+--header '
+CTRL-D to display directories | CTRL-F to display files
+CTRL-A to select all | CTRL-x to deselect all
+ENTER to edit | DEL to delete
+CTRL-P to toggle preview
+'
+

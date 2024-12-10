@@ -1,0 +1,6 @@
+#!/bin/sh
+
+# dwl -s "~/.config/autostart.sh"
+
+dbus-run-session slstatus -s | dwl -s "~/.config/autostart.sh"
+# dbus-run-session slstatus -s | dwl -s "~/.config/autostart.sh" -d 2> ~/.cache/dwl-log.txt

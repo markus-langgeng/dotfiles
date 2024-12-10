@@ -1,0 +1,20 @@
+#!/bin/sh
+
+mpc "$1" --quiet
+
+[ "$(mpc status "%repeat%")"  = "on" ] && repeat="r"
+[ "$(mpc status "%random%")"  = "on" ] && random="z"
+[ "$(mpc status "%consume%")" = "on" ] && consume="c"
+[ "$(mpc status "%single%")"  = "on" ] && single="s"
+state="$(mpc status "%state%")"
+pos="$(mpc status "%songpos%/%length%")"
+
+artist=$(mpc -f "%artist%" | head -1)
+title=$(mpc -f "%title%" | head -1)
+album=$(mpc -f "%album%" | head -1)
+# line1=$(mpc -f "%artist% - %title% - %album%" | head -1)
+
+herbe "[$(echo "$state" | tr '[:lower:]' '[:upper:]')] [$pos] [$repeat$random$consume$single]" \
+    "$title" \
+    " " \
+    "$artist - $album "

@@ -1,0 +1,21 @@
+#!/bin/sh
+# 2 Arguments:
+# $1 video or audio file
+
+[ -z "$1" ] && exit
+
+fullfilename="$(basename -- "$1")"
+filename="${fullfilename%%.*}"
+ext="${fullfilename##*.}"
+temp1="/tmp/${filename}1.${ext}"
+temp2="/tmp/${filename}2.${ext}"
+final="./${filename}_clear.${ext}"
+model="$XDG_CONFIG_HOME/rnnoise-models/conjoined-burgers-2018-08-28/cb.rnnn"
+
+# if [ -e "$model" ]; then
+#     ffmpeg -i "$1"     -af "arnndn=m=$model" -c:v copy "$final"
+# else
+    ffmpeg -i "$1"     -af "afftdn=nf=-25" -c:v copy "$temp1"
+    ffmpeg -i "$temp1" -af "afftdn=nf=-25" -c:v copy "$temp2"
+    ffmpeg -i "$temp2" -af "highpass=f=200, lowpass=f=3000" -c:v copy "$final"
+# fi

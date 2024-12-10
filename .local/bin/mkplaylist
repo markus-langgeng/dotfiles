@@ -1,0 +1,9 @@
+#!/bin/sh
+
+OUTDIR="$HOME/.config/mpd/playlists"
+OUT=$(jq -r '.songs[].list_name' "$1" | sort -u)
+if [ -z "$1" ] || [ "${1##*.}" != "spotdl" ]; then
+    exit 2
+fi
+# jq -r '((.songs[] | {artist,album_name,name} | join("/")) + ".mp3")' < "$1" >  "${OUTDIR}/${OUT}.m3u"
+jq -r '((.songs[] | {artist,album_name,name} | join("/")) + ".mp3")' < "$1" | tr ':' '-' > "${OUTDIR}/${OUT}.m3u"

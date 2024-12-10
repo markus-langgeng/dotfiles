@@ -1,0 +1,4 @@
+#!/bin/sh
+# eval `dbus-launch --sh-syntax --exit-with-session`
+export $(dbus-launch)
+GDK_BACKEND=x11 setsid -f /usr/local/bin/st -e bash
