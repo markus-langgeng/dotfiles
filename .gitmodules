@@ -1,6 +1,3 @@
-[submodule ".config/dwl-0.7"]
-	path = .config/dwl-0.7
-	url = https://github.com/markus-langgeng/dwl
 [submodule ".config/nvim"]
 	path = .config/nvim
 	url = https://github.com/markus-langgeng/nvim
