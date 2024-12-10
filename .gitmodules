@@ -1,0 +1,15 @@
+[submodule ".config/dwl-0.7"]
+	path = .config/dwl-0.7
+	url = https://github.com/markus-langgeng/dwl
+[submodule ".config/nvim"]
+	path = .config/nvim
+	url = https://github.com/markus-langgeng/nvim
+[submodule ".config/slstatus"]
+	path = .config/slstatus
+	url = https://github.com/markus-langgeng/slstatus
+[submodule ".config/latex_templates"]
+	path = .config/latex_templates
+	url = https://github.com/markus-langgeng/latex-templates
+[submodule ".local/share/fonts"]
+	path = .local/share/fonts
+	url = https://github.com/markus-langgeng/fonts
