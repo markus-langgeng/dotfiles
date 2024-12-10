@@ -1,0 +1,13 @@
+var:
+  last_build_time: 1733819939
+  option:
+    ascii_punct: false
+    emoji: true
+    full_shape: false
+    search_single_char: false
+    traditionalization: false
+  previously_selected_schema: rime_ice
+  schema_access_time:
+    luna_pinyin: 1712544602
+    rime_ice: 1733750188
+    terra_pinyin: 1712555433

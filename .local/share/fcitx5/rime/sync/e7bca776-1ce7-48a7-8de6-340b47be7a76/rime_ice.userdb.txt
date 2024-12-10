@@ -1,0 +1,2998 @@
+# Rime user dictionary
+#@/db_name	rime_ice
+#@/db_type	userdb
+#@/rime_version	1.9.0
+#@/tick	7119
+#@/user_id	e7bca776-1ce7-48a7-8de6-340b47be7a76
+A 	A	c=3 d=1.96588 t=7119
+B 	B	c=1 d=0.927743 t=7119
+D 	D	c=4 d=3.38215 t=7119
+G R L 	GRL	c=1 d=0.759572 t=7119
+R 	R	c=1 d=0.927743 t=7119
+U M 	UM	c=1 d=0.995012 t=7119
+Y 	Y	c=1 d=0.965605 t=7119
+a 	啊	c=41 d=20.4093 t=7119
+a ha ha ha 	啊哈哈哈	c=1 d=0.985112 t=7119
+a ya 	啊呀	c=1 d=0.970446 t=7119
+a yi 	阿姨	c=3 d=2.31152 t=7119
+a zhe 	啊这	c=1 d=0.99005 t=7119
+ai 	哎	c=1 d=0.995012 t=7119
+ai 	爱	c=3 d=2.76965 t=7119
+ai hao 	爱好	c=2 d=1.95084 t=7119
+ai qing 	爱情	c=2 d=1.97521 t=7119
+ai xiao 	矮小	c=1 d=1 t=7119
+ai ya 	哎呀	c=1 d=1 t=7119
+an 	安	c=1 d=0.99005 t=7119
+an 	按	c=1 d=1 t=7119
+an fu 	安抚	c=0 d=0.0995012 t=7119
+an hui 	安徽	c=1 d=1 t=7119
+an jing 	安静	c=2 d=1.91693 t=7119
+an pai 	安排	c=1 d=0.980199 t=7119
+an pai hao 	安排好	c=0 d=0.0941765 t=7119
+an shang 	安上	c=0 d=0.0965605 t=7119
+an shi 	按时	c=4 d=3.70377 t=7119
+an zhao 	按照	c=4 d=3.70582 t=7119
+an zhuang 	安装	c=1 d=0.970446 t=7119
+ba 	八	c=2 d=1.94128 t=7119
+ba 	吧	c=10 d=6.68763 t=7119
+ba 	把	c=13 d=8.36013 t=7119
+ba ba 	爸爸	c=8 d=5.43816 t=7119
+ba ba de 	爸爸的	c=2 d=1.69423 t=7119
+ba deng guan le 	把灯关了	c=1 d=0.946485 t=7119
+ba le si 	巴勒斯	c=0 d=0.0955997 t=7119
+ba le si dan 	巴勒斯但	c=1 d=0.960789 t=7119
+ba le si tan 	巴勒斯坦	c=0 d=0.0909373 t=7119
+ba xiang 	八项	c=1 d=0.985112 t=7119
+ba xiang zhu yi 	八项注意	c=2 d=1.92688 t=7119
+bai 	拜	c=1 d=0.923116 t=7119
+ban 	半	c=1 d=0.995012 t=7119
+ban 	搬	c=1 d=0.995012 t=7119
+ban 	班	c=5 d=4.15204 t=7119
+ban fa 	办法	c=3 d=2.68661 t=7119
+ban gong 	办公	c=1 d=0.955997 t=7119
+ban zhang 	班长	c=3 d=2.4524 t=7119
+bang 	棒	c=1 d=0.99005 t=7119
+bang wo 	帮我	c=1 d=1 t=7119
+bang wo ge mang 	帮我个忙	c=1 d=0.980199 t=7119
+bang yang 	榜样	c=2 d=1.99005 t=7119
+bang zhu 	帮助	c=7 d=5.63301 t=7119
+bang zhu guo 	帮助过	c=1 d=0.995012 t=7119
+bao 	保	c=1 d=0.980199 t=7119
+bao 	包	c=2 d=1.9558 t=7119
+bao 	抱	c=1 d=0.965605 t=7119
+bao 	胞	c=1 d=0.99005 t=7119
+bao bei 	宝贝	c=1 d=0.99005 t=7119
+bao chi 	保持	c=2 d=1.97032 t=7119
+bao cun 	保存	c=2 d=1.94092 t=7119
+bao cun le 	保存了	c=1 d=0.99005 t=7119
+bao hu 	保护	c=1 d=0.941765 t=7119
+bao kuo 	包括	c=3 d=2.92654 t=7119
+bao mi 	保密	c=1 d=0.995012 t=7119
+bao ming 	报名	c=3 d=2.72599 t=7119
+bao mu 	保姆	c=1 d=1 t=7119
+bao nuan 	保暖	c=1 d=0.970446 t=7119
+bao qian 	抱歉	c=4 d=3.51121 t=7119
+bao zheng 	保证	c=2 d=1.99501 t=7119
+bao zi 	包子	c=1 d=0.995012 t=7119
+bei 	被	c=10 d=6.82869 t=7119
+bei hai 	被害	c=1 d=0.904837 t=7119
+bei jing 	北京	c=3 d=2.04092 t=7119
+bei jing 	背景	c=1 d=0.980199 t=7119
+bei nian 	备年	c=1 d=0.995012 t=7119
+bei zhan 	备战	c=1 d=0.985112 t=7119
+ben 	本	c=3 d=2.35637 t=7119
+ben ke 	本科	c=1 d=0.995012 t=7119
+ben lai 	本来	c=4 d=3.66431 t=7119
+ben shu 	本书	c=1 d=0.985112 t=7119
+ben wen 	本文	c=1 d=0.995012 t=7119
+ben zi 	本子	c=1 d=0.932394 t=7119
+bi 	必	c=1 d=0.985112 t=7119
+bi 	比	c=6 d=5.0509 t=7119
+bi bu shang 	比不上	c=2 d=1.96546 t=7119
+bi fen 	比分	c=1 d=0.995012 t=7119
+bi ji ben dian nao 	笔记本电脑	c=2 d=1.30737 t=7119
+bi jiao 	比较	c=5 d=4.1029 t=7119
+bi kai 	比开	c=1 d=1 t=7119
+bi ru 	比如	c=1 d=0.995012 t=7119
+bi sa 	比萨	c=1 d=1 t=7119
+bi sai 	比赛	c=6 d=5.28097 t=7119
+bi shi 	笔试	c=1 d=0.99005 t=7119
+bi xu 	必须	c=1 d=0.985112 t=7119
+bi yin 	鼻音	c=0 d=0.099005 t=7119
+bi zi 	鼻子	c=1 d=0.970446 t=7119
+bian 	变	c=3 d=2.8711 t=7119
+bian cheng 	变成	c=5 d=4.40284 t=7119
+bian fu 	蝙蝠	c=1 d=0.995012 t=7119
+bian hua 	变化	c=3 d=2.85943 t=7119
+bian li 	便利	c=1 d=0.97531 t=7119
+bian li dian 	便利店	c=1 d=0.965605 t=7119
+biao 	表	c=2 d=1.9361 t=7119
+biao ge 	表格	c=0 d=0.0980199 t=7119
+biao ge li de 	表格里的	c=1 d=0.985112 t=7119
+biao yan 	表演	c=2 d=1.54037 t=7119
+biao yang 	表扬	c=2 d=1.96062 t=7119
+biao zhun 	标准	c=1 d=1 t=7119
+biao zhun jian 	标准间	c=1 d=1 t=7119
+bie 	别	c=3 d=2.91173 t=7119
+bie de 	别的	c=4 d=3.08436 t=7119
+bie fang jian 	别房间	c=1 d=0.843665 t=7119
+bie ke qi 	别客气	c=3 d=2.97516 t=7119
+bie ren 	别人	c=4 d=3.11307 t=7119
+bie ren de che 	别人的车	c=2 d=1.92168 t=7119
+bie ti 	别提	c=2 d=1.96042 t=7119
+bie wang 	别忘	c=1 d=0.628135 t=7119
+bie wang ji 	别忘记	c=4 d=3.35108 t=7119
+bin guan 	宾馆	c=1 d=0.970446 t=7119
+bing 	并	c=2 d=1.91393 t=7119
+bing qie 	并且	c=2 d=1.89819 t=7119
+bing xiang 	冰箱	c=1 d=0.941765 t=7119
+bo 	波	c=1 d=1 t=7119
+bo fang 	播放	c=1 d=1 t=7119
+bo wu 	博物	c=1 d=0.955997 t=7119
+bu 	不	c=13 d=6.99277 t=7119
+bu 	部	c=2 d=1.94176 t=7119
+bu cuo 	不错	c=2 d=1.88544 t=7119
+bu dan 	不但	c=2 d=1.83527 t=7119
+bu dan hui 	不但会	c=1 d=0.941765 t=7119
+bu de 	不得	c=0 d=0.0852144 t=7119
+bu diao 	步调	c=2 d=1.92654 t=7119
+bu duan 	不断	c=2 d=1.9178 t=7119
+bu dui 	不对	c=2 d=1.80966 t=7119
+bu fen 	部分	c=2 d=1.94111 t=7119
+bu gou 	不够	c=1 d=0.99005 t=7119
+bu guan 	不管	c=1 d=0.985112 t=7119
+bu guo 	不过	c=5 d=4.77558 t=7119
+bu hao yi si 	不好意思	c=8 d=5.50356 t=7119
+bu hui 	不会	c=3 d=2.89776 t=7119
+bu jin 	不仅	c=3 d=2.91156 t=7119
+bu jin jin 	不仅仅	c=1 d=0.995012 t=7119
+bu ke 	补课	c=3 d=2.64845 t=7119
+bu ke qi 	不客气	c=19 d=14.1814 t=7119
+bu le 	不了	c=1 d=0.960789 t=7119
+bu luo 	不落	c=1 d=0.985112 t=7119
+bu ma fan 	不麻烦	c=1 d=0.873716 t=7119
+bu ming bai 	不明白	c=1 d=0.909373 t=7119
+bu na me duo 	不那么多	c=1 d=0.900325 t=7119
+bu nai xin 	不耐心	c=1 d=0.970446 t=7119
+bu neng 	不能	c=3 d=2.40487 t=7119
+bu pa 	不怕	c=1 d=0.985112 t=7119
+bu qi guai 	不奇怪	c=1 d=0.985112 t=7119
+bu ru 	不如	c=2 d=1.89335 t=7119
+bu shi 	不是	c=3 d=2.82239 t=7119
+bu shu fu 	不舒服	c=2 d=1.87423 t=7119
+bu suan 	不算	c=1 d=0.99005 t=7119
+bu tai 	不太	c=6 d=3.88008 t=7119
+bu tai da 	不太大	c=2 d=1.59345 t=7119
+bu tai re 	不太热	c=1 d=0.955997 t=7119
+bu ting 	不停	c=2 d=1.77035 t=7119
+bu tong 	不同	c=2 d=1.64124 t=7119
+bu wai 	不外	c=1 d=0.704688 t=7119
+bu xi huan 	不喜欢	c=1 d=0.970446 t=7119
+bu xiang 	不想	c=1 d=0.985112 t=7119
+bu xiang ting 	不想停	c=1 d=0.951229 t=7119
+bu xing 	不行	c=2 d=1.94176 t=7119
+bu xing 	步行	c=5 d=4.83829 t=7119
+bu yao 	不要	c=1 d=0.865717 t=7119
+bu yao shua 	不要耍	c=1 d=0.99005 t=7119
+bu yi yang 	不一样	c=2 d=1.67584 t=7119
+bu yong 	不用	c=10 d=6.24979 t=7119
+bu yong xie 	不用谢	c=3 d=2.92741 t=7119
+bu yuan yi 	不愿意	c=1 d=0.99005 t=7119
+bu zai 	不再	c=1 d=0.970446 t=7119
+bu zen me 	不怎么	c=1 d=1 t=7119
+bu zhi bu jue 	不知不觉	c=1 d=1 t=7119
+bu zhi dao 	不知道	c=5 d=3.86429 t=7119
+ca 	擦	c=1 d=0.97531 t=7119
+cai 	才	c=12 d=7.81708 t=7119
+cai 	菜	c=1 d=0.715338 t=7119
+cai dan 	菜单	c=2 d=1.90331 t=7119
+cai hui 	才会	c=1 d=0.923116 t=7119
+cai liao 	材料	c=1 d=0.733447 t=7119
+cai lun 	蔡伦	c=1 d=0.995012 t=7119
+cai neng 	才能	c=2 d=1.69273 t=7119
+cai suan 	才算	c=1 d=0.985112 t=7119
+cai zhi 	材质	c=1 d=0.985112 t=7119
+can 	餐	c=1 d=1 t=7119
+can guan 	参观	c=1 d=1 t=7119
+can jia 	参加	c=1 d=0.980199 t=7119
+can jin zhi 	餐巾纸	c=1 d=0.923116 t=7119
+can ting 	餐厅	c=4 d=3.77834 t=7119
+cao 	操	c=1 d=0.995012 t=7119
+cao chang 	操场	c=1 d=0.97531 t=7119
+cao mei 	草莓	c=1 d=1 t=7119
+cao shang 	操上	c=1 d=0.970446 t=7119
+cao shu 	草书	c=4 d=3.58806 t=7119
+cao yuan 	草原	c=1 d=0.995012 t=7119
+ce chu 	册除	c=1 d=0.995012 t=7119
+ce suo 	厕所	c=2 d=1.90823 t=7119
+ceng 	层	c=3 d=2.95072 t=7119
+cha 	查	c=2 d=1.86516 t=7119
+cha 	茶	c=4 d=3.86873 t=7119
+cha bie 	差别	c=1 d=0.615697 t=7119
+cha bu duo 	差不多	c=5 d=4.51739 t=7119
+cha xian 	茶仙	c=1 d=1 t=7119
+chan pin 	产品	c=1 d=0.970446 t=7119
+chang 	唱	c=1 d=1 t=7119
+chang 	场	c=1 d=0.980199 t=7119
+chang 	长	c=5 d=4.75092 t=7119
+chang chang 	常常	c=1 d=0.995012 t=7119
+chang de 	长的	c=0 d=0.097531 t=7119
+chang duan 	长短	c=1 d=1.07284 t=7119
+chang duan de 	长短的	c=1 d=0.980199 t=7119
+chang ge 	唱歌	c=7 d=6.13074 t=7119
+chang ge a 	唱歌啊	c=0 d=0.0995012 t=7119
+chang qi 	长期	c=1 d=1 t=7119
+chang shou ge 	唱首歌	c=1 d=0.99005 t=7119
+chang yi chang 	尝一尝	c=1 d=0.970446 t=7119
+chang zheng 	长征	c=0 d=0.0873716 t=7119
+chao ji dan 	炒鸡蛋	c=1 d=1 t=7119
+che 	车	c=1 d=1.03225 t=7119
+chen 	沉	c=1 d=0.985112 t=7119
+chen 	陈	c=4 d=3.52233 t=7119
+chen shan 	衬衫	c=1 d=0.985112 t=7119
+cheng 	乘	c=1 d=0.995012 t=7119
+cheng 	城	c=3 d=2.55565 t=7119
+cheng 	成	c=1 d=0.97531 t=7119
+cheng che 	乘车	c=1 d=0.995012 t=7119
+cheng che zhan 	乘车站	c=1 d=0.99005 t=7119
+cheng gong 	成功	c=6 d=5.16462 t=7119
+cheng guo 	成果	c=1 d=0.995012 t=7119
+cheng ji 	成绩	c=10 d=8.60999 t=7119
+cheng le 	成了	c=1 d=0.980199 t=7119
+cheng se 	橙色	c=1 d=0.965605 t=7119
+cheng shi 	诚实	c=2 d=1.97521 t=7119
+cheng shu 	成熟	c=1 d=0.980199 t=7119
+cheng wei 	成为	c=3 d=2.9017 t=7119
+cheng xin 	诚信	c=0 d=0.0985112 t=7119
+cheng xin tong tian 	诚信通天	c=1 d=0.99005 t=7119
+cheng yu 	成语	c=2 d=1.88854 t=7119
+cheng yu gu shi 	成语故事	c=1 d=1 t=7119
+cheng zuo 	乘坐	c=1 d=0.970446 t=7119
+chi 	吃	c=6 d=4.24092 t=7119
+chi 	持	c=1 d=0.960789 t=7119
+chi dao 	迟到	c=3 d=2.813 t=7119
+chi fan 	吃饭	c=5 d=4.26348 t=7119
+chi jian kang 	吃健康	c=1 d=0.895834 t=7119
+chi jing 	吃惊	c=1 d=0.99005 t=7119
+chi le 	吃了	c=1 d=0.951229 t=7119
+chi mei wang liang 	魑魅魍魉	c=1 d=0.995012 t=7119
+chi wan fan 	吃晚饭	c=1 d=0.588605 t=7119
+chi wan fan le 	吃晚饭了	c=1 d=0.554327 t=7119
+chi yi bu 	迟一步	c=1 d=1 t=7119
+chi yin 	齿龈	c=2 d=1.98506 t=7119
+chi zao fan 	吃早饭	c=1 d=0.946485 t=7119
+chong fu 	重复	c=1 d=1 t=7119
+chong qing 	重庆	c=2 d=1.91202 t=7119
+chong xin 	重新	c=4 d=3.49148 t=7119
+chong yang 	重阳	c=1 d=0.985112 t=7119
+chong yang jie 	重阳节	c=1 d=0.99005 t=7119
+chou gen 	抽根	c=1 d=0.995012 t=7119
+chou yan 	抽烟	c=1 d=0.985112 t=7119
+chu 	出	c=2 d=1.97521 t=7119
+chu 	处	c=1 d=0.946485 t=7119
+chu 	除	c=3 d=2.88323 t=7119
+chu chai 	出差	c=1 d=1 t=7119
+chu chao 	初潮	c=1 d=1 t=7119
+chu cun 	储存	c=1 d=0.995012 t=7119
+chu fa 	出发	c=3 d=2.73466 t=7119
+chu ji 	初级	c=4 d=3.85303 t=7119
+chu lai 	出来	c=4 d=3.78768 t=7119
+chu le 	除了	c=2 d=1.95123 t=7119
+chu qu 	出去	c=4 d=3.77851 t=7119
+chu shi 	出示	c=1 d=1 t=7119
+chu wan 	处挽	c=1 d=0.918512 t=7119
+chu wu 	初五	c=1 d=0.960789 t=7119
+chu xi ye 	除夕夜	c=3 d=2.90188 t=7119
+chu zu che 	出租车	c=1 d=1 t=7119
+chuan 	船	c=1 d=0.980199 t=7119
+chuan shuo 	传说	c=4 d=3.50964 t=7119
+chuan tong 	传统	c=2 d=1.85214 t=7119
+chuan zhen 	传真	c=1 d=0.985112 t=7119
+chuang 	床	c=5 d=3.94921 t=7119
+chuang hu 	窗户	c=4 d=3.65924 t=7119
+chuang wai 	窗外	c=1 d=0.965605 t=7119
+chun jiang 	春江	c=1 d=1 t=7119
+chun jie 	春节	c=2 d=1.99501 t=7119
+ci 	此	c=1 d=1.05745 t=7119
+ci 	词	c=1 d=1.02212 t=7119
+ci dian 	词典	c=1 d=0.946485 t=7119
+ci hui 	词汇	c=1 d=0.941765 t=7119
+ci ke 	次可	c=2 d=1.9216 t=7119
+ci su 	词素	c=1 d=0.995012 t=7119
+ci yu 	词语	c=1 d=0.71177 t=7119
+ci zhi 	辞职	c=2 d=1.96536 t=7119
+cong 	从	c=7 d=4.62044 t=7119
+cong 	葱	c=1 d=0.980199 t=7119
+cong bu 	从不	c=2 d=1.97516 t=7119
+cong bu gan 	从不敢	c=1 d=0.904837 t=7119
+cong da 	从打	c=1 d=0.985112 t=7119
+cong gao tuo fa 	从高脱发	c=1 d=0.99005 t=7119
+cong lai 	从来	c=2 d=1.89037 t=7119
+cong ming 	聪明	c=2 d=1.97045 t=7119
+cong ming neng gan 	聪明能干	c=1 d=0.99005 t=7119
+cun 	存	c=2 d=1.97045 t=7119
+cun qian 	存钱	c=1 d=1 t=7119
+cuo kai 	错开	c=2 d=1.96536 t=7119
+cuo shi 	错失	c=0 d=0.0980199 t=7119
+cuo shi kong ju zheng 	错失恐惧症	c=1 d=0.985112 t=7119
+cuo wu 	错误	c=1 d=0.980199 t=7119
+da 	大	c=6 d=5.09551 t=7119
+da 	打	c=1 d=0.985112 t=7119
+da an 	答案	c=1 d=0.980199 t=7119
+da bu fen 	大部分	c=1 d=0.995012 t=7119
+da cong 	大葱	c=3 d=2.77402 t=7119
+da dao 	达到	c=1 d=0.980199 t=7119
+da dian hua 	打电话	c=1 d=0.882497 t=7119
+da gai 	大概	c=5 d=4.07201 t=7119
+da ge 	大哥	c=29 d=12.535 t=7119
+da hai 	大海	c=4 d=3.79678 t=7119
+da hai hang xing kao duo shou 	大海航行靠舵手	c=1 d=0.946485 t=7119
+da jia 	大家	c=2 d=1.88544 t=7119
+da jiang 	大奖	c=1 d=0.951229 t=7119
+da lou 	大楼	c=1 d=1 t=7119
+da ma 	大妈	c=1 d=0.99005 t=7119
+da mi 	大米	c=1 d=0.995012 t=7119
+da pen ti 	打喷嚏	c=1 d=0.99005 t=7119
+da qi zhe 	打七折	c=1 d=0.83527 t=7119
+da quan 	大全	c=1 d=0.99005 t=7119
+da rao 	打扰	c=3 d=2.53473 t=7119
+da rao le 	打扰了	c=1 d=0.852144 t=7119
+da rao ni 	打扰你	c=1 d=0.955997 t=7119
+da san 	大三	c=1 d=0.980199 t=7119
+da sheng 	大声	c=1 d=0.965605 t=7119
+da shi er 	大事儿	c=1 d=0.970446 t=7119
+da suan 	打算	c=6 d=4.13937 t=7119
+da wei 	大为	c=1 d=0.99005 t=7119
+da xue 	大学	c=1 d=1 t=7119
+da xue bi ye le 	大学毕业了	c=1 d=0.932394 t=7119
+da yin 	打印	c=3 d=2.86041 t=7119
+da yu 	大于	c=1 d=0.955997 t=7119
+da yu 	大禹	c=1 d=0.99005 t=7119
+da yu 	大鱼	c=1 d=0.99005 t=7119
+da zhao hu 	打招呼	c=3 d=2.87451 t=7119
+da zhe 	打折	c=2 d=1.82283 t=7119
+da zhuan 	打转	c=1 d=1 t=7119
+da zi bao 	大字报	c=2 d=1.99501 t=7119
+dai 	带	c=3 d=2.01459 t=7119
+dai 	待	c=5 d=4.83356 t=7119
+dai bi 	代笔	c=1 d=0.923116 t=7119
+dai bi 	带笔	c=2 d=1.86951 t=7119
+dai bi yin 	带鼻音	c=1 d=0.995012 t=7119
+dai bu 	逮捕	c=1 d=0.918512 t=7119
+dai lai 	带来	c=2 d=1.98511 t=7119
+dai lu 	带路	c=1 d=0.995012 t=7119
+dai zu 	傣族	c=1 d=1 t=7119
+dan 	但	c=2 d=1.88569 t=7119
+dan 	单	c=0 d=0.0980199 t=7119
+dan gao 	蛋糕	c=3 d=2.75302 t=7119
+dan jin 	但仅	c=1 d=0.970446 t=7119
+dan ren jian 	单人间	c=2 d=1.89843 t=7119
+dan shi 	但是	c=22 d=8.39893 t=7119
+dan xin 	担心	c=2 d=1.97521 t=7119
+dan zi 	单子	c=1 d=1 t=7119
+dan zi 	单字	c=1 d=1 t=7119
+dang di 	当地	c=1 d=1 t=7119
+dang fu 	荡妇	c=1 d=0.99005 t=7119
+dang ran 	当然	c=3 d=2.12992 t=7119
+dang shi 	当时	c=2 d=1.85662 t=7119
+dang zuo 	当作	c=1 d=0.985112 t=7119
+dao 	倒	c=2 d=1.8426 t=7119
+dao 	刀	c=1 d=0.913931 t=7119
+dao 	到	c=20 d=10.3457 t=7119
+dao 	导	c=1 d=1 t=7119
+dao 	道	c=2 d=1.94128 t=7119
+dao da 	到达	c=2 d=1.96042 t=7119
+dao di 	到底	c=3 d=2.90671 t=7119
+dao ji shi 	倒计时	c=1 d=0.99005 t=7119
+dao jia 	到家	c=2 d=1.84153 t=7119
+dao na shi 	到那时	c=1 d=0.941765 t=7119
+dao shi 	倒是	c=1 d=0.831104 t=7119
+dao shi hou 	到时候	c=1 d=0.99005 t=7119
+dao xiang ji 	到相机	c=1 d=0.99005 t=7119
+dao zhan 	到站	c=2 d=1.94575 t=7119
+dao zhe li 	到这里	c=1 d=0.856415 t=7119
+dao zhi 	导致	c=1 d=0.985112 t=7119
+de 	地	c=1 d=0.873716 t=7119
+de 	得	c=14 d=10.7333 t=7119
+de 	的	c=96 d=20.8841 t=7119
+de che 	的车	c=0 d=0.0955997 t=7119
+de dai 	的待	c=1 d=0.995012 t=7119
+de dao 	得到	c=6 d=4.65236 t=7119
+de dou 	的都	c=1 d=0.99005 t=7119
+de fang fa 	的方法	c=1 d=0.822835 t=7119
+de hua 	的话	c=2 d=1.90771 t=7119
+de sheng huo 	的生活	c=1 d=0.852144 t=7119
+de shi hou 	的时候	c=2 d=1.56565 t=7119
+de yi si 	的意思	c=1 d=0.995012 t=7119
+dei 	得	c=2 d=1.89904 t=7119
+dei dao 	得到	c=1 d=0.99005 t=7119
+deng 	灯	c=1 d=0.923116 t=7119
+deng 	等	c=3 d=2.34291 t=7119
+deng bu ji 	等不及	c=1 d=0.995012 t=7119
+deng dai 	等待	c=1 d=0.869358 t=7119
+deng ji 	登机	c=1 d=0.985112 t=7119
+deng yi hui er 	等一会儿	c=2 d=1.86667 t=7119
+di 	低	c=1 d=0.995012 t=7119
+di 	地	c=2 d=1.58549 t=7119
+di 	弟	c=1 d=0.980199 t=7119
+di che 	地车	c=1 d=0.995012 t=7119
+di di 	弟弟	c=4 d=3.03991 t=7119
+di er 	第二	c=2 d=1.18198 t=7119
+di er ge 	第二个	c=0 d=0.097531 t=7119
+di er ge lu kou 	第二个路口	c=1 d=0.980199 t=7119
+di fang 	地方	c=2 d=1.69376 t=7119
+di guo 	帝国	c=1 d=0.980199 t=7119
+di li 	地理	c=1 d=0.960789 t=7119
+di san 	第三	c=3 d=1.93155 t=7119
+di tie 	地铁	c=5 d=3.86375 t=7119
+di tu 	地图	c=13 d=11.3841 t=7119
+di yi 	第一	c=4 d=2.62585 t=7119
+dian 	点	c=6 d=4.57815 t=7119
+dian 	电	c=1 d=1 t=7119
+dian de 	点的	c=0 d=0.0941765 t=7119
+dian hua 	电话	c=4 d=3.57304 t=7119
+dian nao 	电脑	c=2 d=1.69682 t=7119
+dian shi ju 	电视剧	c=6 d=3.95477 t=7119
+dian ti 	电梯	c=3 d=2.6241 t=7119
+dian xin 	点心	c=1 d=1 t=7119
+dian yi 	奠仪	c=1 d=1.04402 t=7119
+dian yi neng 	奠仪能	c=1 d=0.980199 t=7119
+dian ying 	电影	c=4 d=3.51312 t=7119
+dian yuan 	电源	c=1 d=0.995012 t=7119
+diao 	掉	c=1 d=1 t=7119
+ding 	定	c=0 d=0.0932394 t=7119
+ding 	订	c=1 d=0.941765 t=7119
+ding piao 	订票	c=2 d=1.99501 t=7119
+ding sheng ri 	定生日	c=1 d=0.937067 t=7119
+ding shi 	定时	c=1 d=1 t=7119
+ding yue 	订约	c=1 d=0.985112 t=7119
+ding yue 	订阅	c=1 d=1 t=7119
+diu lian 	丢脸	c=2 d=1.96531 t=7119
+diu ren 	丢人	c=1 d=0.97531 t=7119
+dong 	东	c=1 d=0.882497 t=7119
+dong 	动	c=1 d=0.995012 t=7119
+dong 	懂	c=2 d=1.82283 t=7119
+dong fang hong 	东方红	c=7 d=6.40937 t=7119
+dong feng 	东风	c=1 d=0.946485 t=7119
+dong hua 	动画	c=1 d=0.960789 t=7119
+dong man 	动漫	c=1 d=0.970446 t=7119
+dong ting 	洞庭	c=1 d=1 t=7119
+dong ting hu 	洞庭湖	c=2 d=1.87077 t=7119
+dong wu 	动物	c=4 d=3.32028 t=7119
+dong xi 	东西	c=1 d=0.895834 t=7119
+dou 	都	c=12 d=5.78643 t=7119
+dou zi 	豆子	c=2 d=1.96042 t=7119
+du 	度	c=1 d=0.826959 t=7119
+du 	读	c=2 d=1.81288 t=7119
+du che 	堵车	c=1 d=0.995012 t=7119
+du jiang yan 	都江堰	c=1 d=1 t=7119
+du ri 	度日	c=0 d=0.0955997 t=7119
+du ri ru 	度日如	c=1 d=0.960789 t=7119
+du shu 	读书	c=1 d=0.97531 t=7119
+du te 	独特	c=1 d=0.985112 t=7119
+du zi 	肚子	c=1 d=0.985112 t=7119
+duan lian 	锻炼	c=3 d=2.84571 t=7119
+duan wen 	短文	c=1 d=0.995012 t=7119
+duan wu jie 	端午节	c=1 d=1 t=7119
+duan xin 	短信	c=3 d=1.96546 t=7119
+dui 	对	c=14 d=8.02149 t=7119
+dui a 	对啊	c=1 d=0.960789 t=7119
+dui ba 	对吧	c=3 d=1.80516 t=7119
+dui bi 	对比	c=1 d=0.995012 t=7119
+dui bu qi 	对不起	c=6 d=4.5688 t=7119
+dui dui dui 	对对对	c=1 d=1 t=7119
+dui fu 	对付	c=1 d=0.97531 t=7119
+dui la 	对啦	c=1 d=0.965605 t=7119
+dui le 	对了	c=5 d=3.91556 t=7119
+dui ma 	对吗	c=3 d=2.61553 t=7119
+dui ya 	对呀	c=1 d=0.980199 t=7119
+dui yu 	对于	c=2 d=1.91238 t=7119
+duo 	多	c=3 d=2.14625 t=7119
+duo duo 	多多	c=3 d=2.94082 t=7119
+duo gan xie 	多感谢	c=1 d=0.995012 t=7119
+duo ha 	多哈	c=0 d=0.099005 t=7119
+duo me 	多么	c=3 d=2.89732 t=7119
+duo shao 	多少	c=1 d=1 t=7119
+duo shao qian 	多少钱	c=2 d=1.92644 t=7119
+duo shou 	舵手	c=4 d=3.83494 t=7119
+duo xie 	多谢	c=15 d=11.4012 t=7119
+duo yu 	多余	c=1 d=0.985112 t=7119
+e 	呃	c=1 d=0.932394 t=7119
+e 	饿	c=1 d=0.985112 t=7119
+e mi tuo fo 	阿弥陀佛	c=1 d=1 t=7119
+ei 	欸	c=1 d=0.97531 t=7119
+en 	嗯	c=1 d=0.946485 t=7119
+er 	二	c=2 d=1.97521 t=7119
+er 	儿	c=6 d=5.35436 t=7119
+er 	尔	c=1 d=0.960789 t=7119
+er 	而	c=2 d=1.93181 t=7119
+er bai wu 	二百五	c=1 d=1 t=7119
+er bu shi 	而不是	c=1 d=1 t=7119
+er duo 	耳朵	c=1 d=0.97531 t=7119
+er qie 	而且	c=5 d=3.42448 t=7119
+er shi 	而是	c=2 d=1.92218 t=7119
+er tong 	儿童	c=1 d=0.99005 t=7119
+er wu li 	二屋里	c=0 d=0.0873716 t=7119
+er wu li chang zheng 	二屋里长征	c=1 d=0.878095 t=7119
+er zi 	儿子	c=3 d=2.67094 t=7119
+fa 	发	c=8 d=5.88257 t=7119
+fa 	法	c=2 d=1.8398 t=7119
+fa biao 	发表	c=1 d=0.960789 t=7119
+fa chu 	发出	c=2 d=1.90268 t=7119
+fa gei wo 	发给我	c=3 d=2.31604 t=7119
+fa men hang ye 	阀门行业	c=1 d=1 t=7119
+fa pi qi 	发脾气	c=1 d=0.970446 t=7119
+fa shao 	发烧	c=2 d=1.92654 t=7119
+fa song 	发送	c=1 d=0.932394 t=7119
+fa xian 	发现	c=1 d=0.985112 t=7119
+fa xiao 	发笑	c=1 d=0.985112 t=7119
+fa xie 	发泄	c=1 d=0.99005 t=7119
+fa yan 	发言	c=1 d=0.980199 t=7119
+fa yin 	发音	c=5 d=3.0212 t=7119
+fa yu 	法语	c=1 d=0.995012 t=7119
+fa zhan 	发展	c=8 d=6.01938 t=7119
+fan 	饭	c=1 d=0.932394 t=7119
+fan guan 	饭馆	c=1 d=0.951229 t=7119
+fan he 	饭盒	c=0 d=0.099005 t=7119
+fan jing shan 	梵净山	c=1 d=0.980199 t=7119
+fan nao 	烦恼	c=6 d=5.24082 t=7119
+fan tuan 	饭团	c=1 d=0.97531 t=7119
+fan xiang 	反向	c=1 d=0.995012 t=7119
+fan yi 	翻译	c=10 d=6.53747 t=7119
+fan yi le 	翻译了	c=1 d=0.965605 t=7119
+fang 	放	c=3 d=2.48139 t=7119
+fang 	方	c=2 d=1.7003 t=7119
+fang bian 	方便	c=1 d=0.895834 t=7119
+fang bian mian 	方便面	c=2 d=1.96536 t=7119
+fang da 	放大	c=2 d=1.98511 t=7119
+fang guang mang 	放光芒	c=1 d=1 t=7119
+fang jia 	放假	c=3 d=2.39758 t=7119
+fang jia de shi hou 	放假的时候	c=1 d=0.941765 t=7119
+fang jian 	房间	c=7 d=6.1239 t=7119
+fang jian li 	房间里	c=1 d=0.891366 t=7119
+fang jin qu 	放进去	c=1 d=0.995012 t=7119
+fang kai 	放开	c=2 d=1.80521 t=7119
+fang men 	房门	c=1 d=1 t=7119
+fang mian 	方面	c=1 d=0.891366 t=7119
+fang qi 	放弃	c=2 d=1.97045 t=7119
+fang shi 	方式	c=3 d=2.90737 t=7119
+fang song 	放松	c=2 d=1.71285 t=7119
+fang xiang 	方向	c=2 d=1.98511 t=7119
+fang xin 	放心	c=3 d=2.5616 t=7119
+fang zai 	放在	c=1 d=0.97531 t=7119
+fei 	费	c=3 d=2.94076 t=7119
+fei 	非	c=1 d=1 t=7119
+fei chang 	非常	c=2 d=1.82376 t=7119
+fei chang hao 	非常好	c=1 d=1.05556 t=7119
+fei chang hao wan er 	非常好玩儿	c=1 d=0.831104 t=7119
+fei hua 	费话	c=1 d=0.985112 t=7119
+fen 	份	c=1 d=1 t=7119
+fen 	分	c=1 d=1.00962 t=7119
+fen shou 	分手	c=1 d=1 t=7119
+fen xiang 	分享	c=1 d=0.995012 t=7119
+feng 	风	c=1 d=1 t=7119
+feng ge 	风格	c=5 d=4.68473 t=7119
+feng jing 	风景	c=1 d=1 t=7119
+feng man 	丰满	c=1 d=1 t=7119
+feng shan 	风扇	c=1 d=0.995012 t=7119
+feng su 	风俗	c=1 d=0.980199 t=7119
+feng xian 	风险	c=1 d=1 t=7119
+fo yan 	佛言	c=0 d=0.0995012 t=7119
+fo yan fo yu 	佛言佛语	c=1 d=1 t=7119
+fo yu 	佛语	c=0 d=0.0995012 t=7119
+fou 	否	c=1 d=0.985112 t=7119
+fou ze 	否则	c=2 d=1.86516 t=7119
+fu 	复	c=2 d=1.90771 t=7119
+fu 	福	c=3 d=2.873 t=7119
+fu dan 	负担	c=2 d=1.93707 t=7119
+fu dao 	辅导	c=1 d=0.995012 t=7119
+fu di 	福地	c=1 d=0.995012 t=7119
+fu di 	腹地	c=0 d=0.099005 t=7119
+fu di zhong nan shan 	腹地终南山	c=1 d=0.995012 t=7119
+fu fei 	付费	c=2 d=1.92218 t=7119
+fu he 	符合	c=7 d=5.97288 t=7119
+fu jian 	福建	c=1 d=0.965605 t=7119
+fu mu 	父母	c=4 d=3.4984 t=7119
+fu qi 	夫妻	c=1 d=0.97531 t=7119
+fu weng 	富翁	c=4 d=3.75708 t=7119
+fu weng de 	富翁的	c=1 d=0.995012 t=7119
+fu wu 	服务	c=1 d=0.980199 t=7119
+fu xi 	复习	c=6 d=4.61984 t=7119
+fu yin 	复印	c=2 d=1.99005 t=7119
+fu you 	富有	c=1 d=1 t=7119
+fu yuan yin 	复元音	c=1 d=1 t=7119
+fu za 	复杂	c=2 d=1.91221 t=7119
+fu ze 	负责	c=2 d=1.94624 t=7119
+fu zhi 	复制	c=1 d=1 t=7119
+fu zhuang 	服装	c=1 d=0.99005 t=7119
+ga li 	咖喱	c=1 d=1 t=7119
+gai 	改	c=1 d=1.01604 t=7119
+gai 	该	c=1 d=0.951229 t=7119
+gai dao 	改到	c=1 d=0.99005 t=7119
+gai hao 	改好	c=1 d=0.97531 t=7119
+gai qian 	改签	c=1 d=0.97531 t=7119
+gai tian 	改天	c=1 d=0.985112 t=7119
+gan 	干	c=3 d=2.9407 t=7119
+gan 	感	c=1 d=1 t=7119
+gan 	赶	c=1 d=0.995012 t=7119
+gan cha 	感差	c=1 d=1 t=7119
+gan dao 	感到	c=1 d=0.995012 t=7119
+gan ga 	尴尬	c=1 d=0.980199 t=7119
+gan ga de 	尴尬的	c=1 d=0.970446 t=7119
+gan gan 	赶赶	c=1 d=0.985112 t=7119
+gan huo 	干活	c=1 d=1 t=7119
+gan jin 	赶紧	c=1 d=0.960789 t=7119
+gan jing 	干净	c=2 d=1.9175 t=7119
+gan jue 	感觉	c=5 d=4.39302 t=7119
+gan mao 	感冒	c=1 d=0.995012 t=7119
+gan qing 	感情	c=1 d=1 t=7119
+gan she 	干涉	c=1 d=0.913931 t=7119
+gan shi 	干事	c=0 d=0.0524663 t=7119
+gan shi jian 	赶时间	c=1 d=0.995012 t=7119
+gan shuo 	敢说	c=2 d=1.99501 t=7119
+gan su 	甘肃	c=1 d=0.955997 t=7119
+gan xie 	感谢	c=2 d=1.98012 t=7119
+gan yu 	干预	c=1 d=0.918512 t=7119
+gan zao 	干燥	c=2 d=1.95101 t=7119
+gan zhao 	感召	c=1 d=0.99005 t=7119
+gan zou 	赶走	c=1 d=0.970446 t=7119
+gang 	刚	c=6 d=5.12447 t=7119
+gang cai 	刚才	c=2 d=1.8167 t=7119
+gang hao 	刚好	c=1 d=0.955997 t=7119
+gang lai 	刚来	c=1 d=1 t=7119
+gang wei 	岗位	c=2 d=1.82149 t=7119
+gao 	高	c=3 d=2.96762 t=7119
+gao gong zi 	高工资	c=2 d=1.80121 t=7119
+gao kao 	高考	c=1 d=0.960789 t=7119
+gao shan liu shui 	高山流水	c=1 d=0.97531 t=7119
+gao su 	告诉	c=5 d=3.64569 t=7119
+gao su nin 	告诉您	c=1 d=0.900325 t=7119
+gao xing 	高兴	c=6 d=4.39477 t=7119
+gao xing dian 	高兴点	c=1 d=0.980199 t=7119
+ge 	个	c=10 d=5.82056 t=7119
+ge 	各	c=1 d=0.980199 t=7119
+ge ci 	歌词	c=1 d=0.970446 t=7119
+ge di 	各地	c=1 d=1 t=7119
+ge ge 	哥哥	c=2 d=1.98506 t=7119
+ge ge 	格格	c=1 d=1 t=7119
+ge guo 	各国	c=1 d=0.965605 t=7119
+ge ming 	革命	c=3 d=2.87796 t=7119
+ge qu 	歌曲	c=5 d=4.6381 t=7119
+ge ren 	个人	c=0 d=0.0946485 t=7119
+ge wei 	各位	c=1 d=1 t=7119
+ge zhong 	各种	c=1 d=0.995012 t=7119
+ge zi 	个子	c=1 d=0.995012 t=7119
+gei 	给	c=9 d=5.58045 t=7119
+gei le 	给了	c=3 d=2.68387 t=7119
+gei ni 	给你	c=1 d=0.99005 t=7119
+gei wo 	给我	c=2 d=1.92712 t=7119
+gen 	根	c=10 d=5.58345 t=7119
+gen 	跟	c=3 d=2.49761 t=7119
+gen bie ren 	跟别人	c=1 d=0.932394 t=7119
+gen ju 	根据	c=2 d=1.93239 t=7119
+gen ju di 	根据地	c=1 d=0.951229 t=7119
+gen ni 	跟你	c=1 d=0.99005 t=7119
+gen tuan you 	跟团游	c=1 d=0.985112 t=7119
+geng 	更	c=3 d=2.56235 t=7119
+geng duo 	更多	c=2 d=1.44272 t=7119
+geng duo ren 	更多人	c=1 d=0.941765 t=7119
+geng hao 	更好	c=2 d=1.16381 t=7119
+geng hao de 	更好的	c=1 d=0.882497 t=7119
+geng nan 	更难	c=1 d=0.918512 t=7119
+geng zao 	更早	c=1 d=0.965605 t=7119
+gong 	公	c=1 d=0.927743 t=7119
+gong an min jing 	公安民警	c=1 d=0.951229 t=7119
+gong chan dang 	共产党	c=9 d=8.15376 t=7119
+gong chan zhu yi 	共产主义	c=1 d=0.99005 t=7119
+gong ju 	工具	c=1 d=0.951229 t=7119
+gong ke 	功课	c=1 d=0.965605 t=7119
+gong ping 	公平	c=1 d=0.985112 t=7119
+gong ren 	工人	c=1 d=0.951229 t=7119
+gong si 	公司	c=1 d=0.67368 t=7119
+gong tong 	共同	c=1 d=1 t=7119
+gong xi 	恭喜	c=2 d=1.99501 t=7119
+gong yao 	公钥	c=0 d=0.0995012 t=7119
+gong yao wan er 	公钥玩儿	c=1 d=1 t=7119
+gong ye hua 	工业化	c=1 d=0.955997 t=7119
+gong yuan 	公元	c=1 d=0.99005 t=7119
+gong zhong 	公众	c=1 d=0.995012 t=7119
+gong zhu 	公主	c=1 d=1 t=7119
+gong zi 	工资	c=6 d=3.28209 t=7119
+gong zuo 	工作	c=5 d=2.83248 t=7119
+gong zuo ji hui 	工作机会	c=1 d=0.960789 t=7119
+gou 	狗	c=9 d=7.40932 t=7119
+gou mai 	购买	c=1 d=0.99005 t=7119
+gou wu 	购物	c=3 d=2.83105 t=7119
+gou wu jie 	购物节	c=1 d=0.927743 t=7119
+gu dong 	鼓动	c=2 d=1.79276 t=7119
+gu gong 	故宫	c=5 d=2.98915 t=7119
+gu ke 	顾客	c=1 d=0.951229 t=7119
+gu li 	鼓励	c=3 d=2.56655 t=7119
+gu shi 	故事	c=7 d=5.47795 t=7119
+gu xiang 	故乡	c=1 d=1 t=7119
+gua 	刮	c=1 d=1 t=7119
+gua 	瓜	c=1 d=0.980199 t=7119
+gua da feng 	刮大风	c=1 d=0.995012 t=7119
+gua feng 	刮风	c=2 d=1.96546 t=7119
+gua shi 	挂失	c=1 d=1 t=7119
+guai 	拐	c=1 d=0.99005 t=7119
+guan 	关	c=3 d=2.18136 t=7119
+guan 	观	c=4 d=2.719 t=7119
+guan dian 	观点	c=1 d=0.923116 t=7119
+guan jian 	关键	c=1 d=1 t=7119
+guan kan 	观看	c=1 d=1 t=7119
+guan li 	管理	c=2 d=1.95123 t=7119
+guan shang dian shi 	关上电视	c=1 d=0.97531 t=7119
+guan xi 	关系	c=3 d=1.92746 t=7119
+guan xin 	关心	c=5 d=3.95839 t=7119
+guan yu 	关于	c=15 d=8.75258 t=7119
+guan zhong 	观众	c=2 d=1.95581 t=7119
+guan zhu 	关注	c=2 d=1.96561 t=7119
+guang 	光	c=4 d=3.73277 t=7119
+guang 	广	c=1 d=0.995012 t=7119
+guang 	逛	c=4 d=3.67163 t=7119
+guang bo 	广播	c=1 d=0.960789 t=7119
+guang chang 	广场	c=1 d=0.980199 t=7119
+guang guang 	逛逛	c=1 d=0.995012 t=7119
+guang jie 	逛街	c=2 d=1.88839 t=7119
+guang lin 	光临	c=1 d=1 t=7119
+guang ming 	光明	c=1 d=0.995012 t=7119
+guang zhou 	广州	c=2 d=1.97025 t=7119
+gui 	贵	c=3 d=2.73929 t=7119
+gui gong 	归公	c=1 d=0.995012 t=7119
+gui gong 	归功	c=1 d=0.923116 t=7119
+gui zhou 	贵州	c=1 d=0.965605 t=7119
+guo 	国	c=1 d=1 t=7119
+guo 	果	c=1 d=0.951229 t=7119
+guo 	过	c=6 d=4.33102 t=7119
+guo de 	过的	c=1 d=0.980199 t=7119
+guo de hao 	过得好	c=1 d=0.985112 t=7119
+guo ji 	国际	c=1 d=1 t=7119
+guo ji ge 	国际歌	c=1 d=0.995012 t=7119
+guo ma lu 	过马路	c=1 d=0.99005 t=7119
+guo qing 	国庆	c=3 d=2.85517 t=7119
+guo qing jie 	国庆节	c=2 d=1.93605 t=7119
+guo qu 	过去	c=6 d=5.07297 t=7119
+guo ran 	果然	c=2 d=1.91238 t=7119
+guo shi 	果实	c=1 d=0.99005 t=7119
+guo shi 	过时	c=2 d=1.93181 t=7119
+ha 	哈	c=1 d=0.913931 t=7119
+ha bo 	哈勃	c=1 d=0.985112 t=7119
+ha de 	哈德	c=1 d=0.995012 t=7119
+ha ha 	哈哈	c=16 d=8.22202 t=7119
+ha ha ha 	哈哈哈	c=8 d=5.64461 t=7119
+hai 	还	c=12 d=6.11503 t=7119
+hai bao 	海报	c=1 d=0.980199 t=7119
+hai di lao 	海底捞	c=2 d=1.96531 t=7119
+hai ke yi 	还可以	c=2 d=1.77772 t=7119
+hai mei 	还没	c=3 d=2.58697 t=7119
+hai mei lai 	还没来	c=1 d=0.946485 t=7119
+hai neng 	还能	c=1 d=0.970446 t=7119
+hai pa 	害怕	c=4 d=3.76846 t=7119
+hai shi 	还是	c=2 d=1.58657 t=7119
+hai wai 	海外	c=1 d=1 t=7119
+hai xiu 	害羞	c=2 d=1.94575 t=7119
+hai yang 	海洋	c=1 d=0.980199 t=7119
+hai yao 	还要	c=1 d=0.856415 t=7119
+hai yo 	嗨哟	c=1 d=1 t=7119
+hai you 	还有	c=1 d=0.737129 t=7119
+hai you wen ti ma 	还有问题吗	c=1 d=1 t=7119
+hai zi 	孩子	c=4 d=2.40297 t=7119
+han 	汉	c=0 d=0.0965605 t=7119
+han bian ren min 	汉变人民	c=1 d=0.970446 t=7119
+han chao 	汉朝	c=1 d=0.995012 t=7119
+han hong 	韩红	c=2 d=1.95101 t=7119
+han shi jie 	寒食节	c=1 d=0.946485 t=7119
+han xin 	寒心	c=1 d=1 t=7119
+han yong 	悍勇	c=3 d=2.75556 t=7119
+han yu 	汉语	c=6 d=4.10247 t=7119
+han yu 	韩语	c=2 d=1.99005 t=7119
+hang 	航	c=2 d=1.95123 t=7119
+hang ban 	航班	c=1 d=0.965605 t=7119
+hang mu 	航母	c=1 d=0.985112 t=7119
+hang xing 	航行	c=5 d=4.73903 t=7119
+hao 	号	c=2 d=1.51615 t=7119
+hao 	好	c=25 d=11.1875 t=7119
+hao a 	好啊	c=1 d=1 t=7119
+hao ba 	好吧	c=3 d=2.54282 t=7119
+hao ba hao ba 	好吧好吧	c=1 d=1 t=7119
+hao chi 	好吃	c=0 d=0.0985112 t=7119
+hao chi de 	好吃的	c=1 d=0.97531 t=7119
+hao chi ji le 	好吃极乐	c=4 d=3.63375 t=7119
+hao chu 	好处	c=2 d=1.91693 t=7119
+hao de 	好的	c=54 d=21.4807 t=7119
+hao duo 	好多	c=1 d=0.995012 t=7119
+hao hao 	好好	c=1 d=0.66365 t=7119
+hao jiu 	好久	c=1 d=0.99005 t=7119
+hao jiu bu jian 	好久不见	c=1 d=1 t=7119
+hao le ma 	好了吗	c=1 d=0.99005 t=7119
+hao ma 	号码	c=2 d=1.96561 t=7119
+hao peng you 	好朋友	c=2 d=1.70045 t=7119
+hao se 	好色	c=1 d=0.985112 t=7119
+hao wan er 	好玩儿	c=4 d=3.69436 t=7119
+hao xian 	号线	c=2 d=1.99005 t=7119
+hao xiang 	好像	c=1 d=0.97531 t=7119
+hao xu hao 	好序号	c=1 d=1 t=7119
+hao yun 	好运	c=5 d=4.86273 t=7119
+hao yun fu 	好运符	c=2 d=1.99005 t=7119
+he 	何	c=1 d=0.980199 t=7119
+he 	合	c=1 d=0.995012 t=7119
+he 	和	c=21 d=7.71113 t=7119
+he 	喝	c=1 d=0.733447 t=7119
+he 	河	c=1 d=1 t=7119
+he 	盒	c=1 d=0.99005 t=7119
+he bei 	河北	c=1 d=0.970446 t=7119
+he ge pin 	合格品	c=1 d=1 t=7119
+he ge zheng 	合格证	c=1 d=0.995012 t=7119
+he kou hu 	合口呼	c=1 d=1 t=7119
+he long 	贺珑	c=1 d=0.97531 t=7119
+he shi 	合适	c=3 d=2.87858 t=7119
+he shi de 	合适的	c=1 d=0.937067 t=7119
+he xu 	何须	c=1 d=0.923116 t=7119
+he zuo 	合作	c=1 d=1 t=7119
+hei 	黑	c=1 d=0.985112 t=7119
+hei an 	黑暗	c=1 d=1 t=7119
+hei ban 	黑板	c=2 d=1.99501 t=7119
+hei shen hua 	黑神话	c=1 d=0.995012 t=7119
+hen 	很	c=24 d=10.6264 t=7119
+hen cha de 	很差的	c=1 d=0.980199 t=7119
+hen chang 	很长	c=1 d=0.99005 t=7119
+hen duo 	很多	c=18 d=8.5085 t=7119
+hen duo ci 	很多次	c=1 d=1 t=7119
+hen duo hen duo 	很多很多	c=1 d=0.955997 t=7119
+hen hao 	很好	c=1 d=1 t=7119
+hen ku 	很酷	c=2 d=1.98506 t=7119
+hen mang 	很忙	c=2 d=1.04385 t=7119
+hen qiang 	很强	c=2 d=1.65234 t=7119
+hen shu fu 	很舒服	c=1 d=0.83527 t=7119
+hen you yi si 	很有意思	c=1 d=0.995012 t=7119
+hen you yong 	很有用	c=1 d=1 t=7119
+heng 	横	c=1 d=1 t=7119
+hong bao shu 	红宝书	c=1 d=0.980199 t=7119
+hong de 	红的	c=1 d=0.99005 t=7119
+hong hong 	红红	c=1 d=0.960789 t=7119
+hong jun 	红军	c=1 d=0.985112 t=7119
+hong pi gu 	红屁股	c=1 d=0.995012 t=7119
+hong tong tong 	红彤彤	c=1 d=1 t=7119
+hong yi 	红衣	c=1 d=0.88692 t=7119
+hong you 	红油	c=2 d=1.88995 t=7119
+hou 	候	c=1 d=0.960789 t=7119
+hou 	后	c=2 d=1.6873 t=7119
+hou hui 	后悔	c=3 d=2.86457 t=7119
+hou lai 	后来	c=3 d=2.68602 t=7119
+hou mian 	后面	c=1 d=0.865022 t=7119
+hou tian 	后天	c=2 d=1.82581 t=7119
+hou zi 	猴子	c=1 d=0.97531 t=7119
+hu 	乎	c=1 d=0.70822 t=7119
+hu 	呼	c=1 d=0.99005 t=7119
+hu 	湖	c=1 d=0.965605 t=7119
+hu bei 	湖北	c=1 d=0.946485 t=7119
+hu dong 	互动	c=1 d=0.965605 t=7119
+hu nan 	湖南	c=1 d=0.97531 t=7119
+hu shen fu 	护身符	c=1 d=0.985112 t=7119
+hu shi 	护士	c=1 d=0.904837 t=7119
+hu xiang 	互相	c=2 d=1.9605 t=7119
+hua 	化	c=1 d=0.694197 t=7119
+hua 	华	c=1 d=0.99005 t=7119
+hua 	画	c=4 d=3.83505 t=7119
+hua 	花	c=6 d=5.27498 t=7119
+hua 	话	c=1 d=0.860708 t=7119
+hua bei 	华北	c=1 d=1 t=7119
+hua bi 	画笔	c=2 d=1.66972 t=7119
+hua fei 	花费	c=1 d=0.99005 t=7119
+hua jia 	画家	c=2 d=1.88437 t=7119
+hua she 	画社	c=0 d=0.099005 t=7119
+hua she tian 	画社天	c=1 d=0.995012 t=7119
+hua she tian zu 	画蛇添足	c=1 d=1 t=7119
+hua shi jian 	花时间	c=2 d=1.93707 t=7119
+hua tuo 	华佗	c=1 d=0.995012 t=7119
+huai 	坏	c=2 d=1.85155 t=7119
+huai hua 	坏话	c=1 d=0.97531 t=7119
+huai yun 	怀孕	c=1 d=0.995012 t=7119
+huan 	还	c=1 d=0.951229 t=7119
+huan bao 	环保	c=1 d=0.941765 t=7119
+huan gei 	还给	c=1 d=0.951229 t=7119
+huan ji 	换季	c=1 d=0.99005 t=7119
+huan jing 	环境	c=4 d=3.83016 t=7119
+huan nan yu gong 	患难与共	c=1 d=0.99005 t=7119
+huan xiao 	欢笑	c=1 d=0.99005 t=7119
+huan yan 	还眼	c=1 d=0.955997 t=7119
+huan ying 	欢迎	c=9 d=8.18649 t=7119
+huan ying guang lin 	欢迎光临	c=1 d=0.970446 t=7119
+huang se 	黄色	c=1 d=0.951229 t=7119
+hui 	会	c=19 d=9.5913 t=7119
+hui 	回	c=2 d=1.96062 t=7119
+hui bian 	会变	c=1 d=0.965605 t=7119
+hui bu hui 	会不会	c=1 d=0.99005 t=7119
+hui er 	会儿	c=1 d=0.995012 t=7119
+hui fu 	恢复	c=3 d=2.7584 t=7119
+hui guo 	回国	c=2 d=1.83244 t=7119
+hui guo le 	回国了	c=1 d=0.932394 t=7119
+hui hua 	绘画	c=1 d=1 t=7119
+hui jia 	回家	c=4 d=3.8239 t=7119
+hui se 	灰色	c=1 d=0.97531 t=7119
+hui shuo 	会说	c=1 d=0.97531 t=7119
+hui xia 	回夏	c=1 d=0.995012 t=7119
+hui yi 	会议	c=6 d=4.65139 t=7119
+hui yi 	回忆	c=1 d=0.99005 t=7119
+hui you 	会有	c=2 d=1.90937 t=7119
+hui zhong wen 	会中文	c=1 d=0.985112 t=7119
+huo 	伙	c=1 d=0.995012 t=7119
+huo 	货	c=3 d=2.95551 t=7119
+huo de hao 	活得好	c=1 d=0.946485 t=7119
+huo dong 	活动	c=1 d=1 t=7119
+huo la 	火辣	c=1 d=0.960789 t=7119
+huo long guo 	火龙果	c=1 d=1 t=7119
+huo xu 	或许	c=1 d=0.895834 t=7119
+huo yuan 	货源	c=1 d=1.09608 t=7119
+huo zhe 	或者	c=1 d=0.97531 t=7119
+ji 	几	c=2 d=1.65095 t=7119
+ji 	即	c=1 d=0.985112 t=7119
+ji 	及	c=1 d=0.99005 t=7119
+ji 	急	c=1 d=0.985112 t=7119
+ji 	既	c=1 d=1.06855 t=7119
+ji ba 	鸡巴	c=1 d=0.965605 t=7119
+ji bai 	击败	c=1 d=0.995012 t=7119
+ji chang 	机场	c=2 d=1.81622 t=7119
+ji chu 	基础	c=1 d=0.99005 t=7119
+ji dan 	鸡蛋	c=2 d=1.92218 t=7119
+ji de 	记得	c=8 d=5.40529 t=7119
+ji dian 	几点	c=4 d=2.24215 t=7119
+ji dong 	激动	c=1 d=1 t=7119
+ji ge 	几个	c=2 d=1.94196 t=7119
+ji guang 	激光	c=1 d=1 t=7119
+ji hu 	几乎	c=3 d=2.84771 t=7119
+ji hua 	计划	c=3 d=2.80843 t=7119
+ji hui 	机会	c=1 d=0.822835 t=7119
+ji hui 	集会	c=4 d=3.14866 t=7119
+ji ji 	积极	c=1 d=0.980199 t=7119
+ji jie 	季节	c=0 d=0.099005 t=7119
+ji le 	极乐	c=0 d=0.0985112 t=7119
+ji lei 	积累	c=1 d=0.900325 t=7119
+ji lie 	激烈	c=1 d=0.946485 t=7119
+ji lin 	吉林	c=1 d=0.97531 t=7119
+ji lv 	纪律	c=3 d=2.85962 t=7119
+ji mu 	继母	c=1 d=0.946485 t=7119
+ji nian pin 	纪念品	c=1 d=1 t=7119
+ji pai 	记牌	c=1 d=0.995012 t=7119
+ji pai 	鸡排	c=0 d=0.0985112 t=7119
+ji pai mian 	鸡排面	c=1 d=0.99005 t=7119
+ji ran 	既然	c=1 d=1 t=7119
+ji rou 	鸡肉	c=1 d=0.980199 t=7119
+ji shi 	即使	c=11 d=7.94636 t=7119
+ji shi 	及时	c=6 d=5.52371 t=7119
+ji shi 	计时	c=2 d=1.86951 t=7119
+ji ti 	集体	c=1 d=1 t=7119
+ji ti zhu yi 	集体主义	c=2 d=1.9802 t=7119
+ji tui 	鸡腿	c=2 d=1.93124 t=7119
+ji xu 	继续	c=3 d=2.36191 t=7119
+ji yao 	既要	c=1 d=0.99005 t=7119
+ji yao 	辑要	c=1 d=0.995012 t=7119
+ji yi 	记忆	c=1 d=0.985112 t=7119
+ji zhe 	记者	c=1 d=1 t=7119
+ji zhu 	记住	c=2 d=1.87311 t=7119
+jia 	价	c=1 d=1 t=7119
+jia 	加	c=6 d=5.28936 t=7119
+jia 	家	c=6 d=4.24515 t=7119
+jia 	架	c=1 d=0.923116 t=7119
+jia ge 	价格	c=2 d=1.96546 t=7119
+jia li man dan 	加里曼丹	c=1 d=0.869358 t=7119
+jia qi 	假期	c=6 d=3.4187 t=7119
+jia ri 	假日	c=0 d=0.099005 t=7119
+jia shi 	假使	c=2 d=1.95551 t=7119
+jia su 	加速	c=1 d=0.99005 t=7119
+jia ting zhu fu 	家庭主妇	c=1 d=0.951229 t=7119
+jia xiang 	家乡	c=3 d=2.84915 t=7119
+jia you 	加油	c=17 d=11.9219 t=7119
+jia zai zhong 	加载中	c=1 d=0.99005 t=7119
+jia zhi 	价值	c=1 d=0.995012 t=7119
+jian 	件	c=1 d=0.99005 t=7119
+jian 	建	c=2 d=1.96531 t=7119
+jian 	见	c=4 d=3.60043 t=7119
+jian 	间	c=2 d=1.91393 t=7119
+jian bi hua 	简笔画	c=1 d=0.97531 t=7119
+jian cha 	检查	c=3 d=2.6098 t=7119
+jian chan 	减产	c=1 d=0.980199 t=7119
+jian chi 	坚持	c=3 d=2.85086 t=7119
+jian dang jie 	建党节	c=1 d=0.995012 t=7119
+jian guan 	监管	c=0 d=0.0965605 t=7119
+jian guan shang dian shi 	监管上电视	c=1 d=0.970446 t=7119
+jian jian 	渐渐	c=2 d=1.92688 t=7119
+jian jue 	坚决	c=1 d=0.985112 t=7119
+jian kang 	健康	c=12 d=8.95897 t=7119
+jian mian 	见面	c=1 d=0.99005 t=7119
+jian mu 	舰母	c=1 d=1 t=7119
+jian qiang 	坚强	c=1 d=0.918512 t=7119
+jian qing 	减轻	c=1 d=0.932394 t=7119
+jian shao 	减少	c=1 d=0.985112 t=7119
+jian she 	建设	c=2 d=1.9802 t=7119
+jian shen 	健身	c=2 d=1.75378 t=7119
+jian shen fang 	健身房	c=1 d=0.99005 t=7119
+jian ti 	间题	c=1 d=1 t=7119
+jian xiao 	减小	c=1 d=0.995012 t=7119
+jian yi 	建议	c=2 d=1.90438 t=7119
+jiang 	将	c=3 d=2.88288 t=7119
+jiang 	讲	c=4 d=3.51678 t=7119
+jiang ban 	降班	c=1 d=0.960789 t=7119
+jiang di 	降低	c=1 d=1 t=7119
+jiang he shui 	江河水	c=1 d=0.980199 t=7119
+jiang wei 	将为	c=1 d=0.97531 t=7119
+jiang xiang 	奖项	c=1 d=1 t=7119
+jiang xing 	将行	c=1 d=1 t=7119
+jiang zhi 	将至	c=1 d=0.970446 t=7119
+jiao 	交	c=1 d=0.99005 t=7119
+jiao 	叫	c=11 d=7.57929 t=7119
+jiao 	教	c=1 d=1 t=7119
+jiao 	校	c=1 d=0.980199 t=7119
+jiao 	脚	c=1 d=0.951229 t=7119
+jiao 	觉	c=2 d=1.87423 t=7119
+jiao 	角	c=2 d=1.97516 t=7119
+jiao ao 	骄傲	c=6 d=5.48808 t=7119
+jiao cheng 	教程	c=1 d=1 t=7119
+jiao huan sheng 	交换生	c=1 d=0.97531 t=7119
+jiao huo 	缴获	c=2 d=1.8233 t=7119
+jiao liu 	交流	c=1 d=0.960789 t=7119
+jiao shi 	教室	c=4 d=3.68799 t=7119
+jiao shi 	教师	c=1 d=0.99005 t=7119
+jiao shi de 	教师的	c=1 d=0.985112 t=7119
+jiao tang 	教堂	c=1 d=1 t=7119
+jiao tong 	交通	c=2 d=1.93124 t=7119
+jiao wai mai 	叫外卖	c=1 d=1 t=7119
+jiao wo 	叫我	c=1 d=0.970446 t=7119
+jiao xue 	教学	c=1 d=0.970446 t=7119
+jiao yu 	教育	c=2 d=1.9458 t=7119
+jiao yuan 	教员	c=1 d=0.985112 t=7119
+jiao zhi 	交织	c=1 d=1 t=7119
+jiao zi 	饺子	c=3 d=2.88836 t=7119
+jie 	借	c=1 d=1 t=7119
+jie 	接	c=7 d=5.30628 t=7119
+jie 	结	c=1 d=0.918512 t=7119
+jie 	节	c=1 d=0.951229 t=7119
+jie 	解	c=2 d=1.89084 t=7119
+jie dao 	接到	c=1 d=0.985112 t=7119
+jie dao 	街道	c=1 d=0.980199 t=7119
+jie gou 	结构	c=0 d=0.0970446 t=7119
+jie gou fen 	结构分	c=1 d=0.97531 t=7119
+jie guo 	结果	c=4 d=3.70184 t=7119
+jie he 	结合	c=1 d=0.980199 t=7119
+jie hun 	结婚	c=3 d=2.85037 t=7119
+jie jie 	姐姐	c=4 d=3.19149 t=7119
+jie ju 	结局	c=1 d=1 t=7119
+jie jue 	解决	c=3 d=2.43561 t=7119
+jie mu 	节目	c=1 d=0.970446 t=7119
+jie qing 	节庆	c=0 d=0.099005 t=7119
+jie qing jia ri 	节庆假日	c=1 d=0.995012 t=7119
+jie ran bu tong 	截然不同	c=1 d=0.980199 t=7119
+jie shao 	介绍	c=5 d=4.51512 t=7119
+jie shao ren shi 	介绍认识	c=1 d=0.985112 t=7119
+jie shao yi xia 	介绍一下	c=1 d=0.970446 t=7119
+jie sheng 	节省	c=1 d=0.937067 t=7119
+jie shi 	解释	c=1 d=0.960789 t=7119
+jie shou 	接受	c=1 d=0.985112 t=7119
+jie shu 	结束	c=2 d=1.59355 t=7119
+jie shu le 	结束了	c=3 d=2.74428 t=7119
+jie shu yi hou 	结束以后	c=0 d=0.0909373 t=7119
+jie ting 	接听	c=1 d=0.99005 t=7119
+jie zhang 	结账	c=1 d=0.99005 t=7119
+jie zhe 	接着	c=1 d=1 t=7119
+jie zou 	节奏	c=1 d=1 t=7119
+jin 	今	c=1 d=0.980199 t=7119
+jin 	紧	c=3 d=2.93123 t=7119
+jin 	近	c=1 d=0.752014 t=7119
+jin 	金	c=2 d=1.95556 t=7119
+jin bu 	进步	c=1 d=1 t=7119
+jin dao 	劲道	c=1 d=0.985112 t=7119
+jin fa 	金发	c=1 d=0.985112 t=7119
+jin guan 	尽管	c=2 d=1.91727 t=7119
+jin li 	尽力	c=1 d=0.99005 t=7119
+jin mi 	紧密	c=1 d=1 t=7119
+jin nian 	今年	c=1 d=0.99005 t=7119
+jin tian 	今天	c=21 d=10.0373 t=7119
+jin tou 	尽头	c=1 d=0.995012 t=7119
+jin xing 	进行	c=3 d=2.73929 t=7119
+jin xing qu 	进行曲	c=0 d=0.0995012 t=7119
+jin zhang 	紧张	c=6 d=5.37476 t=7119
+jin zhi 	禁止	c=1 d=0.985112 t=7119
+jing 	竟	c=1 d=0.923116 t=7119
+jing cai 	精彩	c=1 d=0.960789 t=7119
+jing cha 	警察	c=2 d=1.9316 t=7119
+jing chang 	经常	c=1 d=0.980199 t=7119
+jing chu 	荆楚	c=1 d=0.99005 t=7119
+jing guo 	经过	c=5 d=4.77473 t=7119
+jing ji 	经济	c=3 d=2.86936 t=7119
+jing li 	经历	c=4 d=3.63136 t=7119
+jing li 	经理	c=2 d=1.64404 t=7119
+jing ran 	竟然	c=1 d=0.806541 t=7119
+jing sai 	竞赛	c=1 d=1 t=7119
+jing shen 	精神	c=2 d=1.93124 t=7119
+jing sheng 	警声	c=1 d=0.995012 t=7119
+jing song 	劲松	c=1 d=0.99005 t=7119
+jing song 	惊悚	c=1 d=0.985112 t=7119
+jing tou 	镜头	c=13 d=11.7706 t=7119
+jing yan 	经验	c=2 d=1.64477 t=7119
+jing ying 	精英	c=1 d=1 t=7119
+jing zheng 	竞争	c=3 d=2.74585 t=7119
+jing zi 	镜子	c=0 d=0.0985112 t=7119
+jiu 	九	c=1 d=0.980199 t=7119
+jiu 	就	c=15 d=8.41446 t=7119
+jiu 	救	c=1 d=0.995012 t=7119
+jiu 	旧	c=3 d=2.49962 t=7119
+jiu 	酒	c=3 d=1.9605 t=7119
+jiu ba 	酒吧	c=1 d=1 t=7119
+jiu cheng 	就成	c=1 d=0.995012 t=7119
+jiu dao 	就到	c=1 d=0.970446 t=7119
+jiu dian 	九点	c=1 d=0.955997 t=7119
+jiu dian 	酒店	c=1 d=1.06625 t=7119
+jiu dian san fen 	酒店三分	c=1 d=0.941765 t=7119
+jiu feng shan 	九峰山	c=1 d=0.985112 t=7119
+jiu hua shan 	九华山	c=1 d=0.99005 t=7119
+jiu jiang 	九江	c=2 d=1.86946 t=7119
+jiu jing 	究竟	c=2 d=1.91751 t=7119
+jiu jiu 	舅舅	c=1 d=0.995012 t=7119
+jiu kan 	就看	c=1 d=0.600496 t=7119
+jiu shi 	就是	c=5 d=4.0022 t=7119
+jiu wen 	就问	c=1 d=0.985112 t=7119
+jiu xi 	酒席	c=1 d=0.995012 t=7119
+jiu yao 	就要	c=3 d=2.54525 t=7119
+jiu zhao 	就找	c=1 d=0.995012 t=7119
+ju 	举	c=2 d=1.99005 t=7119
+ju 	句	c=1 d=0.873716 t=7119
+ju 	聚	c=1 d=0.873716 t=7119
+ju ben 	剧本	c=3 d=2.64079 t=7119
+ju bian 	巨变	c=2 d=1.88825 t=7119
+ju de 	举得	c=1 d=0.860708 t=7119
+ju hui 	聚会	c=6 d=5.04789 t=7119
+ju mian 	局面	c=1 d=0.951229 t=7119
+ju ran 	居然	c=1 d=0.99005 t=7119
+ju wen jun 	居文君	c=1 d=1 t=7119
+ju xing 	举行	c=3 d=2.78721 t=7119
+ju zi 	句子	c=4 d=3.39515 t=7119
+juan 	卷	c=1 d=0.995012 t=7119
+jue 	觉	c=1 d=0.99005 t=7119
+jue de 	觉得	c=8 d=5.98706 t=7119
+jun 	均	c=0 d=0.0995012 t=7119
+jun fu 	军服	c=1 d=0.970446 t=7119
+jun jin xing qu 	均进行曲	c=1 d=1 t=7119
+jun ren 	军人	c=1 d=0.995012 t=7119
+ka fei 	咖啡	c=1 d=0.985112 t=7119
+ka tong 	卡通	c=1 d=0.960789 t=7119
+kai 	开	c=4 d=3.85818 t=7119
+kai hui 	开会	c=4 d=3.71435 t=7119
+kai kou hu 	开口呼	c=1 d=0.980199 t=7119
+kai man 	开满	c=1 d=1 t=7119
+kai men 	开门	c=1 d=0.913931 t=7119
+kai shi 	开始	c=8 d=5.49384 t=7119
+kai shu 	楷书	c=3 d=2.74027 t=7119
+kai ti 	楷体	c=1 d=1 t=7119
+kai tou 	开头	c=0 d=0.0980199 t=7119
+kai xiang 	开箱	c=1 d=0.923116 t=7119
+kai xin 	开心	c=4 d=3.56848 t=7119
+kan 	看	c=15 d=7.59074 t=7119
+kan dao 	看到	c=1 d=0.826959 t=7119
+kan dou 	看都	c=1 d=0.985112 t=7119
+kan fa 	看法	c=2 d=1.95002 t=7119
+kan fa zong 	看法总	c=1 d=0.995012 t=7119
+kan guo 	看过	c=2 d=1.88957 t=7119
+kan kan 	看看	c=2 d=1.87156 t=7119
+kan lai 	看来	c=3 d=2.70396 t=7119
+kan peng you 	看朋友	c=1 d=0.733447 t=7119
+kan qi lai 	看起来	c=2 d=1.71388 t=7119
+kan ta men 	看他们	c=1 d=0.960789 t=7119
+kan xia qu 	看下去	c=1 d=1 t=7119
+kang qi 	扛起	c=0 d=0.0980199 t=7119
+kao 	靠	c=3 d=2.90256 t=7119
+kao de hao 	考得好	c=1 d=1 t=7119
+kao de zen me yang 	考得怎么样	c=1 d=0.955997 t=7119
+kao lv 	考虑	c=2 d=1.93181 t=7119
+kao shi 	考试	c=12 d=6.5769 t=7119
+kao shi jie shu yi hou 	考试结束以后	c=1 d=0.913931 t=7119
+ke 	可	c=3 d=2.96546 t=7119
+ke 	客	c=1 d=0.980199 t=7119
+ke 	渴	c=2 d=1.8557 t=7119
+ke 	课	c=18 d=9.7531 t=7119
+ke ai 	可爱	c=2 d=1.79967 t=7119
+ke ben 	课本	c=5 d=2.95068 t=7119
+ke bu 	可不	c=2 d=1.95566 t=7119
+ke bu ke yi 	可不可以	c=2 d=1.67912 t=7119
+ke cheng 	课程	c=1 d=0.985112 t=7119
+ke dao 	可到	c=0 d=0.099005 t=7119
+ke dao le 	可到了	c=1 d=0.995012 t=7119
+ke de 	可得	c=1 d=0.97531 t=7119
+ke ji 	科技	c=1 d=0.970446 t=7119
+ke kou 	可口	c=2 d=1.86537 t=7119
+ke mu 	科目	c=1 d=0.965605 t=7119
+ke mu 	课目	c=2 d=1.94575 t=7119
+ke mu san 	科目三	c=2 d=1.99005 t=7119
+ke neng 	可能	c=1 d=0.955997 t=7119
+ke neng xing 	可能性	c=1 d=0.99005 t=7119
+ke shi 	可是	c=2 d=1.59869 t=7119
+ke sou 	咳嗽	c=1 d=0.985112 t=7119
+ke wen 	课文	c=6 d=3.68466 t=7119
+ke xi 	可惜	c=3 d=2.83761 t=7119
+ke xue 	科学	c=1 d=0.995012 t=7119
+ke yi 	可以	c=25 d=10.3202 t=7119
+ke yi ma 	可以吗	c=1 d=0.970446 t=7119
+ke zhen 	可真	c=1 d=0.995012 t=7119
+ken ding 	肯定	c=1 d=0.980199 t=7119
+kong 	空	c=2 d=1.97025 t=7119
+kong he zi 	空盒子	c=1 d=0.951229 t=7119
+kong jie 	空姐	c=1 d=1 t=7119
+kong ju zheng 	恐惧症	c=0 d=0.0980199 t=7119
+kong qi 	空气	c=1 d=1 t=7119
+kong tiao 	空调	c=1 d=0.637628 t=7119
+kou 	口	c=2 d=1.93635 t=7119
+kou ren 	口人	c=2 d=1.56872 t=7119
+kou yu 	口语	c=10 d=6.48001 t=7119
+ku 	苦	c=3 d=2.8793 t=7119
+ku zi 	裤子	c=2 d=1.85252 t=7119
+kua wen hua 	跨文化	c=1 d=0.995012 t=7119
+kuai 	块	c=2 d=1.87724 t=7119
+kuai 	快	c=2 d=1.75726 t=7119
+kuai dao le 	快到了	c=1 d=0.802519 t=7119
+kuai di 	快递	c=1 d=0.97531 t=7119
+kuai hui fu 	快恢复	c=1 d=0.951229 t=7119
+kuai le 	快乐	c=6 d=4.77551 t=7119
+kuai le wu 	快乐屋	c=1 d=1 t=7119
+kuai men 	快门	c=1 d=0.965605 t=7119
+kuai tiao 	块条	c=1 d=0.995012 t=7119
+kuai xin xian 	块新鲜	c=1 d=0.99005 t=7119
+kuai yao 	快要	c=1 d=0.927743 t=7119
+kuai yi dian er 	快一点儿	c=1 d=1 t=7119
+kuai zi 	筷子	c=1 d=0.946485 t=7119
+kuan da 	宽大	c=1 d=0.99005 t=7119
+kuang quan shui 	矿泉水	c=1 d=0.985112 t=7119
+kun lun shan 	昆仑山	c=1 d=1 t=7119
+kun nan 	困难	c=3 d=2.34131 t=7119
+la 	辣	c=1 d=0.980199 t=7119
+la chang 	拉长	c=1 d=0.995012 t=7119
+la ji tong 	垃圾桶	c=2 d=1.94575 t=7119
+la la 	拉拉	c=5 d=3.90763 t=7119
+la yue 	腊月	c=0 d=0.0970446 t=7119
+lai 	来	c=5 d=3.70842 t=7119
+lai dao 	来到	c=3 d=2.9459 t=7119
+lai de 	来的	c=1 d=0.814647 t=7119
+lai de ji 	来得及	c=1 d=0.826959 t=7119
+lai ji 	来济	c=0 d=0.097531 t=7119
+lai ji chang de lu shang 	来济长的路上	c=1 d=0.980199 t=7119
+lan 	兰	c=1 d=0.995012 t=7119
+lan 	懒	c=2 d=1.90305 t=7119
+lan chong 	懒虫	c=2 d=1.92774 t=7119
+lang fei 	浪费	c=1 d=0.882497 t=7119
+lang man 	浪漫	c=1 d=0.985112 t=7119
+lao bai xing 	老百姓	c=1 d=1 t=7119
+lao ban 	老板	c=1 d=0.985112 t=7119
+lao dong 	劳动	c=2 d=2.09844 t=7119
+lao dong jie 	劳动节	c=5 d=4.90136 t=7119
+lao dong min 	劳动民	c=1 d=1 t=7119
+lao dong ren 	劳动人	c=1 d=0.980199 t=7119
+lao hu 	老虎	c=2 d=1.98511 t=7119
+lao ji 	牢记	c=3 d=2.97032 t=7119
+lao lao 	姥姥	c=1 d=0.980199 t=7119
+lao po 	老婆	c=3 d=2.81326 t=7119
+lao shi 	老实	c=2 d=1.9216 t=7119
+lao shi 	老师	c=57 d=20.4881 t=7119
+lao shi 	老是	c=1 d=0.970446 t=7119
+lao shi hao 	老师好	c=1 d=0.923116 t=7119
+lao shi men 	老师们	c=3 d=2.61472 t=7119
+lao shi shuo 	老实说	c=2 d=1.99501 t=7119
+lao shu 	老鼠	c=1 d=1 t=7119
+lao si ji 	老死机	c=1 d=1 t=7119
+le 	了	c=49 d=17.5949 t=7119
+le ma 	了吗	c=1 d=0.946485 t=7119
+lei feng 	雷锋	c=4 d=3.77258 t=7119
+lei huai 	累坏	c=0 d=0.0941765 t=7119
+lei zhui 	累赘	c=1 d=0.980199 t=7119
+leng 	冷	c=1 d=0.774916 t=7119
+li 	丽	c=1 d=1 t=7119
+li 	利	c=1 d=0.970446 t=7119
+li 	力	c=1 d=0.980199 t=7119
+li 	李	c=1 d=0.995012 t=7119
+li 	理	c=1 d=0.980199 t=7119
+li 	里	c=6 d=4.73725 t=7119
+li ba nen 	黎巴嫩	c=2 d=1.99501 t=7119
+li bai tian 	礼拜天	c=1 d=0.985112 t=7119
+li de 	里的	c=0 d=0.0980199 t=7119
+li he 	礼盒	c=1 d=0.965605 t=7119
+li he 	离合	c=0 d=0.099005 t=7119
+li he ci 	离合词	c=1 d=0.995012 t=7119
+li jie 	理解	c=1 d=0.985112 t=7119
+li jie bu liao 	理解不了	c=1 d=1 t=7119
+li kai 	离开	c=2 d=2.01439 t=7119
+li kai ci 	离开此	c=1 d=0.97531 t=7119
+li kai le 	离开了	c=1 d=0.995012 t=7119
+li ke 	立刻	c=2 d=1.91221 t=7119
+li liang 	力量	c=2 d=1.98511 t=7119
+li ru 	例如	c=1 d=1 t=7119
+li shu 	隶书	c=1 d=0.985112 t=7119
+li xiang 	理想	c=3 d=2.87016 t=7119
+li xiang de 	理想的	c=1 d=0.960789 t=7119
+li yong 	利用	c=3 d=2.84481 t=7119
+li you 	理由	c=1 d=0.97531 t=7119
+li zi 	例子	c=2 d=1.72615 t=7119
+lia 	俩	c=1 d=0.913931 t=7119
+lian 	恋	c=1 d=1 t=7119
+lian 	练	c=1 d=0.937067 t=7119
+lian 	脸	c=1 d=0.965605 t=7119
+lian guo 	脸过	c=1 d=1 t=7119
+lian he 	联合	c=2 d=1.97025 t=7119
+lian xi 	练习	c=8 d=7.13084 t=7119
+lian xi 	联系	c=9 d=6.25357 t=7119
+lian xi fang shi 	联系方式	c=1 d=1 t=7119
+lian xian 	连线	c=1 d=0.985112 t=7119
+liang 	两	c=1 d=1 t=7119
+liang 	亮	c=1 d=0.99005 t=7119
+liang 	量	c=1 d=0.995012 t=7119
+liang bei 	两倍	c=1 d=1 t=7119
+liang ge 	两个	c=2 d=1.84716 t=7119
+liang zhi 	两只	c=1 d=0.995012 t=7119
+liang zhi shou 	两只手	c=1 d=0.985112 t=7119
+liao jie 	了解	c=1 d=1 t=7119
+liao liao 	聊聊	c=1 d=0.980199 t=7119
+liao liao tian er 	聊聊天儿	c=2 d=1.67162 t=7119
+liao ning 	辽宁	c=1 d=0.937067 t=7119
+liao tian 	聊天	c=2 d=1.93181 t=7119
+liao tian er 	聊天儿	c=3 d=2.61968 t=7119
+lie 	列	c=1 d=0.941765 t=7119
+lie ri dang kong 	烈日当空	c=1 d=0.937067 t=7119
+lin 	林	c=7 d=6.67903 t=7119
+lin 	淋	c=2 d=1.98506 t=7119
+lin hai 	林海	c=1 d=0.995012 t=7119
+lin ju 	邻居	c=5 d=4.66701 t=7119
+lin lao shi 	林老师	c=2 d=1.99005 t=7119
+lin li 	邻里	c=1 d=0.985112 t=7119
+lin li guan xi 	邻里关系	c=1 d=0.960789 t=7119
+lin xiang zi 	拎箱子	c=1 d=1 t=7119
+lin ya jun 	林雅君	c=2 d=1.97032 t=7119
+lin yao 	蔺瑶	c=1 d=0.99005 t=7119
+ling 	令	c=2 d=1.96079 t=7119
+ling 	零	c=1 d=0.995012 t=7119
+ling dian 	零点	c=1 d=1 t=7119
+ling hua 	零花	c=1 d=0.995012 t=7119
+ling qu 	领取	c=2 d=1.89319 t=7119
+ling ren 	令人	c=1 d=0.965605 t=7119
+ling wai 	另外	c=3 d=2.38208 t=7119
+liu 	六	c=3 d=2.94062 t=7119
+liu 	流	c=2 d=1.91708 t=7119
+liu bi ti 	流鼻涕	c=2 d=1.92639 t=7119
+liu bi xue 	流鼻血	c=1 d=0.980199 t=7119
+liu bo cheng 	刘伯承	c=1 d=0.99005 t=7119
+liu di 	留底	c=0 d=0.0869358 t=7119
+liu di ni 	留底你	c=1 d=0.873716 t=7119
+liu dian ban 	六点半	c=1 d=0.882497 t=7119
+liu lan 	浏览	c=1 d=0.99005 t=7119
+liu lang 	流浪	c=1 d=1 t=7119
+liu li 	流利	c=1 d=0.965605 t=7119
+liu mang 	流氓	c=0 d=0.097531 t=7119
+liu mang xi qi 	流氓吸气	c=1 d=0.980199 t=7119
+liu pai 	流派	c=1 d=0.99005 t=7119
+liu xin 	留心	c=1 d=0.995012 t=7119
+liu xing 	流行	c=2 d=1.75797 t=7119
+liu xue 	留学	c=1 d=0.980199 t=7119
+liu yi er tong 	六一儿童	c=1 d=0.995012 t=7119
+liu zai 	留在	c=3 d=2.81845 t=7119
+liu zhi dan 	刘志丹	c=1 d=0.99005 t=7119
+long 	龙	c=6 d=5.66633 t=7119
+long xu gou 	龙须沟	c=2 d=1.80977 t=7119
+long zhou 	龙舟	c=1 d=1 t=7119
+lou 	楼	c=4 d=2.65261 t=7119
+lu 	路	c=2 d=1.9218 t=7119
+lu 	露	c=1 d=1 t=7119
+lu chu 	露出	c=1 d=0.985112 t=7119
+lu fei 	路费	c=1 d=0.99005 t=7119
+lu kou 	路口	c=1 d=1.08264 t=7119
+lu shang 	路上	c=0 d=0.097531 t=7119
+lu yin 	录音	c=11 d=7.82582 t=7119
+lu yu 	陆羽	c=1 d=0.995012 t=7119
+luan 	乱	c=1 d=0.980199 t=7119
+lun 	论	c=1 d=0.88692 t=7119
+lun wen 	论文	c=1 d=0.869358 t=7119
+luo 	罗	c=1 d=0.99005 t=7119
+luo 	落	c=2 d=1.98506 t=7119
+luo hou 	落后	c=1 d=0.965605 t=7119
+luo tang ji 	落汤鸡	c=2 d=1.97045 t=7119
+lv 	绿	c=2 d=1.98506 t=7119
+lv guan 	旅馆	c=2 d=1.87954 t=7119
+lv nu 	绿奴	c=1 d=0.995012 t=7119
+lv xing jie hun 	旅行结婚	c=1 d=0.97531 t=7119
+lv xing she 	旅行社	c=1 d=0.99005 t=7119
+lv you 	旅游	c=6 d=4.30415 t=7119
+lv you tuan 	旅游团	c=1 d=0.995012 t=7119
+ma 	吗	c=34 d=12.5141 t=7119
+ma 	妈	c=1 d=0.891366 t=7119
+ma 	马	c=2 d=1.79311 t=7119
+ma an fu 	吗安抚	c=1 d=1 t=7119
+ma fan 	麻烦	c=6 d=5.50671 t=7119
+ma ke si 	马克思	c=2 d=1.97032 t=7119
+ma la 	麻辣	c=1 d=0.995012 t=7119
+ma ma 	妈妈	c=4 d=3.34584 t=7119
+ma po dou fu 	麻婆豆腐	c=1 d=1 t=7119
+ma shang 	马上	c=5 d=3.62338 t=7119
+mai 	买	c=8 d=5.09706 t=7119
+mai 	卖	c=1 d=0.822835 t=7119
+mai de 	买的	c=1 d=1 t=7119
+mai gan shi 	买干事	c=1 d=0.527292 t=7119
+mai guang 	卖光	c=1 d=0.960789 t=7119
+mai guang le 	卖光了	c=1 d=0.985112 t=7119
+man 	满	c=1 d=1 t=7119
+man hua 	漫画	c=2 d=1.94092 t=7119
+man man 	慢慢	c=2 d=1.92196 t=7119
+man man de 	慢慢地	c=1 d=0.878095 t=7119
+man xing 	慢行	c=1 d=1 t=7119
+man yi 	满意	c=3 d=2.74869 t=7119
+man zu 	满足	c=1 d=0.932394 t=7119
+mang 	忙	c=6 d=3.47503 t=7119
+mao 	毛	c=3 d=2.93208 t=7119
+mao 	猫	c=4 d=3.44723 t=7119
+mao bi 	毛笔	c=1 d=1.12162 t=7119
+mao bing 	毛病	c=1 d=0.995012 t=7119
+mao dun 	矛盾	c=1 d=0.995012 t=7119
+mao pi 	毛皮	c=1 d=0.798516 t=7119
+mao xiong 	毛熊	c=1 d=0.970446 t=7119
+mao ze dong 	毛泽东	c=6 d=5.6756 t=7119
+mao zhu xi 	毛主席	c=8 d=7.13578 t=7119
+mao zi 	帽子	c=1 d=0.946485 t=7119
+me 	么	c=1 d=0.802519 t=7119
+mei 	没	c=15 d=8.50771 t=7119
+mei di 	美帝	c=1 d=0.980199 t=7119
+mei ge 	每个	c=3 d=2.60993 t=7119
+mei ge xing qi 	每个星期	c=1 d=0.937067 t=7119
+mei guan xi 	没关系	c=3 d=2.4976 t=7119
+mei guo 	美国	c=2 d=1.89489 t=7119
+mei hua san nong 	梅花三弄	c=1 d=0.99005 t=7119
+mei lai 	没来	c=1 d=0.798516 t=7119
+mei li 	美丽	c=3 d=2.69631 t=7119
+mei mei 	妹妹	c=4 d=3.01942 t=7119
+mei shei 	没谁	c=0 d=0.099005 t=7119
+mei shei er 	没谁儿	c=1 d=0.995012 t=7119
+mei shi 	没事	c=8 d=5.86809 t=7119
+mei shi de 	没事的	c=1 d=0.995012 t=7119
+mei shi er 	没事儿	c=1 d=1 t=7119
+mei shuo 	没说	c=1 d=0.99005 t=7119
+mei tian 	每天	c=2 d=1.60536 t=7119
+mei wen ti 	没问题	c=1 d=0.99005 t=7119
+mei xiang dao 	没想到	c=3 d=2.53359 t=7119
+mei yin wei 	没因为	c=1 d=0.970446 t=7119
+mei yong 	没用	c=1 d=0.83527 t=7119
+mei you 	没有	c=10 d=5.72758 t=7119
+mei you ban fa 	没有办法	c=1 d=0.995012 t=7119
+men 	们	c=2 d=1.99005 t=7119
+men 	门	c=4 d=3.77382 t=7119
+men kou 	门口	c=1 d=0.970446 t=7119
+meng zi 	孟子	c=1 d=1 t=7119
+mi 	米	c=1 d=1 t=7119
+mi 	迷	c=1 d=1 t=7119
+mi gan 	迷感	c=1 d=1 t=7119
+mian 	面	c=2 d=2.107 t=7119
+mian fei 	免费	c=2 d=1.99501 t=7119
+mian jing zi 	面镜子	c=1 d=0.99005 t=7119
+mian pi 	面皮	c=3 d=2.85415 t=7119
+mian shi 	面试	c=3 d=2.93182 t=7119
+mian shi ya 	面试呀	c=1 d=0.818731 t=7119
+mian tiao 	面条	c=2 d=1.90771 t=7119
+miao 	秒	c=1 d=1 t=7119
+miao miao qiu 	喵喵球	c=1 d=1 t=7119
+mie wang 	灭亡	c=1 d=1 t=7119
+min 	民	c=0 d=0.0995012 t=7119
+min jian gu shi 	民间故事	c=1 d=0.985112 t=7119
+ming 	名	c=2 d=1.956 t=7119
+ming 	命	c=1 d=1 t=7119
+ming dan 	名单	c=1 d=0.995012 t=7119
+ming nian 	明年	c=2 d=1.97521 t=7119
+ming pai 	名牌	c=1 d=0.99005 t=7119
+ming sheng gu ji 	名胜古迹	c=3 d=1.98511 t=7119
+ming tian 	明天	c=7 d=5.30493 t=7119
+ming tian jian 	明天见	c=1 d=0.985112 t=7119
+ming wei 	名为	c=1 d=0.995012 t=7119
+ming zi 	名字	c=2 d=1.95581 t=7119
+mo 	摩	c=1 d=0.980199 t=7119
+mo 	无	c=1 d=0.99005 t=7119
+mo 	谟	c=1 d=0.980199 t=7119
+mo li hua 	茉莉花	c=3 d=2.87859 t=7119
+mo xi ge 	墨西哥	c=3 d=2.61042 t=7119
+mo zhi 	墨汁	c=3 d=2.45677 t=7119
+mou 	谋	c=3 d=2.9358 t=7119
+mu 	慕	c=1 d=0.860708 t=7119
+mu 	母	c=2 d=1.96531 t=7119
+mu 	目	c=1 d=0.980199 t=7119
+mu jian 	母舰	c=0 d=0.0960789 t=7119
+mu jian ma 	母舰吗	c=1 d=0.965605 t=7119
+mu nv 	母女	c=1 d=0.995012 t=7119
+mu qin 	母亲	c=1 d=0.865022 t=7119
+mu tou 	木头	c=1 d=0.995012 t=7119
+na 	哪	c=1 d=0.980199 t=7119
+na 	拿	c=0 d=0.0995012 t=7119
+na 	那	c=14 d=6.09549 t=7119
+na bu ding 	拿不定	c=2 d=1.97521 t=7119
+na er 	那儿	c=2 d=1.93635 t=7119
+na ge 	哪个	c=2 d=1.93143 t=7119
+na ge 	那个	c=3 d=2.45249 t=7119
+na ge ke wen 	那个课文	c=1 d=0.980199 t=7119
+na gei 	拿给	c=1 d=0.995012 t=7119
+na jiu hao 	那就好	c=1 d=0.99005 t=7119
+na li 	哪里	c=1 d=1 t=7119
+na li na li 	哪里哪里	c=1 d=1 t=7119
+na mao bi 	拿毛笔	c=1 d=1 t=7119
+na me 	那么	c=1 d=0.955997 t=7119
+na me duo 	那么多	c=0 d=0.0895834 t=7119
+na mo 	南无	c=1 d=0.995012 t=7119
+na neng 	哪能	c=1 d=1 t=7119
+na nian 	那年	c=1 d=0.980199 t=7119
+na nv ren 	那女人	c=1 d=0.937067 t=7119
+na shi 	那是	c=1 d=0.985112 t=7119
+na shi hou 	那时候	c=1 d=0.918512 t=7119
+na tai 	那台	c=0 d=0.0980199 t=7119
+na xie 	那些	c=4 d=3.82057 t=7119
+na yang 	那样	c=1 d=0.955997 t=7119
+na yang a 	那样啊	c=1 d=0.985112 t=7119
+na zhong 	那种	c=1 d=0.960789 t=7119
+nai fan 	耐烦	c=1 d=0.99005 t=7119
+nai nai 	奶奶	c=4 d=2.89896 t=7119
+nai xin 	耐心	c=2 d=1.9605 t=7119
+nan 	难	c=5 d=3.21004 t=7119
+nan chang 	南昌	c=1 d=0.995012 t=7119
+nan chang qi yi 	南昌起义	c=1 d=0.900325 t=7119
+nan dao 	难道	c=2 d=1.71304 t=7119
+nan de 	男的	c=1 d=0.970446 t=7119
+nan guo 	难过	c=8 d=6.20419 t=7119
+nan hou 	南后	c=1 d=0.995012 t=7119
+nan ren 	男人	c=1 d=0.951229 t=7119
+nan sheng 	男生	c=2 d=1.5159 t=7119
+nan wang 	难忘	c=1 d=1 t=7119
+nan zhu 	男主	c=1 d=0.980199 t=7119
+nao dong fang 	闹洞房	c=1 d=0.995012 t=7119
+nao zhong 	闹钟	c=2 d=1.9316 t=7119
+ne 	呢	c=3 d=1.91886 t=7119
+nei 	内	c=1 d=0.995012 t=7119
+nei chu 	内出	c=1 d=0.980199 t=7119
+nei zheng 	内政	c=1 d=0.932394 t=7119
+neng 	能	c=3 d=1.88323 t=7119
+neng gou 	能够	c=1 d=0.970446 t=7119
+neng li 	能力	c=1 d=1.02724 t=7119
+neng li yong dao 	能力用到	c=1 d=1 t=7119
+ni 	你	c=45 d=15.3662 t=7119
+ni chi 	你吃	c=1 d=0.878095 t=7119
+ni de 	你的	c=11 d=8.52412 t=7119
+ni de yi qie 	你的一切	c=1 d=0.99005 t=7119
+ni hao 	你好	c=14 d=8.14855 t=7119
+ni hao shi jie 	你好世界	c=1 d=1 t=7119
+ni hui 	你会	c=2 d=1.90752 t=7119
+ni jue de 	你觉得	c=2 d=1.83371 t=7119
+ni mang 	你忙	c=1 d=0.621885 t=7119
+ni mei 	你没	c=0 d=0.0891366 t=7119
+ni mei xie wan le ma 	你没写完了吗	c=1 d=0.895834 t=7119
+ni men 	你们	c=20 d=10.8125 t=7119
+ni men de 	你们的	c=1 d=0.923116 t=7119
+ni shuo de dui 	你说得对	c=1 d=0.995012 t=7119
+ni ye 	你也	c=1 d=0.99005 t=7119
+ni you 	你有	c=1 d=0.97531 t=7119
+ni zai xue xiao 	你在学校	c=1 d=0.965605 t=7119
+ni zhi dao 	你知道	c=1 d=0.941765 t=7119
+ni zui xi huan 	你最喜欢	c=1 d=0.985112 t=7119
+ni zuo wan le 	你做完了	c=1 d=0.99005 t=7119
+nian 	年	c=3 d=2.20976 t=7119
+nian jiu 	年酒	c=1 d=0.995012 t=7119
+nian jiu 	念旧	c=1 d=0.99005 t=7119
+nian la yue 	年腊月	c=1 d=0.97531 t=7119
+nian ling 	年龄	c=4 d=3.81515 t=7119
+nian qian 	年前	c=1 d=0.927743 t=7119
+nian qing 	年轻	c=2 d=1.97045 t=7119
+nian qing yi dai 	年轻一代	c=1 d=0.97531 t=7119
+niang zi 	娘子	c=1 d=1 t=7119
+niao 	鸟	c=1 d=0.923116 t=7119
+nin 	您	c=19 d=9.72042 t=7119
+ning meng 	柠檬	c=1 d=0.941765 t=7119
+niu nai 	牛奶	c=1 d=1 t=7119
+nong sang 	农桑	c=1 d=0.985112 t=7119
+nong zheng 	农政	c=1 d=0.970446 t=7119
+nu jia 	奴家	c=1 d=1 t=7119
+nu li 	努力	c=1 d=0.985112 t=7119
+nu li 	奴隶	c=1 d=1 t=7119
+nuan huo 	暖和	c=2 d=1.97516 t=7119
+nv 	女	c=2 d=1.96536 t=7119
+nv de 	女的	c=2 d=1.94092 t=7119
+nv hai 	女孩	c=1 d=0.965605 t=7119
+nv ren 	女人	c=3 d=2.02513 t=7119
+nv sheng 	女生	c=3 d=2.12642 t=7119
+nve 	虐	c=1 d=0.985112 t=7119
+o 	哦	c=23 d=10.5468 t=7119
+pa 	怕	c=3 d=2.81884 t=7119
+pai 	拍	c=1 d=0.960789 t=7119
+pai chu 	排除	c=2 d=1.97045 t=7119
+pai chu wan nan 	排除万难	c=1 d=0.99005 t=7119
+pai da 	拍打	c=1 d=0.995012 t=7119
+pai lie 	排列	c=1 d=0.937067 t=7119
+pai ming 	排名	c=1 d=1.09014 t=7119
+pai ning 	派宁	c=1 d=0.99005 t=7119
+pai zhao pian 	拍照片	c=4 d=3.43815 t=7119
+pan duan 	判断	c=2 d=1.84644 t=7119
+pan fu 	盼复	c=1 d=1 t=7119
+pang 	旁	c=1 d=0.970446 t=7119
+pang bian 	旁边	c=1 d=0.767206 t=7119
+pao bu 	跑步	c=2 d=1.89771 t=7119
+pao dao 	跑到	c=1 d=0.985112 t=7119
+pao de 	跑得	c=1 d=0.97531 t=7119
+pao hong 	炮轰	c=0 d=0.0941765 t=7119
+pao hong tuo guan ren an pai hao 	炮轰托管人安排好	c=1 d=0.946485 t=7119
+pei 	陪	c=1 d=0.995012 t=7119
+pei yi 	配以	c=1 d=1 t=7119
+peng 	碰	c=1 d=0.980199 t=7119
+peng dao 	碰到	c=2 d=1.99501 t=7119
+peng li yuan 	彭丽媛	c=1 d=1 t=7119
+peng you 	朋友	c=10 d=7.85952 t=7119
+peng you guo 	朋友过	c=1 d=1 t=7119
+peng you men 	朋友们	c=9 d=6.37276 t=7119
+pi 	皮	c=1 d=0.995012 t=7119
+pi ping 	批评	c=2 d=1.8311 t=7119
+pi qi 	脾气	c=3 d=2.87416 t=7119
+pi xie 	皮鞋	c=1 d=0.985112 t=7119
+pi yu 	批语	c=1 d=0.97531 t=7119
+pian 	片	c=1 d=1 t=7119
+pian 	骗	c=1 d=0.860708 t=7119
+piao 	票	c=1 d=1 t=7119
+piao liang 	漂亮	c=1 d=0.847894 t=7119
+pie 	撇	c=1 d=0.995012 t=7119
+pin 	品	c=1 d=1 t=7119
+pin yin 	拼音	c=1 d=1 t=7119
+ping jing shi 	平静时	c=1 d=1 t=7119
+ping lun 	评论	c=1 d=1 t=7119
+ping shi 	平时	c=7 d=5.53023 t=7119
+ping yuan 	平原	c=1 d=0.995012 t=7119
+ping zi 	瓶子	c=1 d=1 t=7119
+po bu ji dai 	迫不及待	c=1 d=1 t=7119
+po shui jie 	泼水节	c=1 d=0.995012 t=7119
+pu ren 	仆人	c=1 d=0.97531 t=7119
+pu tao 	葡萄	c=7 d=6.09348 t=7119
+pu tong hua 	普通话	c=1 d=1 t=7119
+qi 	七	c=1 d=0.951229 t=7119
+qi 	其	c=1 d=0.995012 t=7119
+qi 	器	c=1 d=0.995012 t=7119
+qi 	期	c=1 d=0.995012 t=7119
+qi 	气	c=1 d=0.941765 t=7119
+qi 	起	c=3 d=2.72234 t=7119
+qi bu de 	起不得	c=1 d=0.856415 t=7119
+qi chi hu 	齐齿呼	c=1 d=0.995012 t=7119
+qi chuang 	起床	c=2 d=1.7311 t=7119
+qi ci 	其次	c=2 d=1.27207 t=7119
+qi dian 	七点	c=2 d=1.82789 t=7119
+qi dian 	起点	c=1 d=0.891366 t=7119
+qi fei 	起飞	c=2 d=1.93124 t=7119
+qi guai 	奇怪	c=1 d=1 t=7119
+qi hou 	气候	c=1 d=0.960789 t=7119
+qi lai 	起来	c=2 d=1.98506 t=7119
+qi ma 	骑马	c=1 d=1 t=7119
+qi mo 	期末	c=1 d=0.960789 t=7119
+qi shi 	其实	c=4 d=3.09231 t=7119
+qi ta 	其他	c=3 d=2.69371 t=7119
+qi ye jia 	企业家	c=1 d=0.995012 t=7119
+qi zhong 	其中	c=5 d=4.41617 t=7119
+qi zhong 	期中	c=2 d=1.88825 t=7119
+qi zhong kao shi 	期中考试	c=2 d=1.64169 t=7119
+qi zi 	妻子	c=3 d=2.97516 t=7119
+qian 	前	c=2 d=1.97521 t=7119
+qian 	千	c=1 d=1.00811 t=7119
+qian 	钱	c=1 d=0.980199 t=7119
+qian bao 	钱包	c=1 d=0.937067 t=7119
+qian bei 	前辈	c=1 d=0.985112 t=7119
+qian bi 	铅笔	c=1 d=0.995012 t=7119
+qian e 	前额	c=1 d=1 t=7119
+qian hou 	前后	c=1 d=0.99005 t=7119
+qian mian 	前面	c=2 d=1.5811 t=7119
+qian shang wan 	千上万	c=1 d=0.946485 t=7119
+qian shi 	前十	c=1 d=1 t=7119
+qian tai 	前台	c=2 d=1.89799 t=7119
+qian tian 	前天	c=2 d=1.75706 t=7119
+qian xu 	前序	c=1 d=0.99005 t=7119
+qian yi 	歉意	c=3 d=2.95544 t=7119
+qian you 	前有	c=1 d=0.97531 t=7119
+qian zheng 	签证	c=1 d=1 t=7119
+qiang 	强	c=4 d=3.70756 t=7119
+qiang diao 	强调	c=1 d=1 t=7119
+qiang zhuang 	强壮	c=2 d=1.97045 t=7119
+qiao bu qi 	瞧不起	c=1 d=0.980199 t=7119
+qiao men 	敲门	c=1 d=1 t=7119
+qie 	切	c=1 d=0.946485 t=7119
+qie mo 	切莫	c=4 d=3.68342 t=7119
+qin 	亲	c=1 d=0.909373 t=7119
+qin ai de 	亲爱的	c=1 d=1 t=7119
+qin ba le si tan 	亲巴勒斯坦	c=1 d=0.913931 t=7119
+qin qi 	亲戚	c=1 d=0.980199 t=7119
+qin qie 	亲切	c=2 d=1.96079 t=7119
+qin wen 	亲吻	c=1 d=1 t=7119
+qing 	情	c=1 d=0.980199 t=7119
+qing 	轻	c=2 d=1.84771 t=7119
+qing 	青	c=1 d=0.97531 t=7119
+qing chu 	清楚	c=3 d=2.82187 t=7119
+qing guo 	轻过	c=1 d=0.985112 t=7119
+qing hua 	青花	c=1 d=0.99005 t=7119
+qing ke 	请客	c=1 d=0.923116 t=7119
+qing kuang 	情况	c=6 d=4.83967 t=7119
+qing ming jie 	清明节	c=1 d=1 t=7119
+qing ni 	请你	c=1 d=0.965605 t=7119
+qing nian jie 	青年节	c=1 d=0.99005 t=7119
+qing sheng 	轻声	c=1 d=0.995012 t=7119
+qing song 	轻松	c=8 d=6.32203 t=7119
+qing wen 	请问	c=4 d=3.07035 t=7119
+qing xu 	情绪	c=1 d=1 t=7119
+qing yin 	轻音	c=1 d=1 t=7119
+qing zhen si 	清真寺	c=1 d=0.985112 t=7119
+qing zhong 	轻重	c=1 d=0.985112 t=7119
+qiong 	穷	c=3 d=2.67947 t=7119
+qiong ren 	穷人	c=4 d=3.40092 t=7119
+qiu bie 	求别	c=1 d=0.995012 t=7119
+qiu shou 	秋收	c=1 d=1 t=7119
+qiu shou qi yi 	秋收起义	c=2 d=1.97531 t=7119
+qiu tian 	秋天	c=2 d=1.76721 t=7119
+qiu ye 	秋叶	c=1 d=1 t=7119
+qu 	区	c=2 d=1.89771 t=7119
+qu 	去	c=14 d=7.98341 t=7119
+qu 	取	c=1 d=0.960789 t=7119
+qu bie 	区别	c=4 d=2.67669 t=7119
+qu bu qu 	去不去	c=1 d=0.995012 t=7119
+qu chu 	取出	c=1 d=0.985112 t=7119
+qu de 	取得	c=1 d=0.965605 t=7119
+qu gai 	去改	c=1 d=0.980199 t=7119
+qu guo 	去过	c=1 d=0.995012 t=7119
+qu kan 	去看	c=2 d=1.29978 t=7119
+qu kuan ji 	取款机	c=2 d=1.99005 t=7119
+qu nian 	去年	c=3 d=2.71856 t=7119
+qu shou 	取手	c=1 d=0.995012 t=7119
+qu zheng qu 	去争取	c=1 d=1 t=7119
+qu zhong guo 	去中国	c=1 d=0.960789 t=7119
+qu zuo 	去做	c=1 d=0.985112 t=7119
+quan 	全	c=1 d=1 t=7119
+quan 	圈	c=1 d=1 t=7119
+quan 	拳	c=2 d=1.93605 t=7119
+quan mian 	全面	c=1 d=0.995012 t=7119
+quan shu 	全书	c=1 d=0.97531 t=7119
+quan xin 	全信	c=1 d=1 t=7119
+quan xin quan yi 	全心全意	c=2 d=1.95556 t=7119
+quan zu 	劝阻	c=1 d=1 t=7119
+que 	却	c=1 d=1 t=7119
+que 	确	c=1 d=0.985112 t=7119
+que 	缺	c=1 d=0.965605 t=7119
+que dian 	缺点	c=1 d=0.97531 t=7119
+que shao 	缺少	c=3 d=2.95566 t=7119
+que zheng 	确证	c=1 d=1 t=7119
+qun 	群	c=1 d=1 t=7119
+qun zhong 	群众	c=2 d=1.88094 t=7119
+qun zi 	裙子	c=2 d=1.93124 t=7119
+qun zu 	群组	c=2 d=1.94624 t=7119
+ran 	然	c=3 d=2.28529 t=7119
+ran hou 	然后	c=7 d=4.68793 t=7119
+rang 	让	c=5 d=4.15894 t=7119
+rang wo 	让我	c=2 d=1.73949 t=7119
+rang wo men 	让我们	c=1 d=0.980199 t=7119
+re 	热	c=2 d=1.7418 t=7119
+re ai 	热爱	c=2 d=1.94575 t=7119
+re nao 	热闹	c=1 d=1 t=7119
+ren 	人	c=10 d=5.5904 t=7119
+ren 	任	c=1 d=0.97531 t=7119
+ren 	认	c=1 d=0.970446 t=7119
+ren he 	任何	c=3 d=2.82807 t=7119
+ren jian 	人间	c=0 d=0.0980199 t=7119
+ren min 	人民	c=3 d=2.77791 t=7119
+ren min bi 	人民币	c=3 d=2.9358 t=7119
+ren min gong she 	人民公社	c=1 d=1 t=7119
+ren qi 	人气	c=1 d=0.970446 t=7119
+ren qing 	认清	c=1 d=0.97531 t=7119
+ren sheng 	人生	c=1 d=0.985112 t=7119
+ren shi 	认识	c=6 d=5.18795 t=7119
+ren wei 	认为	c=4 d=3.41107 t=7119
+ren wu 	人物	c=3 d=2.77916 t=7119
+ren wu 	任务	c=3 d=2.548 t=7119
+ren zhen 	认真	c=2 d=1.14709 t=7119
+reng 	仍	c=3 d=2.69761 t=7119
+reng 	扔	c=1 d=0.99005 t=7119
+reng diao 	扔掉	c=2 d=1.898 t=7119
+reng ran 	仍然	c=4 d=3.74089 t=7119
+ri ben yu 	日本语	c=1 d=0.97531 t=7119
+ri chang 	日常	c=1 d=1 t=7119
+ri li 	日历	c=3 d=2.97516 t=7119
+ri qi 	日期	c=1 d=0.995012 t=7119
+ri zi 	日子	c=1 d=0.99005 t=7119
+rong yi 	容易	c=3 d=2.86061 t=7119
+rou 	肉	c=2 d=1.9362 t=7119
+rou ren 	柔韧	c=1 d=0.955997 t=7119
+rou rou 	揉揉	c=1 d=0.960789 t=7119
+rou ruan 	柔软	c=1 d=0.960789 t=7119
+ru 	如	c=0 d=0.188839 t=7119
+ru ci 	如此	c=1 d=0.995012 t=7119
+ru guo 	如果	c=16 d=5.93124 t=7119
+ru he 	如何	c=7 d=6.54585 t=7119
+ru kou 	入口	c=2 d=1.83705 t=7119
+ru nin 	如您	c=1 d=0.927743 t=7119
+ru xiang sui su 	入乡随俗	c=1 d=0.97531 t=7119
+ru yi 	如意	c=1 d=1 t=7119
+ru yuan 	如愿	c=1 d=0.980199 t=7119
+ru zhu 	入住	c=2 d=1.95084 t=7119
+ruan 	软	c=1 d=0.955997 t=7119
+rui 	瑞	c=2 d=1.77855 t=7119
+ruo you 	若有	c=1 d=0.985112 t=7119
+sa ding ding 	萨顶顶	c=1 d=0.985112 t=7119
+sai ma 	赛马	c=1 d=0.99005 t=7119
+san 	三	c=3 d=2.23238 t=7119
+san ba fu nv jie 	三八妇女节	c=2 d=1.99005 t=7119
+san da 	三大	c=1 d=0.965605 t=7119
+san da ji lv 	三大纪律	c=4 d=3.55778 t=7119
+san da ji lv ba xiang zhu yi 	三大纪律八项注意	c=5 d=4.54677 t=7119
+san dian 	三点	c=1 d=0.980199 t=7119
+san fen 	三分	c=0 d=0.0937067 t=7119
+san ge nv 	三个女	c=1 d=1 t=7119
+san ge ri 	三个日	c=1 d=0.995012 t=7119
+san ge shui 	三个水	c=2 d=1.92639 t=7119
+san jie 	三界	c=0 d=0.099005 t=7119
+san ke 	三刻	c=1 d=0.869358 t=7119
+san kuai 	三块	c=1 d=0.99005 t=7119
+san wen 	散文	c=1 d=1 t=7119
+se 	色	c=1 d=1 t=7119
+se qing 	色情	c=1 d=0.980199 t=7119
+sha fa 	沙发	c=1 d=1 t=7119
+shan 	善	c=2 d=1.99501 t=7119
+shan 	山	c=3 d=2.8833 t=7119
+shan chu 	删除	c=1 d=1 t=7119
+shang 	上	c=7 d=6.01804 t=7119
+shang chi yin 	上齿龈	c=1 d=1 t=7119
+shang ci 	上次	c=4 d=2.53543 t=7119
+shang da xue 	上大学	c=1 d=1 t=7119
+shang dian shi 	上电视	c=0 d=0.0965605 t=7119
+shang ge 	上个	c=3 d=2.75294 t=7119
+shang ke 	上课	c=10 d=7.24742 t=7119
+shang qian 	上前	c=1 d=0.99005 t=7119
+shang qu 	上去	c=1 d=0.980199 t=7119
+shang shuo 	上说	c=1 d=0.946485 t=7119
+shang wan 	上万	c=0 d=0.0941765 t=7119
+shang wu 	上午	c=1 d=1 t=7119
+shang xin 	伤心	c=3 d=2.93137 t=7119
+shang xue 	上学	c=1 d=1 t=7119
+shao deng 	稍等	c=1 d=1 t=7119
+shao nai nai 	少奶奶	c=1 d=0.995012 t=7119
+shao nian 	少年	c=1 d=0.970446 t=7119
+she 	射	c=2 d=1.99005 t=7119
+she ding 	设定	c=2 d=1.97531 t=7119
+she gen 	舌根	c=1 d=0.99005 t=7119
+she ji 	设计	c=2 d=1.92196 t=7119
+she jie 	射界	c=1 d=0.97531 t=7119
+she jing 	射精	c=1 d=0.995012 t=7119
+she men 	射门	c=1 d=0.860708 t=7119
+she piao 	设票	c=1 d=0.995012 t=7119
+she shi 	设施	c=1 d=0.99005 t=7119
+she tou 	舌头	c=1 d=0.99005 t=7119
+she zai 	射在	c=1 d=1 t=7119
+she zhi 	设置	c=4 d=3.65226 t=7119
+shei 	谁	c=1 d=0.995012 t=7119
+shei shi 	谁是	c=1 d=0.722527 t=7119
+shen 	深	c=1 d=0.965605 t=7119
+shen 	神	c=1 d=0.985112 t=7119
+shen 	身	c=2 d=1.82789 t=7119
+shen bian 	身边	c=1 d=0.97531 t=7119
+shen biao 	深表	c=1 d=0.980199 t=7119
+shen hou 	深厚	c=1 d=0.913931 t=7119
+shen me 	什么	c=16 d=8.33908 t=7119
+shen me ke 	什么科	c=0 d=0.097531 t=7119
+shen me ke ben ya 	什么课本呀	c=1 d=0.878095 t=7119
+shen me ke ne gou 	什么科呢狗	c=1 d=0.980199 t=7119
+shen me ren 	什么人	c=1 d=1 t=7119
+shen shan 	神山	c=1 d=0.985112 t=7119
+shen shou 	深受	c=3 d=2.91179 t=7119
+shen ti 	身体	c=2 d=1.95072 t=7119
+shen zhi 	甚至	c=2 d=1.97516 t=7119
+sheng 	剩	c=3 d=2.67662 t=7119
+sheng 	升	c=1 d=0.995012 t=7119
+sheng 	圣	c=1 d=1.07431 t=7119
+sheng 	生	c=1 d=1 t=7119
+sheng 	省	c=3 d=2.8931 t=7119
+sheng 	胜	c=1 d=0.97531 t=7119
+sheng bu dao 	升不到	c=1 d=0.995012 t=7119
+sheng ci 	生词	c=4 d=2.45527 t=7119
+sheng ci de shi hou 	生词的时候	c=1 d=0.927743 t=7119
+sheng dan jie 	圣诞节	c=2 d=1.10868 t=7119
+sheng dan jie yi hou 	圣诞节以后	c=1 d=0.955997 t=7119
+sheng diao 	声调	c=4 d=2.74681 t=7119
+sheng huo 	生活	c=4 d=3.30699 t=7119
+sheng huo de 	生活得	c=1 d=0.860708 t=7119
+sheng li 	胜利	c=1 d=0.97531 t=7119
+sheng ming 	声明	c=1 d=0.900325 t=7119
+sheng ming 	生命	c=1 d=0.895834 t=7119
+sheng ri 	生日	c=7 d=3.78423 t=7119
+sheng ri kuai le 	生日快乐	c=1 d=0.99005 t=7119
+sheng san jie 	圣三界	c=1 d=0.995012 t=7119
+sheng shi 	盛世	c=6 d=5.76303 t=7119
+sheng xia 	剩下	c=1 d=1 t=7119
+sheng xia 	盛夏	c=1 d=0.99005 t=7119
+sheng yi 	生意	c=4 d=3.53398 t=7119
+sheng yin 	声音	c=1 d=0.970446 t=7119
+shi 	事	c=6 d=4.70219 t=7119
+shi 	使	c=4 d=3.67977 t=7119
+shi 	市	c=1 d=0.941765 t=7119
+shi 	时	c=4 d=3.24134 t=7119
+shi 	是	c=51 d=18.0698 t=7119
+shi 	示	c=1 d=0.99005 t=7119
+shi 	试	c=2 d=1.77185 t=7119
+shi an 	是按	c=1 d=0.831104 t=7119
+shi bu shi 	是不是	c=1 d=0.965605 t=7119
+shi de 	是的	c=1 d=1 t=7119
+shi duo 	十多	c=1 d=0.985112 t=7119
+shi er sheng 	十二生	c=1 d=0.995012 t=7119
+shi er sheng xiao 	十二生肖	c=2 d=1.95123 t=7119
+shi fou 	是否	c=4 d=3.43332 t=7119
+shi fu 	师傅	c=2 d=1.97531 t=7119
+shi he 	适合	c=6 d=5.25416 t=7119
+shi hong 	事红	c=1 d=0.97531 t=7119
+shi hou 	时候	c=5 d=4.0721 t=7119
+shi ji 	十几	c=1 d=1 t=7119
+shi ji 	实际	c=2 d=1.95072 t=7119
+shi jian 	实践	c=36 d=21.7327 t=7119
+shi jian 	时间	c=6 d=5.3435 t=7119
+shi jian an pai 	时间安排	c=1 d=0.99005 t=7119
+shi jian biao 	时间表	c=1 d=1 t=7119
+shi jian kou yu de 	实践口语的	c=1 d=0.955997 t=7119
+shi jiao 	视角	c=1 d=0.951229 t=7119
+shi jie 	世界	c=4 d=3.43533 t=7119
+shi jie shang 	世界上	c=3 d=2.50453 t=7119
+shi leng shi re 	时冷时热	c=1 d=0.965605 t=7119
+shi mian mai fu 	十面埋伏	c=1 d=0.995012 t=7119
+shi pin 	视频	c=1 d=1 t=7119
+shi pin 	食品	c=1 d=1.09061 t=7119
+shi pin ji 	食品既	c=1 d=0.97531 t=7119
+shi qing 	事情	c=6 d=4.48567 t=7119
+shi shei 	是谁	c=1 d=0.960789 t=7119
+shi shen me 	是什么	c=1 d=1 t=7119
+shi shi 	事实	c=1 d=0.995012 t=7119
+shi shi 	试试	c=1 d=0.985112 t=7119
+shi tang 	食堂	c=3 d=2.84177 t=7119
+shi ti 	尸体	c=2 d=1.8883 t=7119
+shi tou 	湿透	c=1 d=0.995012 t=7119
+shi tou 	石头	c=1 d=0.955997 t=7119
+shi wan 	十万	c=1 d=1 t=7119
+shi wang 	失望	c=1 d=0.99005 t=7119
+shi wei le 	是为了	c=6 d=4.4615 t=7119
+shi wu 	食物	c=3 d=2.75627 t=7119
+shi ye 	事业	c=1 d=0.99005 t=7119
+shi yi jian 	试衣间	c=1 d=0.923116 t=7119
+shi yi yang 	是一样	c=1 d=0.965605 t=7119
+shi ying 	适应	c=5 d=4.64145 t=7119
+shi zai 	实在	c=1 d=0.941765 t=7119
+shou 	手	c=2 d=1.96561 t=7119
+shou 	收	c=2 d=1.9605 t=7119
+shou 	瘦	c=1 d=0.995012 t=7119
+shou bu liao 	受不了	c=1 d=0.985112 t=7119
+shou dao 	收到	c=1 d=0.99005 t=7119
+shou dao qian 	收到钱	c=1 d=0.900325 t=7119
+shou dou 	手都	c=1 d=0.995012 t=7119
+shou du 	首都	c=1 d=1 t=7119
+shou ge 	首歌	c=1 d=0.985112 t=7119
+shou huan ying 	受欢迎	c=1 d=0.97531 t=7119
+shou huo yuan 	售货员	c=2 d=1.89413 t=7119
+shou ji 	手机	c=1 d=0.865022 t=7119
+shou le 	受了	c=1 d=0.995012 t=7119
+shou ru 	收入	c=1 d=0.995012 t=7119
+shou shi 	收拾	c=1 d=0.985112 t=7119
+shou xian 	首先	c=4 d=2.43466 t=7119
+shou xu 	手续	c=1 d=0.995012 t=7119
+shou yao 	首要	c=1 d=0.923116 t=7119
+shou zai 	受灾	c=1 d=0.965605 t=7119
+shou zang 	收藏	c=1 d=1 t=7119
+shou zhu dai tu 	守株待兔	c=1 d=0.970446 t=7119
+shou zu 	手足	c=1 d=1 t=7119
+shou zui 	受罪	c=1 d=0.970446 t=7119
+shu 	书	c=11 d=7.01804 t=7119
+shu 	数	c=1 d=0.97531 t=7119
+shu 	输	c=1 d=1 t=7119
+shu bao 	书包	c=1 d=0.932394 t=7119
+shu dao 	书道	c=1 d=1 t=7119
+shu fa 	书法	c=14 d=11.1035 t=7119
+shu fa bi sai 	书法比赛	c=1 d=0.99005 t=7119
+shu fu 	舒服	c=2 d=1.77185 t=7119
+shu liang 	数量	c=1 d=1 t=7119
+shu mian 	书面	c=1 d=0.995012 t=7119
+shu nv 	熟女	c=1 d=0.955997 t=7119
+shu pai ming 	书排名	c=1 d=0.980199 t=7119
+shu qian 	书签	c=1 d=0.980199 t=7119
+shu ru 	输入	c=1 d=0.985112 t=7119
+shu xi 	熟悉	c=4 d=3.56401 t=7119
+shu xiang 	书香	c=1 d=0.995012 t=7119
+shu ying 	输赢	c=1 d=0.927743 t=7119
+shua 	耍	c=2 d=1.88331 t=7119
+shuai 	帅	c=1 d=0.740818 t=7119
+shuang 	双	c=2 d=1.95556 t=7119
+shuang 	霜	c=1 d=1 t=7119
+shuang xi 	双喜	c=6 d=5.44914 t=7119
+shui 	水	c=1 d=0.941765 t=7119
+shui 	睡	c=1 d=0.99005 t=7119
+shui 	谁	c=2 d=1.99501 t=7119
+shui guo 	水果	c=1 d=1 t=7119
+shui jiao 	水饺	c=1 d=1 t=7119
+shui jiao 	睡觉	c=4 d=3.33537 t=7119
+shui tong 	水桶	c=1 d=1 t=7119
+shui wu jiao 	睡午觉	c=1 d=1 t=7119
+shui zhu yu 	水煮鱼	c=1 d=0.97531 t=7119
+shui zou 	睡走	c=1 d=0.995012 t=7119
+shun 	顺	c=1 d=1 t=7119
+shun bian 	顺便	c=5 d=4.44851 t=7119
+shun cong 	顺从	c=2 d=1.93239 t=7119
+shun xu 	顺序	c=2 d=1.71048 t=7119
+shuo 	说	c=11 d=5.71493 t=7119
+shuo de 	说的	c=1 d=0.955997 t=7119
+shuo de dui 	说得对	c=1 d=0.995012 t=7119
+shuo han yu 	说汉语	c=1 d=0.65377 t=7119
+shuo hua 	说话	c=1 d=1 t=7119
+shuo huo yuan 	说货源	c=1 d=0.97531 t=7119
+shuo le 	说了	c=1 d=0.88692 t=7119
+shuo ming 	说明	c=2 d=1.95072 t=7119
+shuo shi 	硕士	c=1 d=0.99005 t=7119
+shuo shuo 	说说	c=1 d=0.99005 t=7119
+shuo shuo ba 	说说吧	c=1 d=0.923116 t=7119
+si 	四	c=5 d=3.88583 t=7119
+si 	死	c=1 d=0.970446 t=7119
+si chao 	思潮	c=1 d=0.99005 t=7119
+si chuan 	四川	c=1 d=0.980199 t=7119
+si ji jie 	四季节	c=1 d=0.995012 t=7119
+si sheng zi 	私生子	c=1 d=0.955997 t=7119
+si shi wu 	四十五	c=1 d=0.923116 t=7119
+si xiang 	思想	c=1 d=1 t=7119
+si xiao long 	四小龙	c=2 d=1.73007 t=7119
+song 	松	c=1 d=0.99005 t=7119
+song 	送	c=6 d=5.19353 t=7119
+song chao 	宋朝	c=1 d=0.995012 t=7119
+song dao le 	送到了	c=1 d=0.995012 t=7119
+song ling 	松岭	c=1 d=0.995012 t=7119
+su du 	速度	c=1 d=0.995012 t=7119
+su lian 	苏联	c=1 d=0.985112 t=7119
+su liao dai 	塑料袋	c=2 d=1.84771 t=7119
+su she 	宿舍	c=1 d=0.995012 t=7119
+su xiu 	苏修	c=1 d=0.99005 t=7119
+su zhou 	苏州	c=1 d=0.99005 t=7119
+suan 	酸	c=1 d=0.97531 t=7119
+suan shi 	算是	c=1 d=0.909373 t=7119
+sui 	虽	c=1 d=0.980199 t=7119
+sui bian 	随便	c=2 d=1.8793 t=7119
+sui hou 	随后	c=1 d=0.97531 t=7119
+sui ran 	虽然	c=4 d=3.34307 t=7119
+sui yi 	随意	c=1 d=0.941765 t=7119
+sun wu kong 	孙悟空	c=2 d=1.96079 t=7119
+suo 	所	c=2 d=1.9316 t=7119
+suo yi 	所以	c=9 d=4.49836 t=7119
+suo you 	所有	c=2 d=1.75654 t=7119
+ta 	他	c=17 d=9.42827 t=7119
+ta 	她	c=17 d=9.32087 t=7119
+ta 	它	c=7 d=5.49254 t=7119
+ta de 	他的	c=2 d=1.71126 t=7119
+ta de ma ma 	他的妈妈	c=1 d=0.882497 t=7119
+ta hui 	他会	c=7 d=6.16924 t=7119
+ta hui chang ge a 	他会唱歌啊	c=1 d=1 t=7119
+ta ma de 	他妈的	c=2 d=1.96062 t=7119
+ta ma ma 	他妈妈	c=1 d=0.83527 t=7119
+ta men 	他们	c=19 d=8.58233 t=7119
+ta men 	它们	c=2 d=1.81058 t=7119
+ta men jiu shi 	他们就是	c=1 d=0.960789 t=7119
+ta shi 	他是	c=1 d=0.960789 t=7119
+tai 	台	c=1 d=0.99005 t=7119
+tai 	太	c=3 d=2.02967 t=7119
+tai 	态	c=1 d=1 t=7119
+tai du 	态度	c=3 d=2.72108 t=7119
+tai guo 	泰国	c=1 d=0.937067 t=7119
+tai hao le 	太好了	c=2 d=1.7418 t=7119
+tai ji quan 	太极拳	c=1 d=0.995012 t=7119
+tai kuai 	太快	c=1 d=1 t=7119
+tai lan 	太懒	c=1 d=0.995012 t=7119
+tai lei huai 	太累坏	c=1 d=0.946485 t=7119
+tai ping 	太平	c=1 d=0.995012 t=7119
+tai ping sheng shi 	太平盛世	c=2 d=1.95581 t=7119
+tai tai le 	太太乐	c=1 d=1 t=7119
+tai tian 	太甜	c=2 d=1.93131 t=7119
+tai wan 	太晚	c=1 d=0.985112 t=7119
+tai wan le 	太晚了	c=2 d=1.89771 t=7119
+tai yang 	太阳	c=1 d=1.03139 t=7119
+tai yang sheng 	太阳升	c=1 d=1 t=7119
+tan 	谈	c=1 d=1.00739 t=7119
+tan gang qin 	弹钢琴	c=1 d=0.99005 t=7119
+tan kang qi 	谈扛起	c=1 d=0.985112 t=7119
+tan lun 	谈论	c=1 d=0.980199 t=7119
+tan tan 	谈谈	c=4 d=3.91608 t=7119
+tang 	汤	c=1 d=1 t=7119
+tang 	糖	c=2 d=1.88468 t=7119
+tang chao 	唐朝	c=1 d=0.99005 t=7119
+tang yuan 	汤圆	c=1 d=0.995012 t=7119
+tao 	逃	c=1 d=0.891366 t=7119
+tao lun 	讨论	c=1 d=0.941765 t=7119
+tao yan 	讨厌	c=1 d=0.985112 t=7119
+te bie 	特别	c=2 d=1.72138 t=7119
+te bie shi 	特别是	c=1 d=0.99005 t=7119
+te dian 	特点	c=2 d=1.97045 t=7119
+te jia pin 	特价品	c=1 d=1 t=7119
+te shu 	特殊	c=1 d=1 t=7119
+teng 	疼	c=3 d=2.8975 t=7119
+teng tong 	疼痛	c=1 d=0.985112 t=7119
+ti 	提	c=1 d=0.904837 t=7119
+ti 	踢	c=1 d=0.995012 t=7119
+ti 	题	c=1 d=0.941765 t=7119
+ti chu 	提出	c=2 d=1.99501 t=7119
+ti gao 	提高	c=2 d=1.94128 t=7119
+ti ji 	提及	c=1 d=1 t=7119
+ti jiao 	提交	c=1 d=0.995012 t=7119
+ti li 	体力	c=1 d=1 t=7119
+ti qian 	提前	c=3 d=2.5392 t=7119
+ti xie 	提携	c=1 d=0.980199 t=7119
+ti xing 	提醒	c=4 d=3.64455 t=7119
+ti yi 	提议	c=1 d=0.985112 t=7119
+ti yu 	体育	c=1 d=0.995012 t=7119
+ti yu guan 	体育馆	c=2 d=1.95556 t=7119
+ti zu qiu 	踢足球	c=1 d=0.970446 t=7119
+tian 	天	c=3 d=2.48541 t=7119
+tian 	甜	c=2 d=1.89534 t=7119
+tian an men 	天安门	c=1 d=0.995012 t=7119
+tian an men guang chang 	天安门广场	c=2 d=1.52036 t=7119
+tian li 	田里	c=1 d=0.970446 t=7119
+tian lu 	天路	c=1 d=1 t=7119
+tian qi 	天气	c=1 d=0.99005 t=7119
+tian shang 	天上	c=0 d=0.099005 t=7119
+tian shang tai yang 	天上太阳	c=1 d=0.995012 t=7119
+tian tian 	天天	c=1 d=0.843665 t=7119
+tian tian 	甜甜	c=1 d=1 t=7119
+tian xia 	天下	c=1 d=0.995012 t=7119
+tian xie 	填写	c=1 d=0.99005 t=7119
+tiao 	条	c=1 d=0.99005 t=7119
+tiao 	跳	c=1 d=0.99005 t=7119
+tiao jian 	条件	c=1 d=0.965605 t=7119
+tiao jiao 	调教	c=1 d=0.995012 t=7119
+tiao jie 	条街	c=1 d=0.960789 t=7119
+tiao wu 	跳舞	c=5 d=4.82479 t=7119
+tiao xiu 	调休	c=1 d=0.980199 t=7119
+tie 	铁	c=1 d=0.995012 t=7119
+tie zhi 	贴纸	c=2 d=1.8606 t=7119
+tie zi 	帖子	c=1 d=0.904837 t=7119
+ting 	停	c=3 d=2.80278 t=7119
+ting 	厅	c=1 d=0.980199 t=7119
+ting 	听	c=1 d=0.995012 t=7119
+ting 	挺	c=4 d=3.5647 t=7119
+ting bu dong 	听不懂	c=1 d=0.860708 t=7119
+ting dao le 	听到了	c=1 d=0.985112 t=7119
+ting hua 	听话	c=1 d=0.980199 t=7119
+ting jian 	听见	c=1 d=0.822835 t=7119
+ting li 	听力	c=1 d=0.856415 t=7119
+ting shuo 	听说	c=2 d=1.7474 t=7119
+ting yin yue 	听音乐	c=1 d=0.873716 t=7119
+ting zhi 	停止	c=2 d=1.95101 t=7119
+ting zhi hui 	听指挥	c=1 d=0.965605 t=7119
+tong 	桶	c=1 d=0.965605 t=7119
+tong 	痛	c=4 d=3.84589 t=7119
+tong 	通	c=5 d=4.52794 t=7119
+tong bu 	同步	c=1 d=0.995012 t=7119
+tong chang 	通常	c=1 d=0.960789 t=7119
+tong gen 	同根	c=1 d=0.995012 t=7119
+tong guo 	通过	c=4 d=2.65593 t=7119
+tong kao 	统考	c=1 d=1 t=7119
+tong kuai 	痛快	c=2 d=1.91751 t=7119
+tong shi 	同事	c=1 d=0.960789 t=7119
+tong su 	通俗	c=1 d=1 t=7119
+tong tian 	通天	c=0 d=0.0985112 t=7119
+tong xue men 	同学们	c=2 d=1.64054 t=7119
+tong yi 	同意	c=2 d=1.97531 t=7119
+tong zhi 	同志	c=1 d=0.985112 t=7119
+tong zhi 	通知	c=2 d=1.94128 t=7119
+tou 	头	c=2 d=1.97531 t=7119
+tou fa 	头发	c=1 d=1 t=7119
+tou teng 	头疼	c=1 d=0.970446 t=7119
+tu 	图	c=1 d=0.995012 t=7119
+tu di 	土地	c=2 d=1.9178 t=7119
+tu pian 	图片	c=3 d=2.58947 t=7119
+tu ran 	突然	c=4 d=3.87813 t=7119
+tu shu guan 	图书馆	c=2 d=1.75935 t=7119
+tu su jiu 	屠苏酒	c=1 d=0.980199 t=7119
+tu zi 	兔子	c=1 d=0.937067 t=7119
+tuan 	团	c=2 d=1.75532 t=7119
+tuan dai 	团带	c=1 d=0.965605 t=7119
+tui 	腿	c=5 d=4.49549 t=7119
+tui 	退	c=1 d=0.927743 t=7119
+tui chi 	推迟	c=2 d=1.88544 t=7119
+tui chu 	退出	c=1 d=1 t=7119
+tui fang 	退房	c=1 d=1 t=7119
+tui jian 	推荐	c=2 d=1.96531 t=7119
+tuo fa 	脱发	c=0 d=0.0985112 t=7119
+tuo fu 	托付	c=1 d=0.995012 t=7119
+tuo guan ren 	托管人	c=0 d=0.0941765 t=7119
+tuo zhan 	拓展	c=3 d=2.41674 t=7119
+wa 	哇	c=2 d=1.81163 t=7119
+wa an shang 	哇安上	c=1 d=0.970446 t=7119
+wa sai 	哇噻	c=4 d=3.65683 t=7119
+wai 	外	c=2 d=1.75527 t=7119
+wai mai 	外卖	c=2 d=1.84163 t=7119
+wai mian 	外面	c=1 d=1 t=7119
+wai na tai 	外那台	c=1 d=0.985112 t=7119
+wai po 	外婆	c=1 d=0.995012 t=7119
+wan 	万	c=4 d=3.92189 t=7119
+wan 	完	c=4 d=3.16181 t=7119
+wan an 	晚安	c=1 d=1 t=7119
+wan cheng 	完成	c=4 d=3.69226 t=7119
+wan dan 	完蛋	c=1 d=1 t=7119
+wan er 	玩儿	c=4 d=3.39362 t=7119
+wan fan 	晚饭	c=1 d=0.571209 t=7119
+wan shang 	晚上	c=3 d=2.52333 t=7119
+wan shang hao 	晚上好	c=2 d=1.46076 t=7119
+wan shi 	完事	c=0 d=0.0980199 t=7119
+wan shi kai tou 	完事开头	c=2 d=1.93654 t=7119
+wan xiao 	玩笑	c=1 d=0.980199 t=7119
+wan zheng 	完整	c=1 d=0.97531 t=7119
+wang 	往	c=2 d=1.8385 t=7119
+wang 	忘	c=2 d=1.59896 t=7119
+wang 	王	c=4 d=2.99407 t=7119
+wang ge 	网格	c=1 d=0.980199 t=7119
+wang ji 	忘记	c=2 d=1.23781 t=7119
+wang le 	忘了	c=1 d=0.895834 t=7119
+wang luo 	网络	c=1 d=0.970446 t=7119
+wang mu gan 	王木干	c=1 d=1 t=7119
+wang qian zou 	往前走	c=1 d=1 t=7119
+wang shang 	往上	c=1 d=0.995012 t=7119
+wang wang 	往往	c=2 d=1.96079 t=7119
+wang you 	网友	c=1 d=0.790571 t=7119
+wang zhao jun 	王昭君	c=1 d=0.985112 t=7119
+wei 	为	c=10 d=8.24971 t=7119
+wei 	位	c=1 d=0.99005 t=7119
+wei 	围	c=1 d=0.980199 t=7119
+wei 	未	c=1 d=0.995012 t=7119
+wei 	维	c=1 d=0.970446 t=7119
+wei 	韦	c=1 d=0.985112 t=7119
+wei ba 	尾巴	c=2 d=1.72057 t=7119
+wei da 	伟大	c=1 d=1 t=7119
+wei dao 	味道	c=1 d=1 t=7119
+wei du 	未读	c=2 d=1.96062 t=7119
+wei er 	味儿	c=1 d=1 t=7119
+wei jiao 	围剿	c=1 d=0.960789 t=7119
+wei lai 	未来	c=1 d=1 t=7119
+wei le 	为了	c=8 d=4.47822 t=7119
+wei shen me 	为什么	c=5 d=3.41051 t=7119
+wei xian 	危险	c=5 d=4.50714 t=7119
+wei xiang 	味香	c=1 d=0.995012 t=7119
+wei xiao zhe 	微笑着	c=0 d=0.0927743 t=7119
+wei xiao zhe de 	微笑着的	c=1 d=0.932394 t=7119
+wei xiu 	维修	c=3 d=2.88304 t=7119
+wei zhi 	位置	c=2 d=1.89307 t=7119
+wen 	文	c=2 d=1.31085 t=7119
+wen 	问	c=12 d=6.92962 t=7119
+wen chuang 	文创	c=1 d=0.965605 t=7119
+wen du 	温度	c=1 d=1 t=7119
+wen fang si bao 	文房四宝	c=3 d=2.96546 t=7119
+wen fu 	温服	c=1 d=0.995012 t=7119
+wen ni 	问你	c=1 d=0.951229 t=7119
+wen nuan 	温暖	c=1 d=0.970446 t=7119
+wen ti 	问题	c=14 d=6.03004 t=7119
+wen ti ma 	问题吗	c=0 d=0.0995012 t=7119
+wen xiang 	闻香	c=4 d=3.68933 t=7119
+wen xue 	文学	c=2 d=1.84209 t=7119
+wen yi wen 	问一问	c=4 d=3.24339 t=7119
+wo 	我	c=159 d=29.2724 t=7119
+wo bu 	我不	c=1 d=0.960789 t=7119
+wo cai 	我才	c=1 d=0.631284 t=7119
+wo cao 	卧槽	c=1 d=0.995012 t=7119
+wo cao 	我肏	c=2 d=1.99501 t=7119
+wo de 	我的	c=15 d=9.30136 t=7119
+wo de fang jian 	我的房间	c=2 d=1.48578 t=7119
+wo de li jie 	我的理解	c=1 d=0.951229 t=7119
+wo de yi si 	我的意思	c=1 d=0.995012 t=7119
+wo di di 	我弟弟	c=1 d=0.923116 t=7119
+wo jia 	我家	c=1 d=0.965605 t=7119
+wo jiao ao 	我骄傲	c=1 d=0.99005 t=7119
+wo jie jie 	我姐姐	c=1 d=0.909373 t=7119
+wo jue de 	我觉得	c=6 d=4.49233 t=7119
+wo kan yi xia 	我看一下	c=1 d=1 t=7119
+wo ke yi 	我可以	c=1 d=0.856415 t=7119
+wo mei 	我没	c=1 d=0.980199 t=7119
+wo mei you 	我没有	c=1 d=0.806541 t=7119
+wo men 	我们	c=33 d=11.9366 t=7119
+wo men ban 	我们班	c=1 d=0.937067 t=7119
+wo xi huan 	我喜欢	c=1 d=0.99005 t=7119
+wo xi wang 	我希望	c=1 d=0.748264 t=7119
+wo xiang 	我想	c=2 d=1.67513 t=7119
+wo yao 	我要	c=5 d=3.03678 t=7119
+wo ye 	我也	c=1 d=0.99005 t=7119
+wo ye shi 	我也是	c=1 d=0.995012 t=7119
+wu 	五	c=1 d=0.99005 t=7119
+wu 	无	c=4 d=3.68857 t=7119
+wu bi shu ru 	五笔输入	c=1 d=1 t=7119
+wu dao 	舞蹈	c=1 d=0.995012 t=7119
+wu fa 	无法	c=2 d=1.94176 t=7119
+wu geng 	五更	c=0 d=0.0980199 t=7119
+wu hui 	舞会	c=1 d=0.97531 t=7119
+wu hui 	误会	c=3 d=2.39423 t=7119
+wu liao 	无聊	c=1 d=1 t=7119
+wu long 	乌龙	c=2 d=1.93181 t=7119
+wu lun 	无论	c=3 d=2.77236 t=7119
+wu pin 	物品	c=1 d=1 t=7119
+wu qian 	五千	c=1 d=0.882497 t=7119
+wu qian kuai 	五千块	c=1 d=0.794534 t=7119
+wu song 	雾凇	c=1 d=0.995012 t=7119
+wu xian 	无限	c=1 d=1 t=7119
+xi 	息	c=1 d=0.99005 t=7119
+xi 	洗	c=0 d=0.099005 t=7119
+xi 	西	c=1 d=0.965605 t=7119
+xi ai 	喜爱	c=1 d=1 t=7119
+xi ban ya 	西班牙	c=1 d=0.965605 t=7119
+xi ei e 	西欸饿	c=1 d=0.965605 t=7119
+xi guan 	习惯	c=3 d=1.98073 t=7119
+xi huan 	喜欢	c=10 d=6.48345 t=7119
+xi ju 	戏剧	c=4 d=2.67512 t=7119
+xi lie 	系列	c=1 d=0.985112 t=7119
+xi mao bi 	洗毛笔	c=1 d=0.995012 t=7119
+xi qi 	习气	c=1 d=0.97531 t=7119
+xi qi 	吸气	c=0 d=0.097531 t=7119
+xi sheng 	牺牲	c=1 d=0.99005 t=7119
+xi sheng zi 	细绳子	c=1 d=0.951229 t=7119
+xi shou 	洗手	c=1 d=0.995012 t=7119
+xi su 	习俗	c=1 d=1 t=7119
+xi wang 	希望	c=6 d=4.41147 t=7119
+xi yi fu 	洗衣服	c=1 d=0.843665 t=7119
+xi yi gu 	西一股	c=1 d=0.839457 t=7119
+xi yi ji 	洗衣机	c=1 d=1 t=7119
+xi yin 	吸引	c=2 d=1.91683 t=7119
+xi you ji 	西游记	c=1 d=1 t=7119
+xia 	下	c=4 d=3.79312 t=7119
+xia 	夏	c=1 d=1 t=7119
+xia chao 	夏朝	c=1 d=0.970446 t=7119
+xia ci 	下次	c=6 d=4.36776 t=7119
+xia ding jue xin 	下定决心	c=2 d=1.94099 t=7119
+xia ge 	下个	c=2 d=1.75235 t=7119
+xia ge yue 	下个月	c=2 d=1.87114 t=7119
+xia ke 	下课	c=3 d=2.8329 t=7119
+xia lai 	下来	c=2 d=1.91285 t=7119
+xia mian 	下面	c=1 d=0.985112 t=7119
+xia wu 	下午	c=3 d=2.59458 t=7119
+xia wu hao 	下午好	c=3 d=2.299 t=7119
+xia xing qi 	下星期	c=1 d=1 t=7119
+xia yu 	下雨	c=1 d=1 t=7119
+xian 	仙	c=1 d=0.995012 t=7119
+xian 	先	c=3 d=2.74805 t=7119
+xian 	咸	c=2 d=1.93124 t=7119
+xian 	线	c=1 d=1 t=7119
+xian bei 	先辈	c=2 d=1.99005 t=7119
+xian hua 	鲜花	c=2 d=1.88872 t=7119
+xian ji 	县级	c=1 d=0.99005 t=7119
+xian mu 	羡慕	c=7 d=5.92432 t=7119
+xian qi 	嫌弃	c=1 d=1 t=7119
+xian shi 	现实	c=1 d=0.970446 t=7119
+xian xue 	献血	c=1 d=0.941765 t=7119
+xian zai 	现在	c=7 d=3.66117 t=7119
+xian zai de 	现在的	c=0 d=0.0891366 t=7119
+xian zai de shi qing 	现在的事情	c=1 d=0.895834 t=7119
+xiang 	像	c=2 d=1.95072 t=7119
+xiang 	向	c=1 d=1 t=7119
+xiang 	想	c=18 d=10.4443 t=7119
+xiang 	箱	c=1 d=0.995012 t=7119
+xiang 	象	c=1 d=1 t=7119
+xiang 	香	c=1 d=1 t=7119
+xiang chu 	相处	c=1 d=1 t=7119
+xiang fa 	想法	c=1 d=1 t=7119
+xiang fan 	相反	c=1 d=0.995012 t=7119
+xiang guo 	想过	c=1 d=0.666977 t=7119
+xiang hu 	相互	c=1 d=0.985112 t=7119
+xiang ji 	相机	c=17 d=13.2347 t=7119
+xiang jia 	相加	c=1 d=0.955997 t=7119
+xiang jie he 	相结合	c=1 d=0.985112 t=7119
+xiang mu 	项目	c=1 d=0.965605 t=7119
+xiang qi 	想起	c=1 d=0.995012 t=7119
+xiang qian 	向前	c=1 d=1 t=7119
+xiang qian jin 	向前进	c=1 d=0.99005 t=7119
+xiang ran 	想然	c=1 d=0.839457 t=7119
+xiang wai 	像外	c=1 d=0.970446 t=7119
+xiang xiang 	想想	c=4 d=3.34831 t=7119
+xiang yong 	享用	c=1 d=0.970446 t=7119
+xiao 	小	c=5 d=4.27824 t=7119
+xiao 	笑	c=1 d=0.985112 t=7119
+xiao 	肖	c=1 d=1 t=7119
+xiao bai yang 	小白杨	c=1 d=0.995012 t=7119
+xiao bao 	小报	c=1 d=0.99005 t=7119
+xiao cheng 	小城	c=1 d=0.937067 t=7119
+xiao chi 	小吃	c=5 d=3.75007 t=7119
+xiao de 	小的	c=1 d=0.97531 t=7119
+xiao guo 	效果	c=1 d=1 t=7119
+xiao hong shu 	小红书	c=2 d=1.9802 t=7119
+xiao huo 	小伙	c=1 d=0.99005 t=7119
+xiao huo er 	小伙儿	c=1 d=0.937067 t=7119
+xiao jie 	小姐	c=1 d=0.995012 t=7119
+xiao mao 	小猫	c=1 d=0.965605 t=7119
+xiao sheng 	小声	c=1 d=0.970446 t=7119
+xiao shi hou 	小时候	c=1 d=1 t=7119
+xiao shuo 	小说	c=1 d=0.960789 t=7119
+xiao si le 	笑死了	c=2 d=1.95551 t=7119
+xiao xi 	消息	c=4 d=3.7604 t=7119
+xiao xiao 	小小	c=1 d=0.970446 t=7119
+xiao xue 	小学	c=1 d=1 t=7119
+xiao yu 	小于	c=1 d=0.960789 t=7119
+xiao yuan 	校园	c=1 d=0.970446 t=7119
+xiao yuan wang 	小愿望	c=1 d=0.937067 t=7119
+xiao zhan 	肖战	c=1 d=0.97531 t=7119
+xiao zhuan 	小篆	c=1 d=1 t=7119
+xie 	些	c=2 d=1.87751 t=7119
+xie han zi 	写汉字	c=1 d=0.818731 t=7119
+xie hao 	写好	c=1 d=0.83527 t=7119
+xie wan le ma 	写完了吗	c=0 d=0.0891366 t=7119
+xie xie 	谢谢	c=48 d=25.4105 t=7119
+xie xie lao shi 	谢谢老师	c=1 d=0.985112 t=7119
+xie xie ni 	谢谢你	c=16 d=11.6303 t=7119
+xie xie nin 	谢谢您	c=1 d=0.99005 t=7119
+xie zi 	鞋子	c=4 d=3.5248 t=7119
+xie zuo 	写作	c=1 d=0.873716 t=7119
+xin 	心	c=2 d=1.98506 t=7119
+xin 	新	c=5 d=4.81466 t=7119
+xin fa 	新法	c=1 d=0.918512 t=7119
+xin hao 	信号	c=1 d=1 t=7119
+xin ke ren 	新客人	c=1 d=0.995012 t=7119
+xin ku 	辛苦	c=4 d=3.88312 t=7119
+xin li 	心里	c=2 d=1.76126 t=7119
+xin nian 	信念	c=1 d=0.985112 t=7119
+xin nian 	新年	c=4 d=3.19228 t=7119
+xin ren 	信任	c=1 d=0.980199 t=7119
+xin shang 	心上	c=1 d=0.995012 t=7119
+xin shang 	欣赏	c=1 d=0.99005 t=7119
+xin shui 	薪水	c=1 d=0.666977 t=7119
+xin tong ci li 	心同此理	c=1 d=0.97531 t=7119
+xin wen 	新闻	c=2 d=1.93678 t=7119
+xin xian 	新鲜	c=1 d=1.02625 t=7119
+xin xin 	信心	c=3 d=2.79281 t=7119
+xin yong 	信用	c=2 d=1.98506 t=7119
+xin yong ka 	信用卡	c=1 d=0.99005 t=7119
+xing 	姓	c=1 d=1.06461 t=7119
+xing 	性	c=1 d=0.960789 t=7119
+xing 	星	c=1 d=1 t=7119
+xing 	行	c=3 d=2.95047 t=7119
+xing bie 	性别	c=1 d=0.99005 t=7119
+xing dao 	行到	c=1 d=0.937067 t=7119
+xing dong 	行动	c=2 d=1.85215 t=7119
+xing fan he 	姓饭盒	c=1 d=0.995012 t=7119
+xing fu 	幸福	c=5 d=4.46593 t=7119
+xing kai 	行楷	c=1 d=0.927743 t=7119
+xing ming 	姓名	c=1 d=0.995012 t=7119
+xing qi 	星期	c=7 d=5.05192 t=7119
+xing qi er 	星期二	c=1 d=1.06995 t=7119
+xing qi er de 	星期二的	c=1 d=0.99005 t=7119
+xing shu 	行书	c=4 d=3.27869 t=7119
+xing xing 	星星	c=1 d=0.99005 t=7119
+xing yun fu 	幸运符	c=1 d=0.995012 t=7119
+xing ze 	行则	c=1 d=0.99005 t=7119
+xing zheng qu 	行政区	c=1 d=0.995012 t=7119
+xiong di 	兄弟	c=1 d=0.970446 t=7119
+xiong tai 	兄台	c=1 d=0.99005 t=7119
+xiong zhang 	兄长	c=2 d=1.96042 t=7119
+xiu 	休	c=1 d=0.985112 t=7119
+xiu 	修	c=1 d=0.918512 t=7119
+xiu xi 	休息	c=6 d=5.03019 t=7119
+xu a xiao 	许啊小	c=1 d=0.865022 t=7119
+xu diao 	许调	c=1 d=0.970446 t=7119
+xu duo 	许多	c=1 d=0.99005 t=7119
+xu hao 	序号	c=1 d=1.07481 t=7119
+xu yao 	需要	c=12 d=6.28194 t=7119
+xuan 	选	c=2 d=1.96079 t=7119
+xuan chuan 	宣传	c=2 d=1.81078 t=7119
+xuan ju 	选举	c=1 d=0.97531 t=7119
+xuan yao 	炫耀	c=1 d=0.97531 t=7119
+xuan ze 	选择	c=1 d=0.932394 t=7119
+xuan ze le 	选择了	c=1 d=0.955997 t=7119
+xuan zhi 	宣纸	c=2 d=1.99501 t=7119
+xue 	学	c=6 d=4.49907 t=7119
+xue 	雪	c=1 d=1 t=7119
+xue han yu 	学汉语	c=2 d=1.73082 t=7119
+xue hui 	学会	c=5 d=3.93853 t=7119
+xue hui han yu 	学会汉语	c=1 d=0.955997 t=7119
+xue qi 	学期	c=4 d=2.55645 t=7119
+xue she 	学社	c=1 d=1 t=7119
+xue sheng 	学生	c=2 d=1.65132 t=7119
+xue wan 	学完	c=1 d=0.831104 t=7119
+xue xi 	学习	c=13 d=7.36612 t=7119
+xue xiao 	学校	c=8 d=5.69199 t=7119
+xue xiao ma 	学校吗	c=1 d=0.99005 t=7119
+xue xiong 	学兄	c=1 d=1 t=7119
+xue xiong 	薛兄	c=1 d=0.995012 t=7119
+xue yuan 	雪原	c=1 d=1 t=7119
+xue zhang 	学长	c=1 d=0.99005 t=7119
+xun xu 	循序	c=1 d=0.97531 t=7119
+ya 	呀	c=4 d=2.90737 t=7119
+ya chuang 	牙床	c=1 d=1 t=7119
+ya gao 	牙膏	c=1 d=0.946485 t=7119
+ya jun 	雅君	c=5 d=4.86273 t=7119
+ya li 	压力	c=2 d=1.6909 t=7119
+ya ou 	亚欧	c=0 d=0.0941765 t=7119
+ya zi 	鸭子	c=1 d=1 t=7119
+yan 	盐	c=1 d=0.995012 t=7119
+yan 	眼	c=2 d=1.8883 t=7119
+yan bian 	演变	c=0 d=0.0965605 t=7119
+yan bian ren min 	演变人民	c=2 d=1.95064 t=7119
+yan jiang 	演讲	c=1 d=0.97531 t=7119
+yan jing 	眼睛	c=1 d=0.980199 t=7119
+yan jiu 	研究	c=2 d=1.88437 t=7119
+yan jiu sheng 	研究生	c=1 d=0.980199 t=7119
+yan li 	严厉	c=1 d=1 t=7119
+yan li 	眼里	c=1 d=0.995012 t=7119
+yan qian 	眼前	c=1 d=0.995012 t=7119
+yan se 	颜色	c=5 d=4.11131 t=7119
+yan yuan 	演员	c=2 d=1.28969 t=7119
+yan yun 	烟云	c=1 d=1 t=7119
+yan zheng 	验证	c=1 d=1 t=7119
+yang 	养	c=2 d=1.83258 t=7119
+yang 	样	c=1 d=0.980199 t=7119
+yang 	秧	c=1 d=1 t=7119
+yang 	阳	c=1 d=1 t=7119
+yang guang 	阳光	c=1 d=0.99005 t=7119
+yang guang ming 	杨光明	c=1 d=0.995012 t=7119
+yang ping 	阳平	c=1 d=1 t=7119
+yao 	要	c=37 d=13.7977 t=7119
+yao bu shi 	要不是	c=1 d=0.99005 t=7119
+yao guai 	妖怪	c=1 d=1 t=7119
+yao kan 	要看	c=1 d=0.548812 t=7119
+yao kong 	遥控	c=1 d=1 t=7119
+yao kong qi 	遥控器	c=2 d=1.956 t=7119
+yao qing 	邀请	c=2 d=1.95101 t=7119
+yao qiu 	要求	c=2 d=1.98955 t=7119
+yao qiu gai 	要求改	c=1 d=0.980199 t=7119
+yao re 	夭热	c=1 d=0.995012 t=7119
+yao shi 	要是	c=2 d=1.49335 t=7119
+yao shu 	要书	c=1 d=0.980199 t=7119
+ye 	业	c=2 d=1.89985 t=7119
+ye 	也	c=36 d=12.9662 t=7119
+ye 	叶	c=1 d=0.99005 t=7119
+ye ke yi 	也可以	c=1 d=0.980199 t=7119
+ye mao 	夜猫	c=1 d=0.951229 t=7119
+ye mao zi 	夜猫子	c=1 d=1 t=7119
+ye men 	也门	c=1 d=0.980199 t=7119
+ye men 	爷们	c=1 d=0.97531 t=7119
+ye shi 	也使	c=1 d=1 t=7119
+ye ting 	叶挺	c=1 d=0.965605 t=7119
+ye wu 	业务	c=3 d=2.39228 t=7119
+ye xu 	也许	c=2 d=1.42383 t=7119
+ye you 	也有	c=0 d=0.0923116 t=7119
+ye you ji ge 	也有几个	c=1 d=0.927743 t=7119
+yi 	一	c=10 d=7.02072 t=7119
+yi 	义	c=2 d=1.99501 t=7119
+yi 	以	c=5 d=4.28839 t=7119
+yi 	意	c=1 d=0.873716 t=7119
+yi 	衣	c=1 d=0.995012 t=7119
+yi ba yi zi 	一把椅子	c=1 d=0.923116 t=7119
+yi ban 	一般	c=4 d=3.58344 t=7119
+yi bian 	一边	c=5 d=3.66396 t=7119
+yi chang 	一场	c=2 d=1.86712 t=7119
+yi dao jia 	一到家	c=1 d=0.951229 t=7119
+yi dian 	一点	c=2 d=1.97045 t=7119
+yi dian er 	一点儿	c=2 d=1.74028 t=7119
+yi fa 	一发	c=1 d=0.970446 t=7119
+yi fu 	衣服	c=4 d=3.62587 t=7119
+yi ge 	一个	c=14 d=6.63358 t=7119
+yi ge duo xiao shi 	一个多小时	c=1 d=0.965605 t=7119
+yi ge tian 	一个天	c=1 d=0.960789 t=7119
+yi ge yi ge 	一个一个	c=1 d=0.822835 t=7119
+yi gong 	一共	c=1 d=0.927743 t=7119
+yi gu 	一股	c=0 d=0.083527 t=7119
+yi guan 	一关	c=1 d=0.995012 t=7119
+yi hou 	以后	c=3 d=1.91954 t=7119
+yi hui 	议会	c=2 d=1.97516 t=7119
+yi hui er 	一会儿	c=2 d=1.95064 t=7119
+yi jian 	意见	c=4 d=3.3036 t=7119
+yi jian mei 	一剪梅	c=1 d=1 t=7119
+yi jie 	译介	c=1 d=0.985112 t=7119
+yi jin 	一斤	c=1 d=0.941765 t=7119
+yi jing 	已经	c=14 d=7.25805 t=7119
+yi ke 	一刻	c=1 d=0.941765 t=7119
+yi kuai 	一块	c=1 d=0.985112 t=7119
+yi kuai qian 	一块钱	c=1 d=0.937067 t=7119
+yi lang 	伊朗	c=1 d=0.970446 t=7119
+yi liao 	意料	c=1 d=0.99005 t=7119
+yi pi ma 	一匹马	c=1 d=1 t=7119
+yi qi 	一起	c=3 d=2.61218 t=7119
+yi qiao bu tong 	一窍不通	c=1 d=1 t=7119
+yi qie 	一切	c=2 d=1.9802 t=7119
+yi qun 	一群	c=1 d=0.970446 t=7119
+yi sheng 	医生	c=2 d=1.88692 t=7119
+yi sheng shuo 	医生说	c=1 d=0.767206 t=7119
+yi shu 	艺术	c=5 d=4.10093 t=7119
+yi shu jia 	艺术家	c=1 d=0.97531 t=7119
+yi shuang 	一双	c=1 d=0.955997 t=7119
+yi si 	意思	c=3 d=2.5713 t=7119
+yi suo 	一所	c=1 d=1 t=7119
+yi wei 	一位	c=1 d=0.99005 t=7119
+yi wei 	以为	c=5 d=4.206 t=7119
+yi xia 	一下	c=4 d=3.46855 t=7119
+yi xie 	一些	c=3 d=2.85462 t=7119
+yi xin yi yi 	一心一意	c=1 d=0.995012 t=7119
+yi yan 	一眼	c=2 d=1.96536 t=7119
+yi yang 	一样	c=1 d=0.810584 t=7119
+yi yi 	意义	c=1 d=1 t=7119
+yi yong jun 	义勇军	c=1 d=1 t=7119
+yi zhi 	一只	c=1 d=0.995012 t=7119
+yi zhi 	一支	c=1 d=0.985112 t=7119
+yi zhi 	一直	c=1 d=0.960789 t=7119
+yi zhi 	一致	c=1 d=0.955997 t=7119
+yi zhong tou 	一钟头	c=1 d=1 t=7119
+yi zi 	一字	c=1 d=0.927743 t=7119
+yi zi 	椅子	c=4 d=2.62522 t=7119
+yin 	音	c=2 d=1.97032 t=7119
+yin 	饮	c=1 d=0.970446 t=7119
+yin ci 	因此	c=7 d=6.16551 t=7119
+yin du 	印度	c=1 d=0.99005 t=7119
+yin du ni xi ya 	印度尼西亚	c=1 d=0.995012 t=7119
+yin gao 	音高	c=1 d=1 t=7119
+yin hu 	阴户	c=1 d=0.955997 t=7119
+yin liao 	饮料	c=4 d=3.88378 t=7119
+yin ni 	印尼	c=1 d=1 t=7119
+yin ni dun 	印尼盾	c=1 d=0.995012 t=7119
+yin ping 	阴平	c=1 d=0.99005 t=7119
+yin qi 	引起	c=3 d=2.84481 t=7119
+yin shi 	饮食	c=1 d=0.985112 t=7119
+yin shua shu 	印刷术	c=1 d=1 t=7119
+yin wei 	因为	c=18 d=7.09341 t=7119
+yin xiang 	印象	c=2 d=1.79223 t=7119
+yin yang 	阴阳	c=1 d=1 t=7119
+yin zhang 	印章	c=1 d=0.995012 t=7119
+ying 	影	c=1 d=0.995012 t=7119
+ying 	英	c=2 d=1.97516 t=7119
+ying 	赢	c=4 d=3.38151 t=7119
+ying bi 	硬笔	c=2 d=1.91851 t=7119
+ying gai 	应该	c=19 d=10.8419 t=7119
+ying xiang 	影像	c=1 d=0.891366 t=7119
+ying xiang 	影响	c=5 d=4.19446 t=7119
+ying xin 	迎新	c=1 d=1 t=7119
+ying ye 	营业	c=1 d=1 t=7119
+ying yong 	应用	c=4 d=3.87844 t=7119
+ying yu 	英语	c=2 d=1.86042 t=7119
+yo 	哟	c=0 d=0.0946485 t=7119
+yo ge ren 	哟个人	c=1 d=0.951229 t=7119
+yo hou 	哟后	c=1 d=0.767206 t=7119
+yong 	永	c=4 d=3.34888 t=7119
+yong 	用	c=14 d=6.17798 t=7119
+yong dao 	用到	c=1 d=1.09451 t=7119
+yong fa 	用法	c=8 d=5.51429 t=7119
+yong gan 	勇敢	c=5 d=4.61611 t=7119
+yong hu 	拥护	c=2 d=1.92669 t=7119
+yong li 	用例	c=1 d=0.985112 t=7119
+yong li 	用力	c=2 d=1.95084 t=7119
+yong qi 	勇气	c=3 d=2.88356 t=7119
+yong rui 	用瑞	c=1 d=0.985112 t=7119
+yong yu 	用于	c=1 d=0.995012 t=7119
+yong zhi 	用纸	c=1 d=0.985112 t=7119
+you 	又	c=3 d=2.82771 t=7119
+you 	幽	c=1 d=1 t=7119
+you 	有	c=45 d=14.902 t=7119
+you 	游	c=2 d=1.96079 t=7119
+you 	由	c=3 d=2.89732 t=7119
+you cheng 	又称	c=2 d=1.24379 t=7119
+you ci 	由此	c=1 d=0.995012 t=7119
+you de 	有的	c=2 d=1.03596 t=7119
+you dian 	优点	c=2 d=1.88839 t=7119
+you dian 	有点	c=1 d=0.97531 t=7119
+you dian er 	有点儿	c=4 d=3.23635 t=7119
+you er yuan 	幼儿园	c=1 d=1 t=7119
+you gan 	有感	c=1 d=0.951229 t=7119
+you guan 	有关	c=1 d=0.980199 t=7119
+you hao 	友好	c=1 d=0.985112 t=7119
+you hen duo 	有很多	c=1 d=0.985112 t=7119
+you hun 	游魂	c=1 d=0.995012 t=7119
+you ji ge 	有几个	c=1 d=0.891366 t=7119
+you ji hui de hua 	有机会的话	c=1 d=0.99005 t=7119
+you jian 	邮件	c=2 d=1.73676 t=7119
+you ke 	游客	c=1 d=1 t=7119
+you lai 	由来	c=1 d=0.995012 t=7119
+you le yuan 	游乐园	c=1 d=1 t=7119
+you mo 	幽默	c=2 d=1.91221 t=7119
+you qi 	尤其	c=3 d=2.90689 t=7119
+you qian 	有钱	c=2 d=1.96531 t=7119
+you qian de shi hou 	有钱的时候	c=1 d=0.88692 t=7119
+you qu 	有趣	c=2 d=1.98511 t=7119
+you qu de 	有趣的	c=0 d=0.0951229 t=7119
+you qu de di fang 	有趣的地方	c=1 d=0.955997 t=7119
+you shi jian 	有时间	c=4 d=3.43333 t=7119
+you xi 	游戏	c=3 d=2.84904 t=7119
+you xiang 	邮箱	c=3 d=2.95544 t=7119
+you xing 	游行	c=1 d=0.960789 t=7119
+you xiu 	优秀	c=1 d=0.995012 t=7119
+you yi 	友谊	c=7 d=4.69855 t=7119
+you yi 	有一	c=1 d=0.904837 t=7119
+you yong 	有用	c=1 d=0.995012 t=7119
+you yu 	由于	c=4 d=3.72915 t=7119
+yu 	宇	c=1 d=0.995012 t=7119
+yu 	语	c=3 d=2.20997 t=7119
+yu dao 	遇到	c=5 d=4.76802 t=7119
+yu diao 	语调	c=2 d=1.63243 t=7119
+yu ding 	预定	c=1 d=1 t=7119
+yu ding 	预订	c=2 d=1.90284 t=7119
+yu fa 	语法	c=2 d=1.77989 t=7119
+yu fa dian de 	语法点的	c=1 d=0.946485 t=7119
+yu fu 	预付	c=1 d=0.995012 t=7119
+yu jian 	遇见	c=1 d=0.995012 t=7119
+yu kuai 	愉快	c=4 d=3.81611 t=7119
+yu lu 	语录	c=1 d=0.995012 t=7119
+yu shi 	于是	c=1 d=0.995012 t=7119
+yu su 	语素	c=1 d=1 t=7119
+yu xi 	预习	c=1 d=1 t=7119
+yu yan 	语言	c=1 d=0.960789 t=7119
+yuan 	元	c=6 d=4.65527 t=7119
+yuan 	原	c=1 d=0.995012 t=7119
+yuan 	员	c=1 d=0.927743 t=7119
+yuan 	园	c=1 d=1 t=7119
+yuan 	远	c=2 d=1.88014 t=7119
+yuan dan 	元旦	c=8 d=5.39964 t=7119
+yuan dan jia qi 	元旦假期	c=1 d=0.965605 t=7119
+yuan dan kai shi 	元旦开始	c=1 d=0.937067 t=7119
+yuan gu 	远古	c=1 d=0.985112 t=7119
+yuan lai 	原来	c=5 d=4.12766 t=7119
+yuan liang 	原谅	c=1 d=0.970446 t=7119
+yuan sheng 	原声	c=1 d=1 t=7119
+yuan xiao jie 	元宵节	c=2 d=1.96536 t=7119
+yuan yi 	愿意	c=1 d=0.852144 t=7119
+yuan yin 	原因	c=4 d=3.3462 t=7119
+yue 	乐	c=1 d=0.955997 t=7119
+yue 	月	c=4 d=2.93415 t=7119
+yue du 	阅读	c=1 d=1 t=7119
+yue guang 	月光	c=1 d=0.995012 t=7119
+yue hui 	约会	c=1 d=1 t=7119
+yue lai yue 	越来越	c=2 d=1.85586 t=7119
+yue liang 	月亮	c=1 d=0.985112 t=7119
+yue qi 	乐器	c=1 d=0.980199 t=7119
+yue tuan 	乐团	c=1 d=1 t=7119
+yue ya 	月牙	c=0 d=0.0980199 t=7119
+yue ya wu geng 	月牙五更	c=1 d=0.985112 t=7119
+yue zi 	月子	c=1 d=0.985112 t=7119
+yun 	云	c=2 d=1.86112 t=7119
+yun 	运	c=1 d=0.980199 t=7119
+yun dong 	运动	c=2 d=1.91813 t=7119
+yun dong hui 	运动会	c=1 d=1 t=7119
+yun dong yuan 	运动员	c=1 d=0.985112 t=7119
+yun lv 	韵律	c=3 d=2.98506 t=7119
+yun mu 	韵母	c=1 d=0.970446 t=7119
+yun nan 	云南	c=1 d=0.941765 t=7119
+yun wei 	韵尾	c=1 d=0.985112 t=7119
+zai 	再	c=7 d=4.86079 t=7119
+zai 	在	c=37 d=14.1363 t=7119
+zai ci 	再次	c=1 d=0.965605 t=7119
+zai fang jian 	在房间	c=1 d=0.856415 t=7119
+zai gan shen me 	在干什么	c=1 d=0.970446 t=7119
+zai jia 	在家	c=3 d=2.24254 t=7119
+zai kai shi zhi qian 	在开始之前	c=1 d=0.970446 t=7119
+zai na 	在那	c=1 d=0.995012 t=7119
+zai na er 	在哪儿	c=1 d=0.965605 t=7119
+zai na li 	在哪里	c=2 d=1.83932 t=7119
+zai na li 	在那里	c=1 d=0.951229 t=7119
+zai shang che 	再上车	c=1 d=0.985112 t=7119
+zai yu 	在于	c=2 d=1.85086 t=7119
+zai zhe er 	在这儿	c=1 d=0.733447 t=7119
+zai zhe ge 	在这个	c=1 d=0.980199 t=7119
+zan 	赞	c=1 d=1 t=7119
+zan men 	咱们	c=1 d=0.985112 t=7119
+zan zi 	簪子	c=1 d=0.995012 t=7119
+zang 	藏	c=1 d=0.99005 t=7119
+zao 	早	c=1 d=0.965605 t=7119
+zao 	造	c=2 d=1.94099 t=7119
+zao dian 	早点	c=2 d=1.85586 t=7119
+zao jiu 	早就	c=1 d=0.980199 t=7119
+zao pin 	早品	c=1 d=0.99005 t=7119
+zao shang 	早上	c=1 d=0.995012 t=7119
+zao shang hao 	早上好	c=6 d=4.98948 t=7119
+zao yi dian er 	早一点儿	c=1 d=0.97531 t=7119
+ze ren 	责任	c=3 d=2.68808 t=7119
+zen me 	怎么	c=7 d=5.22017 t=7119
+zen me ban 	怎么办	c=3 d=2.77829 t=7119
+zen me ke neng 	怎么可能	c=1 d=0.985112 t=7119
+zen me yang 	怎么样	c=7 d=5.0169 t=7119
+zen yang 	怎样	c=2 d=1.91393 t=7119
+zhai 	斋	c=1 d=1 t=7119
+zhan chu lai 	站出来	c=1 d=0.985112 t=7119
+zhan fang 	绽放	c=0 d=0.099005 t=7119
+zhan fang ru 	绽放如	c=1 d=0.995012 t=7119
+zhan kai 	展开	c=1 d=1 t=7119
+zhan shi 	展示	c=1 d=0.99005 t=7119
+zhang 	张	c=1 d=0.918512 t=7119
+zhang 	长	c=1 d=1.07676 t=7119
+zhang fu 	丈夫	c=1 d=0.965605 t=7119
+zhang gong zuo 	长工作	c=1 d=1 t=7119
+zhang yuan ying 	张元英	c=1 d=0.980199 t=7119
+zhao 	找	c=5 d=3.8596 t=7119
+zhao biao 	招标	c=1 d=1 t=7119
+zhao dao 	找到	c=5 d=3.59378 t=7119
+zhao gu 	照顾	c=3 d=2.89261 t=7119
+zhao ji 	着急	c=7 d=6.10367 t=7119
+zhao ke 	赵柯	c=1 d=1 t=7119
+zhao pian 	照片	c=5 d=4.26434 t=7119
+zhao pin 	招聘	c=3 d=2.64362 t=7119
+zhao xiang ji 	照相机	c=1 d=0.995012 t=7119
+zhao yue 	赵月	c=1 d=0.99005 t=7119
+zhe 	着	c=2 d=1.9558 t=7119
+zhe 	者	c=1 d=0.955997 t=7119
+zhe 	这	c=6 d=4.20778 t=7119
+zhe ben 	这本	c=1 d=0.970446 t=7119
+zhe ben shu 	这本书	c=2 d=1.89319 t=7119
+zhe dao shi 	这倒是	c=2 d=1.83527 t=7119
+zhe duan 	这段	c=2 d=1.74494 t=7119
+zhe duan xue qi 	这段学期	c=1 d=0.839457 t=7119
+zhe er 	这儿	c=1 d=0.960789 t=7119
+zhe ge 	这个	c=10 d=5.44812 t=7119
+zhe jian 	这件	c=2 d=1.8385 t=7119
+zhe li 	这里	c=1 d=0.995012 t=7119
+zhe liang ge 	这两个	c=1 d=0.843665 t=7119
+zhe me 	这么	c=1 d=0.980199 t=7119
+zhe me zuo 	这么做	c=1 d=0.995012 t=7119
+zhe shi 	这是	c=6 d=4.58189 t=7119
+zhe shuang 	这双	c=1 d=0.970446 t=7119
+zhe yang 	这样	c=10 d=6.58055 t=7119
+zhe yang de 	这样的	c=1 d=0.970446 t=7119
+zhe yang zuo 	这样做	c=1 d=0.985112 t=7119
+zhe zhang 	这张	c=1 d=0.900325 t=7119
+zhe zhong 	这种	c=4 d=3.27238 t=7119
+zhe zhong de 	这种的	c=1 d=0.900325 t=7119
+zhen 	真	c=3 d=2.56649 t=7119
+zhen bao qian 	真抱歉	c=1 d=0.995012 t=7119
+zhen de 	真的	c=7 d=5.34275 t=7119
+zhen de ma 	真的吗	c=1 d=0.97531 t=7119
+zhen hao 	真好	c=1 d=0.913931 t=7119
+zhen me 	真么	c=1 d=0.900325 t=7119
+zhen xian 	针线	c=1 d=0.97531 t=7119
+zhen xian 	阵线	c=1 d=0.970446 t=7119
+zheng 	整	c=1 d=0.97531 t=7119
+zheng 	正	c=2 d=1.99501 t=7119
+zheng chang 	正常	c=3 d=2.92602 t=7119
+zheng hao 	正好	c=3 d=2.76942 t=7119
+zheng ji 	整机	c=1 d=1 t=7119
+zheng ming 	证明	c=1 d=1 t=7119
+zheng qi 	整齐	c=2 d=1.82532 t=7119
+zheng qian 	挣钱	c=1 d=0.97531 t=7119
+zheng que 	正确	c=3 d=2.53906 t=7119
+zheng shi 	正是	c=2 d=1.86974 t=7119
+zheng wei 	正为	c=1 d=0.955997 t=7119
+zheng zai 	正在	c=4 d=3.50165 t=7119
+zheng zhuan 	正传	c=1 d=1 t=7119
+zhi 	只	c=7 d=5.87978 t=7119
+zhi 	支	c=1 d=0.995012 t=7119
+zhi 	直	c=4 d=3.62372 t=7119
+zhi 	纸	c=2 d=1.67513 t=7119
+zhi 	致	c=1 d=0.99005 t=7119
+zhi chi 	支持	c=5 d=4.80231 t=7119
+zhi dao 	知道	c=9 d=5.97051 t=7119
+zhi dao le 	知道了	c=1 d=0.951229 t=7119
+zhi de 	值得	c=3 d=2.42972 t=7119
+zhi de de 	值得的	c=1 d=0.83527 t=7119
+zhi de guo 	值得过	c=1 d=0.847894 t=7119
+zhi de sheng huo 	值得生活	c=1 d=0.843665 t=7119
+zhi fen 	之分	c=1 d=0.99005 t=7119
+zhi fu 	制服	c=1 d=0.970446 t=7119
+zhi hui 	指挥	c=1 d=1 t=7119
+zhi hui 	智慧	c=1 d=0.965605 t=7119
+zhi ji 	之际	c=1 d=1 t=7119
+zhi jie 	直接	c=4 d=3.23304 t=7119
+zhi liang 	质量	c=2 d=1.79015 t=7119
+zhi liao 	治疗	c=1 d=0.995012 t=7119
+zhi neng 	只能	c=4 d=3.60542 t=7119
+zhi neng 	智能	c=1 d=0.995012 t=7119
+zhi qian 	之前	c=1 d=0.980199 t=7119
+zhi ren 	只认	c=1 d=0.904837 t=7119
+zhi shao 	至少	c=3 d=2.7547 t=7119
+zhi sheng 	只剩	c=1 d=0.995012 t=7119
+zhi sheng xia 	只剩下	c=1 d=0.951229 t=7119
+zhi shi 	知识	c=3 d=2.84163 t=7119
+zhi tou 	指头	c=1 d=0.995012 t=7119
+zhi wu 	植物	c=1 d=1 t=7119
+zhi xiang 	纸箱	c=1 d=0.995012 t=7119
+zhi ya ou 	只亚欧	c=1 d=0.946485 t=7119
+zhi yao 	只要	c=7 d=5.82484 t=7119
+zhi yi 	致以	c=2 d=1.68957 t=7119
+zhi you 	只有	c=9 d=5.70126 t=7119
+zhi yuan 	职员	c=1 d=0.918512 t=7119
+zhong 	中	c=7 d=6.74768 t=7119
+zhong 	重	c=2 d=1.956 t=7119
+zhong gong zhong yang 	中共中央	c=1 d=0.955997 t=7119
+zhong guo 	中国	c=18 d=9.10019 t=7119
+zhong guo ren min jie fang 	中国人民解放	c=1 d=0.995012 t=7119
+zhong guo wen hua 	中国文化	c=1 d=1 t=7119
+zhong hua 	中华	c=2 d=1.87888 t=7119
+zhong ji 	中级	c=1 d=0.913931 t=7119
+zhong jian 	中间	c=1 d=0.970446 t=7119
+zhong nan shan 	终南山	c=1 d=1.08709 t=7119
+zhong qiu jie 	中秋节	c=1 d=0.965605 t=7119
+zhong shan zhuang 	中山装	c=1 d=1 t=7119
+zhong shi 	中式	c=1 d=0.995012 t=7119
+zhong shi 	重视	c=3 d=2.64772 t=7119
+zhong tou 	钟头	c=1 d=0.964523 t=7119
+zhong wen 	中文	c=20 d=11.3697 t=7119
+zhong wen xi 	中文系	c=2 d=1.98012 t=7119
+zhong wu hao 	中午好	c=1 d=0.794534 t=7119
+zhong xin 	中心	c=2 d=1.9802 t=7119
+zhong xin 	重心	c=1 d=1 t=7119
+zhong xue 	中学	c=1 d=1 t=7119
+zhong yao 	重要	c=1 d=0.99005 t=7119
+zhong yin 	重音	c=1 d=1 t=7119
+zhong yu 	终于	c=1 d=0.965605 t=7119
+zhou 	周	c=1 d=0.980199 t=7119
+zhou 	州	c=1 d=0.985112 t=7119
+zhou en lai 	周恩来	c=1 d=0.985112 t=7119
+zhou mo 	周末	c=4 d=3.77221 t=7119
+zhou wei 	周围	c=1 d=0.97531 t=7119
+zhu 	住	c=1 d=0.985112 t=7119
+zhu 	祝	c=4 d=3.71671 t=7119
+zhu ce 	注册	c=1 d=1 t=7119
+zhu de 	朱德	c=1 d=0.970446 t=7119
+zhu guan 	主管	c=1 d=0.985112 t=7119
+zhu guan 	主观	c=1 d=0.960789 t=7119
+zhu ming 	著名	c=1 d=1 t=7119
+zhu ni 	祝你	c=9 d=6.07706 t=7119
+zhu ni men 	祝你们	c=1 d=0.99005 t=7119
+zhu nin 	祝您	c=1 d=0.946485 t=7119
+zhu rou 	猪肉	c=1 d=0.995012 t=7119
+zhu yao 	主要	c=3 d=2.96581 t=7119
+zhu yao li kai 	主要离开	c=1 d=0.97531 t=7119
+zhu yi 	主义	c=1 d=0.995012 t=7119
+zhu yi 	主意	c=3 d=2.27492 t=7119
+zhu yi 	注意	c=7 d=5.89669 t=7119
+zhua zhong 	抓中	c=1 d=0.97531 t=7119
+zhua zhou 	抓周	c=2 d=1.93143 t=7119
+zhuan 	赚	c=1 d=0.995012 t=7119
+zhuan 	转	c=1 d=0.995012 t=7119
+zhuan dong 	转动	c=1 d=1 t=7119
+zhuan men 	专门	c=4 d=3.91179 t=7119
+zhuan shu 	篆书	c=1 d=0.980199 t=7119
+zhuan ti 	篆体	c=1 d=0.778801 t=7119
+zhuan ye 	专业	c=3 d=2.87901 t=7119
+zhun bei 	准备	c=6 d=5.2035 t=7119
+zhun que 	准确	c=1 d=0.995012 t=7119
+zhun shi 	准时	c=4 d=3.2951 t=7119
+zhun shu 	准数	c=1 d=0.955997 t=7119
+zhuo zi 	桌子	c=2 d=1.74963 t=7119
+zi 	子	c=2 d=1.92231 t=7119
+zi 	字	c=1 d=1 t=7119
+zi 	自	c=1 d=0.955997 t=7119
+zi ben zhu yi 	资本主义	c=1 d=0.941765 t=7119
+zi dong 	自动	c=1 d=0.995012 t=7119
+zi duo ha 	子多哈	c=1 d=0.995012 t=7119
+zi ji 	自己	c=6 d=5.01439 t=7119
+zi ji de che 	自己的车	c=1 d=0.960789 t=7119
+zi jin cheng 	紫禁城	c=1 d=0.628135 t=7119
+zi nv 	子女	c=0 d=0.0951229 t=7119
+zi pai 	自拍	c=1 d=0.985112 t=7119
+zi ran 	自然	c=1 d=0.99005 t=7119
+zi sha 	自杀	c=3 d=2.94107 t=7119
+zi ti 	字体	c=1 d=0.985112 t=7119
+zi wo 	自我	c=1 d=0.97531 t=7119
+zi xin 	自信	c=1 d=0.97531 t=7119
+zi yu 	自愈	c=1 d=1 t=7119
+zi yu 	自语	c=1 d=0.995012 t=7119
+zong 	总	c=2 d=1.85272 t=7119
+zong bi 	总比	c=1 d=0.99005 t=7119
+zong hui 	总会	c=1 d=0.995012 t=7119
+zong shi 	总是	c=1 d=0.826959 t=7119
+zong tong 	总统	c=3 d=2.50603 t=7119
+zong zi 	粽子	c=2 d=1.8883 t=7119
+zou 	走	c=2 d=1.79257 t=7119
+zou de 	走的	c=1 d=0.88692 t=7119
+zou de hen man 	走得很慢	c=1 d=0.891366 t=7119
+zou lu 	走路	c=1 d=1 t=7119
+zou wo 	揍我	c=1 d=0.970446 t=7119
+zu cheng 	组成	c=1 d=0.995012 t=7119
+zu chu 	租出	c=0 d=0.099005 t=7119
+zu chu che 	租出车	c=1 d=0.995012 t=7119
+zu guo 	祖国	c=1 d=0.985112 t=7119
+zu qiu 	足球	c=1 d=0.995012 t=7119
+zu zhi 	组织	c=2 d=1.75618 t=7119
+zui 	嘴	c=1 d=1 t=7119
+zui 	最	c=2 d=1.63377 t=7119
+zui hao 	最好	c=1 d=0.99005 t=7119
+zui hao de 	最好的	c=1 d=0.99005 t=7119
+zui hou 	最后	c=2 d=1.73954 t=7119
+zui hou de 	最后的	c=1 d=0.985112 t=7119
+zui jin 	最近	c=2 d=1.77464 t=7119
+zui jin de shi 	最近的事	c=2 d=1.77989 t=7119
+zui jin zen me yang 	最近怎么样	c=1 d=0.937067 t=7119
+zui shao 	最少	c=1 d=0.951229 t=7119
+zui zi nv 	最子女	c=1 d=0.955997 t=7119
+zun yi 	遵义	c=1 d=0.995012 t=7119
+zun zhong 	尊重	c=3 d=2.82222 t=7119
+zuo 	做	c=9 d=4.90436 t=7119
+zuo 	坐	c=2 d=1.93707 t=7119
+zuo 	左	c=1 d=0.937067 t=7119
+zuo chu 	做出	c=1 d=1 t=7119
+zuo guo 	做过	c=1 d=1 t=7119
+zuo pai 	做派	c=3 d=2.63912 t=7119
+zuo pai 	左派	c=2 d=1.90256 t=7119
+zuo pin 	作品	c=1 d=1 t=7119
+zuo qi 	做起	c=1 d=0.965605 t=7119
+zuo qing 	左倾	c=1 d=0.891366 t=7119
+zuo shen me 	做什么	c=1 d=0.637628 t=7119
+zuo shu fa de shi hou 	坐书法的时候	c=1 d=0.860708 t=7119
+zuo tian 	昨天	c=1 d=0.951229 t=7119
+zuo wan le 	做完了	c=1 d=1.09851 t=7119
+zuo ye 	作业	c=6 d=4.2658 t=7119
+zuo yong 	作用	c=2 d=1.9175 t=7119
+zuo you 	左右	c=6 d=4.05026 t=7119
+zuo zhe 	作者	c=1 d=0.995012 t=7119
+zuo zuo ye 	做作业	c=3 d=1.74708 t=7119
