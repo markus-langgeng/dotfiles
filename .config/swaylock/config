@@ -1,0 +1,22 @@
+ignore-empty-password
+screenshots
+indicator
+# image=~/.config/wall.png
+font=Liberation Mono
+
+clock
+timestr=%H:%M
+datestr=%a %Y-%m-%d
+
+effect-greyscale
+effect-blur=5x5
+
+indicator-radius=150
+indicator-thickness=7
+
+text-color=ab42d9ff
+key-hl-color=ab42d9ff
+ring-color=66009466
+line-color=00000000
+inside-color=00000088
+separator-color=00000000

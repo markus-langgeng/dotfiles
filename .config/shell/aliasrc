@@ -1,0 +1,57 @@
+#!/bin/sh
+
+# Use neovim for vim if present.
+[ -x "$(command -v nvim)" ] && alias vim="nvim" vimdiff="nvim -d"
+
+# Verbosity and settings that you pretty much just always are going to want.
+alias \
+	cp="cp -i" \
+	mv="mv -i" \
+	rm="rm -i" \
+	bc="bc -ql" \
+	rsync="rsync -vrPlu" \
+	mkdir="mkdir -p" \
+    src="source $HOME/.config/zsh/.zshrc" \
+	yt="yt-dlp --embed-metadata -i" \
+	ffmpeg="ffmpeg -hide_banner" \
+    convert="magick convert -verbose" \
+    weather="curl wttr.in" \
+    df="df -h" \
+    trp="trash-put" \
+    trl="trash-list" \
+    trr="trash-restore" \
+    sx="startx"
+
+# Colorize commands when possible.
+alias \
+	ls="ls -h --color=auto --group-directories-first" \
+	grep="grep --color=auto" \
+	ip="ip -color=auto"
+    # ccat="highlight --out-format=ansi"
+
+# These common commands are just too long! Abbreviate them.
+alias \
+    dfs='/usr/bin/git --git-dir=$HOME/.cfg/ --work-tree=$HOME' \
+	ka="killall" \
+	YT="youtube-viewer" \
+	sdn="shutdown -h now" \
+	e="$EDITOR" \
+	v="$EDITOR" \
+    z="zathura" \
+    g="git" \
+    xdg-qf="xdg-mime query filetype" \
+    xdg-qd="xdg-mime query default" \
+    xdg-def="xdg-mime default" \
+    spotdl="spotdl --config" \
+    wget="wget --hsts-file=$XDG_DATA_HOME/wget-hsts" \
+    tmux-src="tmux source $XDG_CONFIG_HOME/tmux/tmux.conf" \
+    ir-xppen-start="sudo sudo input-remapper-control --command start --device '9 inch PenTablet' --preset 'xppen-test' && clear-capslock" \
+    ir-xppen-stop="sudo sudo input-remapper-control --command stop --device '9 inch PenTablet' && clear-capslock" \
+    input-remapper-gtk="sudo input-remapper-gtk" \
+    ir="sudo input-remapper-gtk" \
+    adb='HOME="$XDG_DATA_HOME"/android adb' \
+    dwl="dbus-run-session slstatus -s | dwl" \
+    apk-search-edge="doas apk -X https://dl-cdn.alpinelinux.org/alpine/edge/community search" \
+    apk-add-edge="doas apk -X https://dl-cdn.alpinelinux.org/alpine/edge/community add"
+
+# rime-i="rime_dir=$XDG_DATA_HOME/.config/fcitx5/rime bash ~/Downloads/plum/rime-install" \

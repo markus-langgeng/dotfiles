@@ -1,0 +1,106 @@
+[rpdvorak:layout]
+
+` = $
+1 = +
+2 = [
+3 = {
+4 = (
+5 = &
+6 = =
+7 = )
+8 = }
+9 = ]
+0 = *
+- = !
+= = |
+
+q = ;
+w = ,
+e = .
+r = p
+t = y
+y = f
+u = g
+i = c
+o = r
+p = l
+[ = /
+] = @
+\ = \
+
+a = a
+s = o
+d = e
+f = u
+g = i
+h = d
+j = h
+k = t
+l = n
+; = s
+' = -
+
+z = '
+x = q
+c = j
+v = k
+b = x
+n = b
+m = m
+< = w
+> = v
+? = z
+shift = layer(rpdvorak_shift)
+
+[rpdvorak_shift:S]
+` = ~
+1 = 1
+2 = 2
+3 = 3
+4 = 4
+5 = 5
+6 = 6
+7 = 7
+8 = 8
+9 = 9
+0 = 0
+- = %
+= = `
+
+q = :
+w = <
+e = >
+r = P
+t = Y
+y = F
+u = G
+i = C
+o = R
+p = L
+[ = ?
+] = ^
+\ = #
+
+a = A
+s = O
+d = E
+f = U
+g = I
+h = D
+j = H
+k = T
+l = N
+; = S
+' = _
+
+z = "
+x = Q
+c = J
+v = K
+b = X
+n = B
+m = M
+< = W
+> = V
+? = Z
+

@@ -1,0 +1,175 @@
+*.font: Liberation Mono:pixelsize=13:antialias=true:autohint=true
+st.font: Liberation Mono:pixelsize=15:antialias=true:autohint=true
+
+!! tomorrow dark
+! special
+! *.foreground:   #c5c8c6
+! ! *.background:   #1d1f21
+! *.cursorColor:  #c5c8c6
+! black
+! *.color0:       #1d1f21
+! *.color8:       #969896
+! red
+! *.color1:       #cc6666
+! *.color9:       #cc6666
+! green
+! *.color2:       #b5bd68
+! *.color10:      #b5bd68
+! yellow
+! *.color3:       #f0c674
+! *.color11:      #f0c674
+! blue
+! *.color4:       #81a2be
+! *.color12:      #81a2be
+! magenta
+! *.color5:       #b294bb
+! *.color13:      #b294bb
+! cyan
+! *.color6:       #8abeb7
+! *.color14:      #8abeb7
+! white
+! *.color7:       #c5c8c6
+! *.color15:      #ffffff
+
+
+!! twilight dark
+! special
+! *.foreground:   #c5c8c6
+! ! *.background:   #1d1f21
+! *.cursorColor:  #c5c8c6
+! black
+! *.color0:       #1d1f21
+! *.color8:       #969896
+! red
+! *.color1:       #cc6666
+! *.color9:       #cc6666
+! green
+! *.color2:       #b5bd68
+! *.color10:      #b5bd68
+! yellow
+! *.color3:       #f0c674
+! *.color11:      #f0c674
+! blue
+! *.color4:       #81a2be
+! *.color12:      #81a2be
+! magenta
+! *.color5:       #b294bb
+! *.color13:      #b294bb
+! cyan
+! *.color6:       #8abeb7
+! *.color14:      #8abeb7
+! white
+! *.color7:       #e9edea
+! *.color15:      #ffffff
+
+
+!!!!!!!!!!!!!!!!!!!!
+!! railcasts dark !!
+!!!!!!!!!!!!!!!!!!!!
+
+!! special
+*.foreground:   #e6e1dc
+!!*.background:   #2b2b2b
+*.background:   #000000
+*.cursorColor:  #e6e1dc
+!! black
+*.color0:       #000000
+*.color8:       #2b2b2b
+!! red
+*.color1:       #da4939
+*.color9:       #ff4500
+!! green
+*.color2:       #789339
+*.color10:      #a5c261
+!! yellow
+*.color3:       #ffbb4d
+*.color11:      #ffc66d
+!! blue
+*.color4:       #4f88b0
+*.color12:      #6d9cbe
+!! magenta
+*.color5:       #b6b3eb
+*.color13:      #b6b3eb
+!! cyan
+*.color6:       #00CED1
+*.color14:      #00CED1
+!! white
+*.color7:       #cccccc
+*.color15:      #e6e6e6
+!! *.color7:       #e6e1dc
+!! *.color15:      #f9f7f3
+
+!!!!!!!!!!!
+!! urxvt !!
+!!!!!!!!!!!
+
+URxvt.perl-ext-common:default,selection-to-clipboard,url-select
+
+URxvt.geometry: 400x400
+URxvt.secondaryScreen: 1
+URxvt.letterSpace: -1
+URxvt.font: xft:Liberation Mono:pixelsize=13:antialias=false:autohint=false;Symbols Nerd Font:pixelsize=10:antialias=false:autohint=false;Noto Color Emoji:pixelsize=10:antialias=false:autohint=false;Noto Sans CJK JP:pixelsize=13:antialias=false:autohint=false
+
+URxvt.scrollBar: false
+URxvt.scrollBar_right: false
+URxvt.scrollBar_floating: false
+URxvt.scrollstyle: rxvt
+
+URxvt.print-pipe: "cat > /dev/null"
+URxvt.background.border: false
+
+! Copy Paste
+URxvt.clipboard.autocopy: true
+URxvt.keysym.M-c: perl:clipboard:copy
+URxvt.keysym.M-v: perl:clipboard:paste
+
+
+!!!!!!!!!
+!! dwm !!
+!!!!!!!!!
+
+!! Red colorscheme
+! dwm.selbordercolor: #FF4500
+! dwm.selbgcolor:     #da4939
+! dmenu.selbgcolor:   #da4939
+! #ff0800 candy apple
+
+!! Purple colorscheme
+! dwm.selbordercolor: #be4dff
+! dwm.selbgcolor:     #552583
+! dmenu.selbgcolor:   #552583
+
+! dwm.selbordercolor: #b30080
+! dwm.selbgcolor:     #4A0336
+! dmenu.selbgcolor:   #4A0336
+
+
+!! Gray colorscheme
+dwm.selbordercolor:   #737373
+dwm.normbordercolor:  #1a1a1a
+dwm.selbgcolor:       #000000
+dmenu.selbgcolor:     #000000
+
+
+
+!!!!!!!!!!!!
+!! tabbed !!
+!!!!!!!!!!!!
+
+! tabbed.font:
+
+tabbed.normbgcolor: #000000
+tabbed.normfgcolor: #e6e1dc
+tabbed.selbgcolor:  #2b2b2b
+tabbed.selfgcolor:  #e6e1dc
+!tabbed.urgbgcolor:
+!tabbed.urgfgcolor:
+tabbed.tabwidth:    100
+
+! tabbed.before:
+! tabbed.after:
+! tabbed.titletrim:
+! tabbed.focusnew:
+! tabbed.urgentswitch:
+! tabbed.newposition:
+! tabbed.npisrelative:

@@ -1,0 +1,3 @@
+timeout 6000 'swaylock -f'
+timeout 315 'zzz'
+before-sleep 'swaylock -f'

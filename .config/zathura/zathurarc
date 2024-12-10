@@ -1,0 +1,20 @@
+set font "monospace normal 12"
+set window-title-basename "true"
+set selection-clipboard "clipboard"
+map D set "first-page-column 1:1"
+map <C-d> set "first-page-column 1:2"
+map B feedkeys ":bmark "
+map L feedkeys ":blist<Tab>"
+
+# include dracula
+include "night"
+
+#
+# Startup options
+#
+set adjust-open width
+set recolor
+
+set guioptions none
+
+set database "sqlite"

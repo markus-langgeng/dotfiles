@@ -1,0 +1,35 @@
+c    "$XDG_CONFIG_HOME"
+
+# share dir
+sh   "$XDG_DATA_HOME"
+st   "$XDG_STATE_HOME"
+ff   "$XDG_DATA_HOME/fonts/"
+
+dl   "$HOME/downloads/"
+
+b    "$HOME/.local/bin/"
+
+# kuliah
+k    "$HOME/kuliah"
+h    "$HOME/hsk/2/mock_test/"
+1    "$HOME/kuliah/semester_1"
+2    "$HOME/kuliah/semester_2"
+3    "$HOME/kuliah/semester_3"
+bmr  "$HOME/personal/latex_beamer_themes"
+
+# kerja
+kd    "$HOME/kerja/coding/"
+
+# bacaan
+bk   "$HOME/personal/buku/"
+jl   "$HOME/personal/jurnal"
+
+sp   "$HOME/sync/pictures/"
+si   "$HOME/sync/pictures/Instander/"
+sc   "$HOME/sync/DCIM/Camera/"
+ss   "$HOME/sync/DCIM/Screenshots"
+sd   "$HOME/sync/documents/"
+
+m    "$HOME/music/"
+p    "$HOME/personal/"
+w    "$HOME/wallpapers/"

@@ -1,0 +1,68 @@
+#!/bin/bash
+
+# dependencies:
+# find,
+# fzf,
+# ueberzug,
+# script that combines fzf+ueberzug (https://github.com/ueber-devel/ueberzug/blob/master/examples/fzfimg.sh)
+# qf (custom script to `quick find` files, see qf file for usage)
+
+mkcd() { mkdir -pv "$1" && cd "$1" || exit; }
+mvcd() { mv -vi "$1" "$2" && cd "$2" || exit; }
+
+fcd() {
+    [ -z "$1" ] && return 1
+    my_cmd="$(qf "$1" "d")"
+    [ -z "$my_cmd" ] && return 1
+    cd "$(eval "$my_cmd")" || exit
+}
+
+gdp() {
+    [ -z "$1" ] && return 1
+    my_cmd="$(qf "$1" "d" "$2")"
+    [ -z "$my_cmd" ] && return 1
+    eval "$my_cmd --multi | sed 's/^/\"/;s/$/\"/' | tr '\n' ' ' | xclip -selection c"
+}
+
+gfp() {
+    [ -z "$1" ] && return 1
+    my_cmd="$(qf "$1" "f" "$2")"
+    [ -z "$my_cmd" ] && return 1
+    eval "$my_cmd --multi | sed 's/^/\"/;s/$/\"/' | tr '\n' ' ' | xclip -selection c"
+}
+
+pms() {
+    pacman -Ssq "$1" | fzf --multi --preview 'pacman -Si {1}; pacman -Qi {1}' | xargs -ro sudo pacman -S
+}
+
+pmr() {
+    pacman -Ssq "$1" | fzf --multi --preview 'pacman -Qi {1}; pacman -Qi {1}' | xargs -ro sudo pacman -Rns
+}
+
+pmq() {
+    pacman -Qsq "$1" | fzf --multi --preview 'pacman -Qi {1}; pacman -Qo {1}' | xargs -ro pacman -Qi
+}
+
+yys() {
+    yay -Ssq | fzf --multi --preview 'yay -Si {1}; yay -Qi {1}' | xargs -ro yay -S
+}
+
+yyq() {
+    yay -Qsq "$1" | fzf --multi --preview 'yay -Qi {1}; yay -Qo {1}' | xargs -ro yay -Qi
+}
+
+img_shuf() {
+    find . -name '*' -exec file {} \; | grep -o -P '^.+: \w+ image' | awk '{gsub(":",""); print $1}'
+}
+
+make_lower_underscore() {
+    echo "$1" | sed "s/\s\.$2$/.$2/;s/\s/_/g;s/\(.*\)/\L\1/g"
+}
+
+simple_countdown() {
+    for i in $(seq "${1:-10}" -1 1) ; do
+        clear ; figlet "$i" ; sleep 1
+    done
+    clear ; figlet STOP
+}
+

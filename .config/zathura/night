@@ -1,0 +1,43 @@
+set default-fg              "#d9d7d6"
+set default-bg 			    "#162026"
+# set default-bg 			    "#061115"
+
+set completion-bg		    "#0A1419"
+set completion-fg		    "#d9d7d6"
+set completion-highlight-bg "#0A1419"
+set completion-highlight-fg rgba(250,189,47,1)
+set completion-group-bg		"#0A1419"
+set completion-group-fg		"#6791c9"
+
+set statusbar-fg		    "#d9d7d6"
+set statusbar-bg		    "#162026"
+
+set notification-bg		    "#0A1419"
+set notification-fg		    "#d9d7d6"
+set notification-error-bg	"#0A1419"
+set notification-error-fg	"#df5b61"
+set notification-warning-bg	"#0A1419"
+set notification-warning-fg	"#de8f78"
+
+set inputbar-fg			    "#d9d7d6"
+set inputbar-bg 		    "#0A1419"
+
+# set recolor-reverse-video   true  # requires zathura-poppler
+# set recolor-lightcolor		"#061115"
+# set recolor-darkcolor		"#d9d7d6"
+
+set recolor-darkcolor		"#e6e6e6"
+set recolor-lightcolor		"#000000"
+set recolor-keephue         false
+
+set index-fg			    "#d9d7d6"
+set index-bg			    "#061115"
+set index-active-fg		    rgba(250,189,47,1)
+set index-active-bg		    "#0A1419"
+
+set render-loading-bg		"#061115"
+set render-loading-fg		"#d9d7d6"
+
+set highlight-color		    rgba(250,189,47,0.4)
+set highlight-fg            rgba(0,0,0,0.5)
+set highlight-active-color  rgba(188,131,227,.5)
