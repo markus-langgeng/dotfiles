@@ -1,5 +1,5 @@
 var:
-  last_build_time: 1733819939
+  last_build_time: 1733994935
   option:
     ascii_punct: false
     emoji: true
@@ -9,5 +9,5 @@ var:
   previously_selected_schema: rime_ice
   schema_access_time:
     luna_pinyin: 1712544602
-    rime_ice: 1733750188
+    rime_ice: 1733924631
     terra_pinyin: 1712555433
