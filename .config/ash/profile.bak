@@ -1,6 +1,8 @@
-# https://wiki.alpinelinux.org/wiki/BusyBox
+export ENV="$HOME/.config/ash/ashrc"
 
 export MESA_LOADER_DRIVER_OVERRIDE=iris # for intel gen 8
+
+# LANG=id_ID.UTF-8
 
 # Default programs
 export EDITOR="nvim"
@@ -110,4 +112,6 @@ export GDK_BACKEND=wayland
 
 export LADSPA_PATH="$HOME/.local/share/ladspa:/usr/lib/ladspa:/usr/local/lib/ladspa"
 
+# oksh
+# export ENV=$HOME/.kshrc
 . "/home/kuss/.local/share/cargo/env"

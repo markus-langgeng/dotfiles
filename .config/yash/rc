@@ -1,12 +1,4 @@
-# set -o posix -o braceexpand -o vi -o vi-tabcomplete;
-
-# Firstly, load the common customization script.
-# If you don't like settings applied in this script, remove this line.
-. --autoload --no-alias initialization/common
-
-bindkey --emacs '\^L' clear-and-redraw-all
-bindkey --vi-insert '\^L' clear-and-redraw-all
-bindkey --vi-command '\^L' clear-and-redraw-all
+set -o posix -o braceexpand -o vi -o vi-tabcomplete;
 
 # if [ $(id -u) == 0 ]; then
 #     PS1="\[\e[1;34m\][\[\e[1;91m\]\u\[\e[35m\]@\[\e[1;35m\]\h \[\e[1;33m\]\W\[\e[1;34m\]]#\[\e[0;m\] "
@@ -14,6 +6,7 @@ bindkey --vi-command '\^L' clear-and-redraw-all
 #     PS1="\[\e[1;34m\][\[\e[1;33m\]\u\[\e[35m\]@\[\e[1;35m\]\h \[\e[1;33m\]\W\[\e[1;34m\]]$\[\e[0;m\] "
 # fi
 
+alias dfs='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
 alias cp="cp -i"
 alias mv="mv -i"
 alias rm="rm -i"
@@ -26,7 +19,6 @@ alias trr="trash-restore"
 
 alias ls="ls -h --color=always --group-directories-first"
 alias grep="grep --color=auto"
-alias diff="diff --color=auto"
 alias ip="ip -color=auto"
 
 alias ka="killall"
@@ -40,8 +32,10 @@ alias xdg-def="xdg-mime default"
 alias adb='HOME="$XDG_DATA_HOME"/android adb'
 alias lofi="setsid -f mpv --no-video --no-resume-playback 'https://www.youtube.com/watch?v=jfKfPfyJRdk'"
 alias rekeyd="doas cp $HOME/.config/my_keyd.conf /etc/keyd/default.conf && doas keyd reload"
+alias apk-search-edge="doas apk -X https://dl-cdn.alpinelinux.org/alpine/edge/community search"
+alias apk-add-edge="doas apk -X https://dl-cdn.alpinelinux.org/alpine/edge/community add"
 
-# . "$HOME/.config/shell/fzf_functions"
+. "$HOME/.config/shell/fzf_functions"
 
 mkcd() { mkdir -pv "$1" && cd "$1" || exit; }
 mvcd() { mv -vi "$1" "$2" && cd "$2" || exit; }

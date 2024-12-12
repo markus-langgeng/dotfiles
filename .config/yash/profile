@@ -6,7 +6,9 @@ export MESA_LOADER_DRIVER_OVERRIDE=iris # for intel gen 8
 export EDITOR="nvim"
 export VISUAL="nvim"
 export TERMINAL="foot"
-export BROWSER="firefox"
+export BROWSER="librewolf"
+export PAGER="nvim +Man!"
+export MANPAGER="nvim +Man!"
 
 # xdg base dirs
 export XDG_CONFIG_HOME=$HOME/.config
@@ -28,6 +30,7 @@ export ANSIBLE_GALAXY_CACHE_DIR="${XDG_CACHE_HOME}/ansible/galaxy_cache"
 # export ZDOTDIR="$XDG_CONFIG_HOME/zsh/"
 # export HISTFILE="$XDG_STATE_HOME/zsh/history"
 export HISTFILE="$XDG_STATE_HOME/history"
+export HISTSIZE=5000
 export XINITRC="$XDG_CONFIG_HOME/X11/xinitrc"
 export LESSHISTFILE="$XDG_STATE_HOME/less/history"
 export GOPATH="$XDG_STATE_HOME/go"
@@ -45,6 +48,9 @@ export CARGO_HOME="$XDG_DATA_HOME"/cargo
 export SQLITE_HISTORY=$XDG_DATA_HOME/sqlite_history
 export RUSTUP_HOME="$XDG_DATA_HOME"/rustup
 export CHROME_EXECUTABLE="/usr/bin/chromium"
+# export SDL_DYNAMIC_API=/usr/lib64/libSDL2-2.0.so.0
+export SDL_VIDEODRIVER=wayland
+# export PIPEWIRE_DEBUG=3
 
 # pnpm
 export NPM_CONFIG_USERCONFIG="$XDG_CONFIG_HOME/npm/npmrc"
@@ -56,12 +62,12 @@ esac
 # pnpm end
 
 # fzf config
-export FZF_DEFAULT_COMMAND="find . \
-    -not \( -iwholename '*/.git' -prune \) \
-    -not \( -iwholename '*/node_modules' -prune \) \
-    -not \( -iwholename '*cache*' -prune \)
-    -type f "
-# export FZF_DEFAULT_OPTS="--cycle --ansi --reverse"
+# export FZF_DEFAULT_COMMAND="find . \
+#     -not \( -iwholename '*/.git' -prune \) \
+#     -not \( -iwholename '*/node_modules' -prune \) \
+#     -not \( -iwholename '*cache*' -prune \)
+#     -type f "
+export FZF_DEFAULT_OPTS="--reverse"
 export NODE_REPL_HISTORY="$XDG_DATA_HOME"/node_repl_history
 
 # IME
@@ -99,9 +105,11 @@ export _JAVA_AWT_WM_NONREPARENTING=1
 export CLUTTER_BACKEND="wayland"
 export SDL_VIDEODRIVER="wayland,x11"
 
-# export MOZ_ENABLE_WAYLAND=1
+export MOZ_ENABLE_WAYLAND=1
 export GDK_BACKEND=wayland
 
+export LADSPA_PATH="$HOME/.local/share/ladspa:/usr/lib/ladspa:/usr/local/lib/ladspa"
+
 # oksh
-# export ENV=$HOME/.kshrc
+export ENV=$HOME/.kshrc
 . "/home/kuss/.local/share/cargo/env"

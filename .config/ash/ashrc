@@ -1,4 +1,6 @@
-set -o posix -o braceexpand -o vi -o vi-tabcomplete;
+# set -o posix
+# set -o braceexpand
+set -o vi
 
 if [ $(id -u) == 0 ]; then
     PS1="\[\e[1;34m\][\[\e[1;91m\]\u\[\e[35m\]@\[\e[1;35m\]\h \[\e[1;33m\]\W\[\e[1;34m\]]#\[\e[0;m\] "
@@ -6,6 +8,7 @@ else
     PS1="\[\e[1;34m\][\[\e[1;33m\]\u\[\e[35m\]@\[\e[1;35m\]\h \[\e[1;33m\]\W\[\e[1;34m\]]$\[\e[0;m\] "
 fi
 
+alias su="doas -s"
 alias dfs='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
 alias cp="cp -i"
 alias mv="mv -i"
@@ -24,6 +27,7 @@ alias ip="ip -color=auto"
 alias ka="killall"
 alias e="$EDITOR"
 alias v="$EDITOR"
+alias vi="$EDITOR"
 alias z="zathura"
 alias g="git"
 alias xdg-qf="xdg-mime query filetype"
@@ -65,4 +69,3 @@ gfp() {
     [ -z "$my_cmd" ] && return 1
     eval "$my_cmd --multi --bind ctrl-a:select-all,ctrl-d:deselect-all,ctrl-t:toggle-all | sed 's/^/\"/;s/$/\"/' | tr '\n' ' ' | wl-copy"
 }
-
