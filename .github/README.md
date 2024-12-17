@@ -38,8 +38,8 @@ alias dfs='git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
 
 ## Configuration
 ```sh
-mydotfiles config status.showUntrackedFiles no
-mydotfiles remote set-url origin git@github.com:markus-langgeng/dotfiles.git
+dfs config status.showUntrackedFiles no
+dfs remote set-url origin git@github.com:markus-langgeng/dotfiles.git
 ```
 
 ## Usage
