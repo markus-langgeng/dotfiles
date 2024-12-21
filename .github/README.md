@@ -27,7 +27,7 @@ link to it whenever it is mentioned here.
 ```sh
 git init --bare $HOME/.dotfiles
 alias dfs='git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
-mydotfiles remote add origin git@github.com:markus-langgeng/dotfiles.git
+dfs remote add origin git@github.com:markus-langgeng/dotfiles.git
 ```
 
 ## Replication
