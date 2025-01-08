@@ -22,6 +22,7 @@ link to it whenever it is mentioned here.
 - Screenshot: [grim](https://wayland.emersion.fr/grim/) & [slurp](https://wayland.emersion.fr/slurp/)
 - Hot Key: [keyd](https://github.com/rvaiya/keyd)
 - IME: [fcitx5](https://fcitx-im.org/wiki/Fcitx_5)
+- Background: [swww](https://github.com/LGFae/swww)
 
 ## Setup
 ```sh
