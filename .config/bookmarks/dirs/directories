@@ -1,0 +1,36 @@
+ | config  |   | "$XDG_CONFIG_HOME"
+
+# share dir
+ | share |   |  "$XDG_DATA_HOME"
+ | state |   |  "$XDG_STATE_HOME"
+ | fonts |   |  "$XDG_DATA_HOME/fonts/"
+ |
+ | down dl |   |  "$HOME/downloads/"
+
+ | bin  |   |  "$HOME/.local/bin/"
+
+# kuliah
+kuliah | kuliah |   |  "$HOME/kuliah"
+kuliah | hsk 2  |   |  "$HOME/hsk/2/mock_test/"
+kuliah | hsk 3  |   |  "$HOME/hsk/3/"
+kuliah | hsk 4  |   |  "$HOME/hsk/4/"
+kuliah | sem 1  |   |  "$HOME/kuliah/semester_1"
+kuliah | sem 2  |   |  "$HOME/kuliah/semester_2"
+kuliah | sem 3  |   |  "$HOME/kuliah/semester_3"
+kuliah | latex beamer |   |  "$HOME/personal/latex_beamer_themes"
+
+# kerja
+kerja  | kd |   |   "$HOME/kerja/coding/"
+
+# bacaan
+bacaan | bk |   |  "$HOME/personal/buku/"
+bacaan | jl |   |  "$HOME/personal/jurnal"
+
+media | sp |   |  "$HOME/sync/pictures/"
+media | si |   |  "$HOME/sync/pictures/Instander/"
+media | sc |   |  "$HOME/sync/DCIM/Camera/"
+media | ss |   |  "$HOME/sync/DCIM/Screenshots"
+media | sd |   |  "$HOME/sync/documents/"
+
+media | m  |   |  "$HOME/music/"
+media | p  |   |  "$HOME/personal/"

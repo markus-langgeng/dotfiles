@@ -36,7 +36,7 @@ export SWWW_TRANSITION_FPS=60
 export SWWW_TRANSITION_STEP=2
 
 # This controls (in seconds) when to switch to the next image
-INTERVAL=180
+INTERVAL=600
 
 # Possible values:
 #    -   no:   Do not resize the image

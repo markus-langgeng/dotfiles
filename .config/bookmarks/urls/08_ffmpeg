@@ -1,0 +1,4 @@
+ffmpeg | noise |   | https://superuser.com/questions/733061/reduce-background-noise-and-optimize-the-speech-from-an-audio-clip-using-ffmpeg
+ffmpeg | noise,noise_reduction |   | https://gist.github.com/liangfu/97f877e311210fa0ae18a31fdd92982e
+ffmpeg | merge |   |  https://superuser.com/questions/277642/how-to-merge-audio-and-video-file-in-ffmpeg
+ffmpeg | gain |   |  https://trac.ffmpeg.org/wiki/AudioVolume

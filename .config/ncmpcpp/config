@@ -78,12 +78,12 @@ visualizer_data_source = /tmp/mpd.fifo
 ##
 #
 # visualizer_output_name = Visualizer feed
-visualizer_output_name = "my_fifo"
+# visualizer_output_name = "my_fifo"
 #
 ##
 ## If you set format to 44100:16:2, make it 'yes'.
 ##
-visualizer_in_stereo = no
+# visualizer_in_stereo = no
 #
 ##
 ## Note: set below to >=10 only if you have synchronization issues with
@@ -99,17 +99,17 @@ visualizer_in_stereo = no
 #
 ## Available values: spectrum, wave, wave_filled, ellipse.
 ##
-visualizer_type = wave_filled
+# visualizer_type = wave_filled
 #
-visualizer_fps = 60
+# visualizer_fps = 60
 #
 # visualizer_autoscale = no
-visualizer_autoscale = yes
+# visualizer_autoscale = yes
 #
-visualizer_look = ●▮
+# visualizer_look = ●▮
 # visualizer_look = "●🎵"
 #
-visualizer_color = blue, cyan, green, yellow, magenta, red
+# visualizer_color = blue, cyan, green, yellow, magenta, red
 #
 ## Alternative subset of 256 colors for terminals that support it.
 ##
@@ -124,7 +124,7 @@ visualizer_color = blue, cyan, green, yellow, magenta, red
 ## and visualizer_in_stereo set, artifacts may be visible on the bottom half of
 ## the visualization.
 #
-visualizer_spectrum_smooth_look = yes
+# visualizer_spectrum_smooth_look = yes
 #
 ## A value between 1 and 5 inclusive. Specifying a larger value makes the
 ## visualizer look at a larger slice of time, which results in less jumpy
@@ -414,11 +414,11 @@ cyclic_scrolling = yes
 #
 # fetch_lyrics_for_current_song_in_background = no
 #
-store_lyrics_in_song_dir = yes
+# store_lyrics_in_song_dir = no
 #
 # generate_win32_compatible_filenames = yes
 #
-#allow_for_physical_item_deletion = no
+# allow_for_physical_item_deletion = no
 #
 ##
 ## Note: If you set this variable, ncmpcpp will try to get info from last.fm in
@@ -443,26 +443,26 @@ store_lyrics_in_song_dir = yes
 ## media_library, playlist_editor, tag_editor, outputs, visualizer, clock,
 ## lyrics, last_fm.
 ##
-screen_switcher_mode = playlist, browser
+# screen_switcher_mode = playlist, browser
 #
 ##
 ## Note: You can define startup screen by choosing screen from the list above.
 ##
-startup_screen = visualizer
+# startup_screen = visualizer
 #
 ##
 ## Note: You can define startup slave screen by choosing screen from the list
 ## above or an empty value for no slave screen.
 ##
-startup_slave_screen = playlist
+# startup_slave_screen = playlist
 #
-startup_slave_screen_focus = yes
+# startup_slave_screen_focus = yes
 #
 ##
 ## Default width of locked screen (in %).  Acceptable values are from 20 to 80.
 ##
 #
-locked_screen_width_part = 40
+# locked_screen_width_part = 40
 #
 #ask_for_locked_screen_width_part = yes
 #
@@ -600,3 +600,4 @@ use_console_editor = yes
 #
 #active_window_border = red
 #
+

@@ -1,0 +1,111 @@
+# expose to (individual) | tag (individual) | url or path
+
+# BOOKMARK BEGIN
+
+ | wa |   | https://web.whatsapp.com
+
+ | @br |   | https://search.brave.com/search?q=
+ | @g    google |   | https://www.google.com/search?q=
+ | @yt   google |   | https://www.youtube.com/results?search_query=
+ | gcr   google |   | https://classroom.google.com
+ | glens google |   | https://lens.google.com
+ | gmail google |   | https://mail.google.com
+ | gmeet google |   | https://meet.google.com
+ | gtr      google |   | https://translate.google.com/
+ | gtr enid google |   | https://translate.google.com/?sl=en&tl=id&op=translate&text=
+ | gtr iden google |   | https://translate.google.com/?sl=id&tl=en&op=translate&text=
+ | gtr encn google |   | https://translate.google.com/?sl=en&tl=zh-CN&op=translate&text=
+ | gtr cnen google |   | https://translate.google.com/?sl=zh-CN&tl=en&op=translate&text=
+ | proton mail  |   | https://mail.proton.me/u/0/inbox
+ | @d  |   | https://html.duckduckgo.com/html/?q=
+ | @bd |   | https://www.baidu.com/s?wd=
+ | @w  |   | https://en.wikipedia.org/wiki/
+ | @sp |   | https://open.spotify.com/search/
+ | @sc |   | https://scholar.google.com/scholar?q=
+
+ | syncthing |   | http://localhost:8384/
+ | chinese test, hsk |   | https://old.chinesetest.cn/ChangeLan.do?languge=en
+ | fmyh |   | https://fmhy.net/beginners-guide
+ | color picker   |    | https://www.w3schools.com/colors/colors_picker.asp
+
+ | github, dotfile markus-langgeng  |    | https://github.com/markus-langgeng/dotfiles/
+ | github, star,   markus-langgeng  |    | https://github.com/markus-langgeng?tab=stars
+ | github, dotfile LukeSmithxyz     |    | https://github.com/LukeSmithxyz/voidrice/
+ | github, dotfile BrodieRobertson  |    | https://github.com/BrodieRobertson/dotfiles/
+ | github, dotfile ThePrimeagen     |    | https://github.com/ThePrimeagen/.dotfiles
+ | github, dotfile tjdevries        |    | https://github.com/tjdevries/config.nvim
+ | github, quizziz |    | https://github.com/gbaranski/quizizz-cheat
+ | github,         |    | https://github.com/lukeSmithxyz/dwm
+ | github, yt-dlp  |    | https://github.com/yt-dlp/yt-dlp
+ | github, ftplugin, neovim, nvim |   | https://github.com/echasnovski/nvim
+ | github, arkenfox |   | https://github.com/arkenfox/user.js/wiki
+ | fonts | linux | https://wiki.archlinux.org/title/Metric-compatible_fonts
+ | fonts, nerdfont |       | https://www.nerdfonts.com/cheat-sheet
+ | landchad, LukeSmithxyz |   | https://landchad.net/
+ | regex |   | https://regexr.com/
+ | scan virus |   | https://virustotal.com/
+
+ | IME       | linux | https://wiki.archlinux.org/title/Input_method
+ | wubi, IME | linux | https://madmansnest.com/2018/03/26/wubi-introduction.html
+ | wubi, IME | linux | https://chinesemac.org/wubi/hua.html
+ | wubi, IME | linux | http://backsla.sh/talks/wubi/
+ | IME       | linux | http://www.studymongolian.net/technical/how-to-create-linux-input-method-editor/
+ | rime trime| linux | https://programmer.ink/think/super-full-and-super-detailed-rime-input-method-configuration-guide.html
+ | rime      | linux | https://dvel.me/posts/rime-ice/#%e4%b8%8a%e6%89%8b%e4%bf%ae%e6%94%b9
+ | rime      | linux | https://github.com/iDvel/rime-ice
+ | rime      | linux | https://www.10101.io/2019/01/30/rime-configuration
+ | rime      | linux | https://github.com/WithdewHua/rime-configuration
+ | trime     | linux | https://github.com/osfans/trime
+ | movie idlix   |   | https://vip.idlixofficialx.net
+ | movie cineby  |   | https://www.cineby.app/
+ | movie broflix |   | https://broflix.cc
+ | movie ddl   |   | https://web.stagatv.com
+ | free books  |   | https://www.pdfdrive.com/
+ | comic       |   | https://getcomics.org/
+ | fonts chinese |   | https://www.fonts.net.cn/fonts-zh/tag-fangzheng-1.html
+
+
+ | fzf |   | https://thevaluable.dev/fzf-shell-integration/
+ | fzf |   | https://www.reddit.com/r/archlinux/comments/163j5d8/list_awesome_cli_tools_you_feels_subtle_but/
+
+
+ | hsk audio |   | https://www.cultureyard.net/blog/hsk-textbook-audio-mp3
+ | hsk books |   | https://www.digmandarin.com/forum/thread/hsk-standard-course-pdf-textbook
+ | hsk audio |   | https://sishumandarin.com/blog/hsk-standard-course-audio-files-levels-1-6-textbooks-and-workbooks
+
+ | asdos_2024 |   | https://drive.google.com/drive/folders/15ROStyBOdNup9dwoWOW_Cpv0u_MPn0vh?usp=sharing
+ | korpus corpora |   | https://corpora.uni-leipzig.de/en?corpusId=cmn-cn_web_2019
+ | hex transparency |   | https://stackoverflow.com/questions/15852122/hex-transparency-in-colors
+ | kbbi kemendikbud |   | https://kbbi.kemdikbud.go.id/
+ | manage dotfiles |   | https://www.atlassian.com/git/tutorials/dotfiles
+ | manage dotfiles |   | https://news.ycombinator.com/item?id=11071754
+ | manage dotfiles |   | https://github.com/Siilwyn/my-dotfiles/tree/master/.my-dotfiles
+ | wallpapers | communism | https://www.flickr.com/photos/148147420@N02/sets/72157678451930511
+ | jurnal research riset free |   | https://www.freefullpdf.com/
+
+ | base64 code encode decode |   | https://www.base64decode.org/
+ | lemmy |   | https://lemmygrad.ml/
+ | lemmy piracy |   | https://lemmy.dbzer0.com/c/piracy
+ | paywall bypass |   | https://12ft.io/
+ | paywall bypass |   | https://gitflic.ru/project/magnolia1234/bpc_uploads
+
+ | firefox css |   | https://mrotherguy.github.io/ToyfoCSS/
+ | gimp heal |   | https://patdavid.net/2012/08/getting-around-in-gimp-heal-selection/
+
+ | techlore privacy |   | https://www.techlore.tech/resources
+ | browser privacy |   | https://coveryourtracks.eff.org/
+ | firefox addon |   | https://addons.mozilla.org/en-US/firefox/
+
+ | website |   | https://motherfuckingwebsite.com/
+ | website |   | http://bettermotherfuckingwebsite.com/
+ | website |   | https://bestmotherfucking.website/
+ | rss bridge |   | https://rss-bridge.org/bridge01/
+ | rss bridge |   | https://docs.rsshub.app/routes/social-media
+ | markdown |   | https://google.github.io/styleguide/docguide/style.html
+ | retro website |   | https://ninacti0n.neocities.org/main_page
+ | pdf to word |   | https://www.adobe.com/acrobat/online/pdf-to-word.html
+ | mpv, chapters |   | https://github.com/mar04/chapters_for_mpv
+ | text based game |   | https://www.ifiction.org/games/
+ | friends |   | https://drive.google.com/drive/folders/1iq9cs0sk4Cj3u2oyIGCqFLQdc-bnoG4n
+# BOOKMARK END
+

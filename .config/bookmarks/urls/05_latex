@@ -1,0 +1,66 @@
+latex |   |   | https://github.com/guanyingc/latex_paper_writing_tips
+latex | latex_packages |   | http://hefferon.blogspot.com/2016/10/curated-list-of-latex-packages.html
+latex | beamer |   | https://www.reddit.com/r/linux/comments/585n6l/what_do_you_use_to_make_slides_for_conference/
+latex | chinese |   | https://tex.stackexchange.com/questions/17611/how-does-one-type-chinese-in-latex
+latex |      |   | https://www.ejmastnak.com/tutorials/vim-latex/intro/
+latex | math |   | https://tex.stackexchange.com/questions/40492/what-are-the-differences-between-align-equation-and-displaymath
+latex | reddit |   | https://www.reddit.com/r/unixporn/comments/jtjol5/comment/gc7pjgq/
+latex | reddit |   | https://www.reddit.com/r/unixporn/comments/jtjol5/comment/gc8381i/
+latex | chinese |   | https://tex.stackexchange.com/questions/250288/chinese-russian-and-english-and-arabic-and-thai-if-possible-in-lualatex
+latex | chinese |   | https://tex.stackexchange.com/questions/222980/how-to-use-chinese-with-lualatex
+latex | chinese |   | https://tex.stackexchange.com/questions/585188/chinese-text-in-english-scrbook-with-luatexja-fontspec-and-polyglossia
+latex | biblatex |   | https://tex.stackexchange.com/questions/200932/what-is-the-most-appropriate-way-to-configure-biblatex-for-use-with-an-unsupport
+latex | biblatex |   | https://github.com/plk/biblatex/issues/1251
+latex | line spacing |   |  https://tex.stackexchange.com/questions/65849/confusion-onehalfspacing-vs-spacing-vs-word-vs-the-world
+latex | line spacing |   |  https://www.reddit.com/r/LaTeX/comments/ubo7p1/spacing_between_lines/?rdt=40077
+latex | biblatex |   | https://www.overleaf.com/latex/examples/a-simple-example-showing-how-to-create-harvard-style-referencing-in-latex/mnwzgkyvdbyy
+latex | babel, latex, language |   | https://www.overleaf.com/learn/latex/International_language_support#Using_more_than_one_language_in_a_document
+latex | biblatex |   | https://texfaq.org/tags#xetex
+latex | biblatex |   | https://texfaq.org/tags#xetex
+latex | beamer |   | https://www.reddit.com/r/LaTeX/comments/7mubcx/looking_for_some_nice_beamer_themes/
+latex |   |   | https://latex-ninja.com/2021/10/17/top-5-magic-latex-packages-you-didnt-know-about
+latex |   |   | https://jonasdevlieghere.com/post/latex-packages-i-wish-i-knew/
+latex | tikz |   | https://tex.stackexchange.com/questions/147143/whats-the-difference-between-path-and-draw-in-tikz
+latex | tikz |   |  https://tikz.dev/
+latex | linguistic |   | https://ctan.org/pkg/movement-arrows
+latex | chemistry  |   | https://ctan.org/pkg/pgf-periodictable
+latex | cards, game |   |  https://ctan.org/pkg/playcards
+latex | paper, notes |   | https://ctan.org/pkg/zebra-goodies
+latex | puzzle, game |   | https://ctan.org/pkg/jigsaw
+latex | art, pixel_art |   | https://www.ctan.org/pkg/pxpic
+latex | art, lego |   | https://ctan.org/pkg/tikzbricks
+latex | pixel_art, art |   | https://ctan.org/pkg/pixelart
+latex | art, animals |   | https://ctan.org/pkg/tikzlings
+latex | art, emoji |   | https://ctan.org/pkg/byo-twemojis
+latex | guitar, music |   | https://ctan.org/pkg/guitarchordschemes
+latex | art, world_flags |   | https://ctan.org/pkg/worldflags
+latex | game, wordle |   | https://ctan.org/pkg/wordle
+latex | music, recorder |   | https://ctan.org/pkg/recorder-fingering
+latex | music, guide |   | https://mirror.unpad.ac.id/ctan/info/latex4musicians/latex4musicians.pdf
+latex | chinese, decoration, ornament, art, beamer |   | https://ctan.org/pkg/pgfornament-han
+latex | decoration, ornament, art, beamer |    | https://ctan.org/pkg/pgfornament
+latex | beamer, notes |   |  https://ctan.org/pkg/notebeamer
+latex | latex packages, chinese |   | https://ctan.org/pkg/zhspacing
+latex | tutorial |  | https://www.overleaf.com/learn
+latex | beamer   |  | https://www.overleaf.com/learn/latex/Beamer
+latex | beamer   |  | https://github.com/martinbjeldbak/ultimate-beamer-theme-list
+latex | beamer, template |   | https://tex.stackexchange.com/questions/146529/design-a-custom-beamer-theme-from-scratch
+latex | beamer, template |   | https://jeromebelleman.gitlab.io/posts/publishing/beamerthemes/
+latex | beamer, guide    |   | https://mirror.unpad.ac.id/ctan/macros/latex/contrib/beamer/doc/beameruserguide.pdf
+latex | beamer, template |   | https://www.r-bloggers.com/2011/11/create-your-own-beamer-template/
+latex |    |    | https://mirror.unpad.ac.id/ctan/info/texbytopic/TeXbyTopic.pdf
+latex | template, titlepage |    | https://tex.stackexchange.com/questions/209993/how-to-customize-my-titlepage
+latex | input, include |  | https://en.wikibooks.org/wiki/LaTeX/Modular_Documents
+latex | references, cross-referencing |   | https://en.wikibooks.org/wiki/LaTeX/Labels_and_Cross-referencing
+latex | wiki |   | https://en.wikibooks.org/wiki/LaTeX
+latex | tikz |   | https://github.com/hengxin/cheat-sheets/blob/master/latex/latex-tikz-cheat-sheet/latex-tikz-cheat-sheet.md
+latex | wikibook, tikz |   | https://en.wikibooks.org/wiki/LaTeX/PGF/TikZ
+latex | tikz, style |   | https://tex.stackexchange.com/questions/52372/should-tikzset-or-tikzstyle-be-used-to-define-tikz-styles
+latex | beamer, template, minimalist |    | https://pascalmichaillat.org/d1/
+latex | beamer, template |   | https://tex.stackexchange.com/questions/158638/make-beamer-not-look-like-beamer
+latex | table, arguments |   | https://davidyat.es/2016/07/27/writing-a-latex-macro-that-takes-a-variable-number-of-arguments/
+latex | chinese, pinyin  |   | https://tex.stackexchange.com/questions/662769/display-pinyin-on-the-left-or-right-of-the-character-with-xpinyin-package
+latex | chinese, pinyin  |   | https://tex.stackexchange.com/questions/576339/xpinyin-display-only-pinyin
+latex | table, tabular   |   | https://tex.stackexchange.com/questions/214840/general-differences-between-array-table-tabular-tabularx-longtable-supertab
+latex | cv |   | https://github.com/andywiecko/MultiLangCV
+latex | cv |   | https://github.com/novoid/LaTeX-CV-template

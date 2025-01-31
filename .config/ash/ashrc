@@ -1,6 +1,5 @@
-# set -o posix
-# set -o braceexpand
 set -o vi
+stty -ixon
 
 if [ $(id -u) == 0 ]; then
     PS1="\[\e[1;34m\][\[\e[1;91m\]\u\[\e[35m\]@\[\e[1;35m\]\h \[\e[1;33m\]\W\[\e[1;34m\]]#\[\e[0;m\] "

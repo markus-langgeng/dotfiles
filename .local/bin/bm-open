@@ -1,33 +1,53 @@
 #!/bin/sh
 
+urldir="$HOME/.config/bookmarks/urls"
+bookdir="$HOME/personal/buku/"
+whichkey="[ ^b (Books) | ^l (Links) ]"
+
 export FZF_DEFAULT_OPTS="$FZF_DEFAULT_OPTS \
-    --multi \
-    --info=hidden \
-    --no-scrollbar "
+    --multi --info=hidden --no-scrollbar \
+    --delimiter='\|' \
+    --tiebreak=begin \
+    --bind \"ctrl-a:toggle-all\" \
+    --bind \"ctrl-d:clear-query\" \
+    --bind \"ctrl-y:transform-query(echo {4})\" \
+    --bind \"ctrl-s:change-query(@)\" \
+    --bind \"enter:accept-or-print-query\" \
+    --preview=\"echo {4}\" \
+    --preview-window=down,1% \
+    --header=\"OPEN LINKS $whichkey\" \
+    --header-first
+    "
 
-bm="$HOME/.config/shell/bm-urls"
-bm_type="url"
+FZF_OPEN_URLS_CMD="sed '1d;$d;/^$/ d;/^#/ d;' \"$urldir\"/* | column -s '|' -o '|' -t"
+FZF_OPEN_BOOK_CMD="find \"$bookdir\" -type f"
 
-if [ "$1" = "book" ] || [ "$1" = "-k" ]; then
-    [ -d "$HOME/personal/buku/" ] && bk="$HOME/personal/buku/"
-    [ -d "$HOME/hsk" ] && hsk="$HOME/hsk/"
-    bm_type="book"
-    selected=$(find "$bk" "$hsk" -type f \( -iname "*pdf" \
-        -o -iname "*epub" \
-        -o -iname "*cbr" \
-        -o -iname "*cbt" \
-        -o -iname "*cb7" \
-        -o -iname "*cbz" \
-        -o -iname "*cba" \
-        -o -iname "*djvu" \
-        -o -iname "*ps" \
-        -o -iname "*pdf" \) | sort | fzf )
-elif [ "$1" = "frequent" ] || [ "$1" = "-f" ]; then
-    selected=$(sed -n '/^\[ FREQUENT BOOKMARK \]$/,/^\[ FREQUENT BOOKMARK END \]$/p;' "$bm" | sed '1d;$d;/^$/ d;/^#/ d;' | fzf )
+FZF_COMMAND="fzf \
+--bind \"ctrl-b:reload($FZF_OPEN_BOOK_CMD)\
++hide-preview\
++change-header(OPEN BOOKS $whichkey)\" "
+
+FZF_COMMAND="$FZF_COMMAND --bind \"ctrl-l:reload($FZF_OPEN_URLS_CMD)\
++show-preview+change-header(OPEN LINKS $whichkey)\
++change-preview-window(down,1%)+change-preview(echo {4})\" "
+
+# FZF_BOOK_OPTS='\
+# --bind "ctrl-b:reload($FZF_OPEN_BOOK_CMD)\
+# +hide-preview\
+# +change-header(OPEN BOOKS $whichkey)" '
+#
+# FZF_URLS_OPTS='--bind \"ctrl-l:reload($FZF_OPEN_URLS_CMD)\
+# +show-preview+change-header(OPEN LINKS $whichkey)\
+# +change-preview-window(down,1%)+change-preview(echo {4})\" "
+# export FZF_DEFAULT_COMMAND="$FZF_OPEN_URLS_CMD"
+#
+# fzf
+
+selected=$(eval "$FZF_OPEN_URLS_CMD" | eval "$FZF_COMMAND" )
+
+if echo "$selected" | grep "|"; then
+    echo "$selected" | cut -d '|' -f4 | sed "s/^ //;s/\'/\\\'/g;s/\"/\\\"/g;s/^/\"/;s/$/\"/" | xargs -r -P3 -I{} setsid -f xdg-open "{}"
 else
-    selected=$(sed -n '/^\[ REGULAR BOOKMARK \]$/,/^\[ REGULAR BOOKMARK END \]$/p;' "$bm" | sed '1d;$d;/^$/ d;/^#/ d;' | fzf )
+    echo "$selected" | sed "s/^ //;s/\'/\\\'/g;s/\"/\\\"/g;s/^/\"/;s/$/\"/" | xargs -r -P3 -I{} setsid -f xdg-open "{}"
 fi
 
-# example uses {} but you can use whatever, such as -I{} or -Ifoo
-[ "url" = "$bm_type" ] && echo "$selected" | tr -s " " | cut -d" " -f2 | xargs -r -I{} setsid -f "$BROWSER" {}
-[ "book" = "$bm_type" ] && echo "$selected" | parallel -r -X zathura

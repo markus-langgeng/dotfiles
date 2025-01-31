@@ -1,2 +1,0 @@
-#!/bin/sh
-herbe "$(rfkill list "$1" | tr -d '\t')"

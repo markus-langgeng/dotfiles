@@ -1,0 +1,74 @@
+linux | @arch wiki |   | https://wiki.archlinux.org/title/
+linux | @alpine wiki |   | https://wiki.alpinelinux.org/wiki/
+linux | @gentoo wiki |   | https://wiki.gentoo.org/wiki/
+linux | bash parameter |   | http://mywiki.wooledge.org/BashGuide/Parameters
+linux | bash test conditional |   | http://mywiki.wooledge.org/BashGuide/TestsAndConditionals
+
+linux | xkb keyboard |   | https://medium.com/@damko/a-simple-humble-but-comprehensive-guide-to-xkb-for-linux-6f1ad5e13450
+linux | xkb keyboard |   | https://unix.stackexchange.com/questions/605053/make-custom-layout-persisten
+
+linux | suckless |   | https://tools.suckless.org/
+linux | suckless |   | https://suckless.org/rocks
+
+linux | nvim, neovim, snippet, luasnip | latex | https://evesdropper.dev/files/luasnip/
+linux | sitasi, pustaka, bibliografi   | latex | https://adityasetyawan.wordpress.com/wp-content/uploads/2016/10/catatan-sitasi-daftar-pustaka-2016.pdf
+linux | nvim, neovim, luasnip          | latex | https://github.com/L3MON4D3/LuaSnip/blob/master/DOC.md
+linux | nvim, neovim, luasnip          | latex | https://ejmastnak.com/tutorials/vim-latex/luasnip/
+linux | nvim, neovim, autocommand,lua  | latex | https://www.reddit.com/r/neovim/comments/ua3wzb/could_someone_please_help_me_convert_my/
+
+
+linux | dwm, dwm border |   | https://github.com/szatanjl/dwm/commit/1529909466206016f2101457bbf37c67195714c8
+linux | grep, shell |   | https://searx.fmac.xyz/search?q=can+i+grep+on+a+specific+line
+linux | lemmy, firefox css |   | https://lemmy.world/c/FirefoxCSS@fedia.io
+linux | fontconf |   | https://unix.stackexchange.com/questions/338047/how-does-fontconfig-actually-work
+linux | fontconf |   | https://wiki.archlinux.org/title/Font configuration/Examples#Default_fonts
+linux | xdg |   | https://wiki.archlinux.org/title/XDG_Base_Directory
+linux | xdg |   | https://github.com/b3nj5m1n/xdg-ninja
+linux | nvim, neovim |   | https://github.com/neovim/neovim/
+linux | arch |   | https://wiki.archlinux.org/title/Installation guide
+linux | dwmblocks, statusbar |   | https://github.com/UtkarshVerma/dwmblocks-async
+linux | statusbar |   | https://github.com/LordRusk/gocaudices
+linux | statusbar |   | https://github.com/shdown/luastatus
+linux | statusbar |   | https://i3wm.org/docs/user-contributed/luastatus-i3bar.html
+linux | dwm, patch |   | https://dwm.suckless.org/patches/
+linux | firefox settings |   |  about:preferences
+linux | xdg open |   | https://unix.stackexchange.com/questions/36380/how-to-properly-and-easily-configure-xdg-open-without-any-environment
+linux | disk, fdisk,gdisk |   | https://www.rodsbooks.com/gdisk/repairing.html
+linux | gdisk, disk,fdisk |   | https://www.rodsbooks.com/gdisk/walkthrough.html
+linux | shell, array |   | https://unix.stackexchange.com/questions/421158/how-to-use-pseudo-arrays-in-posix-shell-script
+linux | shell, array |   | http://www.etalabs.net/sh tricks.html
+linux | shell, array |   | https://stackoverflow.com/questions/35385962/arrays-in-a-posix-compliant-shell
+linux | autocommand, lua |   | https://www.reddit.com/r/neovim/comments/ua3wzb/could someone_please_help_me_convert_my/
+linux | pacman, troubleshoot |   | https://wiki.archlinux.org/title/Pacman#Troubleshooting
+linux | timer, bash |   | https://superuser.com/questions/611538/is-there-a-way-to-display-a-countdown-or-stopwatch-timer-in-a-terminal
+linux | tmux |   | https://wiki.archlinux.org/title/tmux
+linux | dwm, dwm border |   | https://www.reddit.com/r/suckless/comments/gg60lo/transparent_borders_on_dwm_when_using_picom/
+linux | dwm, fullscreen |   | https://github.com/bakkeby/patches/wiki/fullscreen-compilation
+linux | nvim, neovim, ftplugin |   | https://www.reddit.com/r/neovim/comments/x3zp6t/usage_of_afterftplugin_directory_for/
+linux | ftplugin, neovim, nvim |   | https://github.com/echasnovski/nvim
+linux | neovim, nvim, statusline |   | https://zignar.net/2022/01/21/a-boring-statusline-for-neovim/
+linux | neovim, nvim, statusline |   | https://nuxsh.is-a.dev/blog/custom-nvim-statusline.html
+linux | neovim, nvim, statusline |   | https://elianiva.my.id/posts/neovim-lua-statusline/
+linux | graphic, tablet |   | https://www.davidrevoy.com/article1004/xppen-artist-pro-16-gen-2-review-on-gnulinux
+linux | graphic, tablet |   | https://www.davidrevoy.com/article842/review-xp-pen-artist-24-pro-on-linux
+linux | graphic, tablet |   | https://wiki.archlinux.org/title/Graphics_tablet
+linux | roff, neatroff |   | https://litcave.rudi.ir/neatroff.pdf
+linux | roff, neatroff |   | https://litcave.rudi.ir/neatstart.pdf
+linux | roff, heirloom |   | https://heirloom.sourceforge.net/doctools.html
+linux | roff, troff |   | https://www.troff.org/
+linux | wayland |   | https://wiki.archlinux.org/title/wayland
+linux | sleep |   | https://blog.daveeddy.com/2018/10/01/run-user-scripts-on-suspend-and-wakeup-on-void-linux/
+linux | firefox |   | https://www.guyrutenberg.com/2020/03/21/xdg-open-fails-when-using-firefox-under-wayland/
+linux | sed, quit |   | https://unix.stackexchange.com/questions/264962/print-lines-of-a-file-between-two-matching-patterns/264977
+linux | dwl |   | http://codeberg.org/dwl/dwl
+linux | dwl patches |   | https://codeberg.org/dwl/dwl-patches/src/branch/main/patches
+linux | dwm, patches |   | https://dwm.suckless.org/patches
+linux | dwm, patches |   | https://coggle.it/diagram/X9IiSSM6PTWOM9Wz/t/dwm-patches/d3448968e2509321527c3864cd4eee651e5f55e525582fdbf33be764972d9aef
+linux | dwm, patches |   | https://www.reddit.com/r/suckless/comments/fl8oaf/searching for_a_patch_a_dwm_patch_that_can/
+linux | nvim, c, cpp  |   | https://www.reddit.com/r/neovim/comments/18a2tjd/neovim for_cc/
+linux | lua, string, pattern |   | http://lua-users.org/wiki/PatternsTutorial
+linux | table, lua |  | http://lua-users.org/wiki/TablesTutorial
+linux | file-permissions |   | https://askubuntu.com/questions/528411/how-do-you-view-file-permissions
+jinux | ssh, denied, troubleshoot |   | https://stackoverflow.com/questions/17668283/failed-to-add-the-host-to-the-list-of-know-hosts
+linux | ssh, denied, troubleshoot |   | https://quickref.me/chmod.html
+linux | xdg-desktop-portal |   | https://wiki.archlinux.org/title/Xdg-desktop-portal#List_of_backends_and_interfaces

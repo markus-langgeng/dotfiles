@@ -3,287 +3,294 @@
 
 [ FREQUENT BOOKMARK ]
 w       https://web.whatsapp.com
-s       https://siam.ub.ac.id
+# s       https://siam.ub.ac.id
 c       https://classroom.google.com
 l       https://lens.google.com
 g       https://github.com
 yt      https://youtube.com
 sc      https://scholar.google.com
 me      https://meet.google.com
+d       https://github.com/markus-langgeng/dotfiles/
+sp      https://open.spotify.com
 [ FREQUENT BOOKMARK END ]
 
 [ REGULAR BOOKMARK ]
-arch,wiki           https://wiki.archlinux.org/
+# arch,wiki           https://wiki.archlinux.org/
 bash                https://stackoverflow.com/questions/22159044/how-to-append-a-string-at-end-of-a-specific-line-in-a-file-in-bash
-fmhy                https://fmhy.pages.dev/
+fmhy                https://fmhy.net/beginners-guide
 bash,parameter      http://mywiki.wooledge.org/BashGuide/Parameters
 bash,test           http://mywiki.wooledge.org/BashGuide/TestsAndConditionals
 shell,parse,ls      https://mywiki.wooledge.org/ParsingLs
 xkb,keyboard        https://medium.com/@damko/a-simple-humble-but-comprehensive-guide-to-xkb-for-linux-6f1ad5e13450
-syncthing           http://localhost:8384/
+# syncthing           http://localhost:8384/
 
-# githubs
-luke_smith,dotfiles   https://github.com/LukeSmithxyz/voidrice/
-luke_smith,dwm   https://github.com/lukeSmithxyz/dwm
-brodie,dotfiles   https://github.com/BrodieRobertson/dotfiles/
-langgeng,dotfiles   https://github.com/markus-langgeng/dotfiles/
-prime,dotfiles   https://github.com/ThePrimeagen/.dotfiles
-tj,nvim   https://github.com/tjdevries/config.nvim
+# # githubs
+# luke_smith,dotfiles   https://github.com/LukeSmithxyz/voidrice/
+# luke_smith,dwm   https://github.com/lukeSmithxyz/dwm
+# brodie,dotfiles   https://github.com/BrodieRobertson/dotfiles/
+# prime,dotfiles   https://github.com/ThePrimeagen/.dotfiles
+# tj,nvim   https://github.com/tjdevries/config.nvim
 
-dwm,dwm_border   https://github.com/szatanjl/dwm/commit/1529909466206016f2101457bbf37c67195714c8
-grep,shell   https://searx.fmac.xyz/search?q=can+i+grep+on+a+specific+line
-lemmy,firefox_css   https://lemmy.world/c/FirefoxCSS@fedia.io
-fontconf   https://unix.stackexchange.com/questions/338047/how-does-fontconfig-actually-work
-fontconf   https://wiki.archlinux.org/title/Font_configuration/Examples#Default_fonts
-wiki,IME   https://wiki.archlinux.org/title/Input_method
-xdg   https://wiki.archlinux.org/title/XDG_Base_Directory
-xdg   https://github.com/b3nj5m1n/xdg-ninja
-nvim,neovim   https://github.com/neovim/neovim/
-arch   https://wiki.archlinux.org/title/Installation_guide
-dwmblocks,statusbar   https://github.com/UtkarshVerma/dwmblocks-async
-statusbar   https://github.com/LordRusk/gocaudices
-statusbar   https://github.com/shdown/luastatus
-statusbar   https://i3wm.org/docs/user-contributed/luastatus-i3bar.html
-dwm,patch   https://dwm.suckless.org/patches/
-firefox_settings   about:preferences
-xdg_open   https://unix.stackexchange.com/questions/36380/how-to-properly-and-easily-configure-xdg-open-without-any-environment
-disk,fdisk,gdisk   https://www.rodsbooks.com/gdisk/repairing.html
-gdisk,disk,fdisk   https://www.rodsbooks.com/gdisk/walkthrough.html
-color,color_picker   https://www.w3schools.com/colors/colors_picker.asp
-latex   https://github.com/guanyingc/latex_paper_writing_tips
-quizizz   https://github.com/gbaranski/quizizz-cheat
-shell,array   https://unix.stackexchange.com/questions/421158/how-to-use-pseudo-arrays-in-posix-shell-script
-shell,array   http://www.etalabs.net/sh_tricks.html
-shell,array   https://stackoverflow.com/questions/35385962/arrays-in-a-posix-compliant-shell
-regex   https://regexr.com/
-admisi,ub   https://admisi.ub.ac.id/admisi/home
-selma,ub,ukt   https://selma.ub.ac.id/pengumuman-penetapan-uang-kuliah-tunggal-ukt-jalur-seleksi-nasional-berdasarkan-tes-snbt-2023-2024/
-selma   https://selma.ub.ac.id/
-latex,latex_packages   http://hefferon.blogspot.com/2016/10/curated-list-of-latex-packages.html
-latex,beamer   https://www.reddit.com/r/linux/comments/585n6l/what_do_you_use_to_make_slides_for_conference/
-latex,chinese   https://tex.stackexchange.com/questions/17611/how-does-one-type-chinese-in-latex
-autocommand,lua   https://www.reddit.com/r/neovim/comments/ua3wzb/could_someone_please_help_me_convert_my/
-latex   https://www.ejmastnak.com/tutorials/vim-latex/intro/
-latex,snippet,luasnip   https://evesdropper.dev/files/luasnip/
-latex,math   https://tex.stackexchange.com/questions/40492/what-are-the-differences-between-align-equation-and-displaymath
-latex,reddit   https://www.reddit.com/r/unixporn/comments/jtjol5/comment/gc7pjgq/
-latex,reddit   https://www.reddit.com/r/unixporn/comments/jtjol5/comment/gc8381i/
-siam,ub   https://siam.ub.ac.id/
-latex,chinese   https://tex.stackexchange.com/questions/250288/chinese-russian-and-english-and-arabic-and-thai-if-possible-in-lualatex
-latex,chinese   https://tex.stackexchange.com/questions/222980/how-to-use-chinese-with-lualatex
-latex,chinese   https://tex.stackexchange.com/questions/585188/chinese-text-in-english-scrbook-with-luatexja-fontspec-and-polyglossia
-base64,code,encode,decode   https://www.base64decode.org/
-lemmy   https://lemmy.world/
-gapura,ub   https://gapura.ub.ac.id/
-trime,IME   https://forum.f-droid.org/t/typing-chinese-with-trime/5961
-searx   https://searx.space/
-pacman,troubleshoot   https://wiki.archlinux.org/title/Pacman#Troubleshooting
-browser,tracks   https://coveryourtracks.eff.org/
-firefox,addon   https://addons.mozilla.org/en-US/firefox/
-techlore   https://www.techlore.tech/resources
-timer,bash   https://superuser.com/questions/611538/is-there-a-way-to-display-a-countdown-or-stopwatch-timer-in-a-terminal
-fonts   https://stackoverflow.com/questions/20711393/how-do-i-download-extract-font-from-chrome-developers-tools/38470582#38470582
-referensi,ipp   https://www.kemenkopmk.go.id/perlu-kerja-keras-bersama-untuk-tingkatkan-indeks-pembangunan-pemuda
-referensi,ipp   https://ipp.kemenpora.go.id/faq
+# dwm,dwm_border   https://github.com/szatanjl/dwm/commit/1529909466206016f2101457bbf37c67195714c8
+# grep,shell   https://searx.fmac.xyz/search?q=can+i+grep+on+a+specific+line
+# lemmy,firefox_css   https://lemmy.world/c/FirefoxCSS@fedia.io
+# fontconf   https://unix.stackexchange.com/questions/338047/how-does-fontconfig-actually-work
+# fontconf   https://wiki.archlinux.org/title/Font_configuration/Examples#Default_fonts
+# wiki,IME   https://wiki.archlinux.org/title/Input_method
+# xdg   https://wiki.archlinux.org/title/XDG_Base_Directory
+# xdg   https://github.com/b3nj5m1n/xdg-ninja
+# nvim,neovim   https://github.com/neovim/neovim/
+# arch   https://wiki.archlinux.org/title/Installation_guide
+# dwmblocks,statusbar   https://github.com/UtkarshVerma/dwmblocks-async
+# statusbar   https://github.com/LordRusk/gocaudices
+# statusbar   https://github.com/shdown/luastatus
+# statusbar   https://i3wm.org/docs/user-contributed/luastatus-i3bar.html
+# dwm,patch   https://dwm.suckless.org/patches/
+# firefox_settings   about:preferences
+# xdg_open   https://unix.stackexchange.com/questions/36380/how-to-properly-and-easily-configure-xdg-open-without-any-environment
+# disk,fdisk,gdisk   https://www.rodsbooks.com/gdisk/repairing.html
+# gdisk,disk,fdisk   https://www.rodsbooks.com/gdisk/walkthrough.html
+# color,color_picker   https://www.w3schools.com/colors/colors_picker.asp
+# latex   https://github.com/guanyingc/latex_paper_writing_tips
+# quizizz   https://github.com/gbaranski/quizizz-cheat
+# shell,array   https://unix.stackexchange.com/questions/421158/how-to-use-pseudo-arrays-in-posix-shell-script
+# shell,array   http://www.etalabs.net/sh_tricks.html
+# shell,array   https://stackoverflow.com/questions/35385962/arrays-in-a-posix-compliant-shell
+# regex   https://regexr.com/
+# admisi,ub   https://admisi.ub.ac.id/admisi/home
+# selma,ub,ukt   https://selma.ub.ac.id/pengumuman-penetapan-uang-kuliah-tunggal-ukt-jalur-seleksi-nasional-berdasarkan-tes-snbt-2023-2024/
+# selma   https://selma.ub.ac.id/
+# latex,latex_packages   http://hefferon.blogspot.com/2016/10/curated-list-of-latex-packages.html
+# latex,beamer   https://www.reddit.com/r/linux/comments/585n6l/what_do_you_use_to_make_slides_for_conference/
+# latex,chinese   https://tex.stackexchange.com/questions/17611/how-does-one-type-chinese-in-latex
+# autocommand,lua   https://www.reddit.com/r/neovim/comments/ua3wzb/could_someone_please_help_me_convert_my/
+# latex   https://www.ejmastnak.com/tutorials/vim-latex/intro/
+# latex,snippet,luasnip   https://evesdropper.dev/files/luasnip/
+# latex,math   https://tex.stackexchange.com/questions/40492/what-are-the-differences-between-align-equation-and-displaymath
+# latex,reddit   https://www.reddit.com/r/unixporn/comments/jtjol5/comment/gc7pjgq/
+# latex,reddit   https://www.reddit.com/r/unixporn/comments/jtjol5/comment/gc8381i/
+# siam,ub   https://siam.ub.ac.id/
+# latex,chinese   https://tex.stackexchange.com/questions/250288/chinese-russian-and-english-and-arabic-and-thai-if-possible-in-lualatex
+# latex,chinese   https://tex.stackexchange.com/questions/222980/how-to-use-chinese-with-lualatex
+# latex,chinese   https://tex.stackexchange.com/questions/585188/chinese-text-in-english-scrbook-with-luatexja-fontspec-and-polyglossia
+# base64,code,encode,decode   https://www.base64decode.org/
+# lemmy   https://lemmygrad.ml/
+# gapura,ub   https://gapura.ub.ac.id/
+# trime,IME   https://forum.f-droid.org/t/typing-chinese-with-trime/5961
+# searx   https://searx.space/
+# pacman,troubleshoot   https://wiki.archlinux.org/title/Pacman#Troubleshooting
+# browser,tracks   https://coveryourtracks.eff.org/
+# firefox,addon   https://addons.mozilla.org/en-US/firefox/
+# techlore   https://www.techlore.tech/resources
+# timer,bash   https://superuser.com/questions/611538/is-there-a-way-to-display-a-countdown-or-stopwatch-timer-in-a-terminal
+# fonts   https://stackoverflow.com/questions/20711393/how-do-i-download-extract-font-from-chrome-developers-tools/38470582#38470582
+# referensi,ipp   https://www.kemenkopmk.go.id/perlu-kerja-keras-bersama-untuk-tingkatkan-indeks-pembangunan-pemuda
+# referensi,ipp   https://ipp.kemenpora.go.id/faq
 #   referensi,ipp    https://www.kemenkopmk.go.id/pemerintah-fokus-tingkatkan-ipp-domain-pendidikan
 #   referensi,ipp    https://balitbangnovdasumsel.com/berita/953
 #   referensi,ipp    https://sports.sindonews.com/read/1097167/51/menpora-ada-5-domain-yang-diukur-dalam-indikator-ipp-1683986717
-referensi,ipp   https://scholar.google.co.id/scholar?hl=en&as_sdt=0%2C5&as_vis=1&q=indeks+pembangunan+pemuda&btnG=
-gimp,heal   https://patdavid.net/2012/08/getting-around-in-gimp-heal-selection/
-latex,biblatex   https://tex.stackexchange.com/questions/200932/what-is-the-most-appropriate-way-to-configure-biblatex-for-use-with-an-unsupport
-latex,biblatex   https://github.com/plk/biblatex/issues/1251
-latex,line_spacing   https://tex.stackexchange.com/questions/65849/confusion-onehalfspacing-vs-spacing-vs-word-vs-the-world
-latex,line_spacing   https://www.reddit.com/r/LaTeX/comments/ubo7p1/spacing_between_lines/?rdt=40077
-yt-dlp   https://github.com/yt-dlp/yt-dlp
-fonts   https://wiki.archlinux.org/title/Metric-compatible_fonts
-latex,biblatex   https://www.overleaf.com/latex/examples/a-simple-example-showing-how-to-create-harvard-style-referencing-in-latex/mnwzgkyvdbyy
-babel,latex,language   https://www.overleaf.com/learn/latex/International_language_support#Using_more_than_one_language_in_a_document
-latex,biblatex   https://texfaq.org/tags#xetex
-stilistika   https://books.google.co.id/books?hl=en&lr=&id=zGVoDwAAQBAJ&oi=fnd&pg=PR5&dq=pengertian+stilistika&ots=Bq8SarTowb&sig=GexI3gjqFErMCuaZcRYpjZbqo0w&redir_esc=y#v=onepage&q=pengertian%20stilistika&f=false
-rime,trime   https://programmer.ink/think/super-full-and-super-detailed-rime-input-method-configuration-guide.html
-rime,trime   https://wiki.archlinux.org/title/Rime
-tmux   https://wiki.archlinux.org/title/tmux
-paywall,bypass   https://12ft.io/
-beamer   https://www.reddit.com/r/LaTeX/comments/7mubcx/looking_for_some_nice_beamer_themes/
-latex   https://latex-ninja.com/2021/10/17/top-5-magic-latex-packages-you-didnt-know-about
-latex   https://jonasdevlieghere.com/post/latex-packages-i-wish-i-knew/
-noise,noise_reduction   https://unix.stackexchange.com/questions/140398/cleaning-voice-recordings-from-command-line
-luasnip,latex   https://github.com/L3MON4D3/LuaSnip/blob/master/DOC.md
-tikz,latex   https://tex.stackexchange.com/questions/147143/whats-the-difference-between-path-and-draw-in-tikz
-pancasila,logbook   https://docs.google.com/document/d/1-qj49Z4FEpGl5kOcvBX7ixeiK0bXQFoKPrspL3VFnXc/edit
-ffmpeg,noise,noise_reduction   https://gist.github.com/liangfu/97f877e311210fa0ae18a31fdd92982e
-ffmpeg,merge   https://superuser.com/questions/277642/how-to-merge-audio-and-video-file-in-ffmpeg
-ffmpeg,gain   https://trac.ffmpeg.org/wiki/AudioVolume
-bahasa_indonesia,artikel_ilmiah   https://docs.google.com/document/d/1gkdN54EY5NDduVZ7KBdQ7XCaCLDZdKhMgqHiQPt3LPw/edit
-latex,tikz   https://tikz.dev/
-latex,linguistic   https://ctan.org/pkg/movement-arrows
-latex,chemistry   https://ctan.org/pkg/pgf-periodictable
-latex,cards,game   https://ctan.org/pkg/playcards
-latex,paper,notes   https://ctan.org/pkg/zebra-goodies
-latex,puzzle,game   https://ctan.org/pkg/jigsaw
-latex,art,pixel_art   https://www.ctan.org/pkg/pxpic
-latex,art,lego   https://ctan.org/pkg/tikzbricks
-latex,pixel_art,art   https://ctan.org/pkg/pixelart
-latex,art,animals   https://ctan.org/pkg/tikzlings
-latex,art,emoji   https://ctan.org/pkg/byo-twemojis
-latex,guitar,music   https://ctan.org/pkg/guitarchordschemes
-latex,art,world_flags   https://ctan.org/pkg/worldflags
-latex,game,wordle   https://ctan.org/pkg/wordle
-latex,music,recorder   https://ctan.org/pkg/recorder-fingering
-latex,music,guide       https://mirror.unpad.ac.id/ctan/info/latex4musicians/latex4musicians.pdf
-latex,chinese,decoration,ornament,art,beamer   https://ctan.org/pkg/pgfornament-han
-latex,decoration,ornament,art,beamer   https://ctan.org/pkg/pgfornament
-latex,beamer,notes          https://ctan.org/pkg/notebeamer
-latex,latex_packages,chinese   https://ctan.org/pkg/zhspacing
-marxism   https://www.marxists.org/subject/students/index.htm
-pancasila,logbook,outline,catatan_lapangan   https://docs.google.com/document/d/1XQwXuSaz5_qrC8TGrVAnzdTgTunDTlZ_0Het94BnZ8Q/edit
-pancasila,footage   https://drive.google.com/drive/folders/1-7V4wWxE2-nk8eXB1lnlMvSSQm-T4xwg
-trime   https://github.com/osfans/trime
-filsafat,tugas_akhir   https://docs.google.com/document/d/1z9tfIz_8u6_5R597B7ZpSJ0cwTfuuLq8N9ra_DLg-FI/edit
-dwm,dwm_border   https://www.reddit.com/r/suckless/comments/gg60lo/transparent_borders_on_dwm_when_using_picom/
-dwm,fullscreen   https://github.com/bakkeby/patches/wiki/fullscreen-compilation
-retro_website   https://ninacti0n.neocities.org/main_page
-pdf_to_word   https://www.adobe.com/acrobat/online/pdf-to-word.html
-cerpen,filsafat   https://www.tweetilmu.web.id/2023/03/cerpen-sesaat-sebelum-berangkat.html?m=1
-friends   https://drive.google.com/drive/folders/1iq9cs0sk4Cj3u2oyIGCqFLQdc-bnoG4n
-simple_mobile_apps   https://www.reddit.com/r/SimpleMobileTools/comments/18929pq/simplemobiletools_was_sold_alternatives/
-nvim,neovim,ftplugin   https://www.reddit.com/r/neovim/comments/x3zp6t/usage_of_afterftplugin_directory_for/
-ftplugin,neovim,nvim   https://github.com/echasnovski/nvim
-neovim,nvim,statusline   https://zignar.net/2022/01/21/a-boring-statusline-for-neovim/
-neovim,nvim,statusline   https://nuxsh.is-a.dev/blog/custom-nvim-statusline.html
-neovim,nvim,statusline          https://elianiva.my.id/posts/neovim-lua-statusline/
-test,test_2   https://search.brave.com/search?q=shell+printf+add+0
-fzf           https://thevaluable.dev/practical-guide-fzf-example/
-graphic,tablet           https://www.davidrevoy.com/article1004/xppen-artist-pro-16-gen-2-review-on-gnulinux
-graphic,tablet           https://www.davidrevoy.com/article842/review-xp-pen-artist-24-pro-on-linux
-graphic,tablet           https://wiki.archlinux.org/title/Graphics_tablet
-lemmy,piracy           https://lemmy.dbzer0.com/c/piracy
-email,proton           https://mail.proton.me/u/0/inbox
-star,github           https://github.com/markus-langgeng?tab=stars
-chinese,hsk           https://old.chinesetest.cn/ChangeLan.do?languge=en
-ub           https://ub.ac.id/
-lemmy           https://lemmyverse.net/
-photoshop           https://www.photopea.com/
-icon           https://www.iconfinder.com/
-awesome,no_login           https://github.com/aviaryan/awesome-no-login-web-apps
-no_gui,cli_only           https://github.com/you-dont-need/You-Dont-Need-GUI
-awesome           https://github.com/sindresorhus/awesome
-text_based_game           https://www.ifiction.org/games/
-arkenfox           https://github.com/arkenfox/user.js/wiki
-latex,tutorial           https://www.overleaf.com/learn
-latex,beamer           https://www.overleaf.com/learn/latex/Beamer
-beamer           https://github.com/martinbjeldbak/ultimate-beamer-theme-list
-beamer,template           https://tex.stackexchange.com/questions/146529/design-a-custom-beamer-theme-from-scratch
-beamer,template           https://jeromebelleman.gitlab.io/posts/publishing/beamerthemes/
-beamer,guide           https://mirror.unpad.ac.id/ctan/macros/latex/contrib/beamer/doc/beameruserguide.pdf
-beamer,template           https://www.r-bloggers.com/2011/11/create-your-own-beamer-template/
-suckless           https://tools.suckless.org/
-website           https://motherfuckingwebsite.com/
-website           http://bettermotherfuckingwebsite.com/
-website           https://bestmotherfucking.website/
-rss_bridge           https://rss-bridge.org/bridge01/
-rss_bridge           https://docs.rsshub.app/routes/social-media
-landchad           https://landchad.net/
-suckless           https://suckless.org/rocks
-figma_alternative           https://github.com/penpot/penpot
-minimalist,software,alternative           https://github.com/mayfrost/guides/blob/master/ALTERNATIVES.md#android-apps
-latex           https://mirror.unpad.ac.id/ctan/info/texbytopic/TeXbyTopic.pdf
-perpustakaan,online           https://drive.google.com/drive/folders/1ldRFSeIRNEd5iG7wOtNc2Vln3cgTmcZx
-scan,virus           https://virustotal.com/
-literature,marxism           http://ressources-socius.info/index.php/reeditions/18-reeditions-d-articles/150-literature
-lua,string,pattern           http://lua-users.org/wiki/PatternsTutorial
-luasnip,latex,nvim           https://ejmastnak.com/tutorials/vim-latex/luasnip/
-table,lua           http://lua-users.org/wiki/TablesTutorial
-latex,template,titlepage           https://tex.stackexchange.com/questions/209993/how-to-customize-my-titlepage
-roff,neatroff           https://litcave.rudi.ir/neatroff.pdf
-roff,neatroff           https://litcave.rudi.ir/neatstart.pdf
-roff,heirloom           https://heirloom.sourceforge.net/doctools.html
-roff,troff           https://www.troff.org/
-translate,enid           https://translate.google.com/?sl=en&tl=id&op=translate
-markdown           https://google.github.io/styleguide/docguide/style.html
-latex,input,include           https://en.wikibooks.org/wiki/LaTeX/Modular_Documents
-freebsd           https://vermaden.wordpress.com/2020/09/07/quare-freebsd/
-freebsd           https://freebsdfoundation.org/wp-content/uploads/2017/10/FreeBSD-is-Not-a-Linux-Distro.pdf
-freebsd           https://www.over-yonder.net/~fullermd/rants/bsd4linux/01
-freebsd           https://vez.mrsk.me/freebsd-defaults.html
-linguistic           https://docs.google.com/document/d/1DhL0-d9BBwHFunfMzzCxusSTLLOB7vuBnWAx29PyFO0/edit
-wubi,IME           https://madmansnest.com/2018/03/26/wubi-introduction.html
-wubi,IME           https://chinesemac.org/wubi/hua.html
-wubi,IME           http://backsla.sh/talks/wubi/
-IME,           http://www.studymongolian.net/technical/how-to-create-linux-input-method-editor/
-latex,references,cross-referencing           https://en.wikibooks.org/wiki/LaTeX/Labels_and_Cross-referencing
-latex,linguistic           https://en.wikibooks.org/wiki/LaTeX
-rime           https://dvel.me/posts/rime-ice/#%e4%b8%8a%e6%89%8b%e4%bf%ae%e6%94%b9
-rime           https://github.com/iDvel/rime-ice
-rime           https://www.10101.io/2019/01/30/rime-configuration
-rime           https://github.com/WithdewHua/rime-configuration
-mpv,chapters           https://github.com/mar04/chapters_for_mpv
-jurnal,research,riset,free      https://www.freefullpdf.com/
-video_bakat     https://drive.google.com/drive/folders/1Bo9fp-DSymeZJpzXjDySE6Vx041Os7_6
-encore,univ,medpar      https://docs.google.com/file/d/1rEXQx89IHNCEEKIqceU6bTyibJMHk7I-/edit?usp=docslist_api&filetype=msexcel
-makalah,tugas,mki,primordialisme    https://docs.google.com/document/d/1ymL7eHn7ilzl7wwZalC1XP96u_ChOHwVK5jueOECpaY/edit?usp=sharing
-makalah,tugas,sastra,analisis,propp,morphology      https://docs.google.com/document/d/1xr9OpK0h8vOWNXxGD9feE42tXklKWGyiuzQFp6fgjqo/edit?usp=sharing
-mki,tugas_akhir,konservasi,budaya,tari,ronggeng     https://docs.google.com/document/d/1YDGrPelPkm8C3D69SuEaIChOZHwASThvuB4Fu4RV3E4/edit
-chinese,bisai       https://drive.google.com/drive/folders/156jL5RNt66QZ07HHuLgqejLYvJpVK093
-ddl,movie       https://web.stagatv.com
-comic   https://getcomics.org/
-neovim,plugins      https://dotfyle.com/neovim/plugins/trending
-free_books      https://www.pdfdrive.to/
-fonts,chinese   https://www.fonts.net.cn/fonts-zh/tag-fangzheng-1.html
-wayland     https://wiki.archlinux.org/title/wayland
-sleep   https://blog.daveeddy.com/2018/10/01/run-user-scripts-on-suspend-and-wakeup-on-void-linux/
-idlix,movie     https://vip.idlixofficialx.net
-fzf     https://thevaluable.dev/fzf-shell-integration/
-fzf     https://www.reddit.com/r/archlinux/comments/163j5d8/list_awesome_cli_tools_you_feels_subtle_but/
-ffmpeg,noise    https://superuser.com/questions/733061/reduce-background-noise-and-optimize-the-speech-from-an-audio-clip-using-ffmpeg
-firefox     https://www.guyrutenberg.com/2020/03/21/xdg-open-fails-when-using-firefox-under-wayland/
-sed,quit     https://unix.stackexchange.com/questions/264962/print-lines-of-a-file-between-two-matching-patterns/264977
-cia     https://www.cia.gov/readingroom/docs/CIA-RDP80-00810A006000360009-0.pdf
-martin_luther_king,mlk     https://www.africa.upenn.edu/Articles_Gen/Letter_Birmingham.html
-hsk,audio   https://www.cultureyard.net/blog/hsk-textbook-audio-mp3
-hsk,books   https://www.digmandarin.com/forum/thread/hsk-standard-course-pdf-textbook
-hsk,audio   https://sishumandarin.com/blog/hsk-standard-course-audio-files-levels-1-6-textbooks-and-workbooks
-nazi_towards_socialists     https://www.washingtonpost.com/outlook/2020/02/05/right-needs-stop-falsely-claiming-that-nazis-were-socialists/
-dwl     http://codeberg.org/dwl/dwl
-dwl     http://codeberg.org/dwl/dwl-patches/src/branch/main/patches
-dwm_patches     https://coggle.it/diagram/X9IiSSM6PTWOM9Wz/t/dwm-patches/d3448968e2509321527c3864cd4eee651e5f55e525582fdbf33be764972d9aef
-dwm,patches     https://www.reddit.com/r/suckless/comments/fl8oaf/searching_for_a_patch_a_dwm_patch_that_can/
-industrialization,farm_to_factory     https://press.princeton.edu/books/paperback/9780691144313/farm-to-factory
-industrialization,magnetic_mountain     https://www.ucpress.edu/books/magnetic-mountain/paper
-hr_2023     https://drive.google.com/drive/folders/1Vd7sNVuWkOeFZHEWlwboPaWQmjEvcPms
-hr_2024     https://drive.google.com/drive/folders/13F946Snb4xgHqyTEnKstdMwUwE39Os8Q
-fonts,chinese       https://www.fonts.net.cn/
-asdos_2024      https://drive.google.com/drive/folders/15ROStyBOdNup9dwoWOW_Cpv0u_MPn0vh?usp=sharing
-makalah,sck,        https://drive.google.com/drive/folders/1qanx_5Ev_1SGR6XAHQfSy-GXLYcMKBOj
-latex,tikz      https://github.com/hengxin/cheat-sheets/blob/master/latex/latex-tikz-cheat-sheet/latex-tikz-cheat-sheet.md
-sitasi,pustaka,bibliografi      https://adityasetyawan.wordpress.com/wp-content/uploads/2016/10/catatan-sitasi-daftar-pustaka-2016.pdf
-latex,wikibook,tikz     https://en.wikibooks.org/wiki/LaTeX/PGF/TikZ
-latex,tikz,style        https://tex.stackexchange.com/questions/52372/should-tikzset-or-tikzstyle-be-used-to-define-tikz-styles
-latex,beamer,template,minimalist        https://pascalmichaillat.org/d1/
-latex,beamer,template       https://tex.stackexchange.com/questions/158638/make-beamer-not-look-like-beamer
-hex,transparency        https://stackoverflow.com/questions/15852122/hex-transparency-in-colors
-chinese_paradise_12        https://drive.google.com/drive/folders/1CHX9BlCH2zSJ2iw1b005jn0heenF3dO9
-dmenu,list_apps         https://github.com/jukil/dmenu-scripts-collection/blob/master/dmenu_running_apps/dmenu_running_apps
-nvim,c,cpp      https://www.reddit.com/r/neovim/comments/18a2tjd/neovim_for_cc/
-korpus,corpora,     https://corpora.uni-leipzig.de/en?corpusId=cmn-cn_web_2019
-tugas,praktikum,drama       https://docs.google.com/document/d/1-6UFvzPBcPJa3xqnqhltp3vKKby8dUyaFgoEfkU6iKg/edit?usp=sharing
-tugas,kewarganegaraan       https://drive.google.com/drive/folders/1GE31WK32VYL3iOiSJkYRKoTbV4haSF4f
-tugas,fonologi,fonetik      https://drive.google.com/drive/folders/1jVtaNwRZ7vqczSibZFn6v2Xa9ek2Gcfb
-fzf,operators       https://thevaluable.dev/practical-guide-fzf-example/
-latex,table,arguments       https://davidyat.es/2016/07/27/writing-a-latex-macro-that-takes-a-variable-number-of-arguments/
-kbbi,kemendikbud        https://kbbi.kemdikbud.go.id/
-file-permissions        https://askubuntu.com/questions/528411/how-do-you-view-file-permissions
-latex,chinese,pinyin        https://tex.stackexchange.com/questions/662769/display-pinyin-on-the-left-or-right-of-the-character-with-xpinyin-package
-latex,chinese,pinyin        https://tex.stackexchange.com/questions/576339/xpinyin-display-only-pinyin
-image,editing,cmdline,magick    http://www.fmwconcepts.com/imagemagick/index.php
-fonologi,fonetik,uas        https://docs.google.com/document/d/1jnHrDttKZ9OzDPlf7GPTLLPgoWr7QRK-T-qo9O9Ywig/edit?usp=sharing
-praat,chinese,tones         https://corpus.eduhk.hk/mandarin_pronunciation/?page_id=664
-praat,chinese,tones         https://corpus.eduhk.hk/mandarin_pronunciation/?page_id=676
-latex,table,tabular         https://tex.stackexchange.com/questions/214840/general-differences-between-array-table-tabular-tabularx-longtable-supertab
-manange,dotfiles        https://www.atlassian.com/git/tutorials/dotfiles
-manage,dotfiles         https://news.ycombinator.com/item?id=11071754
-manage,dotfiles         https://github.com/Siilwyn/my-dotfiles/tree/master/.my-dotfiles
-ssh,denied,troubleshoot     https://stackoverflow.com/questions/17668283/failed-to-add-the-host-to-the-list-of-know-hosts
-ssh,denied,troubleshoot     https://quickref.me/chmod.html
-xdg-desktop-portal          https://wiki.archlinux.org/title/Xdg-desktop-portal#List_of_backends_and_interfaces
+# referensi,ipp   https://scholar.google.co.id/scholar?hl=en&as_sdt=0%2C5&as_vis=1&q=indeks+pembangunan+pemuda&btnG=
+# gimp,heal   https://patdavid.net/2012/08/getting-around-in-gimp-heal-selection/
+# latex,biblatex   https://tex.stackexchange.com/questions/200932/what-is-the-most-appropriate-way-to-configure-biblatex-for-use-with-an-unsupport
+# latex,biblatex   https://github.com/plk/biblatex/issues/1251
+# latex,line_spacing   https://tex.stackexchange.com/questions/65849/confusion-onehalfspacing-vs-spacing-vs-word-vs-the-world
+# latex,line_spacing   https://www.reddit.com/r/LaTeX/comments/ubo7p1/spacing_between_lines/?rdt=40077
+# yt-dlp   https://github.com/yt-dlp/yt-dlp
+# fonts   https://wiki.archlinux.org/title/Metric-compatible_fonts
+# latex,biblatex   https://www.overleaf.com/latex/examples/a-simple-example-showing-how-to-create-harvard-style-referencing-in-latex/mnwzgkyvdbyy
+# babel,latex,language   https://www.overleaf.com/learn/latex/International_language_support#Using_more_than_one_language_in_a_document
+# latex,biblatex   https://texfaq.org/tags#xetex
+# stilistika   https://books.google.co.id/books?hl=en&lr=&id=zGVoDwAAQBAJ&oi=fnd&pg=PR5&dq=pengertian+stilistika&ots=Bq8SarTowb&sig=GexI3gjqFErMCuaZcRYpjZbqo0w&redir_esc=y#v=onepage&q=pengertian%20stilistika&f=false
+# rime,trime   https://programmer.ink/think/super-full-and-super-detailed-rime-input-method-configuration-guide.html
+# rime,trime   https://wiki.archlinux.org/title/Rime
+# tmux   https://wiki.archlinux.org/title/tmux
+# paywall,bypass   https://12ft.io/
+# beamer   https://www.reddit.com/r/LaTeX/comments/7mubcx/looking_for_some_nice_beamer_themes/
+# latex   https://latex-ninja.com/2021/10/17/top-5-magic-latex-packages-you-didnt-know-about
+# latex   https://jonasdevlieghere.com/post/latex-packages-i-wish-i-knew/
+# noise,noise_reduction   https://unix.stackexchange.com/questions/140398/cleaning-voice-recordings-from-command-line
+# luasnip,latex   https://github.com/L3MON4D3/LuaSnip/blob/master/DOC.md
+# tikz,latex   https://tex.stackexchange.com/questions/147143/whats-the-difference-between-path-and-draw-in-tikz
+# pancasila,logbook   https://docs.google.com/document/d/1-qj49Z4FEpGl5kOcvBX7ixeiK0bXQFoKPrspL3VFnXc/edit
+# ffmpeg,noise,noise_reduction   https://gist.github.com/liangfu/97f877e311210fa0ae18a31fdd92982e
+# ffmpeg,merge   https://superuser.com/questions/277642/how-to-merge-audio-and-video-file-in-ffmpeg
+# ffmpeg,gain   https://trac.ffmpeg.org/wiki/AudioVolume
+# bahasa_indonesia,artikel_ilmiah   https://docs.google.com/document/d/1gkdN54EY5NDduVZ7KBdQ7XCaCLDZdKhMgqHiQPt3LPw/edit
+# latex,tikz   https://tikz.dev/
+# latex,linguistic   https://ctan.org/pkg/movement-arrows
+# latex,chemistry   https://ctan.org/pkg/pgf-periodictable
+# latex,cards,game   https://ctan.org/pkg/playcards
+# latex,paper,notes   https://ctan.org/pkg/zebra-goodies
+# latex,puzzle,game   https://ctan.org/pkg/jigsaw
+# latex,art,pixel_art   https://www.ctan.org/pkg/pxpic
+# latex,art,lego   https://ctan.org/pkg/tikzbricks
+# latex,pixel_art,art   https://ctan.org/pkg/pixelart
+# latex,art,animals   https://ctan.org/pkg/tikzlings
+# latex,art,emoji   https://ctan.org/pkg/byo-twemojis
+# latex,guitar,music   https://ctan.org/pkg/guitarchordschemes
+# latex,art,world_flags   https://ctan.org/pkg/worldflags
+# latex,game,wordle   https://ctan.org/pkg/wordle
+# latex,music,recorder   https://ctan.org/pkg/recorder-fingering
+# latex,music,guide       https://mirror.unpad.ac.id/ctan/info/latex4musicians/latex4musicians.pdf
+# latex,chinese,decoration,ornament,art,beamer   https://ctan.org/pkg/pgfornament-han
+# latex,decoration,ornament,art,beamer   https://ctan.org/pkg/pgfornament
+# latex,beamer,notes          https://ctan.org/pkg/notebeamer
+# latex,latex_packages,chinese   https://ctan.org/pkg/zhspacing
+# marxism   https://www.marxists.org/subject/students/index.htm
+# pancasila,logbook,outline,catatan_lapangan   https://docs.google.com/document/d/1XQwXuSaz5_qrC8TGrVAnzdTgTunDTlZ_0Het94BnZ8Q/edit
+# pancasila,footage   https://drive.google.com/drive/folders/1-7V4wWxE2-nk8eXB1lnlMvSSQm-T4xwg
+# trime   https://github.com/osfans/trime
+# filsafat,tugas_akhir   https://docs.google.com/document/d/1z9tfIz_8u6_5R597B7ZpSJ0cwTfuuLq8N9ra_DLg-FI/edit
+# dwm,dwm_border   https://www.reddit.com/r/suckless/comments/gg60lo/transparent_borders_on_dwm_when_using_picom/
+# dwm,fullscreen   https://github.com/bakkeby/patches/wiki/fullscreen-compilation
+# retro_website   https://ninacti0n.neocities.org/main_page
+# pdf_to_word   https://www.adobe.com/acrobat/online/pdf-to-word.html
+# cerpen,filsafat   https://www.tweetilmu.web.id/2023/03/cerpen-sesaat-sebelum-berangkat.html?m=1
+# friends   https://drive.google.com/drive/folders/1iq9cs0sk4Cj3u2oyIGCqFLQdc-bnoG4n
+# simple_mobile_apps   https://www.reddit.com/r/SimpleMobileTools/comments/18929pq/simplemobiletools_was_sold_alternatives/
+# nvim,neovim,ftplugin   https://www.reddit.com/r/neovim/comments/x3zp6t/usage_of_afterftplugin_directory_for/
+# ftplugin,neovim,nvim   https://github.com/echasnovski/nvim
+# neovim,nvim,statusline   https://zignar.net/2022/01/21/a-boring-statusline-for-neovim/
+# neovim,nvim,statusline   https://nuxsh.is-a.dev/blog/custom-nvim-statusline.html
+# neovim,nvim,statusline          https://elianiva.my.id/posts/neovim-lua-statusline/
+# test,test_2   https://search.brave.com/search?q=shell+printf+add+0
+# fzf           https://thevaluable.dev/practical-guide-fzf-example/
+# graphic,tablet           https://www.davidrevoy.com/article1004/xppen-artist-pro-16-gen-2-review-on-gnulinux
+# graphic,tablet           https://www.davidrevoy.com/article842/review-xp-pen-artist-24-pro-on-linux
+# graphic,tablet           https://wiki.archlinux.org/title/Graphics_tablet
+# lemmy,piracy           https://lemmy.dbzer0.com/c/piracy
+# email,proton           https://mail.proton.me/u/0/inbox
+# star,github           https://github.com/markus-langgeng?tab=stars
+# chinese,hsk           https://old.chinesetest.cn/ChangeLan.do?languge=en
+# ub           https://ub.ac.id/
+# lemmy           https://lemmyverse.net/
+# photoshop           https://www.photopea.com/
+# icon           https://www.iconfinder.com/
+# awesome,no_login           https://github.com/aviaryan/awesome-no-login-web-apps
+# no_gui,cli_only           https://github.com/you-dont-need/You-Dont-Need-GUI
+# awesome           https://github.com/sindresorhus/awesome
+# text_based_game           https://www.ifiction.org/games/
+# arkenfox           https://github.com/arkenfox/user.js/wiki
+# latex,tutorial           https://www.overleaf.com/learn
+# latex,beamer           https://www.overleaf.com/learn/latex/Beamer
+# beamer           https://github.com/martinbjeldbak/ultimate-beamer-theme-list
+# beamer,template           https://tex.stackexchange.com/questions/146529/design-a-custom-beamer-theme-from-scratch
+# beamer,template           https://jeromebelleman.gitlab.io/posts/publishing/beamerthemes/
+# beamer,guide           https://mirror.unpad.ac.id/ctan/macros/latex/contrib/beamer/doc/beameruserguide.pdf
+# beamer,template           https://www.r-bloggers.com/2011/11/create-your-own-beamer-template/
+# suckless           https://tools.suckless.org/
+# website           https://motherfuckingwebsite.com/
+# website           http://bettermotherfuckingwebsite.com/
+# website           https://bestmotherfucking.website/
+# rss_bridge           https://rss-bridge.org/bridge01/
+# rss_bridge           https://docs.rsshub.app/routes/social-media
+# landchad           https://landchad.net/
+# suckless           https://suckless.org/rocks
+# figma_alternative           https://github.com/penpot/penpot
+# minimalist,software,alternative           https://github.com/mayfrost/guides/blob/master/ALTERNATIVES.md#android-apps
+# latex           https://mirror.unpad.ac.id/ctan/info/texbytopic/TeXbyTopic.pdf
+# perpustakaan,online           https://drive.google.com/drive/folders/1ldRFSeIRNEd5iG7wOtNc2Vln3cgTmcZx
+# scan,virus           https://virustotal.com/
+# literature,marxism           http://ressources-socius.info/index.php/reeditions/18-reeditions-d-articles/150-literature
+# lua,string,pattern           http://lua-users.org/wiki/PatternsTutorial
+# luasnip,latex,nvim           https://ejmastnak.com/tutorials/vim-latex/luasnip/
+# table,lua           http://lua-users.org/wiki/TablesTutorial
+# latex,template,titlepage           https://tex.stackexchange.com/questions/209993/how-to-customize-my-titlepage
+# roff,neatroff           https://litcave.rudi.ir/neatroff.pdf
+# roff,neatroff           https://litcave.rudi.ir/neatstart.pdf
+# roff,heirloom           https://heirloom.sourceforge.net/doctools.html
+# roff,troff           https://www.troff.org/
+# translate,enid           https://translate.google.com/?sl=en&tl=id&op=translate
+# markdown           https://google.github.io/styleguide/docguide/style.html
+# latex,input,include           https://en.wikibooks.org/wiki/LaTeX/Modular_Documents
+# freebsd           https://vermaden.wordpress.com/2020/09/07/quare-freebsd/
+# freebsd           https://freebsdfoundation.org/wp-content/uploads/2017/10/FreeBSD-is-Not-a-Linux-Distro.pdf
+# freebsd           https://www.over-yonder.net/~fullermd/rants/bsd4linux/01
+# freebsd           https://vez.mrsk.me/freebsd-defaults.html
+# linguistic           https://docs.google.com/document/d/1DhL0-d9BBwHFunfMzzCxusSTLLOB7vuBnWAx29PyFO0/edit
+# wubi,IME           https://madmansnest.com/2018/03/26/wubi-introduction.html
+# wubi,IME           https://chinesemac.org/wubi/hua.html
+# wubi,IME           http://backsla.sh/talks/wubi/
+# IME,           http://www.studymongolian.net/technical/how-to-create-linux-input-method-editor/
+# latex,references,cross-referencing           https://en.wikibooks.org/wiki/LaTeX/Labels_and_Cross-referencing
+# latex,linguistic           https://en.wikibooks.org/wiki/LaTeX
+# rime           https://dvel.me/posts/rime-ice/#%e4%b8%8a%e6%89%8b%e4%bf%ae%e6%94%b9
+# rime           https://github.com/iDvel/rime-ice
+# rime           https://www.10101.io/2019/01/30/rime-configuration
+# rime           https://github.com/WithdewHua/rime-configuration
+# mpv,chapters           https://github.com/mar04/chapters_for_mpv
+# jurnal,research,riset,free      https://www.freefullpdf.com/
+# video_bakat     https://drive.google.com/drive/folders/1Bo9fp-DSymeZJpzXjDySE6Vx041Os7_6
+# encore,univ,medpar      https://docs.google.com/file/d/1rEXQx89IHNCEEKIqceU6bTyibJMHk7I-/edit?usp=docslist_api&filetype=msexcel
+# makalah,tugas,mki,primordialisme    https://docs.google.com/document/d/1ymL7eHn7ilzl7wwZalC1XP96u_ChOHwVK5jueOECpaY/edit?usp=sharing
+# makalah,tugas,sastra,analisis,propp,morphology      https://docs.google.com/document/d/1xr9OpK0h8vOWNXxGD9feE42tXklKWGyiuzQFp6fgjqo/edit?usp=sharing
+# mki,tugas_akhir,konservasi,budaya,tari,ronggeng     https://docs.google.com/document/d/1YDGrPelPkm8C3D69SuEaIChOZHwASThvuB4Fu4RV3E4/edit
+# chinese,bisai       https://drive.google.com/drive/folders/156jL5RNt66QZ07HHuLgqejLYvJpVK093
+# ddl,movie       https://web.stagatv.com
+# comic   https://getcomics.org/
+# neovim,plugins      https://dotfyle.com/neovim/plugins/trending
+# free_books      https://www.pdfdrive.to/
+# fonts,chinese   https://www.fonts.net.cn/fonts-zh/tag-fangzheng-1.html
+# wayland     https://wiki.archlinux.org/title/wayland
+# sleep   https://blog.daveeddy.com/2018/10/01/run-user-scripts-on-suspend-and-wakeup-on-void-linux/
+# idlix,movie     https://vip.idlixofficialx.net
+# fzf     https://thevaluable.dev/fzf-shell-integration/
+# fzf     https://www.reddit.com/r/archlinux/comments/163j5d8/list_awesome_cli_tools_you_feels_subtle_but/
+# ffmpeg,noise    https://superuser.com/questions/733061/reduce-background-noise-and-optimize-the-speech-from-an-audio-clip-using-ffmpeg
+# firefox     https://www.guyrutenberg.com/2020/03/21/xdg-open-fails-when-using-firefox-under-wayland/
+# sed,quit     https://unix.stackexchange.com/questions/264962/print-lines-of-a-file-between-two-matching-patterns/264977
+# cia     https://www.cia.gov/readingroom/docs/CIA-RDP80-00810A006000360009-0.pdf
+# martin_luther_king,mlk     https://www.africa.upenn.edu/Articles_Gen/Letter_Birmingham.html
+# hsk,audio   https://www.cultureyard.net/blog/hsk-textbook-audio-mp3
+# hsk,books   https://www.digmandarin.com/forum/thread/hsk-standard-course-pdf-textbook
+# hsk,audio   https://sishumandarin.com/blog/hsk-standard-course-audio-files-levels-1-6-textbooks-and-workbooks
+# nazi_towards_socialists     https://www.washingtonpost.com/outlook/2020/02/05/right-needs-stop-falsely-claiming-that-nazis-were-socialists/
+# dwl     http://codeberg.org/dwl/dwl
+# dwl     http://codeberg.org/dwl/dwl-patches/src/branch/main/patches
+# dwm_patches     https://coggle.it/diagram/X9IiSSM6PTWOM9Wz/t/dwm-patches/d3448968e2509321527c3864cd4eee651e5f55e525582fdbf33be764972d9aef
+# dwm,patches     https://www.reddit.com/r/suckless/comments/fl8oaf/searching_for_a_patch_a_dwm_patch_that_can/
+# industrialization,farm_to_factory     https://press.princeton.edu/books/paperback/9780691144313/farm-to-factory
+# industrialization,magnetic_mountain     https://www.ucpress.edu/books/magnetic-mountain/paper
+# hr_2023     https://drive.google.com/drive/folders/1Vd7sNVuWkOeFZHEWlwboPaWQmjEvcPms
+# hr_2024     https://drive.google.com/drive/folders/13F946Snb4xgHqyTEnKstdMwUwE39Os8Q
+# fonts,chinese       https://www.fonts.net.cn/
+# asdos_2024      https://drive.google.com/drive/folders/15ROStyBOdNup9dwoWOW_Cpv0u_MPn0vh?usp=sharing
+# makalah,sck,        https://drive.google.com/drive/folders/1qanx_5Ev_1SGR6XAHQfSy-GXLYcMKBOj
+# latex,tikz      https://github.com/hengxin/cheat-sheets/blob/master/latex/latex-tikz-cheat-sheet/latex-tikz-cheat-sheet.md
+# sitasi,pustaka,bibliografi      https://adityasetyawan.wordpress.com/wp-content/uploads/2016/10/catatan-sitasi-daftar-pustaka-2016.pdf
+# latex,wikibook,tikz     https://en.wikibooks.org/wiki/LaTeX/PGF/TikZ
+# latex,tikz,style        https://tex.stackexchange.com/questions/52372/should-tikzset-or-tikzstyle-be-used-to-define-tikz-styles
+# latex,beamer,template,minimalist        https://pascalmichaillat.org/d1/
+# latex,beamer,template       https://tex.stackexchange.com/questions/158638/make-beamer-not-look-like-beamer
+# hex,transparency        https://stackoverflow.com/questions/15852122/hex-transparency-in-colors
+# chinese_paradise_12        https://drive.google.com/drive/folders/1CHX9BlCH2zSJ2iw1b005jn0heenF3dO9
+# dmenu,list_apps         https://github.com/jukil/dmenu-scripts-collection/blob/master/dmenu_running_apps/dmenu_running_apps
+# nvim,c,cpp      https://www.reddit.com/r/neovim/comments/18a2tjd/neovim_for_cc/
+# korpus,corpora,     https://corpora.uni-leipzig.de/en?corpusId=cmn-cn_web_2019
+# tugas,praktikum,drama       https://docs.google.com/document/d/1-6UFvzPBcPJa3xqnqhltp3vKKby8dUyaFgoEfkU6iKg/edit?usp=sharing
+# tugas,kewarganegaraan       https://drive.google.com/drive/folders/1GE31WK32VYL3iOiSJkYRKoTbV4haSF4f
+# tugas,fonologi,fonetik      https://drive.google.com/drive/folders/1jVtaNwRZ7vqczSibZFn6v2Xa9ek2Gcfb
+# fzf,operators       https://thevaluable.dev/practical-guide-fzf-example/
+# latex,table,arguments       https://davidyat.es/2016/07/27/writing-a-latex-macro-that-takes-a-variable-number-of-arguments/
+# kbbi,kemendikbud        https://kbbi.kemdikbud.go.id/
+# file-permissions        https://askubuntu.com/questions/528411/how-do-you-view-file-permissions
+# latex,chinese,pinyin        https://tex.stackexchange.com/questions/662769/display-pinyin-on-the-left-or-right-of-the-character-with-xpinyin-package
+# latex,chinese,pinyin        https://tex.stackexchange.com/questions/576339/xpinyin-display-only-pinyin
+# image,editing,cmdline,magick    http://www.fmwconcepts.com/imagemagick/index.php
+# fonologi,fonetik,uas        https://docs.google.com/document/d/1jnHrDttKZ9OzDPlf7GPTLLPgoWr7QRK-T-qo9O9Ywig/edit?usp=sharing
+# praat,chinese,tones         https://corpus.eduhk.hk/mandarin_pronunciation/?page_id=664
+# praat,chinese,tones         https://corpus.eduhk.hk/mandarin_pronunciation/?page_id=676
+# latex,table,tabular         https://tex.stackexchange.com/questions/214840/general-differences-between-array-table-tabular-tabularx-longtable-supertab
+# manange,dotfiles        https://www.atlassian.com/git/tutorials/dotfiles
+# manage,dotfiles         https://news.ycombinator.com/item?id=11071754
+# manage,dotfiles         https://github.com/Siilwyn/my-dotfiles/tree/master/.my-dotfiles
+# ssh,denied,troubleshoot     https://stackoverflow.com/questions/17668283/failed-to-add-the-host-to-the-list-of-know-hosts
+# ssh,denied,troubleshoot     https://quickref.me/chmod.html
+# xdg-desktop-portal          https://wiki.archlinux.org/title/Xdg-desktop-portal#List_of_backends_and_interfaces
+# wallpapers          https://www.flickr.com/photos/148147420@N02/sets/72157678451930511
+# chinese,dictionary      https://www.dong-chinese.com/dictionary
+# firefox,css     https://mrotherguy.github.io/ToyfoCSS/
+# minimalism,software     https://inconsolation.wordpress.com/
+# cv,latex        https://github.com/andywiecko/MultiLangCV
+# cv,latex        https://github.com/novoid/LaTeX-CV-template
 [ REGULAR BOOKMARK END]

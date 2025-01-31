@@ -563,5 +563,7 @@ def_key "ctrl-u"
 def_key "ctrl-d"
     page_down
 
-def_key "ctrl-l"
-    run_external_console_command "search-song-lyrics"
+def_key "+"
+    dummy
+def_key "-"
+    dummy
