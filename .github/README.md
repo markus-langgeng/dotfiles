@@ -5,11 +5,11 @@ softwares that I use and also the keybindings. I also have other repo for other
 softwares that I use that I want to separate from my dotfiles. So, I'm going to
 link to it whenever it is mentioned here.
 
-## List of the softwares that I use
+## List of softwares that I use
 
 - OS: [Alpine Linux](https://alpinelinux.org)
 - Shell: [ash (Busybox version)](https://busybox.net)
-- Window Manager: [dwl](https://codeberg.org/dwl/dwl/) [my build (branch 0.7)](https://github.com/markus-langgeng/dwl/tree/0.7)
+- Window Manager: [dwl](https://codeberg.org/dwl/dwl/) [my build (on branch 0.7)](https://github.com/markus-langgeng/dwl/tree/0.7)
 - ~~Desktop Environment~~: -
 - Terminal Emulator: [foot](https://codeberg.org/dnkl/foot) and [st](https://github.com/lukesmithxyz/st)
 - App Launcher: custom fzf script
