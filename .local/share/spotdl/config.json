@@ -23,7 +23,7 @@
     "overwrite": "skip",
     "search_query": null,
     "ffmpeg": "ffmpeg",
-    "bitrate": null,
+    "bitrate": "192k",
     "ffmpeg_args": null,
     "format": "opus",
     "save_file": null,
