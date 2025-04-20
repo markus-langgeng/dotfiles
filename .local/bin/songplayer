@@ -1,0 +1,14 @@
+#!/bin/sh
+
+[ "$1" == "prev" ] && mpc -q prev && songinfo && exit
+[ "$1" == "next" ] && mpc -q next && songinfo && exit
+[ "$1" == "single" ] && mpc -q single && songinfo && exit
+[ "$1" == "repeat" ] && mpc -q repeat && songinfo && exit
+[ "$1" == "random" ] && mpc -q random && songinfo && exit
+[ "$1" == "toggle" ] && mpc -q toggle && songinfo && exit
+
+if [ -z "$1"  ]; then
+	if pgrep "ncmpcpp"; then exit; fi
+	setsid -f footclient -T "floatterm" -w "1000x750" ncmpcpp
+fi
+

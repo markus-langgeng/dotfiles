@@ -1,0 +1,23 @@
+#!/bin/sh
+
+music_dir="$HOME/music"
+previewdir="$XDG_CONFIG_HOME/ncmpcpp/previews"
+filename="$(mpc --format "$music_dir"/%file% current)"
+album=$(mpc --format %album% current)
+[ -n "$album" ] \
+	&& previewname="$previewdir/$(printf "%s" "$album" | base64 | sed "s/\///" ).png" \
+	|| previewname="$previewdir/no_album_image.png"
+
+[ -e "$previewname" ] || ffmpeg -y -i "$filename" -an -vf scale=128:128 "$previewname" > /dev/null 2>&1
+
+[ "$(mpc status "%repeat%")"  = "on" ] && repeat="r" || repeat="-"
+[ "$(mpc status "%random%")"  = "on" ] && random="z" || random="-"
+[ "$(mpc status "%consume%")" = "on" ] && consume="c" || consume="-"
+[ "$(mpc status "%single%")"  = "on" ] && single="s" || single="-"
+state="$(mpc status "%state%")"
+pos="$(mpc status "%songpos%/%length%")"
+
+notify-send --hint=string:x-dunst-stack-tag:song --hint=string:synchronous:song \
+    "Now Playing" -t 4000 \
+    "$(mpc --format '%title% \n%artist% - %album%' current) \n[$repeat$random$consume$single $state $pos]" \
+    -i "$previewname"

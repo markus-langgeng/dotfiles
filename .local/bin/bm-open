@@ -1,53 +1,25 @@
 #!/bin/sh
 
-urldir="$HOME/.config/bookmarks/urls"
-bookdir="$HOME/personal/buku/"
-whichkey="[ ^b (Books) | ^l (Links) ]"
+[ "$(pgrep -f "footclient -T floatterm-bm -w 1500x600 bm-open" | wc -l )" -gt 1 ] && exit
 
-export FZF_DEFAULT_OPTS="$FZF_DEFAULT_OPTS \
-    --multi --info=hidden --no-scrollbar \
-    --delimiter='\|' \
-    --tiebreak=begin \
-    --bind \"ctrl-a:toggle-all\" \
-    --bind \"ctrl-d:clear-query\" \
-    --bind \"ctrl-y:transform-query(echo {4})\" \
-    --bind \"ctrl-s:change-query(@)\" \
-    --bind \"enter:accept-or-print-query\" \
-    --preview=\"echo {4}\" \
-    --preview-window=down,1% \
-    --header=\"OPEN LINKS $whichkey\" \
-    --header-first
-    "
+res=$(
+sed '1d;$d;/^$/ d;/^#/ d;' "$HOME"/.config/bookmarks/urls/* | column -s , -t | \
+	fzf --multi \
+	--prompt 'URLs> ' \
+	--preview 'fpreview {} $FZF_COLUMNS $FZF_LINES' \
+	--preview-window 'hidden' \
+	--bind 'ctrl-t:transform:
+		[[ ! $FZF_PROMPT =~ URL ]] &&
+		echo "change-prompt(URLs> )+reload(sed \"1d;$d;/^$/ d;/^#/ d;\" "$HOME"/.config/bookmarks/urls/* | column -s , -t )+change-preview-window(hidden)" ||
+		echo "change-prompt(Book> )+reload(find $HOME/personal/buku/ -type f)+change-preview-window(right,50%,border-left)"'\
+	--bind 'ctrl-a:toggle-all' \
+	--bind 'ctrl-y:transform-query(echo {-1})' \
+	--bind 'ctrl-s:change-query(@br)' \
+	--bind 'enter:accept-or-print-query'
+)
 
-FZF_OPEN_URLS_CMD="sed '1d;$d;/^$/ d;/^#/ d;' \"$urldir\"/* | column -s '|' -o '|' -t"
-FZF_OPEN_BOOK_CMD="find \"$bookdir\" -type f"
-
-FZF_COMMAND="fzf \
---bind \"ctrl-b:reload($FZF_OPEN_BOOK_CMD)\
-+hide-preview\
-+change-header(OPEN BOOKS $whichkey)\" "
-
-FZF_COMMAND="$FZF_COMMAND --bind \"ctrl-l:reload($FZF_OPEN_URLS_CMD)\
-+show-preview+change-header(OPEN LINKS $whichkey)\
-+change-preview-window(down,1%)+change-preview(echo {4})\" "
-
-# FZF_BOOK_OPTS='\
-# --bind "ctrl-b:reload($FZF_OPEN_BOOK_CMD)\
-# +hide-preview\
-# +change-header(OPEN BOOKS $whichkey)" '
-#
-# FZF_URLS_OPTS='--bind \"ctrl-l:reload($FZF_OPEN_URLS_CMD)\
-# +show-preview+change-header(OPEN LINKS $whichkey)\
-# +change-preview-window(down,1%)+change-preview(echo {4})\" "
-# export FZF_DEFAULT_COMMAND="$FZF_OPEN_URLS_CMD"
-#
-# fzf
-
-selected=$(eval "$FZF_OPEN_URLS_CMD" | eval "$FZF_COMMAND" )
-
-if echo "$selected" | grep "|"; then
-    echo "$selected" | cut -d '|' -f4 | sed "s/^ //;s/\'/\\\'/g;s/\"/\\\"/g;s/^/\"/;s/$/\"/" | xargs -r -P3 -I{} setsid -f xdg-open "{}"
+if echo "$res" | grep -q "http\|about:"; then
+	echo "$res" | sed -n 's/.*\(http\|about:\)\(.*\)/\1\2/p' | xargs -r -P3 -I{} setsid -f xdg-open "{}"
 else
-    echo "$selected" | sed "s/^ //;s/\'/\\\'/g;s/\"/\\\"/g;s/^/\"/;s/$/\"/" | xargs -r -P3 -I{} setsid -f xdg-open "{}"
+	echo "$res" | xargs -r -P3 -I{} setsid -f xdg-open "{}"
 fi
-

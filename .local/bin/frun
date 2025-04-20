@@ -1,7 +1,6 @@
 #!/bin/sh
 
-[ "$(pgrep -f "footclient -T floatterm -w 700x200 frun" | wc -l )" -gt 1 ] && exit
-# if pgrep -f "floatterm"; then exit; fi
+[ "$(pgrep -f "footclient -T floatterm-frun -w 700x200 frun" | wc -l )" -gt 1 ] && exit
 export FZF_DEFAULT_OPTS="$FZF_DEFAULT_OPTS \
     --info=hidden \
     --no-scrollbar \
