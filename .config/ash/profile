@@ -70,6 +70,7 @@ export FZF_DEFAULT_OPTS="$FZF_DEFAULT_OPTS \
 export NODE_REPL_HISTORY="$XDG_DATA_HOME"/node_repl_history
 
 # IME
+# export GTK_IM_MODULE="wayland"
 export GTK_IM_MODULE=fcitx
 export XMODIFIERS=@im=fcitx
 export QT_IM_MODULE=fcitx
@@ -101,6 +102,7 @@ export QT_QPA_PLATFORM="wayland;xcb"
 export QT_WAYLAND_DISABLE_WINDOWDECORATION=1
 export QT_QPA_PLATFORMTHEME=qt5ct
 
+export JAVA_HOME=/usr/lib/jvm/java-11-openjdk
 export _JAVA_AWT_WM_NONREPARENTING=1
 export CLUTTER_BACKEND="wayland"
 export SDL_VIDEODRIVER="wayland,x11"

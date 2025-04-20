@@ -1,3 +1,5 @@
+#!/bin/sh
+
 set -o vi
 stty -ixon
 
@@ -38,33 +40,83 @@ alias rekeyd="doas cp $HOME/.config/my_keyd.conf /etc/keyd/default.conf && doas 
 alias apk-search-edge="doas apk -X https://dl-cdn.alpinelinux.org/alpine/edge/community search"
 alias apk-add-edge="doas apk -X https://dl-cdn.alpinelinux.org/alpine/edge/community add"
 
-. "$HOME/.config/shell/fzf_functions"
+. "/home/kuss/.local/share/cargo/env"
 
 mkcd() { mkdir -pv "$1" && cd "$1" || exit; }
 mvcd() { mv -vi "$1" "$2" && cd "$2" || exit; }
 
-fd() {
-    local dir
-    dir=$(find ${1:-.} -type d -maxdepth 4 2> /dev/null | fzf +m) && cd "$dir"
-}
+f() {
+	usage() {
+		cat <<- EOF
+		Usage: f [directory_path/] [-f|-d][o|y]
+			-f Get type file
+			-d Get type dir
+			Both accepts mandatory arguments: o (open) or y (yank)
+		EOF
+	}
 
-fcd() {
-    [ -z "$1" ] && return 1
-    my_cmd="$(qf "$1" "d")"
-    [ -z "$my_cmd" ] && return 1
-    cd "$(eval "$my_cmd")" || exit
-}
+	echo "$1" | grep -q "^-" && echo "First argument is not flag!" && usage && return
+	if [ -d "$1" ]; then
+		path="$1"
+	else
+		case "$1" in
+			1 ) path="$HOME/kuliah/semester_1/" ;;
+			2 ) path="$HOME/kuliah/semester_2/" ;;
+			3 ) path="$HOME/kuliah/semester_3/" ;;
+			4 ) path="$HOME/kuliah/semester_4/" ;;
+			b ) path="$HOME/personal/buku"      ;;
+			c ) path="$XDG_CONFIG_HOME"         ;;
+			d ) path="$HOME/downloads/"         ;;
+			f ) path="$XDG_DATA_HOME/fonts/"    ;;
+			h ) path="$HOME/hsk/"               ;;
+			k ) path="$HOME/kuliah/"            ;;
+			m ) path="$HOME/music/"             ;;
+			s ) path="$XDG_DATA_HOME"           ;; #share
+			v ) path="$HOME/video/"             ;;
+			x ) path="$HOME/.local/bin"         ;;
+			* ) echo "Bookmark letter not found"; usage; return ;;
+		esac
+	fi
+	shift;
 
-gdp() {
-    [ -z "$1" ] && return 1
-    my_cmd="$(qf "$1" "d" "$2")"
-    [ -z "$my_cmd" ] && return 1
-    eval "$my_cmd --multi --bind ctrl-a:select-all,ctrl-d:deselect-all,ctrl-t:toggle-all | sed 's/^/\"/;s/$/\"/' | tr '\n' ' ' | wl-copy"
-}
+	while getopts "f:d:" flag; do
+		case "$flag" in
+			f ) type="f"
+				case ${OPTARG} in
+					y ) yank="y" ; open=""  ; m="-m" ;;
+					o ) yank=""  ; open="f" ; m="-m" ;;
+					* ) usage; return ;;
+				esac
+				;;
+			d ) type="d"
+				case ${OPTARG} in
+					y ) yank="y" ; open=""  ; m="-m" ;;
+					o ) yank=""  ; open="d" ; m="+m" ;;
+					* ) usage; return ;;
+				esac
+				;;
+			* ) usage; return ;;
+		esac
+	done
 
-gfp() {
-    [ -z "$1" ] && return 1
-    my_cmd="$(qf "$1" "f" "$2")"
-    [ -z "$my_cmd" ] && return 1
-    eval "$my_cmd --multi --bind ctrl-a:select-all,ctrl-d:deselect-all,ctrl-t:toggle-all | sed 's/^/\"/;s/$/\"/' | tr '\n' ' ' | wl-copy"
+	[ $# -gt 1 ] && echo "Only one flag allowed. Use -f or -d." && usage && return
+
+	findcmd="find $path -type $type"
+	fzfcmd="fzf $m \
+		--bind='ctrl-r:reload(find $path -type $type)' \
+		--bind='ctrl-a:toggle-all,ctrl-u:preview-half-page-up,ctrl-b:preview-half-page-down' \
+		--preview 'fpreview {} ' \
+		--preview-window 'border-left'
+		"
+
+	if [ -n "$yank" ]; then
+		eval "$findcmd" | eval "$fzfcmd" | sed "s/^/\"/;s/$/\"/" | tr "\n" " " | wl-copy
+	elif [ "$open" = "f" ]; then
+		eval "$findcmd" | eval "$fzfcmd" | sed "s/\'/\\\'/g;s/\"/\\\"/g" | xargs -r -P3 -I{} setsid -f xdg-open "{}"
+	elif [ "$open" = "d" ]; then
+		res=$(eval "$findcmd" | eval "$fzfcmd")
+		cd "$res" || return
+		echo "cd \"$res\" " >> "$HISTFILE"
+	fi
+	unset findcmd fzfcmd path type yank open m res
 }

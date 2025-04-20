@@ -67,3 +67,4 @@ gfp() {
     eval "$my_cmd --multi --bind ctrl-a:select-all,ctrl-d:deselect-all,ctrl-t:toggle-all | sed 's/^/\"/;s/$/\"/' | tr '\n' ' ' | wl-copy"
 }
 
+. "/home/kuss/.local/share/cargo/env"

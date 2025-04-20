@@ -6,9 +6,9 @@ export $(dbus-launch)
 
 fcitx5 &
 foot --server &
-swww-daemon &
-"$XDG_CONFIG_HOME/swww_randomize_multi.sh" "$XDG_CONFIG_HOME/propaganda_posters/"
 mpd &
+wlsunset -l -7.98 -L 112.63 &
+swaybg -m fit -i "$HOME/.config/wallpaper.jpg" &
 
 # exec dbus-update-activation-environment DISPLAY WAYLAND_DISPLAY XDG_CURRENT_DESKTOP=sway
 # https://www.reddit.com/r/swaywm/comments/uxqt8c/how_do_i_start_xdgdesktopportalwlr_properly/

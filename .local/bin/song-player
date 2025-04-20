@@ -1,5 +1,0 @@
-#!/bin/sh
-
-if pgrep "ncmpcpp"; then exit; fi
-setsid -f footclient -T "floatterm" -w "1000x750" ncmpcpp
-

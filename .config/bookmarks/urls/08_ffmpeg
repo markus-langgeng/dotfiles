@@ -1,4 +1,6 @@
-ffmpeg | noise |   | https://superuser.com/questions/733061/reduce-background-noise-and-optimize-the-speech-from-an-audio-clip-using-ffmpeg
-ffmpeg | noise,noise_reduction |   | https://gist.github.com/liangfu/97f877e311210fa0ae18a31fdd92982e
-ffmpeg | merge |   |  https://superuser.com/questions/277642/how-to-merge-audio-and-video-file-in-ffmpeg
-ffmpeg | gain |   |  https://trac.ffmpeg.org/wiki/AudioVolume
+ffmpeg,noise,,https://superuser.com/questions/733061/reduce-background-noise-and-optimize-the-speech-from-an-audio-clip-using-ffmpeg
+ffmpeg,noise reduction,,https://gist.github.com/liangfu/97f877e311210fa0ae18a31fdd92982e
+ffmpeg,merge,, https://superuser.com/questions/277642/how-to-merge-audio-and-video-file-in-ffmpeg
+ffmpeg,gain,, https://trac.ffmpeg.org/wiki/AudioVolume
+ffmpeg,linux v4l2,,https://askubuntu.com/questions/881305/is-there-any-way-ffmpeg-send-video-to-dev-video0-on-ubuntu/881341#881341
+ffmpeg,linux v4l2,,https://askubuntu.com/questions/881305/is-there-any-way-ffmpeg-send-video-to-dev-video0-on-ubuntu/881341#881341
