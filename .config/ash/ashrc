@@ -39,8 +39,11 @@ alias lofi="setsid -f mpv --no-video --no-resume-playback 'https://www.youtube.c
 alias rekeyd="doas cp $HOME/.config/my_keyd.conf /etc/keyd/default.conf && doas keyd reload"
 alias apk-search-edge="doas apk -X https://dl-cdn.alpinelinux.org/alpine/edge/community search"
 alias apk-add-edge="doas apk -X https://dl-cdn.alpinelinux.org/alpine/edge/community add"
+alias start-hypr="dbus-run-session Hyprland"
 
 . "/home/kuss/.local/share/cargo/env"
+
+fastfetch
 
 mkcd() { mkdir -pv "$1" && cd "$1" || exit; }
 mvcd() { mv -vi "$1" "$2" && cd "$2" || exit; }
@@ -60,21 +63,25 @@ f() {
 		path="$1"
 	else
 		case "$1" in
-			1 ) path="$HOME/kuliah/semester_1/" ;;
-			2 ) path="$HOME/kuliah/semester_2/" ;;
-			3 ) path="$HOME/kuliah/semester_3/" ;;
-			4 ) path="$HOME/kuliah/semester_4/" ;;
-			b ) path="$HOME/personal/buku"      ;;
-			c ) path="$XDG_CONFIG_HOME"         ;;
-			d ) path="$HOME/downloads/"         ;;
-			f ) path="$XDG_DATA_HOME/fonts/"    ;;
-			h ) path="$HOME/hsk/"               ;;
-			k ) path="$HOME/kuliah/"            ;;
-			m ) path="$HOME/music/"             ;;
-			s ) path="$XDG_DATA_HOME"           ;; #share
-			v ) path="$HOME/video/"             ;;
-			x ) path="$HOME/.local/bin"         ;;
-			* ) echo "Bookmark letter not found"; usage; return ;;
+			1  ) path="$HOME/kuliah/semester_1/"   ;;
+			2  ) path="$HOME/kuliah/semester_2/"   ;;
+			3  ) path="$HOME/kuliah/semester_3/"   ;;
+			4  ) path="$HOME/kuliah/semester_4/"   ;;
+			5  ) path="$HOME/kuliah/semester_5/"   ;;
+			p  ) path="$HOME/personal"             ;;
+			b  ) path="$HOME/personal/buku"        ;;
+			c  ) path="$XDG_CONFIG_HOME"           ;;
+			d  ) path="$HOME/downloads/"           ;;
+			f  ) path="$XDG_DATA_HOME/fonts/"      ;;
+			h  ) path="$HOME/hsk/"                 ;;
+			k  ) path="$HOME/kuliah/"              ;;
+			de ) path="$HOME/dev/"                 ;;
+			m  ) path="$HOME/music/"               ;;
+			s  ) path="$XDG_DATA_HOME"             ;; #share
+			st ) path="$HOME/personal/sync_files/" ;;
+			v  ) path="$HOME/video/"               ;;
+			x  ) path="$HOME/.local/bin"           ;;
+			*  ) echo "Bookmark letter not found"; usage; return ;;
 		esac
 	fi
 	shift;
@@ -101,22 +108,40 @@ f() {
 
 	[ $# -gt 1 ] && echo "Only one flag allowed. Use -f or -d." && usage && return
 
-	findcmd="find $path -type $type"
-	fzfcmd="fzf $m \
-		--bind='ctrl-r:reload(find $path -type $type)' \
+	CHOICES=$(
+		find "$path" -not \( -iwholename '*/.git' -prune \) -not \( -iwholename '*/node_modules' -prune \) -type "$type" | \
+		fzf $m \
+		--bind="ctrl-r:reload(find "$path" -not \( -iwholename '*/.git' -prune \) -not \( -iwholename '*/node_modules' -prune \) -type "$type")" \
 		--bind='ctrl-a:toggle-all,ctrl-u:preview-half-page-up,ctrl-b:preview-half-page-down' \
-		--preview 'fpreview {} ' \
-		--preview-window 'border-left'
-		"
+		--preview 'fpreview {} $FZF_COLUMNS $FZF_LINES' \
+		--bind 'start:transform:
+			h=$(echo "8  * $FZF_COLUMNS" | bc)
+			y=$(echo "16 * $FZF_LINES" | bc)
+			if [ $h -le $y ]; then
+				var="change-preview-window(down,70%)"
+			else
+				var="change-preview-window(right,50%)"
+			fi
+			echo "$var"' \
+		--bind 'resize:transform:
+			h=$(echo "8  * $FZF_COLUMNS" | bc)
+			y=$(echo "16 * $FZF_LINES" | bc)
+			if [ $h -le $y ]; then
+				var="change-preview-window(down,70%)"
+			else
+				var="change-preview-window(right,50%)"
+			fi
+			echo "$var"'
+	)
 
 	if [ -n "$yank" ]; then
-		eval "$findcmd" | eval "$fzfcmd" | sed "s/^/\"/;s/$/\"/" | tr "\n" " " | wl-copy
+		printf "$CHOICES" | sed "s/^/\"/;s/$/\"/" | tr "\n" " " | wl-copy
 	elif [ "$open" = "f" ]; then
-		eval "$findcmd" | eval "$fzfcmd" | sed "s/\'/\\\'/g;s/\"/\\\"/g" | xargs -r -P3 -I{} setsid -f xdg-open "{}"
+		printf "$CHOICES" | sed "s/\'/\\\'/g;s/\"/\\\"/g" | xargs -r -P3 -I{} setsid -f xdg-open "{}"
 	elif [ "$open" = "d" ]; then
-		res=$(eval "$findcmd" | eval "$fzfcmd")
-		cd "$res" || return
-		echo "cd \"$res\" " >> "$HISTFILE"
+		cd "$CHOICES" || return
+		echo "cd \"$CHOICES\" " >> "$HISTFILE"
 	fi
-	unset findcmd fzfcmd path type yank open m res
+
+	unset CHOICES path type yank open m res
 }

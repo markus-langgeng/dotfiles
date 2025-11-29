@@ -55,18 +55,14 @@ export SDL_VIDEODRIVER=wayland
 
 # pnpm
 export NPM_CONFIG_USERCONFIG="$XDG_CONFIG_HOME/npm/npmrc"
-export PNPM_HOME="/home/nggeng/.local/share/pnpm"
+export PNPM_HOME="$XDG_DATA_HOME/.local/share/pnpm"
 case ":$PATH:" in
   *":$PNPM_HOME:"*) ;;
   *) export PATH="$PNPM_HOME:$PATH" ;;
 esac
 # pnpm end
 
-export FZF_DEFAULT_OPTS="$FZF_DEFAULT_OPTS \
---reverse --color fg:-1,bg:-1,hl:230,fg+:3,bg+:233,hl+:229 \
---color info:150,prompt:110,spinner:150,pointer:167,marker:174 \
---bind \"ctrl-y:replace-query\" \
-"
+export FZF_DEFAULT_OPTS_FILE="$XDG_CONFIG_HOME/fzf/fzfrc"
 export NODE_REPL_HISTORY="$XDG_DATA_HOME"/node_repl_history
 
 # IME
