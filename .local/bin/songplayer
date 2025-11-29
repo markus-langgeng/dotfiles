@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/usr/bin/env sh
 
 [ "$1" == "prev" ] && mpc -q prev && songinfo && exit
 [ "$1" == "next" ] && mpc -q next && songinfo && exit
@@ -8,7 +8,7 @@
 [ "$1" == "toggle" ] && mpc -q toggle && songinfo && exit
 
 if [ -z "$1"  ]; then
-	if pgrep "ncmpcpp"; then exit; fi
-	setsid -f footclient -T "floatterm" -w "1000x750" ncmpcpp
+	if pgrep "rmpc"; then exit; fi
+	setsid -f footclient -T "floatterm-songplayer" -w "900x450" rmpc
 fi
 

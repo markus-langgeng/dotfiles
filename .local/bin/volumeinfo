@@ -1,0 +1,9 @@
+#!/usr/bin/env sh
+
+vol=$(wpctl get-volume @DEFAULT_AUDIO_SINK@)
+vol=${vol#*: }
+vol=$(echo "100 * $vol" | bc)
+[ -z "$vol" ] && vol="MUTED"
+notify-send --hint=string:x-dunst-stack-tag:volume --hint=string:synchronous:volume \
+	"VOL: $vol"
+

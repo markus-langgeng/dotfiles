@@ -1,0 +1,7 @@
+[Desktop Entry]
+Type=Application
+Name=Mullvad Browser
+Exec=env MOZ_DBUS_REMOTE=1 MOZ_ENABLE_WAYLAND=1 flatpak run net.mullvad.MullvadBrowser %u
+Icon=firefox-esr
+Categories=Network;WebBrowser;
+Terminal=false

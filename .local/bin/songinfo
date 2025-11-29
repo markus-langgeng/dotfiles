@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/usr/bin/env sh
 
 music_dir="$HOME/music"
 previewdir="$XDG_CONFIG_HOME/ncmpcpp/previews"
@@ -16,8 +16,9 @@ album=$(mpc --format %album% current)
 [ "$(mpc status "%single%")"  = "on" ] && single="s" || single="-"
 state="$(mpc status "%state%")"
 pos="$(mpc status "%songpos%/%length%")"
+vol="$(mpc status "%volume%")"
 
 notify-send --hint=string:x-dunst-stack-tag:song --hint=string:synchronous:song \
     "Now Playing" -t 4000 \
-    "$(mpc --format '%title% \n%artist% - %album%' current) \n[$repeat$random$consume$single $state $pos]" \
+    "$(mpc --format '%title% \n%artist% - %album%' current) \n[$repeat$random$consume$single $state $pos] 󰕾$vol" \
     -i "$previewname"

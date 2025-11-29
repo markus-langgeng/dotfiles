@@ -1,0 +1,27 @@
+#!/bin/sh
+
+[ "$(pgrep -f "footclient -T floatterm-bm -w 1500x600 bm-open" | wc -l )" -gt 1 ] && exit
+
+opener="xdg-open"
+res=$(
+sed '1d;$d;/^$/ d;/^#/ d;' "$HOME"/.config/bookmarks/urls/* | column -s , -t | \
+	fzf --multi \
+	--prompt 'URLs> ' \
+	--preview 'fpreview {} $FZF_COLUMNS $FZF_LINES' \
+	--preview-window 'hidden' \
+	--bind 'ctrl-t:transform:
+		[[ ! $FZF_PROMPT =~ URL ]] &&
+		echo "change-prompt(URLs> )+reload(sed \"1d;$d;/^$/ d;/^#/ d;\" "$HOME"/.config/bookmarks/urls/* | column -s , -t )+change-preview-window(hidden)" ||
+		echo "change-prompt(Book> )+reload(find $HOME/personal/buku/ -type f)+change-preview-window(right,50%,border-left)"'\
+	--bind 'ctrl-a:toggle-all' \
+	--bind 'ctrl-y:transform-query(echo {-1})' \
+	--bind 'ctrl-s:change-query(@br)' \
+	--bind 'ctrl-/:execute(echo {-1} | wl-copy)' \
+	--bind 'enter:accept-or-print-query'
+)
+
+if echo "$res" | grep -q "http\|about:"; then
+	echo "$res" | sed -n 's/.*\(http\|about:\)\(.*\)/\1\2/p' | xargs -r -P3 -I{} setsid -f xdg-open "{}"
+else
+	echo "$res" | xargs -r -P3 -I{} setsid -f xdg-open "{}"
+fi

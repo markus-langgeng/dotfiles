@@ -1,0 +1,5 @@
+#!/usr/bin/env sh
+
+notify-send --hint=string:x-dunst-stack-tag:brightness --hint=string:synchronous:brightness \
+	"BRIGHTNESS: $(brightnessctl get)"
+

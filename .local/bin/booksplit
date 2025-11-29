@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/usr/bin/env sh
 
 # Requires ffmpeg and either *.ffmetadata file or regular timestamp file
 #

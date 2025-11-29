@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/usr/bin/env sh
 
 OUTDIR="$HOME/.config/mpd/playlists"
 OUT=$(jq -r '.songs[].list_name' "$1" | sort -u)

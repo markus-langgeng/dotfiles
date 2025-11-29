@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/usr/bin/env sh
 # in detach mode (e. g. via `--detach`) urls are being
 # appended to mpv playlist instead of being played immediately
 #

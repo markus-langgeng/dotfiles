@@ -1,12 +1,13 @@
-#!/bin/sh
+#!/usr/bin/env sh
 
-[ "$(pgrep -f "footclient -T floatterm-frun -w 700x200 frun" | wc -l )" -gt 1 ] && exit
+[ "$(pgrep -f "footclient -T floatterm-frun frun" | wc -l )" -gt 1 ] && exit
 export FZF_DEFAULT_OPTS="$FZF_DEFAULT_OPTS \
     --info=hidden \
     --no-scrollbar \
     --bind=enter:replace-query+print-query"
 IFS=:
 set -f
-
-find -L $PATH -maxdepth 1 -type f -perm -100 -print 2>/dev/null | sed "s!.*/!!" | sort -u | fzf | xargs -r -n3 setsid -f
+flp=$(find "$HOME/.local/share/flatpak/app/" -mindepth 1 -maxdepth 1 -type d -exec basename '{}' \; | xargs -I{} echo "flatpak run {}")
+bins=$(find -L $PATH -maxdepth 1 -type f -perm -100 -print 2>/dev/null | sed "s!.*/!!" | sort -u)
+printf "%s\n%s" "$flp" "$bins" | fzf | xargs -r -n3 setsid -f
 unset IFS

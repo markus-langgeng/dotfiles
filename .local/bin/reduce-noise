@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/usr/bin/env sh
 # 2 Arguments:
 # $1 video or audio file
 

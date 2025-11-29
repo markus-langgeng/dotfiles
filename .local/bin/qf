@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/usr/bin/env sh
 # quickly find by using bookmark dirs
 
 # $1 = file path

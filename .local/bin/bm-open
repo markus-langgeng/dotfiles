@@ -1,25 +1,106 @@
-#!/bin/sh
+#!/usr/bin/env sh
 
-[ "$(pgrep -f "footclient -T floatterm-bm -w 1500x600 bm-open" | wc -l )" -gt 1 ] && exit
+[ "$(pgrep -f "footclient -T floatterm-bm bm-open" | wc -l )" -gt 1 ] && exit
 
-res=$(
-sed '1d;$d;/^$/ d;/^#/ d;' "$HOME"/.config/bookmarks/urls/* | column -s , -t | \
-	fzf --multi \
-	--prompt 'URLs> ' \
-	--preview 'fpreview {} $FZF_COLUMNS $FZF_LINES' \
+(for file in "$HOME"/.config/bookmarks/urls/*.csv; do tail -n +1 "$file"; done) > "/tmp/bm-urls"
+
+CHOICES=$(sed '/^$/ d;/^#/ d;s/,\s*/,/g;' "/tmp/bm-urls" \
+	| column -t -s, -o' | ' \
+	| fzf -m \
+	--delimiter="|" \
+	--bind "ctrl-a:select-all" \
+	--bind "ctrl-q:change-query(@lt)" \
+	--bind "ctrl-y:transform-query(echo {3},{4},{5})" \
+	--bind "enter:accept-or-print-query" \
+	--header-first \
+	--header '^b: Buku | ^s: Sync | ^k: Kuliah' \
+	--prompt 'Links> ' \
 	--preview-window 'hidden' \
-	--bind 'ctrl-t:transform:
-		[[ ! $FZF_PROMPT =~ URL ]] &&
-		echo "change-prompt(URLs> )+reload(sed \"1d;$d;/^$/ d;/^#/ d;\" "$HOME"/.config/bookmarks/urls/* | column -s , -t )+change-preview-window(hidden)" ||
-		echo "change-prompt(Book> )+reload(find $HOME/personal/buku/ -type f)+change-preview-window(right,50%,border-left)"'\
-	--bind 'ctrl-a:toggle-all' \
-	--bind 'ctrl-y:transform-query(echo {-1})' \
-	--bind 'ctrl-s:change-query(@br)' \
-	--bind 'enter:accept-or-print-query'
+	--preview 'fpreview {} $FZF_COLUMNS $FZF_LINES' \
+	--bind 'ctrl-b:transform:
+		if [ $FZF_PROMPT = "Buku>" ]; then
+			var="change-prompt(Links> )"
+			var="${var}+reload(sed \"/^$/ d;/^#/ d;s/,\s*/,/g;\" /tmp/bm-urls | column -t -s, -o\" | \")"
+			var="${var}+change-preview-window(hidden)"
+			echo "$var"
+		else
+			var="change-prompt(Buku> )"
+			var="${var}+reload(fd -0 . $HOME/.config/bookmarks/buku/* -t f | xargs -0 ls -t)"
+			h=$(echo "8  * $FZF_COLUMNS" | bc)
+			y=$(echo "16 * $FZF_LINES"   | bc)
+			if [ $h -le $y ]; then
+				var="${var}+change-preview-window(down,70%)"
+			else
+				var="${var}+change-preview-window(right,50%)"
+			fi
+			echo "$var"
+		fi' \
+	--bind 'ctrl-s:transform:
+		if [ $FZF_PROMPT = "Sync>" ]; then
+			var="change-prompt(Links> )"
+			var="${var}+reload(sed \"/^$/ d;/^#/ d;s/,\s*/,/g;\" /tmp/bm-urls | column -t -s, -o\" | \")"
+			var="${var}+change-preview-window(hidden)"
+			echo "$var"
+		else
+			var="change-prompt(Sync> )"
+			var="${var}+reload(fd -0 . $HOME/.config/bookmarks/sync_files/* -t f | xargs -0 ls -t )"
+			h=$(echo "8  * $FZF_COLUMNS" | bc)
+			y=$(echo "16 * $FZF_LINES"   | bc)
+			if [ $h -le $y ]; then
+				var="${var}+change-preview-window(down,70%)"
+			else
+				var="${var}+change-preview-window(right,50%)"
+			fi
+			echo "$var"
+		fi' \
+	--bind 'ctrl-k:transform:
+		if [ $FZF_PROMPT = "Kuliah>" ]; then
+			var="change-prompt(Links> )"
+			var="${var}+reload(sed \"/^$/ d;/^#/ d;s/,\s*/,/g;\" /tmp/bm-urls | column -t -s, -o\" | \")"
+			var="${var}+change-preview-window(hidden)"
+			echo "$var"
+		else
+			var="change-prompt(Kuliah> )"
+			var="${var}+reload(fd -0 . $HOME/.config/bookmarks/kuliah/* -t f | xargs -0 ls -t)"
+			h=$(echo "8  * $FZF_COLUMNS" | bc)
+			y=$(echo "16 * $FZF_LINES"   | bc)
+			if [ $h -le $y ]; then
+				var="${var}+change-preview-window(down,70%)"
+			else
+				var="${var}+change-preview-window(right,50%)"
+			fi
+			echo "$var"
+		fi' \
+	--bind 'resize:transform:
+		h=$(echo "8  * $FZF_COLUMNS" | bc)
+		y=$(echo "16 * $FZF_LINES"   | bc)
+		if [ $h -le $y ]; then
+			var="change-preview-window(down,70%)"
+		else
+			var="change-preview-window(right,50%)"
+		fi
+		echo "$var"
+		' \
 )
 
-if echo "$res" | grep -q "http\|about:"; then
-	echo "$res" | sed -n 's/.*\(http\|about:\)\(.*\)/\1\2/p' | xargs -r -P3 -I{} setsid -f xdg-open "{}"
-else
-	echo "$res" | xargs -r -P3 -I{} setsid -f xdg-open "{}"
-fi
+[ -z "$CHOICES" ] && exit
+
+openurl() {
+	browser=$(printf "%s" "$1" | cut -d',' -f1)
+	profile=$(printf "%s" "$1" | cut -d',' -f2)
+	url="${1#$browser,$profile,}"
+	case "$profile" in
+		"default" ) setsid -f flatpak run net.mullvad.MullvadBrowser "$url" ;;
+		"personal") setsid -f flatpak run com.brave.Browser --profile-directory=Default "$url" ;;
+		"college" ) setsid -f flatpak run com.brave.Browser --profile-directory="Profile 1" "$url" ;;
+		*         ) echo "error: [$browser][$profile][$url]" && exit 2 ;;
+	esac
+}
+
+echo "$CHOICES" | while IFS= read -r l ; do
+	if [ -f "$l" ]; then
+		setsid -f xdg-open "$l"
+	else
+		openurl "$(echo "$l" | cut -d'|' -f3,4,5 | sed 's/^\s//;s/\s*|\s*/,/g')"
+	fi
+done

@@ -1,17 +1,23 @@
-#!/bin/sh
+#!/usr/bin/env sh
 
 TMPDIR="/tmp/fpreview"
 [ ! -d "$TMPDIR" ] && mkdir -p "$TMPDIR"
 
+# 1920 / 239 = 8.03
+# 1080 / 67 = 16.11
 mime=$(file --mime "$1")
-fcols=$2
-fline=$3
+c=$(echo "8  * $2" | bc)
+l=$(echo "16 * $3" | bc)
+[ $c -ge $l ] && pc=$(echo "(($2 - 1) * 1 / 2) * 8"   | bc) || pc=$(echo "($2 - 1) * 8"  | bc)
+[ $c -le $l ] && pl=$(echo "(($3 - 1) * 7 / 10) * 16" | bc) || pl=$(echo "($3 - 1) * 16" | bc)
+size=$(printf "%s@" $(echo "($pc - 200) * ($pl - 200)" | bc))
+extent=$(printf "%sx%s" "$pc" "$pl")
 
 name="${1##*/}"
 name="${name%*}.jpg"
 
 drawprev() {
-	magick "$1" -gravity west -background none -thumbnail 350000@ -extent 1000x1000 sixel:-
+	magick "$1" -gravity center -thumbnail "$size" -extent "$extent" sixel:-
 }
 
 if [ -n "$( echo "$mime" | grep directory)" ]; then
@@ -25,7 +31,7 @@ elif [ -n "$( echo "$mime" | grep video)" ]; then
 	[ ! -f "$TMPDIR/$name" ] && ffmpeg -loglevel quiet -y -ss 00:00:01 -i "$1" -frames:v 1 -q:v 5 "$TMPDIR/$name"
 	drawprev "$TMPDIR/$name"
 elif [ -n "$( echo "$mime" | grep 'pdf')" ]; then
-	echo "preview for type $2 $3"
+	# echo "col: $c line: $l"
 	[ ! -f "$TMPDIR/$name" ] && pdftoppm -jpeg -singlefile "$1" "$TMPDIR/${name%.*}"
 	drawprev "$TMPDIR/$name"
 else
